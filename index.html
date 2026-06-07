@@ -123,9 +123,9 @@
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     const CONFIG={
-      VERSAO:'V014_CRIAR_BOLAO_SEM_TIMEOUT_CURTO',
+      VERSAO:'V016_API_FIXA_LINK_LIMPO_GRUPO',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
-      API_URL_FIXA:'', // Opcional: cole aqui a URL /exec se quiser fixar manualmente.
+      API_URL_FIXA:'https://script.google.com/macros/s/AKfycbyC2MNJ9w8sOJKadDMbvQj8kqdOt4WZ66957LVtelZQ3OjczoQlv6nScVy4ktqPvu3sMg/exec', // API fixa para permitir link limpo no grupo sem parâmetro ?api=.
       ID_BOLAO:URL_PARAMS.get('id_bolao')||'BOLAO001',
       CODIGO_CONVITE:URL_PARAMS.get('codigo_convite')||URL_PARAMS.get('codigo')||'',
       ENVIAR_AO_BOT_SEM_API:true,
@@ -161,7 +161,13 @@
     }
 
     function esc(v){return String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#039;")}
-    function apiUrl(){return String(CONFIG.API_URL||CONFIG.API_URL_FIXA||localStorage.getItem('PSS_MBE_API_URL')||'').trim()}
+    function apiUrl(){
+      const candidatos=[CONFIG.API_URL,localStorage.getItem('PSS_MBE_API_URL'),CONFIG.API_URL_FIXA].map(v=>String(v||'').trim()).filter(Boolean);
+      for(const u of candidatos){
+        if(/^https:\/\/script\.google\.com\/macros\/s\/[^\/]+\/exec/i.test(u))return u;
+      }
+      return String(CONFIG.API_URL_FIXA||'').trim();
+    }
     function isAberto(j){return !!(j&&j.aceitaPalpite)}
     function statusJogo(j){return String(j&&j.status?j.status:(isAberto(j)?'Aberto':'Em breve'))}
     function idJogo(j){return String((j&&(j.id_jogo||j.id))||'')}
@@ -799,7 +805,6 @@
     function montarLinkConviteLocal(b){
       const base=location.origin+location.pathname;
       const params=new URLSearchParams();
-      params.set('api',apiUrl());
       params.set('id_bolao',b.id_bolao||CONFIG.ID_BOLAO);
       if(b.codigo_convite)params.set('codigo_convite',b.codigo_convite);
       return base+'?'+params.toString();
@@ -960,7 +965,7 @@
 
       if(!url){
         estado.carregando=false;
-        estado.erroApi='API real não informada. Reconfigure o botão Mini App no Apps Script para abrir com ?api=WEBAPP_URL.';
+        estado.erroApi='API real não carregada. A página tentará usar a API fixa configurada no index.html.';
         render();
         if(!tinhaCache)toastMsg(estado.erroApi);
         return;
