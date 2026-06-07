@@ -518,6 +518,24 @@
     }
 
 
+
+    function atualizarTimersVisiveis(){
+      try{
+        const j=estado.jogo;
+        const openText=document.querySelector('.open span');
+        if(j&&openText){
+          const palpiteSalvo=getPalpiteLocal(j);
+          const tempo=textoTempoRestante(j);
+          openText.innerHTML=palpiteSalvo?'JÁ PALPITADO':(isAberto(j)?('ABERTO'+(tempo&&tempo!=='encerrado'?` • <span class="small-count">${esc(tempo)}</span>`:'')):statusJogo(j).toUpperCase());
+        }
+        document.querySelectorAll('[data-countdown-jogo]').forEach(el=>{
+          const id=String(el.getAttribute('data-countdown-jogo')||'');
+          const jogo=estado.jogos.find(x=>idJogo(x)===id);
+          if(jogo)el.textContent=textoTempoRestante(jogo)||'';
+        });
+      }catch(e){console.warn('Falha ao atualizar timer visível.',e)}
+    }
+
     function render(){
       const j=estado.jogo;
       const openText=document.querySelector('.open span');
@@ -733,8 +751,12 @@
       }
 
       if(name==='mais'){
-        return openModal('☰ Mais',`<div class="mini"><strong>Central do Bolão</strong><p>Acesse regulamento, ranking, jogos, bolões ativos e dados do participante.</p></div><div class="mini"><strong>Participante</strong><p>${esc(estado.usuario.nome||'Participante')}</p></div><div class="mini"><strong>Bolão atual</strong><p>${esc((estado.bolaoAtual&&estado.bolaoAtual.nome_bolao)||CONFIG.ID_BOLAO)}</p></div><div class="mini"><strong>Cache local</strong><p>${estado.cacheAtualizadoEm?'Última carga salva: '+esc(estado.cacheAtualizadoEm):'Nenhum cache salvo ainda.'}</p><p>${estado.cacheUsado?'Dados exibidos primeiro pelo cache e atualizados em segundo plano.':'Dados atualizados pela API real.'}</p></div>`, '<button class="btn light" id="entrarCodigo">Entrar Código</button><button class="btn primary" id="criarBolao">Criar Bolão</button>');
-        setTimeout(()=>{entrarCodigo.onclick=abrirEntrarCodigo;criarBolao.onclick=abrirCriarBolao},0);
+        openModal('☰ Mais',`<div class="mini"><strong>Central do Bolão</strong><p>Acesse regulamento, ranking, jogos, bolões ativos e dados do participante.</p></div><div class="mini"><strong>Participante</strong><p>${esc(estado.usuario.nome||'Participante')}</p></div><div class="mini"><strong>Bolão atual</strong><p>${esc((estado.bolaoAtual&&estado.bolaoAtual.nome_bolao)||CONFIG.ID_BOLAO)}</p></div><div class="mini"><strong>Cache local</strong><p>${estado.cacheAtualizadoEm?'Última carga salva: '+esc(estado.cacheAtualizadoEm):'Nenhum cache salvo ainda.'}</p><p>${estado.cacheUsado?'Dados exibidos primeiro pelo cache e atualizados em segundo plano.':'Dados atualizados pela API real.'}</p></div>`, '<button class="btn light" id="entrarCodigo">Entrar Código</button><button class="btn primary" id="criarBolao">Criar Bolão</button>');
+        const btnEntrarCodigo=document.getElementById('entrarCodigo');
+        const btnCriarBolao=document.getElementById('criarBolao');
+        if(btnEntrarCodigo)btnEntrarCodigo.onclick=abrirEntrarCodigo;
+        if(btnCriarBolao)btnCriarBolao.onclick=abrirCriarBolao;
+        return;
       }
     }
 
@@ -904,7 +926,7 @@
       }
     }
 
-    (async()=>{initTelegram();horaAtual();setInterval(horaAtual,30000);const temCache=carregarCache();render();events();await loadApi()})();
+    (async()=>{initTelegram();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);const temCache=carregarCache();render();events();await loadApi()})();
   </script>
 </body>
 </html>
