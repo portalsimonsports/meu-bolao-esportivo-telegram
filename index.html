@@ -80,13 +80,13 @@
       <section class="card game">
         <div class="label">JOGO EM DESTAQUE</div>
         <div class="game-grid">
-          <div><div class="flag flag-mexico" id="flagA" aria-label="Bandeira do México"></div><div class="team" id="teamA">MÉXICO</div></div>
+          <div><div class="flag" id="flagA" aria-label="Carregando dados reais">⚽</div><div class="team" id="teamA">DADOS</div></div>
           <div class="center">
             <div class="date"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M8 3v4M16 3v4M4 10h16"></path></svg><span id="dataJogo">--/--/----</span></div>
             <div class="vs">VS</div>
             <div class="hour"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 7.5v4.8l3 1.8"></path></svg><span id="horaJogo">--:--</span></div>
           </div>
-          <div><div class="flag flag-south-africa" id="flagB" aria-label="Bandeira da África do Sul"></div><div class="team" id="teamB">ÁFRICA DO SUL</div></div>
+          <div><div class="flag" id="flagB" aria-label="Carregando dados reais">📡</div><div class="team" id="teamB">REAIS</div></div>
         </div>
         <div class="open"><i></i><span>CARREGANDO API REAL</span></div>
         <button class="bet" id="btnPalpite" disabled><span>📡</span><span>AGUARDANDO JOGO REAL</span></button>
@@ -123,7 +123,7 @@
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     const CONFIG={
-      VERSAO:'V017_API_FIXA_CACHE_LIMPO_MENUS_OK',
+      VERSAO:'V018_SHELL_RAPIDO_CACHE_STABLE_API_LEVE',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbyC2MNJ9w8sOJKadDMbvQj8kqdOt4WZ66957LVtelZQ3OjczoQlv6nScVy4ktqPvu3sMg/exec', // API fixa para permitir link limpo no grupo sem parâmetro ?api=.
       ID_BOLAO:URL_PARAMS.get('id_bolao')||'BOLAO001',
@@ -297,17 +297,28 @@
 
 
     function cacheKey(){
-      return 'PSS_MBE_HOME_CACHE_'+String(CONFIG.VERSAO||'V017')+'_'+String(CONFIG.ID_BOLAO||'BOLAO001');
+      return 'PSS_MBE_HOME_CACHE_STABLE_'+String(CONFIG.ID_BOLAO||'BOLAO001');
     }
 
     function cacheInfoKey(){
-      return 'PSS_MBE_HOME_CACHE_INFO_'+String(CONFIG.VERSAO||'V017')+'_'+String(CONFIG.ID_BOLAO||'BOLAO001');
+      return 'PSS_MBE_HOME_CACHE_INFO_STABLE_'+String(CONFIG.ID_BOLAO||'BOLAO001');
+    }
+
+    function chavesCachePossiveis(){
+      const id=String(CONFIG.ID_BOLAO||'BOLAO001');
+      return [
+        'PSS_MBE_HOME_CACHE_STABLE_'+id,
+        'PSS_MBE_HOME_CACHE_V018_SHELL_RAPIDO_CACHE_STABLE_API_LEVE_'+id,
+        'PSS_MBE_HOME_CACHE_V017_API_FIXA_CACHE_LIMPO_MENUS_OK_'+id,
+        'PSS_MBE_HOME_CACHE_V015_BOLOES_PRIVADOS_VISIVEIS_CONVITE_HOME_FIXO_'+id,
+        'PSS_MBE_HOME_CACHE_V014_CRIAR_BOLAO_TIMEOUT_60S_'+id,
+        'PSS_MBE_HOME_CACHE_V013_BOTOES_MAIS_E_TIMER_ATIVO_'+id,
+        'PSS_MBE_HOME_CACHE_V011_LAYOUT_JOGOS_TIMER_AUTO_PROXIMO_'+id
+      ];
     }
 
     function limparCachesAntigosSeNecessario(){
       try{
-        const prefixos=['PSS_MBE_HOME_CACHE_BOLAO001','PSS_MBE_HOME_CACHE_INFO_BOLAO001'];
-        prefixos.forEach(k=>localStorage.removeItem(k));
         const apiSalva=String(localStorage.getItem('PSS_MBE_API_URL')||'');
         if(apiSalva && !/^https:\/\/script\.google\.com\/macros\/s\/[^\/]+\/exec/i.test(apiSalva))localStorage.removeItem('PSS_MBE_API_URL');
       }catch(e){}
@@ -383,32 +394,33 @@
 
     function salvarCache(dados){
       try{
-        const pacote={
-          salvoEm:Date.now(),
-          versao:CONFIG.VERSAO,
-          id_bolao:CONFIG.ID_BOLAO,
-          dados:dados||{}
-        };
+        if(!dados)return;
+        const pacote={salvoEm:Date.now(),versao:CONFIG.VERSAO,id_bolao:CONFIG.ID_BOLAO,dados:dados||{}};
         pacote.dados.cacheAtualizadoEm=new Date(pacote.salvoEm).toLocaleString('pt-BR');
         localStorage.setItem(cacheKey(),JSON.stringify(pacote));
         localStorage.setItem(cacheInfoKey(),JSON.stringify({salvoEm:pacote.salvoEm,versao:CONFIG.VERSAO}));
+        estado.cacheAtualizadoEm=pacote.dados.cacheAtualizadoEm;
       }catch(e){console.warn('Não foi possível salvar cache local.',e)}
     }
 
     function carregarCache(){
       try{
-        const raw=localStorage.getItem(cacheKey());
-        if(!raw)return false;
-        const pacote=JSON.parse(raw);
-        if(!pacote||!pacote.dados||!pacote.salvoEm)return false;
-        const idadeHoras=(Date.now()-Number(pacote.salvoEm||0))/(60*60*1000);
-        if(idadeHoras>Number(CONFIG.CACHE_MAX_HORAS||24))return false;
-        pacote.dados.cacheAtualizadoEm=new Date(Number(pacote.salvoEm)).toLocaleString('pt-BR');
-        aplicarDadosApi(pacote.dados,'cache');
-        estado.carregando=false;
-        estado.erroApi='';
-        return true;
-      }catch(e){console.warn('Cache local inválido.',e);return false}
+        const keys=chavesCachePossiveis();
+        for(const key of keys){
+          const raw=localStorage.getItem(key);
+          if(!raw)continue;
+          const pacote=JSON.parse(raw);
+          if(!pacote||!pacote.dados||!pacote.salvoEm)continue;
+          const idadeHoras=(Date.now()-Number(pacote.salvoEm||0))/(60*60*1000);
+          if(idadeHoras>Number(CONFIG.CACHE_MAX_HORAS||24))continue;
+          pacote.dados.cacheAtualizadoEm=new Date(Number(pacote.salvoEm)).toLocaleString('pt-BR');
+          aplicarDadosApi(pacote.dados,'cache');
+          estado.carregando=false;
+          estado.erroApi='';
+          return true;
+        }
+      }catch(e){console.warn('Cache local inválido.',e)}
+      return false;
     }
 
     function cacheRecente(){
@@ -907,7 +919,7 @@
     async function chamarApiAcao(acao,params){
       const url=apiUrl();
       if(!url)throw new Error('API não configurada no Mini App.');
-      return await chamarApiJsonp(url,Object.assign({acao:acao,v:CONFIG.VERSAO,t:Date.now()},params||{}));
+      return await chamarApiJsonp(url,Object.assign({acao:acao,v:CONFIG.VERSAO,t:Date.now()},params||{}),30000);
     }
 
     function marcarNavAtiva(nav){
@@ -946,14 +958,14 @@
       });
     }
 
-    function chamarApiJsonp(url,params){
+    function chamarApiJsonp(url,params,timeoutMs){
       return new Promise((resolve,reject)=>{
         const cb='PSS_MBE_CB_'+Date.now()+'_'+Math.floor(Math.random()*100000);
         const script=document.createElement('script');
         const qs=new URLSearchParams(Object.assign({},params,{callback:cb}));
         const sep=url.includes('?')?'&':'?';
         let finalUrl=url+sep+qs.toString();
-        let timer=setTimeout(()=>{cleanup();reject(new Error('Tempo esgotado ao consultar API. Tente novamente em alguns segundos.'))},60000);
+        let timer=setTimeout(()=>{cleanup();reject(new Error('Tempo esgotado ao consultar API.'))},Number(timeoutMs||12000));
 
         function cleanup(){
           clearTimeout(timer);
@@ -971,23 +983,21 @@
     async function loadApi(){
       const url=apiUrl();
       const tinhaCache=!!estado.jogo||estado.jogos.length>0||estado.ranking.length>0||estado.boloes.length>0;
-      estado.carregando=true;
+      estado.carregando=!tinhaCache;
       estado.erroApi='';
       render();
 
       if(!url){
         estado.carregando=false;
-        estado.erroApi='API real não carregada. A página tentará usar a API fixa configurada no index.html.';
+        estado.erroApi='API fixa não configurada no index.html.';
         render();
         if(!tinhaCache)toastMsg(estado.erroApi);
         return;
       }
 
       try{
-        // Se existe cache recente, mostra instantâneo e atualiza em segundo plano sem bloquear a tela.
-        const j=await chamarApiJsonp(url,{acao:'obterHomeBolaoEsportivo',id_bolao:CONFIG.ID_BOLAO,codigo_convite:CONFIG.CODIGO_CONVITE,telegram_id:estado.usuario.idTelegram,nome:estado.usuario.nome,username:estado.usuario.username,v:CONFIG.VERSAO,t:Date.now()});
+        const j=await chamarApiJsonp(url,{acao:'obterHomeBolaoEsportivo',id_bolao:CONFIG.ID_BOLAO,codigo_convite:CONFIG.CODIGO_CONVITE,telegram_id:estado.usuario.idTelegram,nome:estado.usuario.nome,username:estado.usuario.username,v:CONFIG.VERSAO},8000);
         if(!j||!j.ok)throw new Error((j&&j.erro)||'Resposta inválida da API.');
-
         const dados=j.dados||{};
         aplicarDadosApi(dados,'api');
         salvarCache(dados);
@@ -997,13 +1007,13 @@
       }catch(e){
         console.warn('API indisponível.',e);
         estado.carregando=false;
-        estado.erroApi='Não foi possível carregar os dados reais da API: '+e.message;
+        estado.erroApi='API demorou ou falhou: '+e.message;
         render();
-        toastMsg(tinhaCache?'API demorou/falhou. Mantendo dados do cache local.':estado.erroApi);
+        toastMsg(tinhaCache?'API demorou/falhou. Mantendo cache local.':estado.erroApi);
       }
     }
 
-    (async()=>{initTelegram();limparCachesAntigosSeNecessario();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);const temCache=carregarCache();render();events();await loadApi()})();
+    (function(){initTelegram();limparCachesAntigosSeNecessario();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);carregarCache();events();render();setTimeout(()=>loadApi(),50)})();
   </script>
 </body>
 </html>
