@@ -26,7 +26,7 @@
     .brand{position:relative;z-index:3;color:#fff;text-shadow:0 4px 12px rgba(0,0,0,.38);min-width:0}.brand b{display:block;font-weight:1000;line-height:.92;letter-spacing:-1.5px}.brand .meu,.brand .esp{font-size:32px}.brand .bolao{font-size:48px;background:linear-gradient(180deg,#fff3bc,#f4cc5f 48%,#ad7c20);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 3px 5px rgba(0,0,0,.3))}.tag{margin-top:8px;color:var(--ouro3);font-weight:900;font-size:12px;white-space:nowrap}.big-ball{position:absolute;right:-42px;bottom:8px;width:112px;height:112px;border-radius:50%;background:radial-gradient(circle at 50% 48%,#111 0 11%,transparent 12%),radial-gradient(circle at 20% 24%,#fff 0 13%,transparent 14%),radial-gradient(circle at 74% 28%,#fff 0 13%,transparent 14%),radial-gradient(circle at 30% 78%,#fff 0 13%,transparent 14%),radial-gradient(circle at 78% 76%,#fff 0 13%,transparent 14%),radial-gradient(circle,#eceee9,#9ca39b);opacity:.72;z-index:1}
     .shortcuts{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:-2px;position:relative;z-index:5}.shortcut{min-height:82px;border:0;border-radius:12px;background:linear-gradient(180deg,#fff,#f2f4f3);box-shadow:0 9px 18px rgba(0,0,0,.26),inset 0 1px 0 #fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#0a5a35;padding:8px 3px;transition:.15s}.shortcut:active{transform:translateY(2px) scale(.985)}.shortcut svg{width:30px;height:30px;stroke:#0a5a35;fill:none;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round}.shortcut svg path{vector-effect:non-scaling-stroke}.shortcut:nth-child(1) svg path{fill:#0a5a35;stroke:none}.shortcut span{font-size:12px;font-weight:800;color:#141a20;letter-spacing:-.3px}
     .card{background:linear-gradient(180deg,#fff,#f8faf9);border:1px solid rgba(212,166,60,.28);border-radius:24px;box-shadow:var(--shadow);position:relative}.game{margin-top:18px;padding:16px 12px 14px;overflow:hidden}.game:before{content:"";position:absolute;inset:10px;border:1px solid rgba(212,166,60,.35);border-radius:18px}.label{position:absolute;left:12px;top:12px;z-index:2;height:34px;padding:0 16px 0 12px;display:flex;align-items:center;gap:8px;background:linear-gradient(180deg,#0b5a34,#07381f);color:var(--ouro3);border-radius:0 0 12px 0;font-size:13px;font-weight:1000;text-transform:uppercase;box-shadow:0 8px 14px rgba(0,0,0,.22)}.label:before{content:"★";font-size:17px}
-    .game-grid{position:relative;z-index:2;padding-top:54px;display:grid;grid-template-columns:1fr 94px 1fr;align-items:center;gap:8px;text-align:center}.flag{width:76px;height:76px;border-radius:50%;background:#fff;margin:0 auto 8px;display:grid;place-items:center;font-size:64px;box-shadow:0 5px 14px rgba(0,0,0,.16),inset 0 0 0 1px rgba(0,0,0,.08);overflow:hidden;position:relative}
+    .game-grid{position:relative;z-index:2;padding-top:54px;display:grid;grid-template-columns:1fr 94px 1fr;align-items:center;gap:8px;text-align:center}.flag{width:76px;height:76px;border-radius:50%;background:#fff;margin:0 auto 8px;display:grid;place-items:center;font-size:64px;box-shadow:0 5px 14px rgba(0,0,0,.16),inset 0 0 0 1px rgba(0,0,0,.08);overflow:hidden;position:relative}.flag-img{width:100%;height:100%;object-fit:cover;display:block}.inline-flag{width:22px;height:16px;object-fit:cover;border-radius:3px;vertical-align:-3px;box-shadow:0 1px 3px rgba(0,0,0,.18);margin-right:4px}
     .flag-mexico{background:linear-gradient(90deg,#006847 0 33.33%,#fff 33.33% 66.66%,#ce1126 66.66% 100%)}
     .flag-mexico:after{content:"";position:absolute;left:50%;top:50%;width:18px;height:18px;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,#8c5a21 0 30%,#2c7b42 31% 58%,#b7892d 59% 100%);box-shadow:0 0 0 2px rgba(255,255,255,.72)}
     .flag-south-africa{background:linear-gradient(180deg,#de3831 0 31%,#fff 31% 38%,#007a4d 38% 62%,#fff 62% 69%,#002395 69% 100%)}
@@ -123,7 +123,7 @@
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     const CONFIG={
-      VERSAO:'V003_DADOS_REAIS_API_JSONP',
+      VERSAO:'V004_DADOS_REAIS_FLAGS_IMG_SEM_DUPLICIDADE',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
       API_URL_FIXA:'', // Opcional: cole aqui a URL /exec se quiser fixar manualmente.
       ID_BOLAO:URL_PARAMS.get('id_bolao')||'BOLAO001',
@@ -156,6 +156,47 @@
     function statusJogo(j){return String(j&&j.status?j.status:(isAberto(j)?'Aberto':'Em breve'))}
     function idJogo(j){return String((j&&(j.id_jogo||j.id))||'')}
 
+
+    function normalizarTextoPais(v){
+      return String(v||'').trim().toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ');
+    }
+
+    function codigoPais(nome){
+      const mapa={
+        'MEXICO':'mx','SOUTH AFRICA':'za','AFRICA DO SUL':'za','KOREA REPUBLIC':'kr','COREIA DO SUL':'kr','CZECH REPUBLIC':'cz','REPUBLICA TCHECA':'cz','CANADA':'ca','BOSNIA AND HERZEGOVINA':'ba','BOSNIA E HERZEGOVINA':'ba','UNITED STATES':'us','USA':'us','ESTADOS UNIDOS':'us','PARAGUAY':'py','PARAGUAI':'py','QATAR':'qa','SWITZERLAND':'ch','SUICA':'ch','BRAZIL':'br','BRASIL':'br','MOROCCO':'ma','MARROCOS':'ma','HAITI':'ht','SCOTLAND':'gb-sct','ESCOCIA':'gb-sct','TURKIYE':'tr','TÜRKIYE':'tr','TURKEY':'tr','TURQUIA':'tr','GERMANY':'de','ALEMANHA':'de','CURACAO':'cw','CURAÇÃO':'cw','NETHERLANDS':'nl','HOLANDA':'nl','PAISES BAIXOS':'nl','JAPAN':'jp','JAPAO':'jp','COTE DIVOIRE':'ci',"COTE D'IVOIRE":'ci',"CÔTE D'IVOIRE":'ci','COSTA DO MARFIM':'ci','ECUADOR':'ec','SWEDEN':'se','SUECIA':'se','TUNISIA':'tn','TUNISIA':'tn','SPAIN':'es','ESPANHA':'es','CAPE VERDE ISLANDS':'cv','CABO VERDE':'cv','BELGIUM':'be','BELGICA':'be','EGYPT':'eg','EGITO':'eg','SAUDI ARABIA':'sa','ARABIA SAUDITA':'sa','URUGUAY':'uy','URUGUAI':'uy','IRAN':'ir','NEW ZEALAND':'nz','NOVA ZELANDIA':'nz','FRANCE':'fr','FRANCA':'fr','SENEGAL':'sn','IRAQ':'iq','NORWAY':'no','NORUEGA':'no','ARGENTINA':'ar','ALGERIA':'dz','ARGELIA':'dz','AUSTRIA':'at','JORDAN':'jo','JORDANIA':'jo','PORTUGAL':'pt','CONGO DR':'cd','DR CONGO':'cd','REPUBLICA DEMOCRATICA DO CONGO':'cd','ENGLAND':'gb-eng','INGLATERRA':'gb-eng','CROATIA':'hr','CROACIA':'hr','GHANA':'gh','PANAMA':'pa','UZBEKISTAN':'uz','COLOMBIA':'co'
+      };
+      return mapa[normalizarTextoPais(nome)]||'';
+    }
+
+    function flagUrl(codigo){
+      codigo=String(codigo||'').trim().toLowerCase();
+      return codigo?`https://flagcdn.com/${codigo}.svg`:'';
+    }
+
+    function renderFlag(el,codigo,emoji,nome){
+      const code=String(codigo||codigoPais(nome)||'').trim().toLowerCase();
+      el.className='flag';
+      el.innerHTML='';
+      if(code){
+        const img=document.createElement('img');
+        img.className='flag-img';
+        img.alt='Bandeira de '+(nome||'time');
+        img.src=flagUrl(code);
+        img.onerror=function(){el.innerHTML='';el.textContent=emoji||'⚽'};
+        el.appendChild(img);
+      }else{
+        el.textContent=emoji||'⚽';
+      }
+      el.setAttribute('aria-label','Bandeira/ícone de '+(nome||'time'));
+    }
+
+    function flagHtml(j,lado){
+      const nome=lado==='mandante'?j.mandante:j.visitante;
+      const code=lado==='mandante'?(j.codigoMandante||codigoPais(nome)):(j.codigoVisitante||codigoPais(nome));
+      const emoji=lado==='mandante'?(j.flagMandante||'⚽'):(j.flagVisitante||'⚽');
+      return code?`<img class="inline-flag" src="${flagUrl(code)}" alt="${esc(nome)}">`:esc(emoji);
+    }
+
     function normalizarJogo(j){
       if(!j)return null;
       return {
@@ -164,8 +205,10 @@
         id_jogo:j.id_jogo||j.id||'',
         mandante:j.mandante||j.a||'MANDANTE',
         visitante:j.visitante||j.b||'VISITANTE',
-        flagMandante:j.flagMandante||j.flag_mandante||'⚽',
-        flagVisitante:j.flagVisitante||j.flag_visitante||'⚽',
+        flagMandante:j.flagMandante||j.flag_mandante||j.flagMandanteEmoji||'⚽',
+        flagVisitante:j.flagVisitante||j.flag_visitante||j.flagVisitanteEmoji||'⚽',
+        codigoMandante:j.codigoMandante||j.codigo_mandante||codigoPais(j.mandante||j.a),
+        codigoVisitante:j.codigoVisitante||j.codigo_visitante||codigoPais(j.visitante||j.b),
         data:j.data||'',
         hora:j.hora||'',
         dataHora:j.dataHora||'',
@@ -188,11 +231,8 @@
         btnPalpite.disabled=true;
         btnPalpite.innerHTML='<span>📡</span><span>AGUARDANDO JOGO REAL</span>';
       }else{
-        flagA.className='flag';flagB.className='flag';
-        flagA.textContent=j.flagMandante||'⚽';
-        flagB.textContent=j.flagVisitante||'⚽';
-        flagA.setAttribute('aria-label','Bandeira/ícone de '+j.mandante);
-        flagB.setAttribute('aria-label','Bandeira/ícone de '+j.visitante);
+        renderFlag(flagA,j.codigoMandante,j.flagMandante,j.mandante);
+        renderFlag(flagB,j.codigoVisitante,j.flagVisitante,j.visitante);
         teamA.textContent=j.mandante;
         teamB.textContent=j.visitante;
         dataJogo.textContent=j.data||'--/--/----';
@@ -229,7 +269,7 @@
 
       estado.palpite='';
       openModal('⚽ Fazer Palpite',`
-        <div class="mini"><strong>${esc(j.flagMandante)} ${esc(j.mandante)} VS ${esc(j.flagVisitante)} ${esc(j.visitante)}</strong><p>${esc(j.data)} às ${esc(j.hora)} • ${esc(statusJogo(j))}</p>${j.limitePalpite?`<p>Limite: ${esc(j.limitePalpite)}</p>`:''}</div>
+        <div class="mini"><strong>${flagHtml(j,'mandante')} ${esc(j.mandante)} VS ${flagHtml(j,'visitante')} ${esc(j.visitante)}</strong><p>${esc(j.data)} às ${esc(j.hora)} • ${esc(statusJogo(j))}</p>${j.limitePalpite?`<p>Limite: ${esc(j.limitePalpite)}</p>`:''}</div>
         <div class="opts">
           <button class="opt" data-bet="MANDANTE"><span>Vitória ${esc(j.mandante)}</span><b>1</b></button>
           <button class="opt" data-bet="EMPATE"><span>Empate</span><b>X</b></button>
@@ -305,7 +345,7 @@
       }
 
       if(name==='jogos'){
-        const body=estado.jogos.length?estado.jogos.map(j=>`<button class="mini clickable" data-select-jogo="${esc(idJogo(j))}"><strong>${esc(j.flagMandante||'⚽')} ${esc(j.mandante)} x ${esc(j.flagVisitante||'⚽')} ${esc(j.visitante)}</strong><p>${esc(j.data)} às ${esc(j.hora)} • <span class="chip">${esc(statusJogo(j))}</span></p>${j.limitePalpite?`<p>Limite: ${esc(j.limitePalpite)}</p>`:''}</button>`).join(''):telaVazia(estado.erroApi||'Nenhum jogo real foi retornado pela API.');
+        const body=estado.jogos.length?estado.jogos.map(j=>`<button class="mini clickable" data-select-jogo="${esc(idJogo(j))}"><strong>${flagHtml(j,'mandante')} ${esc(j.mandante)} x ${flagHtml(j,'visitante')} ${esc(j.visitante)}</strong><p>${esc(j.data)} às ${esc(j.hora)} • <span class="chip">${esc(statusJogo(j))}</span></p>${j.limitePalpite?`<p>Limite: ${esc(j.limitePalpite)}</p>`:''}</button>`).join(''):telaVazia(estado.erroApi||'Nenhum jogo real foi retornado pela API.');
         openModal('📅 Jogos',body);
         document.querySelectorAll('[data-select-jogo]').forEach(b=>b.onclick=()=>selecionarJogoPorId(b.dataset.selectJogo));
         return;
