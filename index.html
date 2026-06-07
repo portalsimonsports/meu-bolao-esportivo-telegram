@@ -123,10 +123,11 @@
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     const CONFIG={
-      VERSAO:'V009_PALPITES_OCULTOS_ATE_FECHAMENTO',
+      VERSAO:'V010_BOLOES_PRIVADOS_MINIAPP',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
       API_URL_FIXA:'', // Opcional: cole aqui a URL /exec se quiser fixar manualmente.
       ID_BOLAO:URL_PARAMS.get('id_bolao')||'BOLAO001',
+      CODIGO_CONVITE:URL_PARAMS.get('codigo_convite')||URL_PARAMS.get('codigo')||'',
       ENVIAR_AO_BOT_SEM_API:true,
       CACHE_TTL_MINUTOS:30,
       CACHE_MAX_HORAS:24
@@ -139,6 +140,8 @@
       ranking:[],
       jogos:[],
       boloes:[],
+      bolaoAtual:null,
+      meusPalpites:{},
       carregando:true,
       erroApi:'',
       palpite:'',
@@ -178,8 +181,7 @@
 
     function textoPalpitePrivado(p,j){
       if(!p)return '';
-      if(palpitePodeSerExibido(j||p.jogo))return 'Meu palpite: '+textoPalpiteLocal(p);
-      return 'Palpite registrado — placar oculto até o fechamento do jogo.';
+      return 'Meu palpite: '+textoPalpiteLocal(p);
     }
 
 
@@ -276,7 +278,8 @@
         dataHora:j.dataHora||'',
         limitePalpite:j.limitePalpite||'',
         status:j.status||'Em breve',
-        aceitaPalpite:j.aceitaPalpite===true||String(j.aceitaPalpite).toUpperCase()==='SIM'
+        aceitaPalpite:j.aceitaPalpite===true||String(j.aceitaPalpite).toUpperCase()==='SIM',
+        meuPalpite:normalizarPalpiteApi(j.meuPalpite)
       };
     }
 
@@ -292,15 +295,59 @@
     function aplicarDadosApi(dados, origem){
       dados=dados||{};
       if(dados.id_bolao)CONFIG.ID_BOLAO=dados.id_bolao;
+      estado.bolaoAtual=dados.bolaoAtual||null;
       estado.jogos=deduplicarJogos(Array.isArray(dados.jogos)?dados.jogos.map(normalizarJogo).filter(Boolean):[]);
       estado.ranking=Array.isArray(dados.ranking)?dados.ranking:[];
       estado.boloes=Array.isArray(dados.boloes)?dados.boloes:[];
+      estado.meusPalpites={};
+
+      if(Array.isArray(dados.meusPalpites)){
+        dados.meusPalpites.forEach(p=>{
+          const normal=normalizarPalpiteApi(p);
+          if(normal&&normal.id_jogo)estado.meusPalpites[String(normal.id_bolao||CONFIG.ID_BOLAO)+'|'+String(normal.id_jogo)]=normal;
+        });
+      }
+      estado.jogos.forEach(j=>{
+        if(j.meuPalpite&&j.meuPalpite.id_jogo)estado.meusPalpites[String(j.id_bolao||CONFIG.ID_BOLAO)+'|'+String(j.id_jogo||j.id)]=j.meuPalpite;
+      });
+      salvarMeusPalpitesApiNoLocal();
+
       const destaque=normalizarJogo(dados.jogoDestaque);
       const chaveDestaque=chaveJogoSemHora(destaque);
       const destaqueFiltrado=chaveDestaque?estado.jogos.find(j=>chaveJogoSemHora(j)===chaveDestaque):null;
       estado.jogo=destaqueFiltrado||destaque||estado.jogos.find(isAberto)||estado.jogos[0]||null;
       estado.cacheUsado=origem==='cache';
       estado.cacheAtualizadoEm=dados.cacheAtualizadoEm||dados.dataCache||estado.cacheAtualizadoEm||'';
+    }
+
+    function normalizarPalpiteApi(p){
+      if(!p)return null;
+      const idb=String(p.id_bolao||CONFIG.ID_BOLAO||'');
+      const idj=String(p.id_jogo||p.id||'');
+      if(!idj)return null;
+      const pm=p.placarMandante!==undefined?p.placarMandante:p.palpite_mandante;
+      const pv=p.placarVisitante!==undefined?p.placarVisitante:p.palpite_visitante;
+      return {
+        id_bolao:idb,
+        id_jogo:idj,
+        jogo:p.jogo||null,
+        palpite:{placarMandante:pm,placarVisitante:pv},
+        dataHora:p.dataHora||p.data_hora||'',
+        status:p.status||'VALIDO',
+        pontos:p.pontos||''
+      };
+    }
+
+    function salvarMeusPalpitesApiNoLocal(){
+      try{
+        const mapa=carregarPalpitesLocais();
+        Object.keys(estado.meusPalpites||{}).forEach(k=>{
+          const p=estado.meusPalpites[k];
+          const jogo=estado.jogos.find(j=>String(j.id_jogo||j.id)===String(p.id_jogo));
+          mapa[k]={tipo:'PALPITE_BOLAO_ESPORTIVO',versao:CONFIG.VERSAO,dataHora:p.dataHora||new Date().toISOString(),id_bolao:p.id_bolao,id_jogo:p.id_jogo,usuario:estado.usuario,jogo:jogo||p.jogo||{},palpite:p.palpite};
+        });
+        localStorage.setItem(palpitesKey(),JSON.stringify(mapa));
+      }catch(e){}
     }
 
     function salvarCache(dados){
@@ -362,14 +409,25 @@
 
     function getPalpiteLocal(j){
       if(!j)return null;
+      const key=palpiteKeyJogo(j);
+      if(estado.meusPalpites&&estado.meusPalpites[key]){
+        const p=estado.meusPalpites[key];
+        return {tipo:'PALPITE_BOLAO_ESPORTIVO',versao:CONFIG.VERSAO,dataHora:p.dataHora||'',id_bolao:p.id_bolao,id_jogo:p.id_jogo,usuario:estado.usuario,jogo:j,palpite:p.palpite};
+      }
+      if(j.meuPalpite){
+        const p=normalizarPalpiteApi(j.meuPalpite);
+        if(p)return {tipo:'PALPITE_BOLAO_ESPORTIVO',versao:CONFIG.VERSAO,dataHora:p.dataHora||'',id_bolao:p.id_bolao,id_jogo:p.id_jogo,usuario:estado.usuario,jogo:j,palpite:p.palpite};
+      }
       const mapa=carregarPalpitesLocais();
-      return mapa[palpiteKeyJogo(j)]||null;
+      return mapa[key]||null;
     }
 
     function salvarPalpiteLocal(payload){
       try{
         const mapa=carregarPalpitesLocais();
-        mapa[String(payload.id_bolao||CONFIG.ID_BOLAO)+'|'+String(payload.id_jogo||'')]=payload;
+        const key=String(payload.id_bolao||CONFIG.ID_BOLAO)+'|'+String(payload.id_jogo||'');
+        mapa[key]=payload;
+        estado.meusPalpites[key]=normalizarPalpiteApi({id_bolao:payload.id_bolao,id_jogo:payload.id_jogo,placarMandante:payload.palpite.placarMandante,placarVisitante:payload.palpite.placarVisitante,dataHora:payload.dataHora,status:'VALIDO'});
         localStorage.setItem(palpitesKey(),JSON.stringify(mapa));
         localStorage.setItem('ultimo_palpite_bolao_esportivo',JSON.stringify(payload));
       }catch(e){console.warn('Não foi possível salvar palpite local.',e)}
@@ -383,8 +441,12 @@
     }
 
     function textoPalpiteLocal(p){
-      if(!p||!p.palpite)return '';
-      return `${p.palpite.placarMandante} x ${p.palpite.placarVisitante}`;
+      if(!p)return '';
+      const pal=p.palpite||p;
+      const a=pal.placarMandante!==undefined?pal.placarMandante:pal.palpite_mandante;
+      const b=pal.placarVisitante!==undefined?pal.placarVisitante:pal.palpite_visitante;
+      if(a===undefined||b===undefined)return '';
+      return `${a} x ${b}`;
     }
 
     function render(){
@@ -407,7 +469,7 @@
         teamB.textContent=j.visitante;
         dataJogo.textContent=j.data||'--/--/----';
         horaJogo.textContent=j.hora||'--:--';
-        if(openText)openText.textContent=palpiteSalvo?(palpitePodeSerExibido(j)?('JÁ PALPITADO: '+textoPalpiteLocal(palpiteSalvo)):'JÁ PALPITADO'):statusJogo(j).toUpperCase();
+        if(openText)openText.textContent=palpiteSalvo?('JÁ PALPITADO: '+textoPalpiteLocal(palpiteSalvo)):statusJogo(j).toUpperCase();
         btnPalpite.disabled=!isAberto(j);
         btnPalpite.innerHTML=isAberto(j)?(palpiteSalvo?'<span>✏️</span><span>ALTERAR PALPITE</span>':'<span>⚽</span><span>FAZER PALPITE</span>'):'<span>🔒</span><span>PALPITE INDISPONÍVEL</span>';
       }
@@ -439,7 +501,7 @@
 
       const atual=getPalpiteLocal(j);
       openModal('⚽ Palpite por Placar',`
-        <div class="mini"><strong>${flagHtml(j,'mandante')} ${esc(j.mandante)} x ${esc(j.visitante)} ${flagHtml(j,'visitante')}</strong><p>${esc(j.data)} às ${esc(j.hora)} • ${esc(statusJogo(j))}</p>${j.limitePalpite?`<p>Limite: ${esc(j.limitePalpite)}</p>`:''}${atual?`<p class="saved-pick">Palpite já registrado neste aparelho. O placar ficará oculto até o fechamento do jogo.</p>`:''}</div>
+        <div class="mini"><strong>${flagHtml(j,'mandante')} ${esc(j.mandante)} x ${esc(j.visitante)} ${flagHtml(j,'visitante')}</strong><p>${esc(j.data)} às ${esc(j.hora)} • ${esc(statusJogo(j))}</p>${j.limitePalpite?`<p>Limite: ${esc(j.limitePalpite)}</p>`:''}${atual?`<p class="saved-pick">Palpite já registrado: ${esc(textoPalpiteLocal(atual))}. Outros participantes não verão antes do fechamento.</p>`:''}</div>
         <div class="score">
           <div class="field"><label>${esc(j.mandante)}</label><input id="golsA" type="number" min="0" max="30" inputmode="numeric" autocomplete="off"></div>
           <b style="padding-bottom:12px;color:#0a5a35">X</b>
@@ -544,8 +606,14 @@
 
     function screen(name){
       if(name==='boloes'){
-        const body=estado.boloes.length?estado.boloes.map(b=>`<div class="mini"><strong>${esc(b.nome)} <span class="chip">${esc(b.status||'Ativo')}</span></strong><p>${esc(b.participantes??0)} participantes • ${esc(b.jogos??0)} jogos cadastrados</p></div>`).join(''):telaVazia(estado.erroApi||'Nenhum bolão real retornado pela API.');
-        return openModal('🏆 Bolões',body);
+        const body=(estado.bolaoAtual?`<div class="mini"><strong>Bolão atual</strong><p>${esc(estado.bolaoAtual.nome_bolao||CONFIG.ID_BOLAO)} • ${esc(estado.bolaoAtual.tipo_bolao||'PUBLICO')}</p>${estado.bolaoAtual.codigo_convite?`<p>Código: <b>${esc(estado.bolaoAtual.codigo_convite)}</b></p>`:''}</div>`:'')+
+          `<div class="mini"><strong>Criar ou entrar em bolão</strong><p>Crie um bolão privado para família, trabalho ou amigos. Cada bolão tem ranking separado.</p></div>`+
+          (estado.boloes.length?estado.boloes.map(b=>`<button class="mini clickable" data-select-bolao="${esc(b.id_bolao)}"><strong>${esc(b.nome)} <span class="chip">${esc(b.tipo||b.status||'Ativo')}</span></strong><p>${esc(b.participantes??0)} participantes • ${esc(b.jogos??0)} jogos cadastrados</p>${b.codigo_convite?`<p>Código: ${esc(b.codigo_convite)}</p>`:''}</button>`).join(''):telaVazia(estado.erroApi||'Nenhum bolão real retornado pela API.'));
+        openModal('🏆 Bolões',body,'<button class="btn light" id="entrarCodigo">Entrar com Código</button><button class="btn primary" id="criarBolao">Criar Bolão</button>');
+        document.querySelectorAll('[data-select-bolao]').forEach(b=>b.onclick=()=>selecionarBolao(b.dataset.selectBolao));
+        entrarCodigo.onclick=abrirEntrarCodigo;
+        criarBolao.onclick=abrirCriarBolao;
+        return;
       }
 
       if(name==='jogos'){
@@ -559,22 +627,101 @@
       }
 
       if(name==='ranking'){
-        const body=estado.ranking.length?estado.ranking.map(r=>`<div class="mini"><strong>${esc(r.pos)}º — ${esc(r.nome)}</strong><p>${esc(r.pontos)} pontos ${esc(r.medalha||'🏅')}</p></div>`).join(''):telaVazia('Ainda não há ranking real registrado.');
+        const body=estado.ranking.length?estado.ranking.map(r=>`<div class="mini"><strong>${esc(r.pos)}º — ${esc(r.nome)}</strong><p>${esc(r.pontos)} pontos ${esc(r.medalha||'🏅')}</p></div>`).join(''):telaVazia('Ainda não há ranking real registrado. A pontuação será calculada automaticamente quando os resultados forem sincronizados.');
         return openModal('🏆 Ranking Geral',body);
       }
 
-      if(name==='regulamento')return openModal('📄 Regulamento',`<div class="mini"><strong>Regras principais</strong><p>1. Cada participante registra o palpite antes do fechamento do jogo.</p><p>2. Palpites encerrados não poderão ser alterados.</p><p>3. A pontuação será calculada conforme o regulamento interno.</p><p>4. O ranking será atualizado após a conferência dos resultados.</p><p>5. Os placares palpitados permanecem ocultos enquanto o jogo estiver aberto e só ficam visíveis após o fechamento.</p></div>`);
+      if(name==='regulamento')return openModal('📄 Regulamento',`<div class="mini"><strong>Regras principais</strong><p>1. Cada participante registra o palpite por placar antes do fechamento do jogo.</p><p>2. O participante vê o próprio palpite a qualquer momento.</p><p>3. Palpites de outros participantes só ficam visíveis após o fechamento/início definido para o jogo.</p><p>4. A pontuação será calculada automaticamente após os placares reais serem sincronizados.</p><p>5. Cada bolão privado tem código de convite, participantes e ranking próprios.</p></div>`);
 
       if(name==='palpites'){
         const mapa=carregarPalpitesLocais();
-        const itens=Object.values(mapa).sort((a,b)=>String(b.dataHora||'').localeCompare(String(a.dataHora||'')));
-        const body=itens.length?itens.map(u=>{const jAtual=jogoAtualDaLista(u.jogo||{});const pode=palpitePodeSerExibido(jAtual);return `<div class="mini ja-palpitado"><strong>${flagHtml(jAtual||u.jogo||{},'mandante')} ${esc((jAtual&&jAtual.mandante)||(u.jogo&&u.jogo.mandante)||'Mandante')} x ${esc((jAtual&&jAtual.visitante)||(u.jogo&&u.jogo.visitante)||'Visitante')} ${flagHtml(jAtual||u.jogo||{},'visitante')}</strong><p>${esc((jAtual&&jAtual.data)||(u.jogo&&u.jogo.data)||'')} às ${esc((jAtual&&jAtual.hora)||(u.jogo&&u.jogo.hora)||'')}</p><p class="saved-pick">${esc(pode?('Meu palpite: '+textoPalpiteLocal(u)):'Palpite registrado — placar oculto até o fechamento do jogo.')}</p></div>`}).join(''):`<div class="mini"><strong>Nenhum palpite salvo neste aparelho.</strong><p>Abra um jogo e digite o placar. Ao preencher os dois campos, o palpite será salvo automaticamente.</p></div>`;
+        const apiItens=Object.keys(estado.meusPalpites||{}).map(k=>estado.meusPalpites[k]);
+        const localItens=Object.values(mapa).map(p=>normalizarPalpiteApi({id_bolao:p.id_bolao,id_jogo:p.id_jogo,placarMandante:p.palpite&&p.palpite.placarMandante,placarVisitante:p.palpite&&p.palpite.placarVisitante,dataHora:p.dataHora,status:'VALIDO'})).filter(Boolean);
+        const todos={};apiItens.concat(localItens).forEach(p=>{todos[String(p.id_bolao)+'|'+String(p.id_jogo)]=p});
+        const itens=Object.values(todos).sort((a,b)=>String(b.dataHora||'').localeCompare(String(a.dataHora||'')));
+        const body=itens.length?itens.map(u=>{const jAtual=estado.jogos.find(j=>String(j.id_jogo||j.id)===String(u.id_jogo))||u.jogo||{};return `<div class="mini ja-palpitado"><strong>${flagHtml(jAtual,'mandante')} ${esc(jAtual.mandante||u.mandante||'Mandante')} x ${esc(jAtual.visitante||u.visitante||'Visitante')} ${flagHtml(jAtual,'visitante')}</strong><p>${esc(jAtual.data||'')} ${jAtual.hora?'às '+esc(jAtual.hora):''}</p><p class="saved-pick">Meu palpite: ${esc(textoPalpiteLocal(u))}</p></div>`}).join(''):`<div class="mini"><strong>Nenhum palpite registrado.</strong><p>Abra um jogo e digite o placar. Ao preencher os dois campos, o palpite será salvo automaticamente.</p></div>`;
         openModal('🎯 Palpites',body,'<button class="btn light" id="ok">Fechar</button><button class="btn primary" id="novo">Fazer Palpite</button>');
         setTimeout(()=>{novo.onclick=abrirPalpite;ok.onclick=closeModal},0);
         return;
       }
 
-      if(name==='mais')return openModal('☰ Mais',`<div class="mini"><strong>Central do Bolão</strong><p>Acesse regulamento, ranking, jogos, bolões ativos e dados do participante.</p></div><div class="mini"><strong>Participante</strong><p>${esc(estado.usuario.nome||'Participante')}</p></div><div class="mini"><strong>Cache local</strong><p>${estado.cacheAtualizadoEm?'Última carga salva: '+esc(estado.cacheAtualizadoEm):'Nenhum cache salvo ainda.'}</p><p>${estado.cacheUsado?'Dados exibidos primeiro pelo cache e atualizados em segundo plano.':'Dados atualizados pela API real.'}</p></div><div class="mini"><strong>API</strong><p>${apiUrl()?esc(apiUrl()):'API não informada no link do Mini App.'}</p></div>`);
+      if(name==='mais'){
+        return openModal('☰ Mais',`<div class="mini"><strong>Central do Bolão</strong><p>Acesse regulamento, ranking, jogos, bolões ativos e dados do participante.</p></div><div class="mini"><strong>Participante</strong><p>${esc(estado.usuario.nome||'Participante')}</p></div><div class="mini"><strong>Bolão atual</strong><p>${esc((estado.bolaoAtual&&estado.bolaoAtual.nome_bolao)||CONFIG.ID_BOLAO)}</p></div><div class="mini"><strong>Cache local</strong><p>${estado.cacheAtualizadoEm?'Última carga salva: '+esc(estado.cacheAtualizadoEm):'Nenhum cache salvo ainda.'}</p><p>${estado.cacheUsado?'Dados exibidos primeiro pelo cache e atualizados em segundo plano.':'Dados atualizados pela API real.'}</p></div>`, '<button class="btn light" id="entrarCodigo">Entrar Código</button><button class="btn primary" id="criarBolao">Criar Bolão</button>');
+        setTimeout(()=>{entrarCodigo.onclick=abrirEntrarCodigo;criarBolao.onclick=abrirCriarBolao},0);
+      }
+    }
+
+    async function selecionarBolao(id){
+      if(!id)return;
+      CONFIG.ID_BOLAO=String(id);
+      closeModal();
+      limparCacheAtual();
+      toastMsg('Carregando bolão selecionado...');
+      await loadApi();
+    }
+
+    function abrirCriarBolao(){
+      if(!estado.usuario.idTelegram)return toastMsg('Abra pelo Telegram para criar um bolão vinculado ao seu usuário.');
+      openModal('➕ Criar Bolão Privado',`<div class="mini"><strong>Novo bolão privado</strong><p>Crie um bolão para trabalho, família ou amigos. O sistema gera código de convite e ranking separado.</p></div><div class="field"><label>Nome do bolão</label><input id="nomeBolaoNovo" type="text" maxlength="80" placeholder="Ex: Bolão da Família"></div>`, '<button class="btn light" id="cancelarCriar">Cancelar</button><button class="btn primary" id="confirmarCriar">Criar Bolão</button>');
+      cancelarCriar.onclick=closeModal;
+      confirmarCriar.onclick=criarBolaoPrivado;
+    }
+
+    async function criarBolaoPrivado(){
+      const nome=String(nomeBolaoNovo.value||'').trim();
+      if(!nome)return toastMsg('Informe o nome do bolão.');
+      try{
+        confirmarCriar.disabled=true;confirmarCriar.textContent='Criando...';
+        const r=await chamarApiAcao('criarBolaoPrivado',{nome_bolao:nome,telegram_id:estado.usuario.idTelegram,nome_usuario:estado.usuario.nome,username:estado.usuario.username,campeonato_id:'CUP'});
+        if(!r||!r.ok)throw new Error((r&&r.erro)||'Falha ao criar bolão.');
+        CONFIG.ID_BOLAO=r.bolao.id_bolao;
+        closeModal();
+        await loadApi();
+        mostrarConviteBolao(r.bolao,r.convite);
+      }catch(e){toastMsg(e.message||String(e));if(confirmarCriar){confirmarCriar.disabled=false;confirmarCriar.textContent='Criar Bolão'}}
+    }
+
+    function abrirEntrarCodigo(){
+      if(!estado.usuario.idTelegram)return toastMsg('Abra pelo Telegram para entrar em bolões privados.');
+      openModal('🔑 Entrar com Código',`<div class="mini"><strong>Código do convite</strong><p>Digite o código recebido pelo organizador do bolão.</p></div><div class="field"><label>Código</label><input id="codigoBolao" type="text" maxlength="12" placeholder="Ex: ABC123" style="text-transform:uppercase"></div>`, '<button class="btn light" id="cancelarEntrar">Cancelar</button><button class="btn primary" id="confirmarEntrar">Entrar</button>');
+      cancelarEntrar.onclick=closeModal;
+      confirmarEntrar.onclick=entrarBolaoCodigo;
+    }
+
+    async function entrarBolaoCodigo(){
+      const codigo=String(codigoBolao.value||'').trim().toUpperCase();
+      if(!codigo)return toastMsg('Informe o código do bolão.');
+      try{
+        confirmarEntrar.disabled=true;confirmarEntrar.textContent='Entrando...';
+        const r=await chamarApiAcao('entrarBolaoPorCodigo',{codigo_convite:codigo,telegram_id:estado.usuario.idTelegram,nome:estado.usuario.nome,username:estado.usuario.username});
+        if(!r||!r.ok)throw new Error((r&&r.erro)||'Não foi possível entrar no bolão.');
+        CONFIG.ID_BOLAO=r.bolao.id_bolao;
+        closeModal();
+        await loadApi();
+        toastMsg('Entrada confirmada no bolão: '+(r.bolao.nome_bolao||r.bolao.nome||CONFIG.ID_BOLAO));
+      }catch(e){toastMsg(e.message||String(e));if(confirmarEntrar){confirmarEntrar.disabled=false;confirmarEntrar.textContent='Entrar'}}
+    }
+
+    function mostrarConviteBolao(bolao,convite){
+      const link=(convite&&convite.link)||'';
+      const codigo=(convite&&convite.codigo)||'';
+      openModal('✅ Bolão Criado',`<div class="mini"><strong>${esc(bolao.nome_bolao||'Bolão privado')}</strong><p>Código de convite: <b>${esc(codigo)}</b></p><p style="word-break:break-all">${esc(link)}</p></div>`, '<button class="btn light" id="copiarConvite">Copiar Link</button><button class="btn primary" id="ok">Fechar</button>');
+      copiarConvite.onclick=()=>copiarTexto(link||codigo);
+      ok.onclick=closeModal;
+    }
+
+    async function copiarTexto(txt){
+      try{await navigator.clipboard.writeText(txt);toastMsg('Convite copiado.')}catch(e){toastMsg('Copie manualmente: '+txt)}
+    }
+
+    function limparCacheAtual(){
+      try{localStorage.removeItem(cacheKey());localStorage.removeItem(cacheInfoKey())}catch(e){}
+    }
+
+    async function chamarApiAcao(acao,params){
+      const url=apiUrl();
+      if(!url)throw new Error('API não configurada no Mini App.');
+      return await chamarApiJsonp(url,Object.assign({acao:acao,v:CONFIG.VERSAO,t:Date.now()},params||{}));
     }
 
     function marcarNavAtiva(nav){
@@ -651,7 +798,7 @@
 
       try{
         // Se existe cache recente, mostra instantâneo e atualiza em segundo plano sem bloquear a tela.
-        const j=await chamarApiJsonp(url,{acao:'obterHomeBolaoEsportivo',id_bolao:CONFIG.ID_BOLAO,v:CONFIG.VERSAO,t:Date.now()});
+        const j=await chamarApiJsonp(url,{acao:'obterHomeBolaoEsportivo',id_bolao:CONFIG.ID_BOLAO,codigo_convite:CONFIG.CODIGO_CONVITE,telegram_id:estado.usuario.idTelegram,nome:estado.usuario.nome,username:estado.usuario.username,v:CONFIG.VERSAO,t:Date.now()});
         if(!j||!j.ok)throw new Error((j&&j.erro)||'Resposta inválida da API.');
 
         const dados=j.dados||{};
