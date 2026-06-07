@@ -110,7 +110,7 @@
 
   <div class="modal-bg" id="modal">
     <div class="modal">
-      <div class="modal-head"><h2 id="modalTitle"></h2><button class="close" id="close">×</button></div>
+      <div class="modal-head"><h2 id="modalTitle"></h2><button class="close" id="btnCloseModal" type="button" aria-label="Fechar">×</button></div>
       <div class="modal-body" id="modalBody"></div>
       <div class="actions" id="modalActions"></div>
     </div>
@@ -123,7 +123,7 @@
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     const CONFIG={
-      VERSAO:'V011_LAYOUT_JOGOS_TIMER_AUTO_PROXIMO',
+      VERSAO:'V012_FECHAR_MODAL_MENU_GRUPO_FIXO',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
       API_URL_FIXA:'', // Opcional: cole aqui a URL /exec se quiser fixar manualmente.
       ID_BOLAO:URL_PARAMS.get('id_bolao')||'BOLAO001',
@@ -825,7 +825,8 @@
 
     function events(){
       btnPalpite.onclick=abrirPalpite;
-      close.onclick=closeModal;
+      const btnCloseModal=document.getElementById('btnCloseModal');
+      if(btnCloseModal)btnCloseModal.onclick=(e)=>{e.preventDefault();e.stopPropagation();closeModal()};
       modal.onclick=e=>{if(e.target.id==='modal')closeModal()};
 
       // Botões superiores e links internos com data-screen.
