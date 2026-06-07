@@ -82,14 +82,14 @@
         <div class="game-grid">
           <div><div class="flag flag-mexico" id="flagA" aria-label="Bandeira do México"></div><div class="team" id="teamA">MÉXICO</div></div>
           <div class="center">
-            <div class="date"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M8 3v4M16 3v4M4 10h16"></path></svg><span id="dataJogo">11/06/2026</span></div>
+            <div class="date"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M8 3v4M16 3v4M4 10h16"></path></svg><span id="dataJogo">--/--/----</span></div>
             <div class="vs">VS</div>
-            <div class="hour"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 7.5v4.8l3 1.8"></path></svg><span id="horaJogo">00:00</span></div>
+            <div class="hour"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 7.5v4.8l3 1.8"></path></svg><span id="horaJogo">--:--</span></div>
           </div>
           <div><div class="flag flag-south-africa" id="flagB" aria-label="Bandeira da África do Sul"></div><div class="team" id="teamB">ÁFRICA DO SUL</div></div>
         </div>
-        <div class="open"><i></i><span>PALPITES ABERTOS</span></div>
-        <button class="bet" id="btnPalpite"><span>⚽</span><span>FAZER PALPITE</span></button>
+        <div class="open"><i></i><span>CARREGANDO API REAL</span></div>
+        <button class="bet" id="btnPalpite" disabled><span>📡</span><span>AGUARDANDO JOGO REAL</span></button>
       </section>
 
       <section class="card ranking">
@@ -123,7 +123,7 @@
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     const CONFIG={
-      VERSAO:'V016_API_FIXA_LINK_LIMPO_GRUPO',
+      VERSAO:'V017_API_FIXA_CACHE_LIMPO_MENUS_OK',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbyC2MNJ9w8sOJKadDMbvQj8kqdOt4WZ66957LVtelZQ3OjczoQlv6nScVy4ktqPvu3sMg/exec', // API fixa para permitir link limpo no grupo sem parâmetro ?api=.
       ID_BOLAO:URL_PARAMS.get('id_bolao')||'BOLAO001',
@@ -162,11 +162,14 @@
 
     function esc(v){return String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#039;")}
     function apiUrl(){
-      const candidatos=[CONFIG.API_URL,localStorage.getItem('PSS_MBE_API_URL'),CONFIG.API_URL_FIXA].map(v=>String(v||'').trim()).filter(Boolean);
+      const fixa=String(CONFIG.API_URL_FIXA||'').trim();
+      const param=String(CONFIG.API_URL||'').trim();
+      const salva=String(localStorage.getItem('PSS_MBE_API_URL')||'').trim();
+      const candidatos=[param,fixa,salva].filter(Boolean);
       for(const u of candidatos){
         if(/^https:\/\/script\.google\.com\/macros\/s\/[^\/]+\/exec/i.test(u))return u;
       }
-      return String(CONFIG.API_URL_FIXA||'').trim();
+      return fixa;
     }
     function isAberto(j){return !!(j&&j.aceitaPalpite)}
     function statusJogo(j){return String(j&&j.status?j.status:(isAberto(j)?'Aberto':'Em breve'))}
@@ -294,11 +297,20 @@
 
 
     function cacheKey(){
-      return 'PSS_MBE_HOME_CACHE_'+String(CONFIG.ID_BOLAO||'BOLAO001');
+      return 'PSS_MBE_HOME_CACHE_'+String(CONFIG.VERSAO||'V017')+'_'+String(CONFIG.ID_BOLAO||'BOLAO001');
     }
 
     function cacheInfoKey(){
-      return 'PSS_MBE_HOME_CACHE_INFO_'+String(CONFIG.ID_BOLAO||'BOLAO001');
+      return 'PSS_MBE_HOME_CACHE_INFO_'+String(CONFIG.VERSAO||'V017')+'_'+String(CONFIG.ID_BOLAO||'BOLAO001');
+    }
+
+    function limparCachesAntigosSeNecessario(){
+      try{
+        const prefixos=['PSS_MBE_HOME_CACHE_BOLAO001','PSS_MBE_HOME_CACHE_INFO_BOLAO001'];
+        prefixos.forEach(k=>localStorage.removeItem(k));
+        const apiSalva=String(localStorage.getItem('PSS_MBE_API_URL')||'');
+        if(apiSalva && !/^https:\/\/script\.google\.com\/macros\/s\/[^\/]+\/exec/i.test(apiSalva))localStorage.removeItem('PSS_MBE_API_URL');
+      }catch(e){}
     }
 
     function aplicarDadosApi(dados, origem){
@@ -991,7 +1003,7 @@
       }
     }
 
-    (async()=>{initTelegram();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);const temCache=carregarCache();render();events();await loadApi()})();
+    (async()=>{initTelegram();limparCachesAntigosSeNecessario();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);const temCache=carregarCache();render();events();await loadApi()})();
   </script>
 </body>
 </html>
