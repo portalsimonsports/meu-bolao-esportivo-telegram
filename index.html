@@ -123,7 +123,7 @@
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     const CONFIG={
-      VERSAO:'V005_FILTRO_DUPLICIDADE_HORARIO_ZERO',
+      VERSAO:'V006_NAV_INFERIOR_FUNCIONAL',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
       API_URL_FIXA:'', // Opcional: cole aqui a URL /exec se quiser fixar manualmente.
       ID_BOLAO:URL_PARAMS.get('id_bolao')||'BOLAO001',
@@ -404,10 +404,39 @@
       if(name==='mais')return openModal('☰ Mais',`<div class="mini"><strong>Central do Bolão</strong><p>Acesse regulamento, ranking, jogos, bolões ativos e dados do participante.</p></div><div class="mini"><strong>Participante</strong><p>${esc(estado.usuario.nome||'Participante')}</p></div><div class="mini"><strong>API</strong><p>${apiUrl()?esc(apiUrl()):'API não informada no link do Mini App.'}</p></div>`);
     }
 
+    function marcarNavAtiva(nav){
+      document.querySelectorAll('[data-nav]').forEach(x=>x.classList.remove('active'));
+      const alvo=document.querySelector(`[data-nav="${nav}"]`);
+      if(alvo)alvo.classList.add('active');
+    }
+
+    function voltarInicio(){
+      marcarNavAtiva('inicio');
+      closeModal();
+      try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}
+    }
+
     function events(){
-      btnPalpite.onclick=abrirPalpite;close.onclick=closeModal;modal.onclick=e=>{if(e.target.id==='modal')closeModal()};
-      document.querySelectorAll('[data-screen]').forEach(b=>b.onclick=()=>screen(b.dataset.screen));
-      document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-nav]').forEach(x=>x.classList.remove('active'));b.classList.add('active')});
+      btnPalpite.onclick=abrirPalpite;
+      close.onclick=closeModal;
+      modal.onclick=e=>{if(e.target.id==='modal')closeModal()};
+
+      // Botões superiores e links internos com data-screen.
+      document.querySelectorAll('[data-screen]').forEach(b=>{
+        if(b.dataset.nav)return;
+        b.onclick=()=>screen(b.dataset.screen);
+      });
+
+      // Barra inferior: além de marcar o item ativo, também executa a tela correspondente.
+      document.querySelectorAll('[data-nav]').forEach(b=>{
+        b.onclick=()=>{
+          const nav=b.dataset.nav||'inicio';
+          const scr=b.dataset.screen||'';
+          marcarNavAtiva(nav);
+          if(nav==='inicio')return voltarInicio();
+          if(scr)return screen(scr);
+        };
+      });
     }
 
     function chamarApiJsonp(url,params){
