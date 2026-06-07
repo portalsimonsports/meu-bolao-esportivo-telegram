@@ -123,7 +123,7 @@
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     const CONFIG={
-      VERSAO:'V004_DADOS_REAIS_FLAGS_IMG_SEM_DUPLICIDADE',
+      VERSAO:'V005_FILTRO_DUPLICIDADE_HORARIO_ZERO',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
       API_URL_FIXA:'', // Opcional: cole aqui a URL /exec se quiser fixar manualmente.
       ID_BOLAO:URL_PARAMS.get('id_bolao')||'BOLAO001',
@@ -155,6 +155,42 @@
     function isAberto(j){return !!(j&&j.aceitaPalpite)}
     function statusJogo(j){return String(j&&j.status?j.status:(isAberto(j)?'Aberto':'Em breve'))}
     function idJogo(j){return String((j&&(j.id_jogo||j.id))||'')}
+
+
+    function normalizarChave(v){
+      return String(v||'').trim().toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ');
+    }
+
+    function chaveJogoSemHora(j){
+      if(!j)return '';
+      return [
+        normalizarChave(j.id_bolao||CONFIG.ID_BOLAO),
+        normalizarChave(j.mandante),
+        normalizarChave(j.visitante),
+        String(j.data||'').trim()
+      ].join('|');
+    }
+
+    function scoreDuplicado(j){
+      let score=0;
+      const hora=String(j&&j.hora||'').trim();
+      const limite=String(j&&j.limitePalpite||'').trim();
+      if(hora)score+=10;
+      if(hora&&hora!=='00:00'&&hora!=='00:00:00')score+=100;
+      if(limite&&limite.indexOf('00:00')<0)score+=50;
+      if(j&&j.aceitaPalpite)score+=5;
+      return score;
+    }
+
+    function deduplicarJogos(jogos){
+      const mapa={};
+      (jogos||[]).forEach(j=>{
+        const chave=chaveJogoSemHora(j);
+        if(!chave)return;
+        if(!mapa[chave]||scoreDuplicado(j)>scoreDuplicado(mapa[chave]))mapa[chave]=j;
+      });
+      return Object.values(mapa).sort((a,b)=>String((a.data||'')+' '+(a.hora||'')).localeCompare(String((b.data||'')+' '+(b.hora||''))));
+    }
 
 
     function normalizarTextoPais(v){
@@ -415,10 +451,15 @@
 
         const dados=j.dados||{};
         if(dados.id_bolao)CONFIG.ID_BOLAO=dados.id_bolao;
-        estado.jogos=Array.isArray(dados.jogos)?dados.jogos.map(normalizarJogo).filter(Boolean):[];
+        estado.jogos=deduplicarJogos(Array.isArray(dados.jogos)?dados.jogos.map(normalizarJogo).filter(Boolean):[]);
         estado.ranking=Array.isArray(dados.ranking)?dados.ranking:[];
         estado.boloes=Array.isArray(dados.boloes)?dados.boloes:[];
-        estado.jogo=normalizarJogo(dados.jogoDestaque)||estado.jogos.find(isAberto)||estado.jogos[0]||null;
+        {
+          const destaque=normalizarJogo(dados.jogoDestaque);
+          const chaveDestaque=chaveJogoSemHora(destaque);
+          const destaqueFiltrado=chaveDestaque?estado.jogos.find(j=>chaveJogoSemHora(j)===chaveDestaque):null;
+          estado.jogo=destaqueFiltrado||destaque||estado.jogos.find(isAberto)||estado.jogos[0]||null;
+        }
         estado.carregando=false;
         estado.erroApi='';
         render();
