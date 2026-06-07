@@ -123,7 +123,7 @@
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     const CONFIG={
-      VERSAO:'V012_FECHAR_MODAL_MENU_GRUPO_FIXO',
+      VERSAO:'V014_CRIAR_BOLAO_SEM_TIMEOUT_CURTO',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
       API_URL_FIXA:'', // Opcional: cole aqui a URL /exec se quiser fixar manualmente.
       ID_BOLAO:URL_PARAMS.get('id_bolao')||'BOLAO001',
@@ -876,7 +876,7 @@
         const qs=new URLSearchParams(Object.assign({},params,{callback:cb}));
         const sep=url.includes('?')?'&':'?';
         let finalUrl=url+sep+qs.toString();
-        let timer=setTimeout(()=>{cleanup();reject(new Error('Tempo esgotado ao consultar API.'))},15000);
+        let timer=setTimeout(()=>{cleanup();reject(new Error('Tempo esgotado ao consultar API. Tente novamente em alguns segundos.'))},60000);
 
         function cleanup(){
           clearTimeout(timer);
