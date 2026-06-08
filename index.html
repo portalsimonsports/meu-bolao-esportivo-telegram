@@ -124,7 +124,7 @@
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     const CONFIG={
-      VERSAO:'V028_BOLAO_ATIVO_PALPITE_ISOLADO_POR_BOLAO',
+      VERSAO:'V029_CARREGA_72_JOGOS_CONTADOR_CORRETO',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbyC2MNJ9w8sOJKadDMbvQj8kqdOt4WZ66957LVtelZQ3OjczoQlv6nScVy4ktqPvu3sMg/exec', // API fixa para permitir link limpo no grupo sem parâmetro ?api=.
       ID_BOLAO:URL_PARAMS.get('id_bolao')||'BOLAO001',
@@ -336,19 +336,19 @@
 
 
     function cacheKey(){
-      return 'PSS_MBE_HOME_CACHE_V028_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_V029_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function cacheInfoKey(){
-      return 'PSS_MBE_HOME_CACHE_INFO_V028_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_INFO_V029_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function chavesCachePossiveis(){
       const id=String(CONFIG.ID_BOLAO||'BOLAO001');
       const tg=String(estado.usuario.idTelegram||'ANON');
+      // V029: não usar caches antigos/estáveis porque eles podem conter lista cortada em 45 jogos.
       return [
-        'PSS_MBE_HOME_CACHE_V028_'+id+'_'+tg,
-        'PSS_MBE_HOME_CACHE_STABLE_'+id
+        'PSS_MBE_HOME_CACHE_V029_'+id+'_'+tg
       ];
     }
 
@@ -356,6 +356,19 @@
       try{
         const apiSalva=String(localStorage.getItem('PSS_MBE_API_URL')||'');
         if(apiSalva && !/^https:\/\/script\.google\.com\/macros\/s\/[^\/]+\/exec/i.test(apiSalva))localStorage.removeItem('PSS_MBE_API_URL');
+
+        // V029: limpa somente caches de HOME antigos que podiam trazer 45 jogos.
+        // Não remove palpites locais nem dados reais da aba PALPITES.
+        const limpar=String(URL_PARAMS.get('limpar_cache')||'').toLowerCase();
+        const deveLimpar=limpar==='1'||limpar==='sim'||limpar==='true';
+        const removiveis=[];
+        for(let i=0;i<localStorage.length;i++){
+          const k=localStorage.key(i)||'';
+          if(k.startsWith('PSS_MBE_HOME_CACHE_')||k.startsWith('PSS_MBE_HOME_CACHE_INFO_')){
+            if(deveLimpar || !k.includes('_V029_'))removiveis.push(k);
+          }
+        }
+        removiveis.forEach(k=>localStorage.removeItem(k));
       }catch(e){}
     }
 
@@ -374,9 +387,19 @@
       // Primeiro carrega os palpites persistidos no localStorage (fonte de verdade local).
       var palpitesLocaisAtual=carregarPalpitesLocais();
       var novosMeusPalpites={};
-      // 1) Traz palpites locais persistidos
+      // 1) Traz apenas palpites locais válidos da versão atual e do bolão ativo.
+      // Caches locais antigos não são usados para contador, para não aparecerem 27 jogos como já palpitados indevidamente.
+      const idsJogosAtuais={};
+      estado.jogos.forEach(function(j){idsJogosAtuais[String(j.id_jogo||j.id||'')]=true});
       Object.keys(palpitesLocaisAtual).forEach(function(k){
         var p=palpitesLocaisAtual[k];
+        if(!p)return;
+        if(String(p.id_bolao||'')!==String(CONFIG.ID_BOLAO||''))return;
+        if(!idsJogosAtuais[String(p.id_jogo||'')])return;
+        var uidAtual=String(estado.usuario.idTelegram||'');
+        var uidPalpite=String((p.usuario&&p.usuario.idTelegram)||p.telegram_id||'');
+        if(uidAtual&&uidPalpite&&uidAtual!==uidPalpite)return;
+        if(p.versao&&String(p.versao)!==String(CONFIG.VERSAO))return;
         var normal=normalizarPalpiteApi({id_bolao:p.id_bolao,id_jogo:p.id_jogo,placarMandante:p.palpite&&p.palpite.placarMandante,placarVisitante:p.palpite&&p.palpite.placarVisitante,dataHora:p.dataHora,status:'VALIDO'});
         if(normal&&normal.id_jogo)novosMeusPalpites[k]=normal;
       });
@@ -493,6 +516,19 @@
       return String((j&&j.id_bolao)||CONFIG.ID_BOLAO||'BOLAO001')+'|'+String(idJogo(j));
     }
 
+    function palpiteLocalValidoParaJogo(p,j){
+      if(!p||!j)return false;
+      if(String(p.id_bolao||'')!==String((j&&j.id_bolao)||CONFIG.ID_BOLAO||''))return false;
+      if(String(p.id_jogo||'')!==String(idJogo(j)))return false;
+      const uidAtual=String(estado.usuario.idTelegram||'');
+      const uidPalpite=String((p.usuario&&p.usuario.idTelegram)||p.telegram_id||'');
+      if(uidAtual && uidPalpite && uidAtual!==uidPalpite)return false;
+      // V029: localStorage antigo de versões anteriores não entra no contador para evitar falso “já palpitado”.
+      if(p.versao && String(p.versao)!==String(CONFIG.VERSAO))return false;
+      const pal=p.palpite||{};
+      return pal.placarMandante!==undefined && pal.placarVisitante!==undefined;
+    }
+
     function carregarPalpitesLocais(){
       try{
         const raw=localStorage.getItem(palpitesKey());
@@ -514,7 +550,8 @@
         if(p)return {tipo:'PALPITE_BOLAO_ESPORTIVO',versao:CONFIG.VERSAO,dataHora:p.dataHora||'',id_bolao:p.id_bolao,id_jogo:p.id_jogo,usuario:estado.usuario,jogo:j,palpite:p.palpite};
       }
       const mapa=carregarPalpitesLocais();
-      return mapa[key]||null;
+      const local=mapa[key]||null;
+      return palpiteLocalValidoParaJogo(local,j)?local:null;
     }
 
     function salvarPalpiteLocal(payload){
@@ -882,8 +919,9 @@
       if(name==='jogos'){
         // CORRECAO: lista em ordem cronologica (proximo a iniciar primeiro)
         var jogosOrdenados=(estado.jogos||[]).slice().sort(function(a,b){return millisJogo(a)-millisJogo(b)});
+        var palpitados=jogosOrdenados.filter(function(j){return !!getPalpiteLocal(j)});
         var pendentes=jogosOrdenados.filter(function(j){return isAberto(j)&&!getPalpiteLocal(j)});
-        var resumo=jogosOrdenados.length?htmlBolaoContexto('Palpites e ranking separados por bolão.')+'<div class="pendentes-box"><b>'+pendentes.length+'</b> jogo(s) ainda sem palpite neste bolão.</div>':htmlBolaoContexto('Palpites e ranking separados por bolão.');
+        var resumo=jogosOrdenados.length?htmlBolaoContexto('Palpites e ranking separados por bolão.')+'<div class="pendentes-box"><b>'+jogosOrdenados.length+'</b> jogo(s) carregado(s) neste bolão.<br><b>'+pendentes.length+'</b> ainda sem palpite aberto.<br><b>'+palpitados.length+'</b> já palpitado(s) por você neste bolão.</div>':htmlBolaoContexto('Palpites e ranking separados por bolão.');
         var bodyJogos=jogosOrdenados.length?resumo+jogosOrdenados.map(function(j){
           var p=getPalpiteLocal(j);
           return '<div class="mini '+(p?'ja-palpitado':'')+'"><div class="game-card-head">'+textoDataHoraStatus(j)+'</div>'+htmlLinhaTimesJogo(j)+(p?'<p class="saved-pick">'+esc(textoPalpitePrivado(p,j))+'</p>':htmlTempoParaPalpitar(j))+'<div class="mini-actions">'+(isAberto(j)?'<button class="mini-action" data-palpitar-jogo="'+esc(idJogo(j))+'">'+(p?'Alterar palpite':'Fazer palpite')+'</button>':'')+'<button class="mini-action secondary" data-select-jogo="'+esc(idJogo(j))+'">Selecionar</button></div></div>';
