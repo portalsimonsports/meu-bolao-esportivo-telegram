@@ -123,14 +123,15 @@
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     const CONFIG={
-      VERSAO:'V019_BOLOES_VISIVEIS_PALPITES_PROTEGIDOS_DESTAQUE_CORRETO',
+      VERSAO:'V027_BOLOES_CRIADOS_PARTICIPANDO_LINK_OFICIAL_FIX',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbyC2MNJ9w8sOJKadDMbvQj8kqdOt4WZ66957LVtelZQ3OjczoQlv6nScVy4ktqPvu3sMg/exec', // API fixa para permitir link limpo no grupo sem parâmetro ?api=.
       ID_BOLAO:URL_PARAMS.get('id_bolao')||'BOLAO001',
       CODIGO_CONVITE:URL_PARAMS.get('codigo_convite')||URL_PARAMS.get('codigo')||'',
       ENVIAR_AO_BOT_SEM_API:true,
       CACHE_TTL_MINUTOS:30,
-      CACHE_MAX_HORAS:24
+      CACHE_MAX_HORAS:24,
+      TELEGRAM_MINIAPP_OFICIAL:'https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo'
     };
 
     const tg=window.Telegram&&window.Telegram.WebApp?window.Telegram.WebApp:null;
@@ -153,11 +154,33 @@
     };
 
     function initTelegram(){
-      if(!tg)return;
-      tg.ready();tg.expand();
-      try{tg.setHeaderColor('#062d1d');tg.setBackgroundColor('#00170e');tg.enableClosingConfirmation()}catch(e){}
-      const u=tg.initDataUnsafe&&tg.initDataUnsafe.user?tg.initDataUnsafe.user:null;
-      if(u){estado.usuario={idTelegram:u.id||'',nome:[u.first_name,u.last_name].filter(Boolean).join(' ')||u.username||'Participante',username:u.username||''}}
+      if(tg){
+        tg.ready();tg.expand();
+        try{tg.setHeaderColor('#062d1d');tg.setBackgroundColor('#00170e');tg.enableClosingConfirmation()}catch(e){}
+        const u=tg.initDataUnsafe&&tg.initDataUnsafe.user?tg.initDataUnsafe.user:null;
+        if(u){
+          estado.usuario={idTelegram:String(u.id||''),nome:[u.first_name,u.last_name].filter(Boolean).join(' ')||u.username||'Participante',username:u.username||''};
+          try{localStorage.setItem('PSS_MBE_ULTIMO_TELEGRAM_ID',estado.usuario.idTelegram);localStorage.setItem('PSS_MBE_ULTIMO_NOME',estado.usuario.nome);localStorage.setItem('PSS_MBE_ULTIMO_USERNAME',estado.usuario.username||'')}catch(e){}
+        }
+      }
+
+      // Fallback só para teste no navegador: permite abrir como ?telegram_id=197139159.
+      // No uso real, o Telegram envia o id automaticamente via initDataUnsafe.user.
+      if(!estado.usuario.idTelegram && URL_PARAMS.get('telegram_id')){
+        estado.usuario={idTelegram:String(URL_PARAMS.get('telegram_id')||''),nome:URL_PARAMS.get('nome')||'Participante',username:URL_PARAMS.get('username')||''};
+      }
+
+      aplicarStartParamTelegram();
+    }
+
+    function aplicarStartParamTelegram(){
+      let sp=URL_PARAMS.get('tgWebAppStartParam')||URL_PARAMS.get('startapp')||'';
+      try{if(tg&&tg.initDataUnsafe&&tg.initDataUnsafe.start_param)sp=tg.initDataUnsafe.start_param||sp}catch(e){}
+      sp=String(sp||'').trim();
+      if(!sp)return;
+      const partes=sp.split('_');
+      if(partes[0])CONFIG.ID_BOLAO=partes[0];
+      if(partes[1])CONFIG.CODIGO_CONVITE=partes[1].toUpperCase();
     }
 
     function esc(v){return String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#039;")}
@@ -808,7 +831,9 @@
         var boloesPublicos=estado.boloesPublicos||estado.boloes.filter(function(b){return String(b.tipo||'PUBLICO').toUpperCase()==='PUBLICO'});
         var meusCriados=estado.meusBoloesCriados||estado.boloes.filter(function(b){return b.souCriador});
         var participando=estado.boloesParticipando||[];
+        var avisoUsuario=!estado.usuario.idTelegram?'<div class="mini" style="border-color:rgba(212,166,60,.55);background:#fffdf4"><strong>⚠️ Abra pelo Mini App oficial do Telegram</strong><p>Fora do Telegram não é possível identificar o participante; por isso os bolões privados criados/participando podem não aparecer. Para teste no navegador, use ?telegram_id=SEU_ID.</p></div>':'';
         var bodyBoloes=
+          avisoUsuario+
           (estado.bolaoAtual?'<div class="mini" style="border-color:rgba(10,90,53,.4);background:#f0fff4"><strong>✅ Bolão ativo: '+esc(estado.bolaoAtual.nome_bolao||CONFIG.ID_BOLAO)+'</strong><p>'+esc(estado.bolaoAtual.tipo_bolao||'PUBLICO')+
           (estado.bolaoAtual.codigo_convite&&estado.bolaoAtual.codigo_convite!=='PUBLICO'?'&nbsp;•&nbsp;Código: <b>'+esc(estado.bolaoAtual.codigo_convite)+'</b>':'')+
           '</p></div>':'')+
@@ -893,7 +918,7 @@
       lista=Array.isArray(lista)?lista:[];
       var itens=lista.length?lista.map(function(b){
         var codigo=b.codigo_convite||'';
-        var link=b.link_convite||montarLinkConviteLocal(b);
+        var link=b.link_convite_oficial||b.link_convite||montarLinkConviteLocal(b);
         var codigoVisivelStr=(codigo&&codigo!=='PUBLICO')?'<p>Código de convite: <b>'+esc(codigo)+'</b></p>':'';
         var botoesCompartilhar='';
         if(mostrarCompartilhar){
@@ -909,10 +934,19 @@
     }
 
     function montarLinkConviteLocal(b){
+      // Link correto para compartilhar com participantes no Telegram.
+      // O Mini App recebe esse valor em tgWebAppStartParam/start_param.
+      const id=String((b&&b.id_bolao)||CONFIG.ID_BOLAO||'BOLAO001').trim();
+      const codigo=String((b&&b.codigo_convite)||'').trim().toUpperCase();
+      const start=[id,codigo].filter(Boolean).join('_').replace(/[^0-9A-Za-z_-]/g,'');
+      return CONFIG.TELEGRAM_MINIAPP_OFICIAL+(start?'?startapp='+encodeURIComponent(start):'');
+    }
+
+    function montarLinkConviteSiteFallback(b){
       const base=location.origin+location.pathname;
       const params=new URLSearchParams();
-      params.set('id_bolao',b.id_bolao||CONFIG.ID_BOLAO);
-      if(b.codigo_convite)params.set('codigo_convite',b.codigo_convite);
+      params.set('id_bolao',(b&&b.id_bolao)||CONFIG.ID_BOLAO);
+      if(b&&b.codigo_convite)params.set('codigo_convite',b.codigo_convite);
       return base+'?'+params.toString();
     }
 
@@ -936,7 +970,7 @@
       closeModal();
       limparCacheAtual();
       toastMsg('Carregando bolão selecionado...');
-      await loadApi();
+      await loadApi(true);
     }
 
     function abrirCriarBolao(){
@@ -957,7 +991,7 @@
         // CORRECAO: mostrar convite imediatamente (antes de recarregar a API para nao sumir)
         mostrarConviteBolao(r.bolao,r.convite);
         // Atualiza lista em segundo plano sem fechar o modal do convite
-        setTimeout(function(){loadApi()},300);
+        setTimeout(function(){loadApi(true)},300);
       }catch(e){toastMsg(e.message||String(e));if(confirmarCriar){confirmarCriar.disabled=false;confirmarCriar.textContent='Criar Bolão'}}
     }
 
@@ -977,7 +1011,7 @@
         if(!r||!r.ok)throw new Error((r&&r.erro)||'Não foi possível entrar no bolão.');
         CONFIG.ID_BOLAO=r.bolao.id_bolao;
         closeModal();
-        await loadApi();
+        await loadApi(true);
         toastMsg('Entrada confirmada no bolão: '+(r.bolao.nome_bolao||r.bolao.nome||CONFIG.ID_BOLAO));
       }catch(e){toastMsg(e.message||String(e));if(confirmarEntrar){confirmarEntrar.disabled=false;confirmarEntrar.textContent='Entrar'}}
     }
@@ -1075,7 +1109,7 @@
       });
     }
 
-    async function loadApi(){
+    async function loadApi(force){
       const url=apiUrl();
       const tinhaCache=!!estado.jogo||estado.jogos.length>0||estado.ranking.length>0||estado.boloes.length>0;
       estado.carregando=!tinhaCache;
@@ -1090,8 +1124,26 @@
         return;
       }
 
+      const paramsBase={
+        acao:'obterHomeBolaoEsportivo',
+        id_bolao:CONFIG.ID_BOLAO,
+        codigo_convite:CONFIG.CODIGO_CONVITE,
+        telegram_id:estado.usuario.idTelegram,
+        nome:estado.usuario.nome,
+        username:estado.usuario.username,
+        v:CONFIG.VERSAO,
+        force:force?'1':''
+      };
+
       try{
-        const j=await chamarApiJsonp(url,{acao:'obterHomeBolaoEsportivo',id_bolao:CONFIG.ID_BOLAO,codigo_convite:CONFIG.CODIGO_CONVITE,telegram_id:estado.usuario.idTelegram,nome:estado.usuario.nome,username:estado.usuario.username,v:CONFIG.VERSAO},18000);
+        let j;
+        try{
+          j=await chamarApiJsonp(url,paramsBase,14000);
+        }catch(e1){
+          console.warn('Primeira tentativa da API falhou, tentando novamente.',e1);
+          await new Promise(r=>setTimeout(r,650));
+          j=await chamarApiJsonp(url,Object.assign({},paramsBase,{force:'1',retry:Date.now()}),26000);
+        }
         if(!j||!j.ok)throw new Error((j&&j.erro)||'Resposta inválida da API.');
         const dados=j.dados||{};
         aplicarDadosApi(dados,'api');
@@ -1104,9 +1156,10 @@
         estado.carregando=false;
         estado.erroApi='API demorou ou falhou: '+e.message;
         render();
-        toastMsg(tinhaCache?'API demorou/falhou. Mantendo cache local.':estado.erroApi);
+        toastMsg(tinhaCache?'API demorou/falhou. Mantendo dados já carregados/cache local.':estado.erroApi);
       }
     }
+
 
     (function(){initTelegram();limparCachesAntigosSeNecessario();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);carregarCache();events();render();setTimeout(()=>loadApi(),50)})();
   </script>
