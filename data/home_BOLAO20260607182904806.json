@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "versao": "V031B_ACIONADOR_AUTOMATICO_UNICO_SEM_REMOVER",
+  "versao": "V031C_PUBLICACAO_JSON_INCREMENTAL_SEM_TIMEOUT",
   "modoHome": "LEVE_CACHE_RAPIDO",
-  "dataHora": "09/06/2026 10:09:38",
+  "dataHora": "09/06/2026 10:40:01",
   "dados": {
-    "apiUrl": "https://script.google.com/macros/s/AKfycbyC2MNJ9w8sOJKadDMbvQj8kqdOt4WZ66957LVtelZQ3OjczoQlv6nScVy4ktqPvu3sMg/exec",
-    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&v=V031B_ACIONADOR_AUTOMATICO_UNICO_SEM_REMOVER",
+    "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
+    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&v=V031C_PUBLICACAO_JSON_INCREMENTAL_SEM_TIMEOUT",
     "id_bolao": "BOLAO20260607182904806",
     "bolaoAtual": {
       "id_bolao": "BOLAO20260607182904806",
@@ -54,7 +54,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V031B_ACIONADOR_AUTOMATICO_UNICO_SEM_REMOVER",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V031C_PUBLICACAO_JSON_INCREMENTAL_SEM_TIMEOUT",
         "souCriador": false,
         "participantes": 1,
         "jogos": 72
@@ -70,7 +70,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V031B_ACIONADOR_AUTOMATICO_UNICO_SEM_REMOVER",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V031C_PUBLICACAO_JSON_INCREMENTAL_SEM_TIMEOUT",
         "souCriador": false,
         "participantes": 1,
         "jogos": 72
@@ -1817,10 +1817,10 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "09/06/2026 10:10:13",
+    "cacheAtualizadoEm": "09/06/2026 10:40:52",
     "modoDados": "JSON_PUBLICO_ESTATICO"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "09/06/2026 10:10:13",
-  "gerado_ts": 1781010613164
+  "gerado_em": "09/06/2026 10:40:52",
+  "gerado_ts": 1781012452451
 }
