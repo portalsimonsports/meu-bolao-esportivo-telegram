@@ -124,9 +124,9 @@
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     const CONFIG={
-      VERSAO:'V031_PUBLICACAO_SEGURA_TRAVAS_PALPITES_BOLOES',
+      VERSAO:'V031C_API_URL_ATUALIZADA',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
-      API_URL_FIXA:'https://script.google.com/macros/s/AKfycbyC2MNJ9w8sOJKadDMbvQj8kqdOt4WZ66957LVtelZQ3OjczoQlv6nScVy4ktqPvu3sMg/exec', // API fixa para permitir link limpo no grupo sem parâmetro ?api=.
+      API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // API fixa para permitir link limpo no grupo sem parâmetro ?api=.
       ID_BOLAO:URL_PARAMS.get('id_bolao')||'BOLAO001',
       CODIGO_CONVITE:URL_PARAMS.get('codigo_convite')||URL_PARAMS.get('codigo')||'',
       ENVIAR_AO_BOT_SEM_API:true,
@@ -380,11 +380,11 @@
     }
 
     function cacheKey(){
-      return 'PSS_MBE_HOME_CACHE_V031_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_V031C_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function cacheInfoKey(){
-      return 'PSS_MBE_HOME_CACHE_INFO_V031_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_INFO_V031C_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function chavesCachePossiveis(){
@@ -392,7 +392,7 @@
       const tg=String(estado.usuario.idTelegram||'ANON');
       // V031: não usar caches antigos/estáveis porque eles podem conter lista cortada em 45 jogos.
       return [
-        'PSS_MBE_HOME_CACHE_V031_'+id+'_'+tg
+        'PSS_MBE_HOME_CACHE_V031C_'+id+'_'+tg
       ];
     }
 
@@ -409,7 +409,7 @@
         for(let i=0;i<localStorage.length;i++){
           const k=localStorage.key(i)||'';
           if(k.startsWith('PSS_MBE_HOME_CACHE_')||k.startsWith('PSS_MBE_HOME_CACHE_INFO_')){
-            if(deveLimpar || !k.includes('_V031_'))removiveis.push(k);
+            if(deveLimpar || !k.includes('_V031C_'))removiveis.push(k);
           }
         }
         removiveis.forEach(k=>localStorage.removeItem(k));
