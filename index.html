@@ -124,7 +124,7 @@
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     const CONFIG={
-      VERSAO:'V030_CLOUDFLARE_JSON_INSTANTANEO_SEM_CUSTO',
+      VERSAO:'V031_PUBLICACAO_SEGURA_TRAVAS_PALPITES_BOLOES',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbyC2MNJ9w8sOJKadDMbvQj8kqdOt4WZ66957LVtelZQ3OjczoQlv6nScVy4ktqPvu3sMg/exec', // API fixa para permitir link limpo no grupo sem parâmetro ?api=.
       ID_BOLAO:URL_PARAMS.get('id_bolao')||'BOLAO001',
@@ -155,7 +155,10 @@
       erroApi:'',
       palpite:'',
       cacheUsado:false,
-      cacheAtualizadoEm:''
+      cacheAtualizadoEm:'',
+      sincronizandoBoloes:false,
+      tentouAtualizarBoloesTelegram:false,
+      usuarioAdmin:false
     };
 
     function initTelegram(){
@@ -377,19 +380,19 @@
     }
 
     function cacheKey(){
-      return 'PSS_MBE_HOME_CACHE_V029_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_V031_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function cacheInfoKey(){
-      return 'PSS_MBE_HOME_CACHE_INFO_V029_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_INFO_V031_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function chavesCachePossiveis(){
       const id=String(CONFIG.ID_BOLAO||'BOLAO001');
       const tg=String(estado.usuario.idTelegram||'ANON');
-      // V029: não usar caches antigos/estáveis porque eles podem conter lista cortada em 45 jogos.
+      // V031: não usar caches antigos/estáveis porque eles podem conter lista cortada em 45 jogos.
       return [
-        'PSS_MBE_HOME_CACHE_V029_'+id+'_'+tg
+        'PSS_MBE_HOME_CACHE_V031_'+id+'_'+tg
       ];
     }
 
@@ -398,7 +401,7 @@
         const apiSalva=String(localStorage.getItem('PSS_MBE_API_URL')||'');
         if(apiSalva && !/^https:\/\/script\.google\.com\/macros\/s\/[^\/]+\/exec/i.test(apiSalva))localStorage.removeItem('PSS_MBE_API_URL');
 
-        // V029: limpa somente caches de HOME antigos que podiam trazer 45 jogos.
+        // V031: limpa somente caches de HOME antigos que podiam trazer 45 jogos.
         // Não remove palpites locais nem dados reais da aba PALPITES.
         const limpar=String(URL_PARAMS.get('limpar_cache')||'').toLowerCase();
         const deveLimpar=limpar==='1'||limpar==='sim'||limpar==='true';
@@ -406,7 +409,7 @@
         for(let i=0;i<localStorage.length;i++){
           const k=localStorage.key(i)||'';
           if(k.startsWith('PSS_MBE_HOME_CACHE_')||k.startsWith('PSS_MBE_HOME_CACHE_INFO_')){
-            if(deveLimpar || !k.includes('_V029_'))removiveis.push(k);
+            if(deveLimpar || !k.includes('_V031_'))removiveis.push(k);
           }
         }
         removiveis.forEach(k=>localStorage.removeItem(k));
@@ -423,6 +426,7 @@
       estado.boloesPublicos=Array.isArray(dados.boloesPublicos)?dados.boloesPublicos:estado.boloes.filter(b=>String(b.tipo||'PUBLICO').toUpperCase()==='PUBLICO');
       estado.meusBoloesCriados=Array.isArray(dados.meusBoloesCriados)?dados.meusBoloesCriados:estado.boloes.filter(b=>b.souCriador);
       estado.boloesParticipando=Array.isArray(dados.boloesParticipando)?dados.boloesParticipando:[];
+      estado.usuarioAdmin=(dados.usuarioAdmin===true||String(dados.usuarioAdmin||'').toUpperCase()==='SIM');
 
       // CORRECAO: Nunca zerar palpites locais ao receber dados da API.
       // Primeiro carrega os palpites persistidos no localStorage (fonte de verdade local).
@@ -564,7 +568,7 @@
       const uidAtual=String(estado.usuario.idTelegram||'');
       const uidPalpite=String((p.usuario&&p.usuario.idTelegram)||p.telegram_id||'');
       if(uidAtual && uidPalpite && uidAtual!==uidPalpite)return false;
-      // V029: localStorage antigo de versões anteriores não entra no contador para evitar falso “já palpitado”.
+      // V031: localStorage antigo de versões anteriores não entra no contador para evitar falso “já palpitado”.
       if(p.versao && String(p.versao)!==String(CONFIG.VERSAO))return false;
       const pal=p.palpite||{};
       return pal.placarMandante!==undefined && pal.placarVisitante!==undefined;
@@ -935,25 +939,71 @@
 
     function screen(name){
       if(name==='boloes'){
-        // CORRECAO: exibe sempre publicos, meus criados e onde participo.
-        // Criador ve o botao de compartilhar em TODOS os seus boloes (publicos e privados).
-        var boloesPublicos=estado.boloesPublicos||estado.boloes.filter(function(b){return String(b.tipo||'PUBLICO').toUpperCase()==='PUBLICO'});
-        var meusCriados=estado.meusBoloesCriados||estado.boloes.filter(function(b){return b.souCriador});
-        var participando=estado.boloesParticipando||[];
-        var avisoUsuario=!estado.usuario.idTelegram?'<div class="mini" style="border-color:rgba(212,166,60,.55);background:#fffdf4"><strong>⚠️ Abra pelo Mini App oficial do Telegram</strong><p>Fora do Telegram não é possível identificar o participante; por isso os bolões privados criados/participando podem não aparecer. Para teste no navegador, use ?telegram_id=SEU_ID.</p></div>':'';
+        // V031: diferencia claramente modo publico (navegador) de modo Telegram identificado.
+        // O JSON publico abre rapido, mas dados privados dependem do Telegram ID/API.
+        const identificado=!!String(estado.usuario.idTelegram||'').trim();
+        const adminAtual=estado.usuarioAdmin===true;
+        const emTelegram=!!(tg&&tg.initDataUnsafe&&tg.initDataUnsafe.user&&estado.usuario.idTelegram);
+
+        if(identificado && !estado.tentouAtualizarBoloesTelegram){
+          estado.tentouAtualizarBoloesTelegram=true;
+          estado.sincronizandoBoloes=true;
+          setTimeout(function(){
+            loadApi(true,true).then(function(){
+              estado.sincronizandoBoloes=false;
+              if(document.getElementById('modal')&&document.getElementById('modal').classList.contains('show'))screen('boloes');
+            }).catch(function(){estado.sincronizandoBoloes=false;if(document.getElementById('modal')&&document.getElementById('modal').classList.contains('show'))screen('boloes');});
+          },80);
+        }
+
+        var todosBoloes=Array.isArray(estado.boloes)?estado.boloes:[];
+        var boloesPublicos=Array.isArray(estado.boloesPublicos)?estado.boloesPublicos:todosBoloes.filter(function(b){return String(b.tipo||b.tipo_bolao||'PUBLICO').toUpperCase()==='PUBLICO'});
+        var meusCriados=Array.isArray(estado.meusBoloesCriados)?estado.meusBoloesCriados:[];
+        var participando=Array.isArray(estado.boloesParticipando)?estado.boloesParticipando:[];
+
+        // Admin identificado deve ver todos os bolões administráveis na seção de criados/administrados.
+        if(adminAtual && todosBoloes.length)meusCriados=todosBoloes.slice();
+
+        if(!meusCriados.length&&todosBoloes.length&&identificado){
+          var fallbackCriados=todosBoloes.filter(function(b){return !!b.souCriador});
+          if(fallbackCriados.length)meusCriados=fallbackCriados;
+        }
+
+        var avisoUsuario=!identificado?'<div class="mini" style="border-color:rgba(212,166,60,.55);background:#fffdf4"><strong>⚠️ Modo público: usuário não identificado</strong><p>Esta abertura está fora do Mini App do Telegram ou sem identificação. Por segurança, aqui aparecem apenas bolões públicos. Para ver seus bolões criados, bolões privados e participações, abra pelo botão do Telegram.</p><button class="mini-action" id="abrirTelegramOficial">Abrir pelo Telegram</button></div>':'';
+        var avisoSync=(identificado&&estado.sincronizandoBoloes)?'<div class="mini" style="border-color:rgba(10,90,53,.35);background:#f0fff4"><strong>🔄 Sincronizando seus bolões com a planilha...</strong><p>O JSON público abre rápido; seus bolões privados/criados só aparecem depois da consulta real com seu Telegram ID.</p></div>':'';
+        var avisoPrivado='';
+        if(identificado && !estado.sincronizandoBoloes && !meusCriados.length && !participando.length){
+          avisoPrivado='<div class="mini" style="border-color:rgba(212,166,60,.35);background:#fffdf4"><strong>⚠️ Nenhum bolão privado vinculado ao seu Telegram ID</strong><p>Se você criou bolões e eles não apareceram, confira se o criador_telegram_id/inscrição na planilha está com o mesmo ID do Telegram usado para abrir este Mini App.</p><button class="mini-action secondary" id="atualizarBoloesApiTopo">Atualizar bolões agora</button></div>';
+        }
+
+        var secoesPrivadas='';
+        if(identificado){
+          secoesPrivadas+=montarSecaoBoloes(adminAtual?'🔐 Bolões administrados':'🔐 Meus bolões criados', meusCriados, true);
+          secoesPrivadas+=montarSecaoBoloes('👥 Bolões que participo', participando, false);
+        }else{
+          secoesPrivadas+='<div class="mini"><strong>🔐 Área privada protegida</strong><p>Meus bolões criados e bolões que participo só aparecem quando o Telegram identifica o participante.</p></div>';
+        }
+
         var bodyBoloes=
-          avisoUsuario+
+          avisoUsuario+avisoSync+
           (estado.bolaoAtual?'<div class="mini" style="border-color:rgba(10,90,53,.4);background:#f0fff4"><strong>✅ Bolão ativo: '+esc(estado.bolaoAtual.nome_bolao||CONFIG.ID_BOLAO)+'</strong><p>'+esc(estado.bolaoAtual.tipo_bolao||'PUBLICO')+
           (estado.bolaoAtual.codigo_convite&&estado.bolaoAtual.codigo_convite!=='PUBLICO'?'&nbsp;•&nbsp;Código: <b>'+esc(estado.bolaoAtual.codigo_convite)+'</b>':'')+
           '</p></div>':'')+
           montarSecaoBoloes('🌎 Bolões públicos', boloesPublicos, true)+
-          montarSecaoBoloes('🔐 Meus bolões criados', meusCriados, true)+
-          montarSecaoBoloes('👥 Bolões que participo', participando, false)+
-          '<div class="mini"><strong>Criar ou entrar em bolão</strong><p>Crie bolões privados para trabalho, família ou amigos. Cada bolão tem ranking e código de convite separados.</p></div>';
+          secoesPrivadas+
+          avisoPrivado+
+          '<div class="mini"><strong>Criar ou entrar em bolão</strong><p>Crie bolões privados para trabalho, família ou amigos. Cada bolão tem ranking e código de convite separados.</p><button class="mini-action secondary" id="atualizarBoloesApi">🔄 Atualizar bolões agora</button></div>';
         openModal('🏆 Bolões',bodyBoloes,'<button class="btn light" id="entrarCodigo">Entrar com Código</button><button class="btn primary" id="criarBolao">Criar Bolão</button>');
         ligarEventosBoloes();
         entrarCodigo.onclick=abrirEntrarCodigo;
         criarBolao.onclick=abrirCriarBolao;
+        var abrirTel=document.getElementById('abrirTelegramOficial');
+        if(abrirTel)abrirTel.onclick=function(){window.location.href=CONFIG.TELEGRAM_MINIAPP_OFICIAL};
+        function atualizarBoloesAgora(){estado.sincronizandoBoloes=true;screen('boloes');loadApi(true,false).then(function(){estado.sincronizandoBoloes=false;screen('boloes')}).catch(function(){estado.sincronizandoBoloes=false;screen('boloes')})}
+        var btnAtualizar=document.getElementById('atualizarBoloesApi');
+        if(btnAtualizar)btnAtualizar.onclick=atualizarBoloesAgora;
+        var btnAtualizarTopo=document.getElementById('atualizarBoloesApiTopo');
+        if(btnAtualizarTopo)btnAtualizarTopo.onclick=atualizarBoloesAgora;
         return;
       }
 
