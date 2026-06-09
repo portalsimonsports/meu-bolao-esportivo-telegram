@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "projeto": "Bolão Futebol Telegram — Portal SimonSports",
+  "versao": "V030A_JSON_TOKEN_CONFIG_SEM_UI_FIX",
+  "gerado_em": "09/06/2026 06:49:08",
+  "site": "https://bolaodacopa.portalsimonsports.com/",
+  "boloes": [
+    {
+      "id_bolao": "BOLAO001",
+      "nome_bolao": "Bolão Copa do Mundo 2026",
+      "status": "ATIVO"
+    },
+    {
+      "id_bolao": "BOLAO20260607182904806",
+      "nome_bolao": "Bolao da Luisinha",
+      "status": "ATIVO"
+    },
+    {
+      "id_bolao": "BOLAO20260607185133484",
+      "nome_bolao": "Bolao de Pinheirao",
+      "status": "ATIVO"
+    }
+  ]
+}
