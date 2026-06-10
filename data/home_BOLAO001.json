@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "versao": "V031C_PUBLICACAO_JSON_INCREMENTAL_SEM_TIMEOUT",
+  "versao": "V031D_FIX_BOLOES_PALPITES",
   "modoHome": "LEVE_CACHE_RAPIDO",
-  "dataHora": "09/06/2026 10:25:04",
+  "dataHora": "10/06/2026 15:10:01",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
-    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&v=V031C_PUBLICACAO_JSON_INCREMENTAL_SEM_TIMEOUT",
+    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&v=V031D_FIX_BOLOES_PALPITES",
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
       "id_bolao": "BOLAO001",
@@ -54,7 +54,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V031C_PUBLICACAO_JSON_INCREMENTAL_SEM_TIMEOUT",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V031D_FIX_BOLOES_PALPITES",
         "souCriador": false,
         "participantes": 1,
         "jogos": 72
@@ -70,7 +70,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V031C_PUBLICACAO_JSON_INCREMENTAL_SEM_TIMEOUT",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V031D_FIX_BOLOES_PALPITES",
         "souCriador": false,
         "participantes": 1,
         "jogos": 72
@@ -1817,10 +1817,10 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "09/06/2026 10:25:57",
+    "cacheAtualizadoEm": "10/06/2026 15:11:02",
     "modoDados": "JSON_PUBLICO_ESTATICO"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "09/06/2026 10:25:57",
-  "gerado_ts": 1781011557663
+  "gerado_em": "10/06/2026 15:11:02",
+  "gerado_ts": 1781115062324
 }
