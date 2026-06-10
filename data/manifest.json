@@ -1,8 +1,8 @@
 {
   "ok": true,
   "projeto": "Bolão Futebol Telegram — Portal SimonSports",
-  "versao": "V031C_PUBLICACAO_JSON_INCREMENTAL_SEM_TIMEOUT",
-  "gerado_em": "10/06/2026 14:25:27",
+  "versao": "V031D_FIX_BOLOES_PALPITES",
+  "gerado_em": "10/06/2026 14:40:37",
   "site": "https://bolaodacopa.portalsimonsports.com/",
   "boloes": [
     {
