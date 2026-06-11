@@ -361,23 +361,25 @@
       }finally{clearTimeout(timer)}
     }
 
-    async function carregarJsonPublicoEstatico(){
-      if(!CONFIG.JSON_PUBLICO_ATIVO)return false;
-      try{
-        const pacote=await fetchJsonComTimeout(jsonPublicoHomeUrl(),CONFIG.JSON_PUBLICO_TIMEOUT_MS||1800);
-        const dados=(pacote&&pacote.dados)?pacote.dados:pacote;
-        if(!dados||!Array.isArray(dados.jogos)||!dados.jogos.length)throw new Error('JSON público sem jogos.');
-        aplicarDadosApi(dados,'json_publico');
-        salvarCache(dados);
-        estado.carregando=false;
-        estado.erroApi='';
-        render();
-        return true;
-      }catch(e){
-        console.warn('JSON público ainda não disponível; usando cache/API.',e);
-        return false;
-      }
-    }
+    async async async function carregarJsonPublicoEstatico(){
+  if(!CONFIG.JSON_PUBLICO_ATIVO)return false;
+  // V031D: tenta JSON para qualquer bolão (público ou privado).
+  // Se não existir ainda → 404 → catch → fallback para API real.
+  try{
+    const pacote=await fetchJsonComTimeout(jsonPublicoHomeUrl(),CONFIG.JSON_PUBLICO_TIMEOUT_MS||1800);
+    const dados=(pacote&&pacote.dados)?pacote.dados:pacote;
+    if(!dados||!Array.isArray(dados.jogos)||!dados.jogos.length)throw new Error('JSON sem jogos.');
+    aplicarDadosApi(dados,'json_publico');
+    salvarCache(dados);
+    estado.carregando=false;
+    estado.erroApi='';
+    render();
+    return true;
+  }catch(e){
+    console.warn('JSON público não disponível para este bolão; usando API.',e);
+    return false;
+  }
+}
 
     function cacheKey(){
       return 'PSS_MBE_HOME_CACHE_V031C_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
@@ -809,7 +811,7 @@
         flagA.textContent='⚽';flagB.textContent='📡';
         teamA.textContent='DADOS';teamB.textContent='REAIS';
         dataJogo.textContent='--/--/----';horaJogo.textContent='--:--';
-        if(openText)openText.textContent=estado.carregando?'CARREGANDO API REAL':(estado.erroApi?'API NÃO CONFIGURADA':'SEM JOGOS DISPONÍVEIS');
+        if(openText)openText.textContent=estado.carregando?'CARREGANDO...':(estado.erroApi?(apiUrl()?'ERRO AO CARREGAR':'API NÃO CONFIGURADA'):'SEM JOGOS DISPONÍVEIS');
         btnPalpite.disabled=true;
         btnPalpite.innerHTML='<span>📡</span><span>AGUARDANDO JOGO REAL</span>';
       }else{
@@ -1175,11 +1177,10 @@
       window.open(url,'_blank');
     }
 
-    async function selecionarBolao(id) {
+    async async async function selecionarBolao(id) {
   if (!id) return;
   CONFIG.ID_BOLAO = String(id);
   CONFIG.CODIGO_CONVITE = '';
-  // CORRECAO: persiste a seleção para sobreviver a recarregamentos.
   try { localStorage.setItem('PSS_MBE_BOLAO_ATIVO', String(id)); } catch(e) {}
   estado.jogo = null;
   estado.jogos = [];
@@ -1189,8 +1190,15 @@
   closeModal();
   limparCacheAtual();
   render();
-  toastMsg('Carregando bolão selecionado...');
-  await loadApi(true);
+  toastMsg('Carregando bolão...');
+  // V031D: tenta JSON público do bolão selecionado primeiro (rápido).
+  // Se não existir ou estiver desatualizado, busca da API real.
+  const jsonOk = await carregarJsonPublicoEstatico();
+  if (!jsonOk) {
+    await loadApi(true, false);
+  } else if (CONFIG.API_REFRESH_SILENCIOSO) {
+    setTimeout(() => loadApi(false, true), 900);
+  }
 }
 
     function abrirCriarBolao(){
@@ -1381,17 +1389,20 @@
     }
 
 
-    async function iniciarCarregamentoInstantaneo(){
-      const jsonOk=await carregarJsonPublicoEstatico();
-      const jaTemDados=!!estado.jogo||estado.jogos.length>0||estado.ranking.length>0||estado.boloes.length>0;
-      if(!jsonOk&&!jaTemDados){
-        await loadApi(false,false);
-      }else if(CONFIG.API_REFRESH_SILENCIOSO){
-        setTimeout(()=>loadApi(false,true),900);
-      }
-    }
+    async async function iniciarCarregamentoInstantaneo(){
+  // V031D: tenta JSON do bolão atual (público ou privado).
+  // Se não existir ainda, vai direto para API.
+  const jsonOk = await carregarJsonPublicoEstatico();
+  const jaTemDados = !!estado.jogo || estado.jogos.length > 0 || estado.ranking.length > 0;
+  if (!jsonOk && !jaTemDados) {
+    await loadApi(false, false);
+  } else if (CONFIG.API_REFRESH_SILENCIOSO) {
+    setTimeout(() => loadApi(false, true), 900);
+  }
+}
 
     (function(){initTelegram();limparCachesAntigosSeNecessario();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);carregarCache();events();render();setTimeout(()=>iniciarCarregamentoInstantaneo(),50)})();
   </script>
 </body>
 </html>
+
