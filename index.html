@@ -157,7 +157,7 @@
     }
 
     const CONFIG={
-      VERSAO:'V035_JSON_PERFIL_TELEGRAM_ESTATICO',
+      VERSAO:'V036_JSON_PRELOAD_BOLOES_ESTATICO',
       API_URL:API_PARAM||'', // V035: usado somente para gravação; leitura principal vem dos JSONs estáticos.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // Fallback somente para ações de gravação caso o JSON não traga apiUrl.
       ID_BOLAO:idBolaoInicial_(),
@@ -196,6 +196,10 @@
       tentouAtualizarBoloesTelegram:false,
       usuarioAdmin:false
     };
+
+    // V036: mantém manifesto, perfil e homes dos bolões em memória/localStorage.
+    // Troca de bolão não deve chamar Apps Script/API; deve renderizar JSON estático já publicado.
+    const JSON_ESTATICO_MEM={manifest:null,perfil:null,homes:{},preloadIniciado:false};
 
     function initTelegram(){
       if(tg){
@@ -430,6 +434,107 @@
       return Object.values(mapa);
     }
 
+    function bolaoPorIdEstatico(id){
+      id=String(id||'').trim();
+      if(!id)return null;
+      const fontes=[];
+      if(Array.isArray(estado.boloes))fontes.push.apply(fontes,estado.boloes);
+      if(Array.isArray(estado.meusBoloesCriados))fontes.push.apply(fontes,estado.meusBoloesCriados);
+      if(Array.isArray(estado.boloesParticipando))fontes.push.apply(fontes,estado.boloesParticipando);
+      if(Array.isArray(estado.boloesPublicos))fontes.push.apply(fontes,estado.boloesPublicos);
+      listaBoloesPerfil(JSON_ESTATICO_MEM.perfil).forEach(function(b){fontes.push(b)});
+      listaBoloesManifest(JSON_ESTATICO_MEM.manifest).forEach(function(b){fontes.push(b)});
+      for(const b of fontes){if(b&&String(b.id_bolao||'')===id)return b;}
+      return null;
+    }
+
+    function atualizarBolaoAtualPorIdEstatico(id){
+      const b=bolaoPorIdEstatico(id);
+      if(b)estado.bolaoAtual=b;
+      return b;
+    }
+
+    function idsBoloesPerfilEManifest(manifest,perfil){
+      const mapa={};
+      listaBoloesPerfil(perfil).forEach(function(b){if(b&&b.id_bolao)mapa[String(b.id_bolao)]=true});
+      listaBoloesManifest(manifest).forEach(function(b){if(b&&b.id_bolao)mapa[String(b.id_bolao)]=true});
+      return Object.keys(mapa);
+    }
+
+    function homeJsonStorageKey(id){
+      return 'PSS_MBE_JSON_HOME_'+String(CONFIG.VERSAO||'')+'_'+String(id||'BOLAO001');
+    }
+
+    function guardarHomeJsonEstatico(id,home){
+      id=String(id||'').trim();
+      if(!id||!home)return;
+      JSON_ESTATICO_MEM.homes[id]=home;
+      try{localStorage.setItem(homeJsonStorageKey(id),JSON.stringify({salvoEm:Date.now(),home:home}))}catch(e){}
+    }
+
+    function lerHomeJsonEstaticoLocal(id){
+      id=String(id||'').trim();
+      if(!id)return null;
+      if(JSON_ESTATICO_MEM.homes[id])return JSON_ESTATICO_MEM.homes[id];
+      try{
+        const raw=localStorage.getItem(homeJsonStorageKey(id));
+        if(!raw)return null;
+        const pacote=JSON.parse(raw);
+        if(!pacote||!pacote.home||!pacote.salvoEm)return null;
+        const idadeHoras=(Date.now()-Number(pacote.salvoEm||0))/(60*60*1000);
+        if(idadeHoras>Number(CONFIG.CACHE_MAX_HORAS||24))return null;
+        const dadosHome=(pacote.home&&pacote.home.dados)?pacote.home.dados:pacote.home;
+        if(!dadosHome||!Array.isArray(dadosHome.jogos)||!dadosHome.jogos.length)return null;
+        JSON_ESTATICO_MEM.homes[id]=pacote.home;
+        return pacote.home;
+      }catch(e){return null;}
+    }
+
+    async function carregarHomeJsonEstatico(id,force){
+      id=String(id||CONFIG.ID_BOLAO||'BOLAO001').trim()||'BOLAO001';
+      if(!force){
+        const local=lerHomeJsonEstaticoLocal(id);
+        if(local)return local;
+      }
+      const home=await fetchJsonComTimeout(jsonPublicoHomeUrl(id),CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500);
+      const dadosHome=(home&&home.dados)?home.dados:home;
+      if(!dadosHome||!Array.isArray(dadosHome.jogos)||!dadosHome.jogos.length){
+        throw new Error('home_'+id+'.json publicado sem jogos ou não publicado.');
+      }
+      guardarHomeJsonEstatico(id,home);
+      return home;
+    }
+
+    function preCarregarHomesDoPerfilEstatico(manifest,perfil,idAtual){
+      if(JSON_ESTATICO_MEM.preloadIniciado)return;
+      JSON_ESTATICO_MEM.preloadIniciado=true;
+      const ids=idsBoloesPerfilEManifest(manifest,perfil).filter(function(id){return String(id)!==String(idAtual||'')});
+      ids.forEach(function(id){
+        carregarHomeJsonEstatico(id,false).catch(function(e){
+          console.warn('JSON do bolão não pré-carregado:',id,e);
+        });
+      });
+    }
+
+    async function carregarBolaoSelecionadoPorJsonEstatico(id){
+      id=String(id||CONFIG.ID_BOLAO||'').trim();
+      if(!id)throw new Error('id_bolao vazio.');
+      if(!JSON_ESTATICO_MEM.manifest){
+        JSON_ESTATICO_MEM.manifest=await fetchJsonComTimeout(jsonPublicoManifestUrl(),CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500);
+      }
+      if(!JSON_ESTATICO_MEM.perfil&&estado.usuario.idTelegram){
+        JSON_ESTATICO_MEM.perfil=await fetchJsonComTimeout(jsonPublicoPerfilUrl(estado.usuario.idTelegram),CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500);
+      }
+      const home=await carregarHomeJsonEstatico(id,false);
+      const dados=mesclarHomeComPerfilJson(home,JSON_ESTATICO_MEM.perfil,JSON_ESTATICO_MEM.manifest,id);
+      aplicarDadosApi(dados,'json_perfil');
+      salvarCache(dados);
+      estado.carregando=false;
+      estado.erroApi='';
+      render();
+      return true;
+    }
+
     function escolherBolaoPorJson(manifest,perfil){
       const explicito=String(URL_PARAMS.get('id_bolao')||startParamInicialBolao_()||'').trim();
       if(explicito)return explicito;
@@ -471,9 +576,9 @@
       const todosPalpites=Array.isArray(dPerfil.meusPalpites)?dPerfil.meusPalpites:[];
       dados.meusPalpites=todosPalpites.filter(function(p){return String(p.id_bolao||'')===String(dados.id_bolao)});
 
-      if(!dados.bolaoAtual){
-        dados.bolaoAtual=dados.boloes.find(function(b){return String(b.id_bolao)===String(dados.id_bolao)})||null;
-      }
+      // V036: sempre força o contexto visual para o bolão selecionado.
+      // Evita exibir somente o ID ou herdar bolaoAtual do JSON anterior.
+      dados.bolaoAtual=dados.boloes.find(function(b){return String(b.id_bolao)===String(dados.id_bolao)})||dados.bolaoAtual||null;
       return dados;
     }
 
@@ -481,16 +586,16 @@
       if(!CONFIG.JSON_PUBLICO_ATIVO)return false;
       const erros=[];
       let manifest=null,perfil=null,home=null;
-      try{manifest=await fetchJsonComTimeout(jsonPublicoManifestUrl(),CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500)}catch(e){erros.push('manifest.json: '+e.message)}
+      try{manifest=await fetchJsonComTimeout(jsonPublicoManifestUrl(),CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500);JSON_ESTATICO_MEM.manifest=manifest;}catch(e){erros.push('manifest.json: '+e.message)}
       if(estado.usuario.idTelegram){
         const perfilUrl=jsonPublicoPerfilUrl(estado.usuario.idTelegram);
         if(perfilUrl){
-          try{perfil=await fetchJsonComTimeout(perfilUrl,CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500)}catch(e){erros.push('perfil_'+estado.usuario.idTelegram+'.json: '+e.message)}
+          try{perfil=await fetchJsonComTimeout(perfilUrl,CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500);JSON_ESTATICO_MEM.perfil=perfil;}catch(e){erros.push('perfil_'+estado.usuario.idTelegram+'.json: '+e.message)}
         }
       }
       const idEscolhido=escolherBolaoPorJson(manifest,perfil);
       if(idEscolhido)CONFIG.ID_BOLAO=idEscolhido;
-      try{home=await fetchJsonComTimeout(jsonPublicoHomeUrl(CONFIG.ID_BOLAO),CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500)}catch(e){erros.push('home_'+CONFIG.ID_BOLAO+'.json: '+e.message)}
+      try{home=await carregarHomeJsonEstatico(CONFIG.ID_BOLAO,true)}catch(e){erros.push('home_'+CONFIG.ID_BOLAO+'.json: '+e.message)}
 
       const dadosHome=(home&&home.dados)?home.dados:home;
       if(!dadosHome||!Array.isArray(dadosHome.jogos)||!dadosHome.jogos.length){
@@ -502,6 +607,8 @@
       estado.carregando=false;
       estado.erroApi='';
       render();
+      // V036: pré-carrega os demais bolões em segundo plano para troca instantânea.
+      setTimeout(function(){preCarregarHomesDoPerfilEstatico(manifest,perfil,CONFIG.ID_BOLAO)},120);
       return true;
     }
 
@@ -510,7 +617,7 @@
     }
 
     function cacheKey(){
-      return 'PSS_MBE_HOME_CACHE_V035_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_V036_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function cacheInfoKey(){
@@ -522,7 +629,7 @@
       const tg=String(estado.usuario.idTelegram||'ANON');
       // V031: não usar caches antigos/estáveis porque eles podem conter lista cortada em 45 jogos.
       return [
-        'PSS_MBE_HOME_CACHE_V035_'+id+'_'+tg
+        'PSS_MBE_HOME_CACHE_V036_'+id+'_'+tg
       ];
     }
 
@@ -1322,21 +1429,32 @@
 
     async function selecionarBolao(id) {
   if (!id) return;
-  CONFIG.ID_BOLAO = String(id);
+  id=String(id).trim();
+  CONFIG.ID_BOLAO = id;
   CONFIG.CODIGO_CONVITE = '';
   CONFIG.AUTO_PERFIL = false;
-  // V033: marca seleção manual para não voltar automaticamente ao perfil em recarregamento.
-  try { localStorage.setItem('PSS_MBE_BOLAO_ATIVO', String(id)); localStorage.setItem('PSS_MBE_BOLAO_ATIVO_ESCOLHIDO','SIM'); } catch(e) {}
-  estado.jogo = null;
-  estado.jogos = [];
-  estado.ranking = [];
-  estado.meusPalpites = {};
-  estado.bolaoAtual = null;
+  // V036: marca seleção manual e troca via JSON estático, sem chamar Apps Script/API.
+  try { localStorage.setItem('PSS_MBE_BOLAO_ATIVO', id); localStorage.setItem('PSS_MBE_BOLAO_ATIVO_ESCOLHIDO','SIM'); } catch(e) {}
   closeModal();
-  limparCacheAtual();
+  estado.carregando=true;
+  estado.erroApi='';
+  atualizarBolaoAtualPorIdEstatico(id);
   render();
-  toastMsg('Carregando bolão selecionado...');
-  await loadApi(true);
+  toastMsg('Abrindo bolão pelo JSON publicado...');
+  try{
+    await carregarBolaoSelecionadoPorJsonEstatico(id);
+  }catch(e){
+    console.warn('Falha ao trocar bolão por JSON estático.',e);
+    estado.carregando=false;
+    estado.jogo=null;
+    estado.jogos=[];
+    estado.ranking=[];
+    estado.meusPalpites={};
+    atualizarBolaoAtualPorIdEstatico(id);
+    estado.erroApi='JSON do bolão não publicado/inválido: '+(e&&e.message?e.message:String(e));
+    render();
+    toastMsg(estado.erroApi);
+  }
 }
 
     function abrirCriarBolao(){
