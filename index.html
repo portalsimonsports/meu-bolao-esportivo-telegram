@@ -132,10 +132,22 @@
       return String(partes[0]||'').trim();
     }
 
+    function startParamInicialCodigo_(){
+      let sp=URL_PARAMS.get('tgWebAppStartParam')||URL_PARAMS.get('startapp')||'';
+      sp=String(sp||'').trim();
+      if(!sp)return '';
+      const partes=sp.split('_');
+      return String(partes[1]||'').trim().toUpperCase();
+    }
+
+    function codigoConviteInicial_(){
+      return String(URL_PARAMS.get('codigo_convite')||URL_PARAMS.get('codigo')||URL_PARAMS.get('convite')||startParamInicialCodigo_()||'').trim().toUpperCase();
+    }
+
     function entradaBolaoExplicita_(){
       const urlId=String(URL_PARAMS.get('id_bolao')||'').trim();
       const startId=startParamInicialBolao_();
-      const convite=String(URL_PARAMS.get('codigo_convite')||URL_PARAMS.get('codigo')||URL_PARAMS.get('convite')||'').trim();
+      const convite=codigoConviteInicial_();
       return !!(urlId||startId||convite);
     }
 
@@ -147,7 +159,7 @@
       const salvo=String(localStorage.getItem('PSS_MBE_BOLAO_ATIVO')||'').trim();
       const urlId=String(URL_PARAMS.get('id_bolao')||'').trim();
       const startId=startParamInicialBolao_();
-      const temConvite=!!String(URL_PARAMS.get('codigo_convite')||URL_PARAMS.get('codigo')||URL_PARAMS.get('convite')||'').trim();
+      const temConvite=!!codigoConviteInicial_();
       if(startId)return startId;
       // Correção definitiva: link antigo do menu pode vir com id_bolao=BOLAO001.
       // Sem convite, a última seleção do usuário tem prioridade para não voltar sempre ao bolão padrão.
@@ -157,11 +169,11 @@
     }
 
     const CONFIG={
-      VERSAO:'V038_CRIAR_ENTRAR_CARD_PRIVADO_CORRETO',
+      VERSAO:'V039_CONVITE_DIRETO_ACOES_RAPIDAS',
       API_URL:API_PARAM||'', // V035: usado somente para gravação; leitura principal vem dos JSONs estáticos.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // Fallback somente para ações de gravação caso o JSON não traga apiUrl.
       ID_BOLAO:idBolaoInicial_(),
-      CODIGO_CONVITE:URL_PARAMS.get('codigo_convite')||URL_PARAMS.get('codigo')||'',
+      CODIGO_CONVITE:codigoConviteInicial_(),
       ENVIAR_AO_BOT_SEM_API:true,
       CACHE_TTL_MINUTOS:30,
       CACHE_MAX_HORAS:24,
@@ -617,11 +629,11 @@
     }
 
     function cacheKey(){
-      return 'PSS_MBE_HOME_CACHE_V038_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_V039_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function cacheInfoKey(){
-      return 'PSS_MBE_HOME_CACHE_INFO_V038_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_INFO_V039_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function chavesCachePossiveis(){
@@ -629,7 +641,7 @@
       const tg=String(estado.usuario.idTelegram||'ANON');
       // V031: não usar caches antigos/estáveis porque eles podem conter lista cortada em 45 jogos.
       return [
-        'PSS_MBE_HOME_CACHE_V038_'+id+'_'+tg
+        'PSS_MBE_HOME_CACHE_V039_'+id+'_'+tg
       ];
     }
 
@@ -1535,8 +1547,8 @@
 
     function mensagemTimeoutAcao(tipo){
       return (tipo==='criar')
-        ? 'A criação demorou para responder. Não clique de novo agora; abra Bolões e confira se o bolão apareceu.'
-        : 'A entrada demorou para responder. Não clique de novo agora; confira a tela de Bolões em instantes.';
+        ? 'Criação enviada. Se o bolão aparecer na lista, não clique novamente; aguarde o JSON atualizar.'
+        : 'Entrada enviada. Se o link do convite abriu o bolão, aguarde o JSON confirmar sua participação.';
     }
 
     function abrirCriarBolao(){
@@ -1576,8 +1588,16 @@
     async function entrarBolaoCodigo(){
       const codigo=String(codigoBolao.value||'').trim().toUpperCase();
       if(!codigo)return toastMsg('Informe o código do bolão.');
+      return entrarBolaoPorCodigoRapido(codigo,{origem:'manual'});
+    }
+
+    async function entrarBolaoPorCodigoRapido(codigo,opcoes){
+      opcoes=opcoes||{};
+      codigo=String(codigo||'').trim().toUpperCase();
+      if(!codigo)return toastMsg('Informe o código do bolão.');
+      let btn=opcoes.botao||document.getElementById('confirmarEntrar');
       try{
-        confirmarEntrar.disabled=true;confirmarEntrar.textContent='Entrando...';
+        if(btn){btn.disabled=true;btn.textContent=opcoes.textoBotao||'Entrando...'}
         const requestId='ENTRAR_'+String(estado.usuario.idTelegram||'')+'_'+codigo+'_'+Date.now();
         const r=await chamarApiAcao('entrarBolaoPorCodigo',{codigo_convite:codigo,telegram_id:estado.usuario.idTelegram,nome:estado.usuario.nome,username:estado.usuario.username,modo_rapido:'1',client_request_id:requestId});
         if(!r||!r.ok)throw new Error((r&&r.erro)||'Não foi possível entrar no bolão.');
@@ -1585,12 +1605,23 @@
         closeModal();
         toastMsg((r.ja_inscrito?'Você já estava neste bolão: ':'Entrada confirmada: ')+(b?(b.nome_bolao||b.nome||b.id_bolao):codigo));
         if(b&&b.id_bolao){
-          setTimeout(function(){selecionarBolao(b.id_bolao)},180);
+          setTimeout(function(){selecionarBolao(b.id_bolao)},120);
         }
+        try{sessionStorage.setItem('PSS_MBE_CONVITE_OK_'+codigo,'SIM')}catch(e){}
+        return b;
       }catch(e){
         const msg=String(e&&e.message?e.message:e);
+        const bolaoConhecido=bolaoPorIdEstatico(CONFIG.ID_BOLAO);
+        if(/tempo esgotado|timeout/i.test(msg)&&bolaoConhecido&&opcoes.origem==='link'){
+          const b=inserirBolaoLocalDeAcao(Object.assign({},bolaoConhecido,{codigo_convite:codigo,tipo:'PRIVADO',tipo_bolao:'PRIVADO'}),'participando');
+          closeModal();
+          toastMsg('Solicitação enviada. Abrindo o bolão pelo link; a confirmação final será atualizada no JSON.');
+          if(b&&b.id_bolao)setTimeout(function(){selecionarBolao(b.id_bolao)},120);
+          return b;
+        }
         toastMsg(/tempo esgotado|timeout/i.test(msg)?mensagemTimeoutAcao('entrar'):msg);
-        if(confirmarEntrar){confirmarEntrar.disabled=false;confirmarEntrar.textContent='Entrar'}
+        if(btn){btn.disabled=false;btn.textContent='Entrar'}
+        throw e;
       }
     }
 
@@ -1742,12 +1773,41 @@
     }
 
 
+    function usuarioJaInscritoNoBolaoPerfil_(id){
+      id=String(id||'').trim();
+      if(!id)return false;
+      const perfil=JSON_ESTATICO_MEM.perfil;
+      const d=(perfil&&perfil.dados)?perfil.dados:(perfil||{});
+      const listas=['meusBoloesCriados','boloesParticipando','boloesComPalpite'];
+      return listas.some(function(k){return (Array.isArray(d[k])?d[k]:[]).some(function(b){return b&&String(b.id_bolao||'')===id})});
+    }
+
+    function conviteInicialJaTratado_(codigo){
+      try{return sessionStorage.getItem('PSS_MBE_CONVITE_OK_'+String(codigo||'').toUpperCase())==='SIM'}catch(e){return false}
+    }
+
+    function abrirConfirmacaoConviteInicial(){
+      const codigo=String(CONFIG.CODIGO_CONVITE||'').trim().toUpperCase();
+      const id=String(CONFIG.ID_BOLAO||startParamInicialBolao_()||'').trim();
+      if(!codigo||codigo==='PUBLICO'||!id)return;
+      if(conviteInicialJaTratado_(codigo))return;
+      if(usuarioJaInscritoNoBolaoPerfil_(id))return;
+      const b=bolaoPorIdEstatico(id)||{id_bolao:id,nome_bolao:id,codigo_convite:codigo,tipo:'PRIVADO',tipo_bolao:'PRIVADO'};
+      const nome=b.nome_bolao||b.nome||id;
+      const corpo='<div class="mini bolao-contexto"><strong>Entrar neste bolão?</strong><p><b>'+esc(nome)+'</b></p><p>Código de convite: <b>'+esc(codigo)+'</b></p></div><div class="mini"><p>Ao confirmar, seu perfil do Telegram será inscrito neste bolão e os palpites/ranking ficarão separados.</p></div>';
+      openModal('🔑 Convite do Bolão',corpo,'<button class="btn light" id="cancelarConviteLink">Cancelar</button><button class="btn primary" id="confirmarConviteLink">Entrar no Bolão</button>');
+      const cancelar=document.getElementById('cancelarConviteLink');
+      const confirmar=document.getElementById('confirmarConviteLink');
+      if(cancelar)cancelar.onclick=function(){try{sessionStorage.setItem('PSS_MBE_CONVITE_OK_'+codigo,'SIM')}catch(e){} closeModal();};
+      if(confirmar)confirmar.onclick=function(){entrarBolaoPorCodigoRapido(codigo,{origem:'link',botao:confirmar,textoBotao:'Entrando...'})};
+    }
+
     async function iniciarCarregamentoInstantaneo(){
       // V035: a leitura principal é 100% JSON estático publicado no GitHub/Cloudflare.
       // Apps Script/JSONP fica apenas para ações de gravação: salvar palpite, criar bolão e entrar por código.
       try{
         const jsonOk=await carregarJsonPublicoPerfilEstatico();
-        if(jsonOk)return;
+        if(jsonOk){setTimeout(abrirConfirmacaoConviteInicial,220);return;}
       }catch(e){
         console.warn('Falha ao carregar JSON estático.',e);
         estado.carregando=false;
