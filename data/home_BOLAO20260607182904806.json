@@ -2,7 +2,7 @@
   "ok": true,
   "versao": "V031D_FIX_BOLOES_PALPITES",
   "modoHome": "LEVE_CACHE_RAPIDO",
-  "dataHora": "11/06/2026 05:55:38",
+  "dataHora": "11/06/2026 06:06:58",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&v=V031D_FIX_BOLOES_PALPITES",
@@ -1817,10 +1817,10 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "11/06/2026 05:57:31",
+    "cacheAtualizadoEm": "11/06/2026 06:07:34",
     "modoDados": "JSON_PUBLICO_ESTATICO"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "11/06/2026 05:57:31",
-  "gerado_ts": 1781168251130
+  "gerado_em": "11/06/2026 06:07:34",
+  "gerado_ts": 1781168854227
 }
