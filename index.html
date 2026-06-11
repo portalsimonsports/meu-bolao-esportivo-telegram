@@ -157,7 +157,7 @@
     }
 
     const CONFIG={
-      VERSAO:'V036_JSON_PRELOAD_BOLOES_ESTATICO',
+      VERSAO:'V038_CRIAR_ENTRAR_CARD_PRIVADO_CORRETO',
       API_URL:API_PARAM||'', // V035: usado somente para gravação; leitura principal vem dos JSONs estáticos.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // Fallback somente para ações de gravação caso o JSON não traga apiUrl.
       ID_BOLAO:idBolaoInicial_(),
@@ -617,11 +617,11 @@
     }
 
     function cacheKey(){
-      return 'PSS_MBE_HOME_CACHE_V036_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_V038_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function cacheInfoKey(){
-      return 'PSS_MBE_HOME_CACHE_INFO_V035_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_INFO_V038_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function chavesCachePossiveis(){
@@ -629,7 +629,7 @@
       const tg=String(estado.usuario.idTelegram||'ANON');
       // V031: não usar caches antigos/estáveis porque eles podem conter lista cortada em 45 jogos.
       return [
-        'PSS_MBE_HOME_CACHE_V036_'+id+'_'+tg
+        'PSS_MBE_HOME_CACHE_V038_'+id+'_'+tg
       ];
     }
 
@@ -1241,16 +1241,8 @@
         const adminAtual=estado.usuarioAdmin===true;
         const emTelegram=!!(tg&&tg.initDataUnsafe&&tg.initDataUnsafe.user&&estado.usuario.idTelegram);
 
-        if(identificado && !estado.tentouAtualizarBoloesTelegram){
-          estado.tentouAtualizarBoloesTelegram=true;
-          estado.sincronizandoBoloes=true;
-          setTimeout(function(){
-            loadApi(true,true).then(function(){
-              estado.sincronizandoBoloes=false;
-              if(document.getElementById('modal')&&document.getElementById('modal').classList.contains('show'))screen('boloes');
-            }).catch(function(){estado.sincronizandoBoloes=false;if(document.getElementById('modal')&&document.getElementById('modal').classList.contains('show'))screen('boloes');});
-          },80);
-        }
+        // V037: a tela de bolões não consulta mais API automaticamente.
+        // Ela usa o perfil JSON já carregado para evitar timeout e falso erro.
 
         var todosBoloes=Array.isArray(estado.boloes)?estado.boloes:[];
         var boloesPublicos=Array.isArray(estado.boloesPublicos)?estado.boloesPublicos:todosBoloes.filter(function(b){return String(b.tipo||b.tipo_bolao||'PUBLICO').toUpperCase()==='PUBLICO'});
@@ -1269,33 +1261,33 @@
         var avisoSync=(identificado&&estado.sincronizandoBoloes)?'<div class="mini" style="border-color:rgba(10,90,53,.35);background:#f0fff4"><strong>🔄 Sincronizando seus bolões com a planilha...</strong><p>O JSON público abre rápido; seus bolões privados/criados só aparecem depois da consulta real com seu Telegram ID.</p></div>':'';
         var avisoPrivado='';
         if(identificado && !estado.sincronizandoBoloes && !meusCriados.length && !participando.length){
-          avisoPrivado='<div class="mini" style="border-color:rgba(212,166,60,.35);background:#fffdf4"><strong>⚠️ Nenhum bolão privado vinculado ao seu Telegram ID</strong><p>Se você criou bolões e eles não apareceram, confira se o criador_telegram_id/inscrição na planilha está com o mesmo ID do Telegram usado para abrir este Mini App.</p><button class="mini-action secondary" id="atualizarBoloesApiTopo">Atualizar bolões agora</button></div>';
+          avisoPrivado='<div class="mini" style="border-color:rgba(212,166,60,.35);background:#fffdf4"><strong>⚠️ Nenhum bolão privado vinculado ao seu Telegram ID</strong><p>Se você criou bolões e eles não apareceram, confira se o criador_telegram_id/inscrição na planilha está com o mesmo ID do Telegram usado para abrir este Mini App.</p><button class="mini-action secondary" id="atualizarBoloesApiTopo">Recarregar JSON do perfil</button></div>';
         }
 
         var secoesPrivadas='';
         if(identificado){
           secoesPrivadas+=montarSecaoBoloes(adminAtual?'🔐 Bolões administrados':'🔐 Meus bolões criados', meusCriados, true);
-          secoesPrivadas+=montarSecaoBoloes('👥 Bolões que participo', participando, false);
+          if(participando.length)secoesPrivadas+=montarSecaoBoloes('👥 Bolões que participo', participando, false);
         }else{
           secoesPrivadas+='<div class="mini"><strong>🔐 Área privada protegida</strong><p>Meus bolões criados e bolões que participo só aparecem quando o Telegram identifica o participante.</p></div>';
         }
 
         var bodyBoloes=
           avisoUsuario+avisoSync+
-          (estado.bolaoAtual?'<div class="mini" style="border-color:rgba(10,90,53,.4);background:#f0fff4"><strong>✅ Bolão ativo: '+esc(estado.bolaoAtual.nome_bolao||CONFIG.ID_BOLAO)+'</strong><p>'+esc(estado.bolaoAtual.tipo_bolao||'PUBLICO')+
+          (estado.bolaoAtual?'<div class="mini" style="border-color:rgba(10,90,53,.4);background:#f0fff4"><strong>✅ Bolão ativo: '+esc(estado.bolaoAtual.nome_bolao||CONFIG.ID_BOLAO)+'</strong><p>'+esc(tipoBolaoSeguro(estado.bolaoAtual))+
           (estado.bolaoAtual.codigo_convite&&estado.bolaoAtual.codigo_convite!=='PUBLICO'?'&nbsp;•&nbsp;Código: <b>'+esc(estado.bolaoAtual.codigo_convite)+'</b>':'')+
           '</p></div>':'')+
           montarSecaoBoloes('🌎 Bolões públicos', boloesPublicos, true)+
           secoesPrivadas+
           avisoPrivado+
-          '<div class="mini"><strong>Criar ou entrar em bolão</strong><p>Crie bolões privados para trabalho, família ou amigos. Cada bolão tem ranking e código de convite separados.</p><button class="mini-action secondary" id="atualizarBoloesApi">🔄 Atualizar bolões agora</button></div>';
+          '<div class="mini"><strong>Criar ou entrar em bolão</strong><p>Crie bolões privados para trabalho, família ou amigos. Cada bolão tem ranking e código de convite separados.</p><button class="mini-action secondary" id="atualizarBoloesApi">🔄 Recarregar JSON do perfil</button></div>';
         openModal('🏆 Bolões',bodyBoloes,'<button class="btn light" id="entrarCodigo">Entrar com Código</button><button class="btn primary" id="criarBolao">Criar Bolão</button>');
         ligarEventosBoloes();
         entrarCodigo.onclick=abrirEntrarCodigo;
         criarBolao.onclick=abrirCriarBolao;
         var abrirTel=document.getElementById('abrirTelegramOficial');
         if(abrirTel)abrirTel.onclick=function(){window.location.href=CONFIG.TELEGRAM_MINIAPP_OFICIAL};
-        function atualizarBoloesAgora(){estado.sincronizandoBoloes=true;screen('boloes');loadApi(true,false).then(function(){estado.sincronizandoBoloes=false;screen('boloes')}).catch(function(){estado.sincronizandoBoloes=false;screen('boloes')})}
+        function atualizarBoloesAgora(){estado.sincronizandoBoloes=true;screen('boloes');carregarJsonPublicoPerfilEstatico().then(function(){estado.sincronizandoBoloes=false;screen('boloes');toastMsg('JSON do perfil recarregado.');}).catch(function(e){estado.sincronizandoBoloes=false;screen('boloes');toastMsg('Não foi possível recarregar o JSON agora.');})}
         var btnAtualizar=document.getElementById('atualizarBoloesApi');
         if(btnAtualizar)btnAtualizar.onclick=atualizarBoloesAgora;
         var btnAtualizarTopo=document.getElementById('atualizarBoloesApiTopo');
@@ -1379,17 +1371,19 @@
 
     function montarSecaoBoloes(titulo, lista, mostrarCompartilhar){
       lista=Array.isArray(lista)?lista:[];
-      var itens=lista.length?lista.map(function(b){
-        var codigo=b.codigo_convite||'';
+      var itens=lista.length?lista.map(function(raw){
+        var b=normalizarBolaoRespostaAcao(raw, raw&&raw.codigo_convite) || raw || {};
+        var codigo=String(b.codigo_convite||'').trim().toUpperCase();
+        var tipo=tipoBolaoSeguro(b);
         var link=b.link_convite_oficial||b.link_convite||montarLinkConviteLocal(b);
         var codigoVisivelStr=(codigo&&codigo!=='PUBLICO')?'<p>Código de convite: <b>'+esc(codigo)+'</b></p>':'';
         var botoesCompartilhar='';
         if(mostrarCompartilhar){
-          botoesCompartilhar='<button class="mini-action secondary" data-copy-convite="'+esc(link)+'">📋 Copiar link</button>'+
+          botoesCompartilhar='<button class="mini-action secondary" data-copy-convite="'+esc(link)+'">📋 Copiar link</button>'+ 
             '<button class="mini-action secondary" data-share-convite="'+esc(link)+'" data-share-nome="'+esc(b.nome||b.nome_bolao||'Bolão')+'">📤 Compartilhar</button>';
         }
-        return '<div class="mini bolao-card"><strong>'+esc(b.nome||b.nome_bolao||b.id_bolao)+' <span class="chip">'+esc(b.tipo||'PUBLICO')+'</span></strong>'+
-          '<p>'+esc(b.participantes!=null?b.participantes:0)+' participante(s) • '+esc(b.jogos!=null?b.jogos:0)+' jogo(s)</p>'+
+        return '<div class="mini bolao-card"><strong>'+esc(b.nome||b.nome_bolao||b.id_bolao)+' <span class="chip">'+esc(tipo)+'</span></strong>'+ 
+          '<p>'+esc(qtdParticipantesSeguro(b))+' participante(s) • '+esc(qtdJogosSeguro(b))+' jogo(s)</p>'+ 
           codigoVisivelStr+
           '<div class="mini-actions"><button class="mini-action" data-select-bolao="'+esc(b.id_bolao)+'">Abrir</button>'+botoesCompartilhar+'</div></div>';
       }).join(''):'<div class="mini"><p style="color:#52635a">Nenhum bolão nesta seção.</p></div>';
@@ -1457,6 +1451,94 @@
   }
 }
 
+    function tipoBolaoSeguro(b){
+      b=b||{};
+      const codigo=String(b.codigo_convite||b.codigo||'').trim().toUpperCase();
+      let tipo=String(b.tipo||b.tipo_bolao||'').trim().toUpperCase();
+      // Bolão com código de convite real nunca deve aparecer como PÚBLICO.
+      if(!tipo || (tipo==='PUBLICO' && codigo && codigo!=='PUBLICO')) tipo='PRIVADO';
+      return tipo||'PUBLICO';
+    }
+
+    function qtdParticipantesSeguro(b){
+      b=b||{};
+      const vals=[b.participantes,b.total_participantes,b.qtd_participantes,b.inscritos];
+      for(let i=0;i<vals.length;i++){
+        const n=Number(vals[i]);
+        if(isFinite(n)&&n>0)return n;
+      }
+      // Criador/bolão privado recém-criado: a inscrição do criador já existe, mesmo que o JSON de perfil ainda não tenha sido republicado.
+      if(tipoBolaoSeguro(b)==='PRIVADO' || b.souCriador)return 1;
+      return 0;
+    }
+
+    function qtdJogosSeguro(b){
+      b=b||{};
+      const vals=[b.jogos,b.total_jogos,b.qtd_jogos];
+      for(let i=0;i<vals.length;i++){
+        const n=Number(vals[i]);
+        if(isFinite(n)&&n>0)return n;
+      }
+      const id=String(b.id_bolao||'').trim();
+      const home=estado.homePorBolao&&id?estado.homePorBolao[id]:null;
+      if(home&&home.dados&&Array.isArray(home.dados.jogos)&&home.dados.jogos.length)return home.dados.jogos.length;
+      if(home&&Array.isArray(home.jogos)&&home.jogos.length)return home.jogos.length;
+      // Bolões privados criados pelo Mini App são cópia do bolão padrão. Enquanto o JSON de perfil não republica, não exibir 0 indevido.
+      if(tipoBolaoSeguro(b)==='PRIVADO')return 72;
+      return 0;
+    }
+
+    function normalizarBolaoRespostaAcao(bolao,codigo){
+      if(!bolao||!bolao.id_bolao)return null;
+      const b=Object.assign({},bolao);
+      b.id_bolao=String(b.id_bolao||'').trim();
+      b.nome_bolao=b.nome_bolao||b.nome||b.id_bolao;
+      b.nome=b.nome||b.nome_bolao;
+      b.status=b.status||'ATIVO';
+      b.codigo_convite=String(b.codigo_convite||codigo||'').trim().toUpperCase();
+      b.tipo=tipoBolaoSeguro(b);
+      b.tipo_bolao=b.tipo;
+      b.link_convite=b.link_convite||b.link_convite_oficial||montarLinkConviteLocal(b);
+      b.link_convite_oficial=b.link_convite_oficial||b.link_convite;
+      b.link_convite_site=b.link_convite_site||montarLinkConviteLocal(b);
+      b.participantes=qtdParticipantesSeguro(b);
+      b.jogos=qtdJogosSeguro(b);
+      return b;
+    }
+
+    function upsertBolaoArrayLocal(arr,bolao){
+      arr=Array.isArray(arr)?arr.slice():[];
+      if(!bolao||!bolao.id_bolao)return arr;
+      const id=String(bolao.id_bolao);
+      let achou=false;
+      arr=arr.map(function(x){
+        if(x&&String(x.id_bolao||'')===id){achou=true;return Object.assign({},x,bolao);}
+        return x;
+      });
+      if(!achou)arr.unshift(bolao);
+      return arr;
+    }
+
+    function inserirBolaoLocalDeAcao(bolao,grupo){
+      const b=normalizarBolaoRespostaAcao(bolao,bolao&&bolao.codigo_convite);
+      if(!b)return null;
+      estado.boloes=upsertBolaoArrayLocal(estado.boloes,b);
+      if(String(b.tipo||b.tipo_bolao||'').toUpperCase()==='PUBLICO')estado.boloesPublicos=upsertBolaoArrayLocal(estado.boloesPublicos,b);
+      if(grupo==='criado')estado.meusBoloesCriados=upsertBolaoArrayLocal(estado.meusBoloesCriados,Object.assign({},b,{souCriador:true}));
+      if(grupo==='participando')estado.boloesParticipando=upsertBolaoArrayLocal(estado.boloesParticipando,b);
+      estado.bolaoAtual=b;
+      CONFIG.ID_BOLAO=b.id_bolao;
+      CONFIG.AUTO_PERFIL=false;
+      try{localStorage.setItem('PSS_MBE_BOLAO_ATIVO',String(CONFIG.ID_BOLAO||''));localStorage.setItem('PSS_MBE_BOLAO_ATIVO_ESCOLHIDO','SIM')}catch(e){}
+      return b;
+    }
+
+    function mensagemTimeoutAcao(tipo){
+      return (tipo==='criar')
+        ? 'A criação demorou para responder. Não clique de novo agora; abra Bolões e confira se o bolão apareceu.'
+        : 'A entrada demorou para responder. Não clique de novo agora; confira a tela de Bolões em instantes.';
+    }
+
     function abrirCriarBolao(){
       if(!estado.usuario.idTelegram)return toastMsg('Abra pelo Telegram para criar um bolão vinculado ao seu usuário.');
       openModal('➕ Criar Bolão Privado',`<div class="mini"><strong>Novo bolão privado</strong><p>Crie um bolão para trabalho, família ou amigos. O sistema gera código de convite e ranking separado.</p></div><div class="field"><label>Nome do bolão</label><input id="nomeBolaoNovo" type="text" maxlength="80" placeholder="Ex: Bolão da Família"></div>`, '<button class="btn light" id="cancelarCriar">Cancelar</button><button class="btn primary" id="confirmarCriar">Criar Bolão</button>');
@@ -1469,16 +1551,19 @@
       if(!nome)return toastMsg('Informe o nome do bolão.');
       try{
         confirmarCriar.disabled=true;confirmarCriar.textContent='Criando...';
-        const r=await chamarApiAcao('criarBolaoPrivado',{nome_bolao:nome,telegram_id:estado.usuario.idTelegram,nome_usuario:estado.usuario.nome,username:estado.usuario.username,campeonato_id:'CUP'});
+        const requestId='CRIAR_'+String(estado.usuario.idTelegram||'')+'_'+Date.now()+'_'+Math.floor(Math.random()*100000);
+        const r=await chamarApiAcao('criarBolaoPrivado',{nome_bolao:nome,telegram_id:estado.usuario.idTelegram,nome_usuario:estado.usuario.nome,username:estado.usuario.username,campeonato_id:'CUP',modo_rapido:'1',client_request_id:requestId});
         if(!r||!r.ok)throw new Error((r&&r.erro)||'Falha ao criar bolão.');
-        CONFIG.ID_BOLAO=r.bolao.id_bolao;
-        CONFIG.AUTO_PERFIL=false;
-        try{localStorage.setItem('PSS_MBE_BOLAO_ATIVO',String(CONFIG.ID_BOLAO||''));localStorage.setItem('PSS_MBE_BOLAO_ATIVO_ESCOLHIDO','SIM')}catch(e){}
-        // CORRECAO: mostrar convite imediatamente (antes de recarregar a API para nao sumir)
+        const b=inserirBolaoLocalDeAcao(r.bolao,'criado');
+        if(b){
+          toastMsg((r.ja_existia?'Bolão já existente localizado: ':'Bolão criado: ')+(b.nome_bolao||b.nome||b.id_bolao));
+        }
         mostrarConviteBolao(r.bolao,r.convite);
-        // Atualiza lista em segundo plano sem fechar o modal do convite
-        setTimeout(function(){loadApi(true)},300);
-      }catch(e){toastMsg(e.message||String(e));if(confirmarCriar){confirmarCriar.disabled=false;confirmarCriar.textContent='Criar Bolão'}}
+      }catch(e){
+        const msg=String(e&&e.message?e.message:e);
+        toastMsg(/tempo esgotado|timeout/i.test(msg)?mensagemTimeoutAcao('criar'):msg);
+        if(confirmarCriar){confirmarCriar.disabled=false;confirmarCriar.textContent='Criar Bolão'}
+      }
     }
 
     function abrirEntrarCodigo(){
@@ -1493,15 +1578,20 @@
       if(!codigo)return toastMsg('Informe o código do bolão.');
       try{
         confirmarEntrar.disabled=true;confirmarEntrar.textContent='Entrando...';
-        const r=await chamarApiAcao('entrarBolaoPorCodigo',{codigo_convite:codigo,telegram_id:estado.usuario.idTelegram,nome:estado.usuario.nome,username:estado.usuario.username});
+        const requestId='ENTRAR_'+String(estado.usuario.idTelegram||'')+'_'+codigo+'_'+Date.now();
+        const r=await chamarApiAcao('entrarBolaoPorCodigo',{codigo_convite:codigo,telegram_id:estado.usuario.idTelegram,nome:estado.usuario.nome,username:estado.usuario.username,modo_rapido:'1',client_request_id:requestId});
         if(!r||!r.ok)throw new Error((r&&r.erro)||'Não foi possível entrar no bolão.');
-        CONFIG.ID_BOLAO=r.bolao.id_bolao;
-        CONFIG.AUTO_PERFIL=false;
-        try{localStorage.setItem('PSS_MBE_BOLAO_ATIVO',String(CONFIG.ID_BOLAO||''));localStorage.setItem('PSS_MBE_BOLAO_ATIVO_ESCOLHIDO','SIM')}catch(e){}
+        const b=inserirBolaoLocalDeAcao(r.bolao,'participando');
         closeModal();
-        await loadApi(true);
-        toastMsg('Entrada confirmada no bolão: '+(r.bolao.nome_bolao||r.bolao.nome||CONFIG.ID_BOLAO));
-      }catch(e){toastMsg(e.message||String(e));if(confirmarEntrar){confirmarEntrar.disabled=false;confirmarEntrar.textContent='Entrar'}}
+        toastMsg((r.ja_inscrito?'Você já estava neste bolão: ':'Entrada confirmada: ')+(b?(b.nome_bolao||b.nome||b.id_bolao):codigo));
+        if(b&&b.id_bolao){
+          setTimeout(function(){selecionarBolao(b.id_bolao)},180);
+        }
+      }catch(e){
+        const msg=String(e&&e.message?e.message:e);
+        toastMsg(/tempo esgotado|timeout/i.test(msg)?mensagemTimeoutAcao('entrar'):msg);
+        if(confirmarEntrar){confirmarEntrar.disabled=false;confirmarEntrar.textContent='Entrar'}
+      }
     }
 
     function mostrarConviteBolao(bolao,convite){
