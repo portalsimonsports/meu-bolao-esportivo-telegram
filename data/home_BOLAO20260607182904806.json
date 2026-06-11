@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "versao": "V050_RANKING_PONTUACAO_DETALHADA_SEM_DATA",
+  "versao": "V052_JOGOS_FINALIZADOS_PLACAR_CLASSIFICACAO_AO_VIVO",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "11/06/2026 19:04:53",
+  "dataHora": "11/06/2026 20:21:02",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
-    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V050_RANKING_PONTUACAO_DETALHADA_SEM_DATA&perfil=1",
+    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V052_JOGOS_FINALIZADOS_PLACAR_CLASSIFICACAO_AO_VIVO&perfil=1",
     "id_bolao": "BOLAO20260607182904806",
     "id_bolao_solicitado": "BOLAO20260607182904806",
     "bolaoAtual": {
@@ -71,10 +71,10 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V050_RANKING_PONTUACAO_DETALHADA_SEM_DATA",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V052_JOGOS_FINALIZADOS_PLACAR_CLASSIFICACAO_AO_VIVO",
         "souCriador": false,
         "participantes": 1,
-        "jogos": 71
+        "jogos": 72
       }
     ],
     "boloesPublicos": [
@@ -88,10 +88,10 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V050_RANKING_PONTUACAO_DETALHADA_SEM_DATA",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V052_JOGOS_FINALIZADOS_PLACAR_CLASSIFICACAO_AO_VIVO",
         "souCriador": false,
         "participantes": 1,
-        "jogos": 71
+        "jogos": 72
       }
     ],
     "meusBoloesCriados": [],
@@ -105,6 +105,32 @@
       "admin": false
     },
     "jogos": [
+      {
+        "id": "dff5182881d55565",
+        "id_bolao": "BOLAO20260607182904806",
+        "id_jogo": "dff5182881d55565",
+        "mandante": "Mexico",
+        "visitante": "South Africa",
+        "flagMandante": "🇲🇽",
+        "flagVisitante": "🇿🇦",
+        "flagMandanteEmoji": "🇲🇽",
+        "flagVisitanteEmoji": "🇿🇦",
+        "codigoMandante": "mx",
+        "codigoVisitante": "za",
+        "data": "11/06/2026",
+        "hora": "16:00",
+        "dataHora": "11/06/2026 16:00",
+        "limitePalpite": "11/06/2026 16:00",
+        "gols_mandante": 2,
+        "gols_visitante": 0,
+        "status": "Finalizado",
+        "aceitaPalpite": false,
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
+        "palpites_liberados": "NAO",
+        "palpitesPublicosLiberados": true,
+        "meuPalpite": null
+      },
       {
         "id": "01000048ef0bcecc",
         "id_bolao": "BOLAO20260607182904806",
@@ -1953,10 +1979,10 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "11/06/2026 19:05:36",
+    "cacheAtualizadoEm": "11/06/2026 20:21:47",
     "modoDados": "JSON_PUBLICO_ESTATICO"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "11/06/2026 19:05:36",
-  "gerado_ts": 1781215536777
+  "gerado_em": "11/06/2026 20:21:47",
+  "gerado_ts": 1781220107507
 }
