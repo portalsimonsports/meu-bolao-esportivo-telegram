@@ -121,6 +121,7 @@
   <script>
     const URL_PARAMS=new URLSearchParams(window.location.search||'');
     const API_PARAM=URL_PARAMS.get('api')||'';
+    // V035: api= não é mais usado para carregar tela. Ele fica apenas como compatibilidade para ações de gravação.
     if(API_PARAM){try{localStorage.setItem('PSS_MBE_API_URL',API_PARAM)}catch(e){}}
 
     function startParamInicialBolao_(){
@@ -156,9 +157,9 @@
     }
 
     const CONFIG={
-      VERSAO:'V033_PERFIL_TELEGRAM_BOLOES_PALPITES',
-      API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
-      API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // API fixa para permitir link limpo no grupo sem parâmetro ?api=.
+      VERSAO:'V035_JSON_PERFIL_TELEGRAM_ESTATICO',
+      API_URL:API_PARAM||'', // V035: usado somente para gravação; leitura principal vem dos JSONs estáticos.
+      API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // Fallback somente para ações de gravação caso o JSON não traga apiUrl.
       ID_BOLAO:idBolaoInicial_(),
       CODIGO_CONVITE:URL_PARAMS.get('codigo_convite')||URL_PARAMS.get('codigo')||'',
       ENVIAR_AO_BOT_SEM_API:true,
@@ -167,8 +168,8 @@
       TELEGRAM_MINIAPP_OFICIAL:'https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo',
       JSON_PUBLICO_ATIVO:true,
       JSON_PUBLICO_BASE:'data',
-      JSON_PUBLICO_TIMEOUT_MS:1800,
-      API_REFRESH_SILENCIOSO:true,
+      JSON_PUBLICO_TIMEOUT_MS:4500,
+      API_REFRESH_SILENCIOSO:false,
       // V033: abertura pelo menu do Telegram sem id_bolao deve carregar o PERFIL do usuário,
       // não forçar BOLAO001 nem JSON público anônimo.
       AUTO_PERFIL:(!entradaBolaoExplicita_()&&!selecaoManualSalva_())
@@ -228,14 +229,16 @@
 
     function esc(v){return String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#039;")}
     function apiUrl(){
-      const fixa=String(CONFIG.API_URL_FIXA||'').trim();
       const param=String(CONFIG.API_URL||'').trim();
       const salva=String(localStorage.getItem('PSS_MBE_API_URL')||'').trim();
-      const candidatos=[param,fixa,salva].filter(Boolean);
+      const fixa=String(CONFIG.API_URL_FIXA||'').trim();
+      // V035: leitura não depende desta API; ela serve para salvar palpite/criar/entrar.
+      // Prioriza URL recebida do JSON público, depois compatibilidade por parâmetro/localStorage.
+      const candidatos=[param,salva,fixa].filter(Boolean);
       for(const u of candidatos){
         if(/^https:\/\/script\.google\.com\/macros\/s\/[^\/]+\/exec/i.test(u))return u;
       }
-      return fixa;
+      return '';
     }
     function isAberto(j){return !!(j&&j.aceitaPalpite)}
     function statusJogo(j){return String(j&&j.status?j.status:(isAberto(j)?'Aberto':'Em breve'))}
@@ -378,48 +381,140 @@
 
 
 
-    function jsonPublicoHomeUrl(){
-      const id=String(CONFIG.ID_BOLAO||'BOLAO001').trim()||'BOLAO001';
+    function jsonBaseUrl(path){
       const base=String(CONFIG.JSON_PUBLICO_BASE||'data').replace(/^\/+|\/+$/g,'')||'data';
-      const url=new URL(base+'/home_'+encodeURIComponent(id)+'.json',window.location.href);
+      const url=new URL(base+'/'+String(path||'').replace(/^\/+/,''),window.location.href);
       url.searchParams.set('v',CONFIG.VERSAO||'');
+      const limpar=String(URL_PARAMS.get('limpar_cache')||'').toLowerCase();
+      if(limpar==='1'||limpar==='sim'||limpar==='true')url.searchParams.set('_',String(Date.now()));
       return url.toString();
+    }
+
+    function jsonPublicoHomeUrl(idBolao){
+      const id=String(idBolao||CONFIG.ID_BOLAO||'BOLAO001').trim()||'BOLAO001';
+      return jsonBaseUrl('home_'+encodeURIComponent(id)+'.json');
+    }
+
+    function jsonPublicoManifestUrl(){
+      return jsonBaseUrl('manifest.json');
+    }
+
+    function jsonPublicoPerfilUrl(telegramId){
+      const tg=String(telegramId||estado.usuario.idTelegram||'').replace(/\D+/g,'');
+      if(!tg)return '';
+      return jsonBaseUrl('perfis/perfil_'+encodeURIComponent(tg)+'.json');
     }
 
     async function fetchJsonComTimeout(url,timeoutMs){
       const controller=window.AbortController?new AbortController():null;
-      const timer=setTimeout(()=>{try{if(controller)controller.abort()}catch(e){}},Number(timeoutMs||1800));
+      const timer=setTimeout(()=>{try{if(controller)controller.abort()}catch(e){}},Number(timeoutMs||4500));
       try{
-        const resp=await fetch(url,{cache:'force-cache',signal:controller?controller.signal:undefined});
-        if(!resp.ok)throw new Error('HTTP '+resp.status);
+        const resp=await fetch(url,{cache:'no-cache',signal:controller?controller.signal:undefined});
+        if(!resp.ok)throw new Error('HTTP '+resp.status+' em '+url);
         return await resp.json();
       }finally{clearTimeout(timer)}
     }
 
+    function listaBoloesManifest(manifest){
+      return Array.isArray(manifest&&manifest.boloes)?manifest.boloes:[];
+    }
+
+    function listaBoloesPerfil(perfil){
+      const d=(perfil&&perfil.dados)?perfil.dados:perfil||{};
+      const todos=[];
+      ['boloesComPalpite','meusBoloesCriados','boloesParticipando','boloes','boloesPublicos'].forEach(function(k){
+        (Array.isArray(d[k])?d[k]:[]).forEach(function(b){if(b&&b.id_bolao)todos.push(b)});
+      });
+      const mapa={};
+      todos.forEach(function(b){mapa[String(b.id_bolao)]=Object.assign({},mapa[String(b.id_bolao)]||{},b)});
+      return Object.values(mapa);
+    }
+
+    function escolherBolaoPorJson(manifest,perfil){
+      const explicito=String(URL_PARAMS.get('id_bolao')||startParamInicialBolao_()||'').trim();
+      if(explicito)return explicito;
+      const salvo=String(localStorage.getItem('PSS_MBE_BOLAO_ATIVO')||'').trim();
+      const d=(perfil&&perfil.dados)?perfil.dados:perfil||{};
+      const idsPerfil=listaBoloesPerfil(perfil).map(function(b){return String(b.id_bolao)});
+      if(salvo&&idsPerfil.indexOf(salvo)>=0)return salvo;
+      if(d.ultimoBolao&&d.ultimoBolao.id_bolao)return String(d.ultimoBolao.id_bolao);
+      if(Array.isArray(d.boloesComPalpite)&&d.boloesComPalpite.length)return String(d.boloesComPalpite[0].id_bolao||'');
+      if(Array.isArray(d.meusBoloesCriados)&&d.meusBoloesCriados.length)return String(d.meusBoloesCriados[0].id_bolao||'');
+      if(Array.isArray(d.boloesParticipando)&&d.boloesParticipando.length)return String(d.boloesParticipando[0].id_bolao||'');
+      if(idsPerfil.length)return idsPerfil[0];
+      const bm=listaBoloesManifest(manifest);
+      if(bm.length)return String(bm[0].id_bolao||'');
+      return String(CONFIG.ID_BOLAO||'BOLAO001');
+    }
+
+    function mesclarHomeComPerfilJson(home,perfil,manifest,idBolao){
+      const pacoteHome=(home&&home.dados)?home.dados:(home||{});
+      const dPerfil=(perfil&&perfil.dados)?perfil.dados:(perfil||{});
+      const dados=Object.assign({},pacoteHome);
+      dados.id_bolao=String(idBolao||dados.id_bolao||CONFIG.ID_BOLAO||'BOLAO001');
+      dados.modoDados='JSON_ESTATICO_PERFIL_TELEGRAM';
+      dados.cacheAtualizadoEm=(home&&home.gerado_em)||dados.cacheAtualizadoEm||dPerfil.gerado_em||'';
+      if(dados.apiUrl){try{CONFIG.API_URL=dados.apiUrl;localStorage.setItem('PSS_MBE_API_URL',dados.apiUrl)}catch(e){}}
+
+      const porId={};
+      function addBolao(b){if(b&&b.id_bolao)porId[String(b.id_bolao)]=Object.assign({},porId[String(b.id_bolao)]||{},b)}
+      listaBoloesManifest(manifest).forEach(addBolao);
+      listaBoloesPerfil(perfil).forEach(addBolao);
+      (Array.isArray(pacoteHome.boloes)?pacoteHome.boloes:[]).forEach(addBolao);
+      dados.boloes=Object.values(porId);
+      dados.boloesPublicos=Array.isArray(dPerfil.boloesPublicos)?dPerfil.boloesPublicos:(Array.isArray(pacoteHome.boloesPublicos)?pacoteHome.boloesPublicos:listaBoloesManifest(manifest));
+      dados.meusBoloesCriados=Array.isArray(dPerfil.meusBoloesCriados)?dPerfil.meusBoloesCriados:[];
+      dados.boloesParticipando=Array.isArray(dPerfil.boloesParticipando)?dPerfil.boloesParticipando:[];
+      dados.usuario=dPerfil.usuario||dados.usuario||estado.usuario;
+      dados.usuarioAdmin=!!(dPerfil.usuarioAdmin||dados.usuarioAdmin);
+
+      const todosPalpites=Array.isArray(dPerfil.meusPalpites)?dPerfil.meusPalpites:[];
+      dados.meusPalpites=todosPalpites.filter(function(p){return String(p.id_bolao||'')===String(dados.id_bolao)});
+
+      if(!dados.bolaoAtual){
+        dados.bolaoAtual=dados.boloes.find(function(b){return String(b.id_bolao)===String(dados.id_bolao)})||null;
+      }
+      return dados;
+    }
+
+    async function carregarJsonPublicoPerfilEstatico(){
+      if(!CONFIG.JSON_PUBLICO_ATIVO)return false;
+      const erros=[];
+      let manifest=null,perfil=null,home=null;
+      try{manifest=await fetchJsonComTimeout(jsonPublicoManifestUrl(),CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500)}catch(e){erros.push('manifest.json: '+e.message)}
+      if(estado.usuario.idTelegram){
+        const perfilUrl=jsonPublicoPerfilUrl(estado.usuario.idTelegram);
+        if(perfilUrl){
+          try{perfil=await fetchJsonComTimeout(perfilUrl,CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500)}catch(e){erros.push('perfil_'+estado.usuario.idTelegram+'.json: '+e.message)}
+        }
+      }
+      const idEscolhido=escolherBolaoPorJson(manifest,perfil);
+      if(idEscolhido)CONFIG.ID_BOLAO=idEscolhido;
+      try{home=await fetchJsonComTimeout(jsonPublicoHomeUrl(CONFIG.ID_BOLAO),CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500)}catch(e){erros.push('home_'+CONFIG.ID_BOLAO+'.json: '+e.message)}
+
+      const dadosHome=(home&&home.dados)?home.dados:home;
+      if(!dadosHome||!Array.isArray(dadosHome.jogos)||!dadosHome.jogos.length){
+        throw new Error(erros.length?erros.join(' | '):'JSON público sem jogos para '+CONFIG.ID_BOLAO+'.');
+      }
+      const dados=mesclarHomeComPerfilJson(home,perfil,manifest,CONFIG.ID_BOLAO);
+      aplicarDadosApi(dados,'json_perfil');
+      salvarCache(dados);
+      estado.carregando=false;
+      estado.erroApi='';
+      render();
+      return true;
+    }
+
     async function carregarJsonPublicoEstatico(){
-  if(!CONFIG.JSON_PUBLICO_ATIVO)return false;
-  try{
-    const pacote=await fetchJsonComTimeout(jsonPublicoHomeUrl(),CONFIG.JSON_PUBLICO_TIMEOUT_MS||1800);
-    const dados=(pacote&&pacote.dados)?pacote.dados:pacote;
-    if(!dados||!Array.isArray(dados.jogos)||!dados.jogos.length)throw new Error('JSON sem jogos.');
-    aplicarDadosApi(dados,'json_publico');
-    salvarCache(dados);
-    estado.carregando=false;
-    estado.erroApi='';
-    render();
-    return true;
-  }catch(e){
-    console.warn('JSON publico nao disponivel; usando API.',e);
-    return false;
-  }
-}
+      return carregarJsonPublicoPerfilEstatico();
+    }
 
     function cacheKey(){
-      return 'PSS_MBE_HOME_CACHE_V033_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_V035_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function cacheInfoKey(){
-      return 'PSS_MBE_HOME_CACHE_INFO_V033_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_INFO_V035_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function chavesCachePossiveis(){
@@ -427,7 +522,7 @@
       const tg=String(estado.usuario.idTelegram||'ANON');
       // V031: não usar caches antigos/estáveis porque eles podem conter lista cortada em 45 jogos.
       return [
-        'PSS_MBE_HOME_CACHE_V033_'+id+'_'+tg
+        'PSS_MBE_HOME_CACHE_V035_'+id+'_'+tg
       ];
     }
 
@@ -444,7 +539,7 @@
         for(let i=0;i<localStorage.length;i++){
           const k=localStorage.key(i)||'';
           if(k.startsWith('PSS_MBE_HOME_CACHE_')||k.startsWith('PSS_MBE_HOME_CACHE_INFO_')){
-            if(deveLimpar || !k.includes('_V033_'))removiveis.push(k);
+            if(deveLimpar || !k.includes('_V035_'))removiveis.push(k);
           }
         }
         removiveis.forEach(k=>localStorage.removeItem(k));
@@ -453,10 +548,13 @@
 
     function aplicarDadosApi(dados, origem) {
   dados = dados || {};
+  if (dados.apiUrl) {
+    try { CONFIG.API_URL = String(dados.apiUrl || ''); localStorage.setItem('PSS_MBE_API_URL', CONFIG.API_URL); } catch(e) {}
+  }
   if (dados.id_bolao) {
     CONFIG.ID_BOLAO = dados.id_bolao;
-    // V033: depois que a API resolve o perfil, o bolão retornado passa a ser o ativo desta sessão.
-    if (origem === 'api') CONFIG.AUTO_PERFIL = false;
+    // V035: JSON de perfil também resolve o bolão ativo da sessão.
+    if (origem === 'api' || origem === 'json_perfil') CONFIG.AUTO_PERFIL = false;
     // Persiste o bolão ativo para sobreviver a recarregamentos, mas sem marcar como escolha manual.
     try { localStorage.setItem('PSS_MBE_BOLAO_ATIVO', dados.id_bolao); } catch(e) {}
   }
@@ -849,7 +947,7 @@
         flagA.textContent='⚽';flagB.textContent='📡';
         teamA.textContent='DADOS';teamB.textContent='REAIS';
         dataJogo.textContent='--/--/----';horaJogo.textContent='--:--';
-        if(openText)openText.textContent=estado.carregando?'CARREGANDO...':(estado.erroApi?(apiUrl()?'ERRO AO CARREGAR':'API NAO CONFIGURADA'):'SEM JOGOS DISPONÍVEIS');
+        if(openText)openText.textContent=estado.carregando?'CARREGANDO...':(estado.erroApi?'ERRO JSON':'SEM JOGOS DISPONÍVEIS');
         btnPalpite.disabled=true;
         btnPalpite.innerHTML='<span>📡</span><span>AGUARDANDO JOGO REAL</span>';
       }else{
@@ -890,7 +988,7 @@
 
     function abrirPalpite(){
       const j=estado.jogo;
-      if(!j)return toastMsg('Nenhum jogo real foi carregado pela API ainda.');
+      if(!j)return toastMsg('Nenhum jogo real foi carregado pelo JSON ainda.');
       if(!isAberto(j))return toastMsg('Este jogo não está aberto para palpite neste momento.');
 
       const atual=getPalpiteLocal(j);
@@ -1162,7 +1260,7 @@
       }
 
       if(name==='mais'){
-        openModal('☰ Mais',`<div class="mini"><strong>Central do Bolão</strong><p>Acesse regulamento, ranking, jogos, bolões ativos e dados do participante.</p></div><div class="mini"><strong>Participante</strong><p>${esc(estado.usuario.nome||'Participante')}</p><p>Telegram ID: <b>${esc(estado.usuario.idTelegram||'não identificado')}</b></p></div><div class="mini"><strong>Bolão atual</strong><p>${esc((estado.bolaoAtual&&estado.bolaoAtual.nome_bolao)||CONFIG.ID_BOLAO)}</p></div><div class="mini"><strong>Dados</strong><p>API: ${apiUrl()?'configurada':'não configurada'}</p><p>${estado.cacheAtualizadoEm?'Última carga salva: '+esc(estado.cacheAtualizadoEm):'Nenhum cache salvo ainda.'}</p><p>${estado.cacheUsado?'Dados exibidos primeiro pelo cache local/JSON e atualizados pela API.':'Dados atualizados pela API real.'}</p></div>`, '<button class="btn light" id="entrarCodigo">Entrar Código</button><button class="btn primary" id="criarBolao">Criar Bolão</button>');
+        openModal('☰ Mais',`<div class="mini"><strong>Central do Bolão</strong><p>Acesse regulamento, ranking, jogos, bolões ativos e dados do participante.</p></div><div class="mini"><strong>Participante</strong><p>${esc(estado.usuario.nome||'Participante')}</p><p>Telegram ID: <b>${esc(estado.usuario.idTelegram||'não identificado')}</b></p></div><div class="mini"><strong>Bolão atual</strong><p>${esc((estado.bolaoAtual&&estado.bolaoAtual.nome_bolao)||CONFIG.ID_BOLAO)}</p></div><div class="mini"><strong>Dados</strong><p>Leitura: JSON estático</p><p>API gravação: ${apiUrl()?'configurada':'não configurada'}</p><p>${estado.cacheAtualizadoEm?'Última carga salva: '+esc(estado.cacheAtualizadoEm):'Nenhum cache salvo ainda.'}</p><p>${estado.cacheUsado?'Dados exibidos pelo JSON público/cache local.':'Dados carregados pelo JSON público.'}</p></div>`, '<button class="btn light" id="entrarCodigo">Entrar Código</button><button class="btn primary" id="criarBolao">Criar Bolão</button>');
         const btnEntrarCodigo=document.getElementById('entrarCodigo');
         const btnCriarBolao=document.getElementById('criarBolao');
         if(btnEntrarCodigo)btnEntrarCodigo.onclick=abrirEntrarCodigo;
@@ -1437,16 +1535,23 @@
 
 
     async function iniciarCarregamentoInstantaneo(){
-  // V033: dentro do Telegram, sem bolão explícito, carrega primeiro a API real com telegram_id.
-  // O JSON público é anônimo e por isso não mostra bolões criados, inscrições e palpites do perfil.
-  const precisaPerfilTelegram=!!(estado.usuario.idTelegram&&CONFIG.AUTO_PERFIL);
-  if(precisaPerfilTelegram){await loadApi(true,false);return;}
-
-  const jsonOk=await carregarJsonPublicoEstatico();
-  const jaTemDados=!!estado.jogo||estado.jogos.length>0||estado.ranking.length>0;
-  if(!jsonOk&&!jaTemDados){await loadApi(false,false);}
-  else if(CONFIG.API_REFRESH_SILENCIOSO){setTimeout(()=>loadApi(CONFIG.AUTO_PERFIL,true),900);}
-}
+      // V035: a leitura principal é 100% JSON estático publicado no GitHub/Cloudflare.
+      // Apps Script/JSONP fica apenas para ações de gravação: salvar palpite, criar bolão e entrar por código.
+      try{
+        const jsonOk=await carregarJsonPublicoPerfilEstatico();
+        if(jsonOk)return;
+      }catch(e){
+        console.warn('Falha ao carregar JSON estático.',e);
+        estado.carregando=false;
+        estado.erroApi='JSON público não carregou: '+(e&&e.message?e.message:String(e));
+        render();
+        toastMsg(estado.erroApi);
+        return;
+      }
+      estado.carregando=false;
+      estado.erroApi='JSON público não encontrado para o perfil/bolão.';
+      render();
+    }
 
     (function(){initTelegram();limparCachesAntigosSeNecessario();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);carregarCache();events();render();setTimeout(()=>iniciarCarregamentoInstantaneo(),50)})();
   </script>
