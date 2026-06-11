@@ -1,12 +1,13 @@
 {
   "ok": true,
-  "versao": "V031D_FIX_BOLOES_PALPITES",
-  "modoHome": "LEVE_CACHE_RAPIDO",
-  "dataHora": "11/06/2026 06:07:48",
+  "versao": "V035_JSON_PERFIL_TELEGRAM_ESTATICO",
+  "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
+  "dataHora": "11/06/2026 10:40:03",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
-    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&v=V031D_FIX_BOLOES_PALPITES",
+    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V035_JSON_PERFIL_TELEGRAM_ESTATICO&perfil=1",
     "id_bolao": "BOLAO20260607185133484",
+    "id_bolao_solicitado": "BOLAO20260607185133484",
     "bolaoAtual": {
       "id_bolao": "BOLAO20260607185133484",
       "nome_bolao": "Bolao de Pinheirao",
@@ -54,7 +55,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V031D_FIX_BOLOES_PALPITES",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V035_JSON_PERFIL_TELEGRAM_ESTATICO",
         "souCriador": false,
         "participantes": 1,
         "jogos": 72
@@ -70,7 +71,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V031D_FIX_BOLOES_PALPITES",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V035_JSON_PERFIL_TELEGRAM_ESTATICO",
         "souCriador": false,
         "participantes": 1,
         "jogos": 72
@@ -1817,10 +1818,10 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "11/06/2026 06:08:21",
+    "cacheAtualizadoEm": "11/06/2026 10:40:42",
     "modoDados": "JSON_PUBLICO_ESTATICO"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "11/06/2026 06:08:21",
-  "gerado_ts": 1781168901417
+  "gerado_em": "11/06/2026 10:40:42",
+  "gerado_ts": 1781185242474
 }
