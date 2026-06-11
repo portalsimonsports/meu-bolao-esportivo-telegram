@@ -131,6 +131,17 @@
       return String(partes[0]||'').trim();
     }
 
+    function entradaBolaoExplicita_(){
+      const urlId=String(URL_PARAMS.get('id_bolao')||'').trim();
+      const startId=startParamInicialBolao_();
+      const convite=String(URL_PARAMS.get('codigo_convite')||URL_PARAMS.get('codigo')||URL_PARAMS.get('convite')||'').trim();
+      return !!(urlId||startId||convite);
+    }
+
+    function selecaoManualSalva_(){
+      try{return String(localStorage.getItem('PSS_MBE_BOLAO_ATIVO_ESCOLHIDO')||'').toUpperCase()==='SIM'}catch(e){return false}
+    }
+
     function idBolaoInicial_(){
       const salvo=String(localStorage.getItem('PSS_MBE_BOLAO_ATIVO')||'').trim();
       const urlId=String(URL_PARAMS.get('id_bolao')||'').trim();
@@ -145,7 +156,7 @@
     }
 
     const CONFIG={
-      VERSAO:'V032_BOLOES_MULTIPLOS_PALPITES_DEFINITIVO',
+      VERSAO:'V033_PERFIL_TELEGRAM_BOLOES_PALPITES',
       API_URL:API_PARAM||'', // Recebida automaticamente pelo botão do Telegram: ?api=WEBAPP_URL.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // API fixa para permitir link limpo no grupo sem parâmetro ?api=.
       ID_BOLAO:idBolaoInicial_(),
@@ -157,7 +168,10 @@
       JSON_PUBLICO_ATIVO:true,
       JSON_PUBLICO_BASE:'data',
       JSON_PUBLICO_TIMEOUT_MS:1800,
-      API_REFRESH_SILENCIOSO:true
+      API_REFRESH_SILENCIOSO:true,
+      // V033: abertura pelo menu do Telegram sem id_bolao deve carregar o PERFIL do usuário,
+      // não forçar BOLAO001 nem JSON público anônimo.
+      AUTO_PERFIL:(!entradaBolaoExplicita_()&&!selecaoManualSalva_())
     };
 
     const tg=window.Telegram&&window.Telegram.WebApp?window.Telegram.WebApp:null;
@@ -401,11 +415,11 @@
 }
 
     function cacheKey(){
-      return 'PSS_MBE_HOME_CACHE_V032_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_V033_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function cacheInfoKey(){
-      return 'PSS_MBE_HOME_CACHE_INFO_V032_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_INFO_V033_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function chavesCachePossiveis(){
@@ -413,7 +427,7 @@
       const tg=String(estado.usuario.idTelegram||'ANON');
       // V031: não usar caches antigos/estáveis porque eles podem conter lista cortada em 45 jogos.
       return [
-        'PSS_MBE_HOME_CACHE_V032_'+id+'_'+tg
+        'PSS_MBE_HOME_CACHE_V033_'+id+'_'+tg
       ];
     }
 
@@ -430,7 +444,7 @@
         for(let i=0;i<localStorage.length;i++){
           const k=localStorage.key(i)||'';
           if(k.startsWith('PSS_MBE_HOME_CACHE_')||k.startsWith('PSS_MBE_HOME_CACHE_INFO_')){
-            if(deveLimpar || !k.includes('_V032_'))removiveis.push(k);
+            if(deveLimpar || !k.includes('_V033_'))removiveis.push(k);
           }
         }
         removiveis.forEach(k=>localStorage.removeItem(k));
@@ -441,7 +455,9 @@
   dados = dados || {};
   if (dados.id_bolao) {
     CONFIG.ID_BOLAO = dados.id_bolao;
-    // CORRECAO: persiste o bolão ativo para sobreviver a recarregamentos.
+    // V033: depois que a API resolve o perfil, o bolão retornado passa a ser o ativo desta sessão.
+    if (origem === 'api') CONFIG.AUTO_PERFIL = false;
+    // Persiste o bolão ativo para sobreviver a recarregamentos, mas sem marcar como escolha manual.
     try { localStorage.setItem('PSS_MBE_BOLAO_ATIVO', dados.id_bolao); } catch(e) {}
   }
   estado.bolaoAtual = dados.bolaoAtual || null;
@@ -1210,8 +1226,9 @@
   if (!id) return;
   CONFIG.ID_BOLAO = String(id);
   CONFIG.CODIGO_CONVITE = '';
-  // CORRECAO: persiste a seleção para sobreviver a recarregamentos.
-  try { localStorage.setItem('PSS_MBE_BOLAO_ATIVO', String(id)); } catch(e) {}
+  CONFIG.AUTO_PERFIL = false;
+  // V033: marca seleção manual para não voltar automaticamente ao perfil em recarregamento.
+  try { localStorage.setItem('PSS_MBE_BOLAO_ATIVO', String(id)); localStorage.setItem('PSS_MBE_BOLAO_ATIVO_ESCOLHIDO','SIM'); } catch(e) {}
   estado.jogo = null;
   estado.jogos = [];
   estado.ranking = [];
@@ -1239,7 +1256,8 @@
         const r=await chamarApiAcao('criarBolaoPrivado',{nome_bolao:nome,telegram_id:estado.usuario.idTelegram,nome_usuario:estado.usuario.nome,username:estado.usuario.username,campeonato_id:'CUP'});
         if(!r||!r.ok)throw new Error((r&&r.erro)||'Falha ao criar bolão.');
         CONFIG.ID_BOLAO=r.bolao.id_bolao;
-        try{localStorage.setItem('PSS_MBE_BOLAO_ATIVO',String(CONFIG.ID_BOLAO||''))}catch(e){}
+        CONFIG.AUTO_PERFIL=false;
+        try{localStorage.setItem('PSS_MBE_BOLAO_ATIVO',String(CONFIG.ID_BOLAO||''));localStorage.setItem('PSS_MBE_BOLAO_ATIVO_ESCOLHIDO','SIM')}catch(e){}
         // CORRECAO: mostrar convite imediatamente (antes de recarregar a API para nao sumir)
         mostrarConviteBolao(r.bolao,r.convite);
         // Atualiza lista em segundo plano sem fechar o modal do convite
@@ -1262,7 +1280,8 @@
         const r=await chamarApiAcao('entrarBolaoPorCodigo',{codigo_convite:codigo,telegram_id:estado.usuario.idTelegram,nome:estado.usuario.nome,username:estado.usuario.username});
         if(!r||!r.ok)throw new Error((r&&r.erro)||'Não foi possível entrar no bolão.');
         CONFIG.ID_BOLAO=r.bolao.id_bolao;
-        try{localStorage.setItem('PSS_MBE_BOLAO_ATIVO',String(CONFIG.ID_BOLAO||''))}catch(e){}
+        CONFIG.AUTO_PERFIL=false;
+        try{localStorage.setItem('PSS_MBE_BOLAO_ATIVO',String(CONFIG.ID_BOLAO||''));localStorage.setItem('PSS_MBE_BOLAO_ATIVO_ESCOLHIDO','SIM')}catch(e){}
         closeModal();
         await loadApi(true);
         toastMsg('Entrada confirmada no bolão: '+(r.bolao.nome_bolao||r.bolao.nome||CONFIG.ID_BOLAO));
@@ -1381,7 +1400,8 @@
 
       const paramsBase={
         acao:'obterHomeBolaoEsportivo',
-        id_bolao:CONFIG.ID_BOLAO,
+        id_bolao:(CONFIG.AUTO_PERFIL&&estado.usuario.idTelegram)?'':CONFIG.ID_BOLAO,
+        auto_perfil:(CONFIG.AUTO_PERFIL&&estado.usuario.idTelegram)?'1':'',
         codigo_convite:CONFIG.CODIGO_CONVITE,
         telegram_id:estado.usuario.idTelegram,
         nome:estado.usuario.nome,
@@ -1417,10 +1437,15 @@
 
 
     async function iniciarCarregamentoInstantaneo(){
+  // V033: dentro do Telegram, sem bolão explícito, carrega primeiro a API real com telegram_id.
+  // O JSON público é anônimo e por isso não mostra bolões criados, inscrições e palpites do perfil.
+  const precisaPerfilTelegram=!!(estado.usuario.idTelegram&&CONFIG.AUTO_PERFIL);
+  if(precisaPerfilTelegram){await loadApi(true,false);return;}
+
   const jsonOk=await carregarJsonPublicoEstatico();
   const jaTemDados=!!estado.jogo||estado.jogos.length>0||estado.ranking.length>0;
   if(!jsonOk&&!jaTemDados){await loadApi(false,false);}
-  else if(CONFIG.API_REFRESH_SILENCIOSO){setTimeout(()=>loadApi(false,true),900);}
+  else if(CONFIG.API_REFRESH_SILENCIOSO){setTimeout(()=>loadApi(CONFIG.AUTO_PERFIL,true),900);}
 }
 
     (function(){initTelegram();limparCachesAntigosSeNecessario();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);carregarCache();events();render();setTimeout(()=>iniciarCarregamentoInstantaneo(),50)})();
