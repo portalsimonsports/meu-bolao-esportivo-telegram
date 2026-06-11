@@ -169,7 +169,7 @@
     }
 
     const CONFIG={
-      VERSAO:'V039_CONVITE_DIRETO_ACOES_RAPIDAS',
+      VERSAO:'V040_JSON_IMEDIATO_BOLAO_NOVO',
       API_URL:API_PARAM||'', // V035: usado somente para gravação; leitura principal vem dos JSONs estáticos.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // Fallback somente para ações de gravação caso o JSON não traga apiUrl.
       ID_BOLAO:idBolaoInicial_(),
@@ -426,8 +426,16 @@
       const timer=setTimeout(()=>{try{if(controller)controller.abort()}catch(e){}},Number(timeoutMs||4500));
       try{
         const resp=await fetch(url,{cache:'no-cache',signal:controller?controller.signal:undefined});
+        const texto=await resp.text();
         if(!resp.ok)throw new Error('HTTP '+resp.status+' em '+url);
-        return await resp.json();
+        const t=String(texto||'').trim();
+        if(!t)throw new Error('arquivo JSON vazio/publicação pendente: '+url);
+        if(/^<!doctype|^<html|^</i.test(t)){
+          throw new Error('arquivo JSON ainda não publicado no domínio: '+url);
+        }
+        try{return JSON.parse(t);}catch(e){
+          throw new Error('arquivo JSON inválido/publicação pendente: '+(e&&e.message?e.message:e));
+        }
       }finally{clearTimeout(timer)}
     }
 
@@ -502,15 +510,90 @@
       }catch(e){return null;}
     }
 
+
+    function clonarObjetoSimples(obj){
+      try{return JSON.parse(JSON.stringify(obj||{}));}catch(e){return Object.assign({},obj||{});}
+    }
+
+    function procurarHomeBaseParaBolaoNovo(){
+      const ids=Object.keys(JSON_ESTATICO_MEM.homes||{});
+      for(let i=0;i<ids.length;i++){
+        const h=JSON_ESTATICO_MEM.homes[ids[i]];
+        const d=(h&&h.dados)?h.dados:h;
+        if(d&&Array.isArray(d.jogos)&&d.jogos.length)return h;
+      }
+      const base=lerHomeJsonEstaticoLocal('BOLAO001');
+      if(base)return base;
+      if(Array.isArray(estado.jogos)&&estado.jogos.length){
+        return {ok:true,versao:CONFIG.VERSAO,gerado_em:'cache local',dados:{
+          id_bolao:CONFIG.ID_BOLAO,
+          bolaoAtual:estado.bolaoAtual,
+          jogos:estado.jogos,
+          ranking:[],
+          boloes:estado.boloes,
+          boloesPublicos:estado.boloesPublicos,
+          meusBoloesCriados:estado.meusBoloesCriados,
+          boloesParticipando:estado.boloesParticipando,
+          meusPalpites:[]
+        }};
+      }
+      return null;
+    }
+
+    function criarHomeLocalParaBolaoNovo(bolao){
+      const b=normalizarBolaoRespostaAcao(bolao,bolao&&bolao.codigo_convite);
+      if(!b||!b.id_bolao)return null;
+      const base=procurarHomeBaseParaBolaoNovo();
+      if(!base)return null;
+      const home=clonarObjetoSimples(base);
+      const dados=(home&&home.dados)?home.dados:home;
+      dados.id_bolao=b.id_bolao;
+      dados.id_bolao_solicitado=b.id_bolao;
+      dados.bolaoAtual=b;
+      dados.ranking=[];
+      dados.meusPalpites=[];
+      dados.modoDados='JSON_LOCAL_IMEDIATO_AGUARDANDO_PUBLICACAO';
+      dados.cacheAtualizadoEm='gerado localmente após criação/entrada';
+      const jogos=Array.isArray(dados.jogos)?dados.jogos:[];
+      dados.jogos=jogos.map(function(j){const x=Object.assign({},j);x.id_bolao=b.id_bolao;x.meuPalpite=null;return x;});
+      const porId={};
+      (Array.isArray(estado.boloes)?estado.boloes:[]).forEach(function(x){if(x&&x.id_bolao)porId[String(x.id_bolao)]=x;});
+      porId[String(b.id_bolao)]=b;
+      dados.boloes=Object.values(porId);
+      if(String(b.tipo||b.tipo_bolao||'').toUpperCase()==='PUBLICO'){
+        dados.boloesPublicos=upsertBolaoArrayLocal(estado.boloesPublicos,b);
+      }else{
+        dados.boloesPublicos=Array.isArray(estado.boloesPublicos)?estado.boloesPublicos:[];
+      }
+      dados.meusBoloesCriados=Array.isArray(estado.meusBoloesCriados)?estado.meusBoloesCriados:[];
+      if(b.souCriador)dados.meusBoloesCriados=upsertBolaoArrayLocal(dados.meusBoloesCriados,Object.assign({},b,{souCriador:true}));
+      dados.boloesParticipando=Array.isArray(estado.boloesParticipando)?estado.boloesParticipando:[];
+      if(!b.souCriador && String(b.tipo||b.tipo_bolao||'').toUpperCase()==='PRIVADO')dados.boloesParticipando=upsertBolaoArrayLocal(dados.boloesParticipando,b);
+      const pacote=(home&&home.dados)?home:{ok:true,versao:CONFIG.VERSAO,gerado_em:'local',dados:dados};
+      guardarHomeJsonEstatico(b.id_bolao,pacote);
+      return pacote;
+    }
+
     async function carregarHomeJsonEstatico(id,force){
       id=String(id||CONFIG.ID_BOLAO||'BOLAO001').trim()||'BOLAO001';
       if(!force){
         const local=lerHomeJsonEstaticoLocal(id);
         if(local)return local;
       }
-      const home=await fetchJsonComTimeout(jsonPublicoHomeUrl(id),CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500);
+      let home=null;
+      try{
+        home=await fetchJsonComTimeout(jsonPublicoHomeUrl(id),CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500);
+      }catch(e){
+        const b=bolaoPorIdEstatico(id);
+        const localCriado=b?criarHomeLocalParaBolaoNovo(b):null;
+        if(localCriado)return localCriado;
+        throw e;
+      }
       const dadosHome=(home&&home.dados)?home.dados:home;
       if(!dadosHome||!Array.isArray(dadosHome.jogos)||!dadosHome.jogos.length){
+        const b=bolaoPorIdEstatico(id);
+        const localCriado=b?criarHomeLocalParaBolaoNovo(b):null;
+        if(localCriado)return localCriado;
         throw new Error('home_'+id+'.json publicado sem jogos ou não publicado.');
       }
       guardarHomeJsonEstatico(id,home);
@@ -629,11 +712,11 @@
     }
 
     function cacheKey(){
-      return 'PSS_MBE_HOME_CACHE_V039_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_V040_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function cacheInfoKey(){
-      return 'PSS_MBE_HOME_CACHE_INFO_V039_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_INFO_V040_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function chavesCachePossiveis(){
@@ -641,7 +724,7 @@
       const tg=String(estado.usuario.idTelegram||'ANON');
       // V031: não usar caches antigos/estáveis porque eles podem conter lista cortada em 45 jogos.
       return [
-        'PSS_MBE_HOME_CACHE_V039_'+id+'_'+tg
+        'PSS_MBE_HOME_CACHE_V040_'+id+'_'+tg
       ];
     }
 
@@ -658,7 +741,7 @@
         for(let i=0;i<localStorage.length;i++){
           const k=localStorage.key(i)||'';
           if(k.startsWith('PSS_MBE_HOME_CACHE_')||k.startsWith('PSS_MBE_HOME_CACHE_INFO_')){
-            if(deveLimpar || !k.includes('_V035_'))removiveis.push(k);
+            if(deveLimpar || !k.includes('_V040_'))removiveis.push(k);
           }
         }
         removiveis.forEach(k=>localStorage.removeItem(k));
@@ -1457,7 +1540,7 @@
     estado.ranking=[];
     estado.meusPalpites={};
     atualizarBolaoAtualPorIdEstatico(id);
-    estado.erroApi='JSON do bolão não publicado/inválido: '+(e&&e.message?e.message:String(e));
+    estado.erroApi='JSON do bolão ainda não publicado. Usando cache/local quando disponível: '+(e&&e.message?e.message:String(e));
     render();
     toastMsg(estado.erroApi);
   }
@@ -1542,6 +1625,7 @@
       CONFIG.ID_BOLAO=b.id_bolao;
       CONFIG.AUTO_PERFIL=false;
       try{localStorage.setItem('PSS_MBE_BOLAO_ATIVO',String(CONFIG.ID_BOLAO||''));localStorage.setItem('PSS_MBE_BOLAO_ATIVO_ESCOLHIDO','SIM')}catch(e){}
+      try{criarHomeLocalParaBolaoNovo(b);}catch(e){console.warn('Home local imediato não foi gerado',e);}
       return b;
     }
 
@@ -1569,6 +1653,7 @@
         const b=inserirBolaoLocalDeAcao(r.bolao,'criado');
         if(b){
           toastMsg((r.ja_existia?'Bolão já existente localizado: ':'Bolão criado: ')+(b.nome_bolao||b.nome||b.id_bolao));
+          dispararPublicacaoJsonPosAcao(b.id_bolao);
         }
         mostrarConviteBolao(r.bolao,r.convite);
       }catch(e){
@@ -1605,6 +1690,7 @@
         closeModal();
         toastMsg((r.ja_inscrito?'Você já estava neste bolão: ':'Entrada confirmada: ')+(b?(b.nome_bolao||b.nome||b.id_bolao):codigo));
         if(b&&b.id_bolao){
+          dispararPublicacaoJsonPosAcao(b.id_bolao);
           setTimeout(function(){selecionarBolao(b.id_bolao)},120);
         }
         try{sessionStorage.setItem('PSS_MBE_CONVITE_OK_'+codigo,'SIM')}catch(e){}
@@ -1658,6 +1744,18 @@
       const url=apiUrl();
       if(!url)throw new Error('API não configurada no Mini App.');
       return await chamarApiJsonp(url,Object.assign({acao:acao,v:CONFIG.VERSAO,t:Date.now()},params||{}),30000);
+    }
+
+
+    function dispararPublicacaoJsonPosAcao(idBolao){
+      const url=apiUrl();
+      const id=String(idBolao||CONFIG.ID_BOLAO||'').trim();
+      if(!url||!id)return;
+      try{
+        chamarApiJsonp(url,{acao:'publicarJsonPosAcao',v:CONFIG.VERSAO,t:Date.now(),id_bolao:id,telegram_id:estado.usuario.idTelegram||'',modo:'background'},60000)
+          .then(function(r){console.log('Publicação JSON pós-ação concluída',r);})
+          .catch(function(e){console.warn('Publicação JSON pós-ação pendente/falhou',e);});
+      }catch(e){console.warn('Não foi possível iniciar publicação JSON pós-ação',e);}
     }
 
     function marcarNavAtiva(nav){
