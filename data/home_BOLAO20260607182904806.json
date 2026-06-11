@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "versao": "V036_JSON_PRELOAD_BOLOES_ESTATICO",
+  "versao": "V039_CONVITE_DIRETO_ACOES_RAPIDAS",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "11/06/2026 12:10:40",
+  "dataHora": "11/06/2026 13:40:16",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
-    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V036_JSON_PRELOAD_BOLOES_ESTATICO&perfil=1",
+    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V039_CONVITE_DIRETO_ACOES_RAPIDAS&perfil=1",
     "id_bolao": "BOLAO20260607182904806",
     "id_bolao_solicitado": "BOLAO20260607182904806",
     "bolaoAtual": {
@@ -52,10 +52,11 @@
         "nome_bolao": "Bolão Copa do Mundo 2026",
         "status": "ATIVO",
         "tipo": "PUBLICO",
+        "tipo_bolao": "PUBLICO",
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V036_JSON_PRELOAD_BOLOES_ESTATICO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V039_CONVITE_DIRETO_ACOES_RAPIDAS",
         "souCriador": false,
         "participantes": 1,
         "jogos": 72
@@ -68,10 +69,11 @@
         "nome_bolao": "Bolão Copa do Mundo 2026",
         "status": "ATIVO",
         "tipo": "PUBLICO",
+        "tipo_bolao": "PUBLICO",
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V036_JSON_PRELOAD_BOLOES_ESTATICO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V039_CONVITE_DIRETO_ACOES_RAPIDAS",
         "souCriador": false,
         "participantes": 1,
         "jogos": 72
@@ -1818,10 +1820,10 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "11/06/2026 12:11:49",
+    "cacheAtualizadoEm": "11/06/2026 13:41:54",
     "modoDados": "JSON_PUBLICO_ESTATICO"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "11/06/2026 12:11:49",
-  "gerado_ts": 1781190709205
+  "gerado_em": "11/06/2026 13:41:54",
+  "gerado_ts": 1781196114073
 }
