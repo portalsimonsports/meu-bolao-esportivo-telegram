@@ -1,10 +1,10 @@
 {
   "ok": true,
   "projeto": "Bolão Futebol Telegram — Portal SimonSports",
-  "versao": "V035_JSON_PERFIL_TELEGRAM_ESTATICO",
+  "versao": "V036_JSON_PRELOAD_BOLOES_ESTATICO",
   "modoJsonPublico": "PERFIL_TELEGRAM_ESTATICO",
-  "gerado_em": "11/06/2026 10:31:24",
-  "gerado_ts": 1781184684473,
+  "gerado_em": "11/06/2026 11:41:05",
+  "gerado_ts": 1781188865627,
   "dados": {
     "telegram_id": "SISTEMA",
     "usuario": {
@@ -24,7 +24,7 @@
       "codigo_convite": "PUBLICO",
       "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
       "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-      "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V035_JSON_PERFIL_TELEGRAM_ESTATICO",
+      "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V036_JSON_PRELOAD_BOLOES_ESTATICO",
       "souCriador": true,
       "participantes": 1,
       "jogos": 72
@@ -39,7 +39,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V035_JSON_PERFIL_TELEGRAM_ESTATICO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V036_JSON_PRELOAD_BOLOES_ESTATICO",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -55,7 +55,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V035_JSON_PERFIL_TELEGRAM_ESTATICO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V036_JSON_PRELOAD_BOLOES_ESTATICO",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -71,7 +71,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V035_JSON_PERFIL_TELEGRAM_ESTATICO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V036_JSON_PRELOAD_BOLOES_ESTATICO",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -81,7 +81,7 @@
     "boloesComPalpite": [],
     "meusPalpites": [],
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
-    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V035_JSON_PERFIL_TELEGRAM_ESTATICO&perfil=1",
+    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V036_JSON_PRELOAD_BOLOES_ESTATICO&perfil=1",
     "modoDados": "JSON_PERFIL_ESTATICO"
   }
 }
