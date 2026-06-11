@@ -1,10 +1,10 @@
 {
   "ok": true,
   "projeto": "Bolão Futebol Telegram — Portal SimonSports",
-  "versao": "V040_JSON_IMEDIATO_BOLAO_NOVO",
+  "versao": "V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
   "modoJsonPublico": "PERFIL_TELEGRAM_ESTATICO",
-  "gerado_em": "11/06/2026 13:56:54",
-  "gerado_ts": 1781197014071,
+  "gerado_em": "11/06/2026 15:12:47",
+  "gerado_ts": 1781201567812,
   "dados": {
     "telegram_id": "197139159",
     "usuario": {
@@ -25,7 +25,7 @@
       "codigo_convite": "WGWX4H",
       "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607185133484_WGWX4H",
       "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607185133484_WGWX4H",
-      "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607185133484&codigo_convite=WGWX4H&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+      "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607185133484&codigo_convite=WGWX4H&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
       "souCriador": true,
       "participantes": 1,
       "jogos": 72
@@ -41,7 +41,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -56,7 +56,7 @@
         "codigo_convite": "BRXA2L",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607182904806_BRXA2L",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607182904806_BRXA2L",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607182904806&codigo_convite=BRXA2L&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607182904806&codigo_convite=BRXA2L&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -71,7 +71,7 @@
         "codigo_convite": "WGWX4H",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607185133484_WGWX4H",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607185133484_WGWX4H",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607185133484&codigo_convite=WGWX4H&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607185133484&codigo_convite=WGWX4H&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -86,7 +86,7 @@
         "codigo_convite": "BETJ48",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260611115548229_BETJ48",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260611115548229_BETJ48",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260611115548229&codigo_convite=BETJ48&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260611115548229&codigo_convite=BETJ48&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -101,7 +101,7 @@
         "codigo_convite": "RPEZ84",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260611135508480_RPEZ84",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260611135508480_RPEZ84",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260611135508480&codigo_convite=RPEZ84&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260611135508480&codigo_convite=RPEZ84&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -118,7 +118,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -135,7 +135,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -150,7 +150,7 @@
         "codigo_convite": "BRXA2L",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607182904806_BRXA2L",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607182904806_BRXA2L",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607182904806&codigo_convite=BRXA2L&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607182904806&codigo_convite=BRXA2L&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -165,7 +165,7 @@
         "codigo_convite": "WGWX4H",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607185133484_WGWX4H",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607185133484_WGWX4H",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607185133484&codigo_convite=WGWX4H&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607185133484&codigo_convite=WGWX4H&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -180,7 +180,7 @@
         "codigo_convite": "BETJ48",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260611115548229_BETJ48",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260611115548229_BETJ48",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260611115548229&codigo_convite=BETJ48&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260611115548229&codigo_convite=BETJ48&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -195,7 +195,7 @@
         "codigo_convite": "RPEZ84",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260611135508480_RPEZ84",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260611135508480_RPEZ84",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260611135508480&codigo_convite=RPEZ84&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260611135508480&codigo_convite=RPEZ84&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -213,7 +213,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -228,7 +228,7 @@
         "codigo_convite": "BRXA2L",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607182904806_BRXA2L",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607182904806_BRXA2L",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607182904806&codigo_convite=BRXA2L&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607182904806&codigo_convite=BRXA2L&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -243,7 +243,7 @@
         "codigo_convite": "WGWX4H",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607185133484_WGWX4H",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO20260607185133484_WGWX4H",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607185133484&codigo_convite=WGWX4H&v=V040_JSON_IMEDIATO_BOLAO_NOVO",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO20260607185133484&codigo_convite=WGWX4H&v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR",
         "souCriador": true,
         "participantes": 1,
         "jogos": 72
@@ -332,7 +332,7 @@
       }
     ],
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
-    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V040_JSON_IMEDIATO_BOLAO_NOVO&perfil=1",
+    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V042_COPA_GRUPOS_COMPARTILHAR_POS_CRIAR&perfil=1",
     "modoDados": "JSON_PERFIL_ESTATICO"
   }
 }
