@@ -363,8 +363,6 @@
 
     async function carregarJsonPublicoEstatico(){
   if(!CONFIG.JSON_PUBLICO_ATIVO)return false;
-  // V031D: tenta JSON para qualquer bolão (público ou privado).
-  // Se não existir ainda → 404 → catch → fallback para API real.
   try{
     const pacote=await fetchJsonComTimeout(jsonPublicoHomeUrl(),CONFIG.JSON_PUBLICO_TIMEOUT_MS||1800);
     const dados=(pacote&&pacote.dados)?pacote.dados:pacote;
@@ -376,17 +374,17 @@
     render();
     return true;
   }catch(e){
-    console.warn('JSON público não disponível para este bolão; usando API.',e);
+    console.warn('JSON publico nao disponivel; usando API.',e);
     return false;
   }
 }
 
     function cacheKey(){
-      return 'PSS_MBE_HOME_CACHE_V031C_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_V031D_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function cacheInfoKey(){
-      return 'PSS_MBE_HOME_CACHE_INFO_V031C_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_INFO_V031D_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function chavesCachePossiveis(){
@@ -394,7 +392,7 @@
       const tg=String(estado.usuario.idTelegram||'ANON');
       // V031: não usar caches antigos/estáveis porque eles podem conter lista cortada em 45 jogos.
       return [
-        'PSS_MBE_HOME_CACHE_V031C_'+id+'_'+tg
+        'PSS_MBE_HOME_CACHE_V031D_'+id+'_'+tg
       ];
     }
 
@@ -411,7 +409,7 @@
         for(let i=0;i<localStorage.length;i++){
           const k=localStorage.key(i)||'';
           if(k.startsWith('PSS_MBE_HOME_CACHE_')||k.startsWith('PSS_MBE_HOME_CACHE_INFO_')){
-            if(deveLimpar || !k.includes('_V031C_'))removiveis.push(k);
+            if(deveLimpar || !k.includes('_V031D_'))removiveis.push(k);
           }
         }
         removiveis.forEach(k=>localStorage.removeItem(k));
@@ -811,7 +809,7 @@
         flagA.textContent='⚽';flagB.textContent='📡';
         teamA.textContent='DADOS';teamB.textContent='REAIS';
         dataJogo.textContent='--/--/----';horaJogo.textContent='--:--';
-        if(openText)openText.textContent=estado.carregando?'CARREGANDO...':(estado.erroApi?(apiUrl()?'ERRO AO CARREGAR':'API NÃO CONFIGURADA'):'SEM JOGOS DISPONÍVEIS');
+        if(openText)openText.textContent=estado.carregando?'CARREGANDO...':(estado.erroApi?(apiUrl()?'ERRO AO CARREGAR':'API NAO CONFIGURADA'):'SEM JOGOS DISPONÍVEIS');
         btnPalpite.disabled=true;
         btnPalpite.innerHTML='<span>📡</span><span>AGUARDANDO JOGO REAL</span>';
       }else{
@@ -1181,6 +1179,7 @@
   if (!id) return;
   CONFIG.ID_BOLAO = String(id);
   CONFIG.CODIGO_CONVITE = '';
+  // CORRECAO: persiste a seleção para sobreviver a recarregamentos.
   try { localStorage.setItem('PSS_MBE_BOLAO_ATIVO', String(id)); } catch(e) {}
   estado.jogo = null;
   estado.jogos = [];
@@ -1190,15 +1189,8 @@
   closeModal();
   limparCacheAtual();
   render();
-  toastMsg('Carregando bolão...');
-  // V031D: tenta JSON público do bolão selecionado primeiro (rápido).
-  // Se não existir ou estiver desatualizado, busca da API real.
-  const jsonOk = await carregarJsonPublicoEstatico();
-  if (!jsonOk) {
-    await loadApi(true, false);
-  } else if (CONFIG.API_REFRESH_SILENCIOSO) {
-    setTimeout(() => loadApi(false, true), 900);
-  }
+  toastMsg('Carregando bolão selecionado...');
+  await loadApi(true);
 }
 
     function abrirCriarBolao(){
@@ -1390,15 +1382,10 @@
 
 
     async function iniciarCarregamentoInstantaneo(){
-  // V031D: tenta JSON do bolão atual (público ou privado).
-  // Se não existir ainda, vai direto para API.
-  const jsonOk = await carregarJsonPublicoEstatico();
-  const jaTemDados = !!estado.jogo || estado.jogos.length > 0 || estado.ranking.length > 0;
-  if (!jsonOk && !jaTemDados) {
-    await loadApi(false, false);
-  } else if (CONFIG.API_REFRESH_SILENCIOSO) {
-    setTimeout(() => loadApi(false, true), 900);
-  }
+  const jsonOk=await carregarJsonPublicoEstatico();
+  const jaTemDados=!!estado.jogo||estado.jogos.length>0||estado.ranking.length>0;
+  if(!jsonOk&&!jaTemDados){await loadApi(false,false);}
+  else if(CONFIG.API_REFRESH_SILENCIOSO){setTimeout(()=>loadApi(false,true),900);}
 }
 
     (function(){initTelegram();limparCachesAntigosSeNecessario();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);carregarCache();events();render();setTimeout(()=>iniciarCarregamentoInstantaneo(),50)})();
