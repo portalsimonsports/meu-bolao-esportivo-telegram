@@ -1,12 +1,13 @@
 {
   "ok": true,
-  "versao": "V031D_FIX_BOLOES_PALPITES",
-  "modoHome": "LEVE_CACHE_RAPIDO",
-  "dataHora": "11/06/2026 06:37:54",
+  "versao": "V033_PERFIL_TELEGRAM_BOLOES_PALPITES",
+  "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
+  "dataHora": "11/06/2026 10:10:06",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
-    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&v=V031D_FIX_BOLOES_PALPITES",
+    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V033_PERFIL_TELEGRAM_BOLOES_PALPITES&perfil=1",
     "id_bolao": "BOLAO20260611063552960",
+    "id_bolao_solicitado": "BOLAO20260611063552960",
     "bolaoAtual": {
       "id_bolao": "BOLAO20260611063552960",
       "nome_bolao": "Boloes Teste",
@@ -54,7 +55,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V031D_FIX_BOLOES_PALPITES",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V033_PERFIL_TELEGRAM_BOLOES_PALPITES",
         "souCriador": false,
         "participantes": 1,
         "jogos": 72
@@ -70,7 +71,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V031D_FIX_BOLOES_PALPITES",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V033_PERFIL_TELEGRAM_BOLOES_PALPITES",
         "souCriador": false,
         "participantes": 1,
         "jogos": 72
@@ -1817,10 +1818,10 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "11/06/2026 06:41:02",
+    "cacheAtualizadoEm": "11/06/2026 10:10:49",
     "modoDados": "JSON_PUBLICO_ESTATICO"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "11/06/2026 06:41:02",
-  "gerado_ts": 1781170862753
+  "gerado_em": "11/06/2026 10:10:49",
+  "gerado_ts": 1781183449851
 }
