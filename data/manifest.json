@@ -1,9 +1,9 @@
 {
   "ok": true,
   "projeto": "Bolão Futebol Telegram — Portal SimonSports",
-  "versao": "V035_JSON_PERFIL_TELEGRAM_ESTATICO",
-  "gerado_em": "11/06/2026 11:27:28",
-  "gerado_ts": 1781188048687,
+  "versao": "V036_JSON_PRELOAD_BOLOES_ESTATICO",
+  "gerado_em": "11/06/2026 11:40:47",
+  "gerado_ts": 1781188847199,
   "site": "https://bolaodacopa.portalsimonsports.com/",
   "base_path": "data",
   "leitura": "JSON_ESTATICO_CLOUDFLARE_GITHUB",
