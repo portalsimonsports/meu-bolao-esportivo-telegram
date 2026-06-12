@@ -2,7 +2,7 @@
   "ok": true,
   "versao": "V058_PLACAR_X_CENTRAL_ALINHADO",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "12/06/2026 12:06:38",
+  "dataHora": "12/06/2026 16:51:43",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V058_PLACAR_X_CENTRAL_ALINHADO&perfil=1",
@@ -21,21 +21,21 @@
       "visibilidade_palpites": "APOS_FECHAMENTO_JOGO"
     },
     "jogoDestaque": {
-      "id": "4f5e7d9da1657c78",
+      "id": "e7c37205176a0bd9",
       "id_bolao": "BOLAO001",
-      "id_jogo": "4f5e7d9da1657c78",
-      "mandante": "Canada",
-      "visitante": "Bosnia and Herzegovina",
-      "flagMandante": "🇨🇦",
-      "flagVisitante": "🇧🇦",
-      "flagMandanteEmoji": "🇨🇦",
-      "flagVisitanteEmoji": "🇧🇦",
-      "codigoMandante": "ca",
-      "codigoVisitante": "ba",
+      "id_jogo": "e7c37205176a0bd9",
+      "mandante": "United States",
+      "visitante": "Paraguay",
+      "flagMandante": "🇺🇸",
+      "flagVisitante": "🇵🇾",
+      "flagMandanteEmoji": "🇺🇸",
+      "flagVisitanteEmoji": "🇵🇾",
+      "codigoMandante": "us",
+      "codigoVisitante": "py",
       "data": "12/06/2026",
-      "hora": "16:00",
-      "dataHora": "12/06/2026 16:00",
-      "limitePalpite": "12/06/2026 16:00",
+      "hora": "22:00",
+      "dataHora": "12/06/2026 22:00",
+      "limitePalpite": "12/06/2026 22:00",
       "gols_mandante": "",
       "gols_visitante": "",
       "status": "Aberto",
@@ -52,14 +52,14 @@
         "nome": "Simon",
         "total_pontos": 220,
         "pontos": "220",
-        "palpites": 2,
+        "palpites": 3,
         "medalha": "👑",
         "classe": "gold",
         "avatar": "👨🏻"
       }
     ],
-    "rankingTipo": "DEFINITIVO_CALCULADO",
-    "rankingLegenda": "Ranking definitivo calculado com jogos finalizados.",
+    "rankingTipo": "PROVISORIO",
+    "rankingLegenda": "Ranking ao vivo/provisório calculado com o placar em andamento.",
     "boloes": [
       {
         "id_bolao": "BOLAO001",
@@ -173,14 +173,14 @@
         "hora": "16:00",
         "dataHora": "12/06/2026 16:00",
         "limitePalpite": "12/06/2026 16:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Aberto",
-        "aceitaPalpite": true,
-        "status_jogo": "ABERTO",
-        "status_bolao": "ABERTO",
-        "palpites_liberados": "SIM",
-        "palpitesPublicosLiberados": false,
+        "gols_mandante": 0,
+        "gols_visitante": 1,
+        "status": "Ao vivo",
+        "aceitaPalpite": false,
+        "status_jogo": "AO_VIVO",
+        "status_bolao": "FECHADO",
+        "palpites_liberados": "NAO",
+        "palpitesPublicosLiberados": true,
         "meuPalpite": null
       },
       {
@@ -1979,10 +1979,10 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "12/06/2026 12:07:32",
+    "cacheAtualizadoEm": "12/06/2026 16:52:26",
     "modoDados": "JSON_PUBLICO_ESTATICO"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "12/06/2026 12:07:32",
-  "gerado_ts": 1781276852101
+  "gerado_em": "12/06/2026 16:52:26",
+  "gerado_ts": 1781293946725
 }
