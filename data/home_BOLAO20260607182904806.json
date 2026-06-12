@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "versao": "V055_ALINHAMENTO_CLASSIFICACAO_COPA",
+  "versao": "V058_PLACAR_X_CENTRAL_ALINHADO",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "12/06/2026 02:06:37",
+  "dataHora": "12/06/2026 12:53:03",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
-    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V055_ALINHAMENTO_CLASSIFICACAO_COPA&perfil=1",
+    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V058_PLACAR_X_CENTRAL_ALINHADO&perfil=1",
     "id_bolao": "BOLAO20260607182904806",
     "id_bolao_solicitado": "BOLAO20260607182904806",
     "bolaoAtual": {
@@ -71,7 +71,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V055_ALINHAMENTO_CLASSIFICACAO_COPA",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V058_PLACAR_X_CENTRAL_ALINHADO",
         "souCriador": false,
         "participantes": 1,
         "jogos": 72
@@ -88,7 +88,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V055_ALINHAMENTO_CLASSIFICACAO_COPA",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V058_PLACAR_X_CENTRAL_ALINHADO",
         "souCriador": false,
         "participantes": 1,
         "jogos": 72
@@ -1979,10 +1979,10 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "12/06/2026 02:07:29",
+    "cacheAtualizadoEm": "12/06/2026 12:54:13",
     "modoDados": "JSON_PUBLICO_ESTATICO"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "12/06/2026 02:07:29",
-  "gerado_ts": 1781240849578
+  "gerado_em": "12/06/2026 12:54:13",
+  "gerado_ts": 1781279653513
 }
