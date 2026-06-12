@@ -2,7 +2,7 @@
   "ok": true,
   "versao": "V058_PLACAR_X_CENTRAL_ALINHADO",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "12/06/2026 16:22:11",
+  "dataHora": "12/06/2026 18:06:38",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V058_PLACAR_X_CENTRAL_ALINHADO&perfil=1",
@@ -162,12 +162,12 @@
         "hora": "16:00",
         "dataHora": "12/06/2026 16:00",
         "limitePalpite": "12/06/2026 16:00",
-        "gols_mandante": 0,
-        "gols_visitante": 0,
-        "status": "Ao vivo",
+        "gols_mandante": 1,
+        "gols_visitante": 1,
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "meuPalpite": null
@@ -1968,10 +1968,10 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "12/06/2026 16:23:05",
+    "cacheAtualizadoEm": "12/06/2026 18:07:22",
     "modoDados": "JSON_PUBLICO_ESTATICO"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "12/06/2026 16:23:05",
-  "gerado_ts": 1781292185650
+  "gerado_em": "12/06/2026 18:07:22",
+  "gerado_ts": 1781298442573
 }
