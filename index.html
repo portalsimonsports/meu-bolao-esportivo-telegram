@@ -372,8 +372,73 @@
       }
       return '';
     }
-    function isAberto(j){return !!(j&&j.aceitaPalpite)}
-    function statusJogo(j){const st=String((j&&(j.status_jogo||j.statusJogo))||'').toUpperCase(); if(st==='AO_VIVO')return 'Ao vivo'; return String(j&&j.status?j.status:(isAberto(j)?'Aberto':'Em breve'))}
+    function jogoFechouPorHorario(j){
+      const d=parseDataHoraJogo(j);
+      return !!(d&&Date.now()>=d.getTime());
+    }
+
+    function statusBrutoJogo_(j){
+      return normalizarChave((j&&(j.status_jogo||j.statusJogo||j.status))||'');
+    }
+
+    function statusFinalOuBloqueado_(j){
+      const st=statusBrutoJogo_(j);
+      return ['FINALIZADO','ENCERRADO','FINISHED','FT','CANCELADO','CANCELADA','ADIADO','ADIADA','AO VIVO','AOVIVO','AO_VIVO','FECHADO','FECHADA','BLOQUEADO','BLOQUEADA','FECHADO LOCAL','FECHADO_LOCAL'].indexOf(st)>=0;
+    }
+
+    function atualizarJogoFechadoLocal_(j){
+      if(!j)return false;
+      const st=statusBrutoJogo_(j);
+      if(['FINALIZADO','ENCERRADO','FINISHED','FT','CANCELADO','CANCELADA','ADIADO','ADIADA','AO VIVO','AOVIVO','AO_VIVO'].indexOf(st)>=0)return false;
+      if(jogoFechouPorHorario(j)){
+        const mudou=j.aceitaPalpite!==false || j.status!=='Fechado' || j.status_jogo!=='FECHADO_LOCAL';
+        j.aceitaPalpite=false;
+        j.status='Fechado';
+        j.status_jogo='FECHADO_LOCAL';
+        j.status_bolao='FECHADO_LOCAL';
+        j.palpites_liberados='NAO';
+        j.palpitesPublicosLiberados=true;
+        return mudou;
+      }
+      return false;
+    }
+
+    function atualizarFechamentosLocaisPorHorario(){
+      let mudou=0;
+      (estado.jogos||[]).forEach(function(j){if(atualizarJogoFechadoLocal_(j))mudou++;});
+      if(estado.jogo)atualizarJogoFechadoLocal_(estado.jogo);
+      return mudou;
+    }
+
+    function isAberto(j){
+      if(!j)return false;
+      atualizarJogoFechadoLocal_(j);
+      if(statusFinalOuBloqueado_(j))return false;
+      if(jogoFechouPorHorario(j))return false;
+      return !!j.aceitaPalpite;
+    }
+
+    function statusJogo(j){
+      if(!j)return 'Em breve';
+      atualizarJogoFechadoLocal_(j);
+      const st=statusBrutoJogo_(j);
+      if(['FINALIZADO','ENCERRADO','FINISHED','FT'].indexOf(st)>=0)return 'Finalizado';
+      if(['AO VIVO','AOVIVO','AO_VIVO'].indexOf(st)>=0)return 'Ao vivo';
+      if(['CANCELADO','CANCELADA'].indexOf(st)>=0)return 'Cancelado';
+      if(['ADIADO','ADIADA'].indexOf(st)>=0)return 'Adiado';
+      if(['FECHADO','FECHADA','BLOQUEADO','BLOQUEADA','FECHADO LOCAL','FECHADO_LOCAL'].indexOf(st)>=0)return 'Fechado';
+      if(jogoFechouPorHorario(j))return 'Fechado';
+      return isAberto(j)?'Aberto':String(j.status||'Em breve');
+    }
+
+    function palpitesPublicosLiberadosLocal(j){
+      if(!j)return false;
+      atualizarJogoFechadoLocal_(j);
+      if(j.palpitesPublicosLiberados===true||String(j.palpitesPublicosLiberados||'').toUpperCase()==='SIM')return true;
+      const st=statusBrutoJogo_(j);
+      if(['FINALIZADO','ENCERRADO','FINISHED','FT','AO VIVO','AOVIVO','AO_VIVO','FECHADO','FECHADA','BLOQUEADO','BLOQUEADA','FECHADO LOCAL','FECHADO_LOCAL'].indexOf(st)>=0)return true;
+      return jogoFechouPorHorario(j);
+    }
     function temPlacarJogo(j){
       if(!j)return false;
       const gm=j.gols_mandante!==undefined?j.gols_mandante:j.golsMandante;
@@ -527,6 +592,7 @@
         gols_mandante:j.gols_mandante!==undefined?j.gols_mandante:(j.golsMandante!==undefined?j.golsMandante:(j.gm!==undefined?j.gm:'')),
         gols_visitante:j.gols_visitante!==undefined?j.gols_visitante:(j.golsVisitante!==undefined?j.golsVisitante:(j.gv!==undefined?j.gv:'')),
         aceitaPalpite:j.aceitaPalpite===true||String(j.aceitaPalpite).toUpperCase()==='SIM',
+        palpitesPublicosLiberados:j.palpitesPublicosLiberados===true||String(j.palpitesPublicosLiberados||'').toUpperCase()==='SIM',
         meuPalpite:normalizarPalpiteApi(j.meuPalpite)
       };
     }
@@ -1252,6 +1318,13 @@
 
     function atualizarTimersVisiveis(){
       try{
+        const mudouFechamento=atualizarFechamentosLocaisPorHorario();
+        if(mudouFechamento>0){
+          render();
+          const titulo=String((modalTitle&&modalTitle.textContent)||'');
+          if(modal&&modal.classList.contains('show')&&/Jogos/i.test(titulo)){setTimeout(function(){screen('jogos')},0);}
+          if(modal&&modal.classList.contains('show')&&/Palpite por Placar/i.test(titulo)){closeModal();toastMsg('🔒 Palpites encerrados pelo horário do jogo.');}
+        }
         const j=jogoDestaqueHome();
         const openText=document.querySelector('.open span');
         if(j&&openText){
@@ -1951,6 +2024,28 @@
       if(btnDesativar)btnDesativar.onclick=function(){executarSalvar(false)};
     }
 
+
+    async function abrirPalpitesPublicosJogo(id){
+      const j=(estado.jogos||[]).find(function(x){return idJogo(x)===String(id)});
+      if(!j)return toastMsg('Jogo não localizado.');
+      atualizarJogoFechadoLocal_(j);
+      if(!palpitesPublicosLiberadosLocal(j))return toastMsg('Os palpites dos participantes só abrem após o fechamento do jogo.');
+      openModal('👥 Palpites do jogo','<div class="mini"><div class="game-card-head">'+textoDataHoraStatus(j)+'</div>'+htmlLinhaTimesJogo(j)+'<p>Carregando palpites públicos...</p></div>','<button class="btn primary" id="ok">Fechar</button>');
+      try{
+        const r=await chamarApiAcao('obterPalpitesJogo',{id_bolao:j.id_bolao||CONFIG.ID_BOLAO,id_jogo:idJogo(j),telegram_id:estado.usuario.idTelegram},{timeoutMs:45000,retries:1});
+        const lista=Array.isArray(r&&r.palpites)?r.palpites:[];
+        const meu=r&&r.meuPalpite?r.meuPalpite:null;
+        const aviso=(r&&r.palpitesPublicosLiberados)?'Palpites liberados após fechamento do jogo.':'Palpites ainda não liberados pelo GS.';
+        let html=htmlBolaoContexto('Palpites públicos deste jogo após o fechamento para novos palpites.')+'<div class="mini"><div class="game-card-head">'+textoDataHoraStatus(j)+'</div>'+htmlLinhaTimesJogo(j)+'<p>'+esc(aviso)+'</p></div>';
+        if(meu)html+='<div class="mini ja-palpitado"><strong>Seu palpite</strong><p class="saved-pick">'+esc(textoPalpiteLocal(meu))+'</p></div>';
+        html+=lista.length?lista.map(function(p){return '<div class="mini"><strong>'+esc(p.nome||'Participante')+'</strong><p class="saved-pick">Palpite: '+esc(textoPalpiteLocal(p))+(p.pontos!==''&&p.pontos!==undefined?' • '+esc(p.pontos)+' pts':'')+'</p></div>';}).join(''):'<div class="mini"><strong>Nenhum palpite público encontrado.</strong><p>Se o jogo acabou de fechar, aguarde o GS publicar/confirmar os dados.</p></div>';
+        openModal('👥 Palpites do jogo',html,'<button class="btn primary" id="ok">Fechar</button>');
+      }catch(e){
+        console.warn('Erro ao obter palpites públicos.',e);
+        openModal('👥 Palpites do jogo','<div class="mini"><strong>Não foi possível carregar agora</strong><p>Verifique se o Web App foi implantado na versão nova e tente novamente.</p></div>','<button class="btn primary" id="ok">Fechar</button>');
+      }
+    }
+
     function screen(name){
       if(name==='boloes'){
         // V031: diferencia claramente modo publico (navegador) de modo Telegram identificado.
@@ -2014,6 +2109,7 @@
       }
 
       if(name==='jogos'){
+        atualizarFechamentosLocaisPorHorario();
         // CORRECAO: lista em ordem cronologica (proximo a iniciar primeiro)
         var jogosOrdenados=(estado.jogos||[]).slice().sort(function(a,b){return millisJogo(a)-millisJogo(b)});
         var palpitados=jogosOrdenados.filter(function(j){return !!getPalpiteLocal(j)});
@@ -2021,12 +2117,14 @@
         var resumo=jogosOrdenados.length?htmlBolaoContexto('Palpites e ranking separados por bolão.')+'<div class="pendentes-box"><b>'+jogosOrdenados.length+'</b> jogo(s) carregado(s) neste bolão.<br><b>'+pendentes.length+'</b> ainda sem palpite aberto.<br><b>'+palpitados.length+'</b> já palpitado(s) por você neste bolão.</div>':htmlBolaoContexto('Palpites e ranking separados por bolão.');
         var bodyJogos=jogosOrdenados.length?resumo+jogosOrdenados.map(function(j){
           var p=getPalpiteLocal(j);
-          return '<div class="mini '+(p?'ja-palpitado':'')+'"><div class="game-card-head">'+textoDataHoraStatus(j)+'</div>'+htmlLinhaTimesJogo(j)+(p?'<p class="saved-pick">'+esc(textoPalpitePrivado(p,j))+'</p>':htmlTempoParaPalpitar(j))+'<div class="mini-actions">'+(isAberto(j)?'<button class="mini-action" data-palpitar-jogo="'+esc(idJogo(j))+'">'+(p?'Alterar palpite':'Fazer palpite')+'</button>':'')+'<button class="mini-action secondary" data-select-jogo="'+esc(idJogo(j))+'">Selecionar</button></div></div>';
+          var btnPalpitesPublicos=palpitesPublicosLiberadosLocal(j)?'<button class="mini-action secondary" data-ver-palpites-jogo="'+esc(idJogo(j))+'">Ver palpites</button>':'';
+          return '<div class="mini '+(p?'ja-palpitado':'')+'"><div class="game-card-head">'+textoDataHoraStatus(j)+'</div>'+htmlLinhaTimesJogo(j)+(p?'<p class="saved-pick">'+esc(textoPalpitePrivado(p,j))+'</p>':htmlTempoParaPalpitar(j))+'<div class="mini-actions">'+(isAberto(j)?'<button class="mini-action" data-palpitar-jogo="'+esc(idJogo(j))+'">'+(p?'Alterar palpite':'Fazer palpite')+'</button>':'')+'<button class="mini-action secondary" data-select-jogo="'+esc(idJogo(j))+'">Selecionar</button>'+btnPalpitesPublicos+'</div></div>';
         }).join(''):telaVazia(estado.erroApi||'Nenhum jogo foi retornado pela API.');
         openModal('📅 Jogos',bodyJogos);
         iniciarTimerRegressivoModal();
         document.querySelectorAll('[data-select-jogo]').forEach(function(b){b.onclick=function(){selecionarJogoPorId(b.dataset.selectJogo)}});
         document.querySelectorAll('[data-palpitar-jogo]').forEach(function(b){b.onclick=function(){var j=estado.jogos.find(function(x){return idJogo(x)===String(b.dataset.palpitarJogo)});if(j){estado.jogo=j;render();closeModal();setTimeout(function(){abrirPalpite()},120)}}});
+        document.querySelectorAll('[data-ver-palpites-jogo]').forEach(function(b){b.onclick=function(){abrirPalpitesPublicosJogo(b.dataset.verPalpitesJogo)}});
         return;
       }
 
