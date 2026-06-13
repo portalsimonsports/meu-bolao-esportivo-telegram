@@ -2039,10 +2039,11 @@
         // V067: a API pode ainda estar com duplicidade antiga até rodar a correção no GS.
         // Para o bloco "Seu palpite", o app prioriza o palpite local do próprio usuário quando existir.
         const meu=meuLocal&&textoPalpiteLocal(meuLocal)?meuLocal:meuApi;
-        const aviso=(r&&r.palpitesPublicosLiberados)?'Palpites liberados após fechamento do jogo.':'Palpites ainda não liberados pelo GS.';
+        const liberado=(r&&r.palpitesPublicosLiberados)||palpitesPublicosLiberadosLocal(j);
+        const aviso=liberado?'Palpites públicos liberados após o fechamento do jogo.':'Palpites ainda não liberados pelo GS.';
         let html=htmlBolaoContexto('Palpites públicos deste jogo após o fechamento para novos palpites.')+'<div class="mini"><div class="game-card-head">'+textoDataHoraStatus(j)+'</div>'+htmlLinhaTimesJogo(j)+'<p>'+esc(aviso)+'</p></div>';
         if(meu)html+='<div class="mini ja-palpitado"><strong>Seu palpite</strong><p class="saved-pick">'+esc(textoPalpiteLocal(meu))+'</p></div>';
-        html+=lista.length?lista.map(function(p){return '<div class="mini"><strong>'+esc(p.nome||'Participante')+'</strong><p class="saved-pick">Palpite: '+esc(textoPalpiteLocal(p))+(p.pontos!==''&&p.pontos!==undefined?' • '+esc(p.pontos)+' pts':'')+'</p></div>';}).join(''):'<div class="mini"><strong>Nenhum palpite público encontrado.</strong><p>Se o jogo acabou de fechar, aguarde o GS publicar/confirmar os dados.</p></div>';
+        html+=lista.length?lista.map(function(p){return '<div class="mini"><strong>'+esc(p.nome||'Participante')+'</strong><p class="saved-pick">Palpite: '+esc(textoPalpiteLocal(p))+(p.pontos!==''&&p.pontos!==undefined?' • '+esc(p.pontos)+' pts':'')+'</p></div>';}).join(''):(liberado?'<div class="mini"><strong>Nenhum outro participante encontrado.</strong><p>Seu palpite aparece acima. Adversários só aparecem quando houver palpite válido publicado para este jogo.</p></div>':'<div class="mini"><strong>Nenhum palpite público encontrado.</strong><p>Se o jogo acabou de fechar, aguarde a rotina automática publicar o JSON.</p></div>');
         openModal('👥 Palpites do jogo',html,'<button class="btn primary" id="ok">Fechar</button>');
       }catch(e){
         console.warn('Erro ao obter palpites públicos.',e);
@@ -2637,6 +2638,29 @@
       if(confirmar)confirmar.onclick=function(){entrarBolaoPorCodigoRapido(codigo,{origem:'link',botao:confirmar,textoBotao:'Entrando...'})};
     }
 
+
+
+    async function atualizarJsonAoVivoSilenciosoV072(){
+      // V072: não chama Apps Script. Apenas relê o JSON público com cache bust
+      // para refletir placares, status e ranking publicados pela rotina automática.
+      if(!CONFIG.JSON_PUBLICO_ATIVO)return;
+      if(document.hidden)return;
+      try{
+        const id=String(CONFIG.ID_BOLAO||'BOLAO001');
+        const home=await carregarHomeJsonEstatico(id,true);
+        if(!home)return;
+        let manifest=JSON_ESTATICO_MEM.manifest;
+        let perfil=JSON_ESTATICO_MEM.perfil;
+        if(!manifest){try{manifest=await fetchJsonComTimeout(jsonPublicoManifestUrl(),CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500);JSON_ESTATICO_MEM.manifest=manifest;}catch(e){} }
+        if(!perfil&&estado.usuario.idTelegram){try{perfil=await fetchJsonComTimeout(jsonPublicoPerfilUrl(estado.usuario.idTelegram),CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500);JSON_ESTATICO_MEM.perfil=perfil;}catch(e){} }
+        const dados=mesclarHomeComPerfilJson(home,perfil,manifest,id);
+        aplicarDadosApi(dados,'json_v072_refresh');
+        salvarCache(dados);
+        atualizarFechamentosLocaisPorHorario();
+        render();
+      }catch(e){console.warn('Atualização silenciosa V072 falhou.',e);}
+    }
+
     async function iniciarCarregamentoInstantaneo(){
       // V035: a leitura principal é 100% JSON estático publicado no GitHub/Cloudflare.
       // Apps Script/JSONP fica apenas para ações de gravação: salvar palpite, criar bolão e entrar por código.
@@ -2656,7 +2680,7 @@
       render();
     }
 
-    (function(){initTelegram();limparCachesAntigosSeNecessario();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);carregarCache();events();render();setTimeout(()=>iniciarCarregamentoInstantaneo(),50)})();
+    (function(){initTelegram();limparCachesAntigosSeNecessario();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);setInterval(atualizarJsonAoVivoSilenciosoV072,30000);carregarCache();events();render();setTimeout(()=>iniciarCarregamentoInstantaneo(),50);setTimeout(atualizarJsonAoVivoSilenciosoV072,12000)})();
   </script>
 </body>
 </html>
