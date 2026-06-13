@@ -2034,7 +2034,11 @@
       try{
         const r=await chamarApiAcao('obterPalpitesJogo',{id_bolao:j.id_bolao||CONFIG.ID_BOLAO,id_jogo:idJogo(j),telegram_id:estado.usuario.idTelegram},{timeoutMs:45000,retries:1});
         const lista=Array.isArray(r&&r.palpites)?r.palpites:[];
-        const meu=r&&r.meuPalpite?r.meuPalpite:null;
+        const meuApi=r&&r.meuPalpite?normalizarPalpiteApi(r.meuPalpite):null;
+        const meuLocal=getPalpiteLocal(j);
+        // V067: a API pode ainda estar com duplicidade antiga até rodar a correção no GS.
+        // Para o bloco "Seu palpite", o app prioriza o palpite local do próprio usuário quando existir.
+        const meu=meuLocal&&textoPalpiteLocal(meuLocal)?meuLocal:meuApi;
         const aviso=(r&&r.palpitesPublicosLiberados)?'Palpites liberados após fechamento do jogo.':'Palpites ainda não liberados pelo GS.';
         let html=htmlBolaoContexto('Palpites públicos deste jogo após o fechamento para novos palpites.')+'<div class="mini"><div class="game-card-head">'+textoDataHoraStatus(j)+'</div>'+htmlLinhaTimesJogo(j)+'<p>'+esc(aviso)+'</p></div>';
         if(meu)html+='<div class="mini ja-palpitado"><strong>Seu palpite</strong><p class="saved-pick">'+esc(textoPalpiteLocal(meu))+'</p></div>';
