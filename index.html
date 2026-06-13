@@ -283,7 +283,7 @@
     }
 
     const CONFIG={
-      VERSAO:'V058_PLACAR_X_CENTRAL_ALINHADO',
+      VERSAO:'V063_PALPITE_AUTO_IA_GRUPOS_FIFA_INDEX',
       API_URL:API_PARAM||'', // V035: usado somente para gravação; leitura principal vem dos JSONs estáticos.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // Fallback somente para ações de gravação caso o JSON não traga apiUrl.
       ID_BOLAO:idBolaoInicial_(),
@@ -1509,9 +1509,97 @@
       return jogos.slice(0, Math.min(72,jogos.length));
     }
 
+
+    // V063: grupos oficiais FIFA 2026 como fallback/normalização no Mini App.
+    // Mesmo que o JSON venha com grupo antigo ou deslocado, a tela Copa usa este mapa
+    // para montar Grupos, Classificação e Chaveamento sem depender de correção visual manual.
+    const PSS_GRUPOS_FIFA_2026_OFICIAIS_INDEX={
+      A:['Mexico','South Africa','Korea Republic','Czech Republic'],
+      B:['Canada','Qatar','Switzerland','Bosnia and Herzegovina'],
+      C:['Brazil','Morocco','Haiti','Scotland'],
+      D:['United States','Paraguay','Australia','Türkiye'],
+      E:['Germany',"Côte d'Ivoire",'Ecuador','Curacao'],
+      F:['Netherlands','Japan','Sweden','Tunisia'],
+      G:['Belgium','Egypt','Iran','New Zealand'],
+      H:['Spain','Uruguay','Saudi Arabia','Cape Verde Islands'],
+      I:['France','Senegal','Norway','Iraq'],
+      J:['Argentina','Algeria','Austria','Jordan'],
+      K:['Portugal','Colombia','Uzbekistan','Congo DR'],
+      L:['England','Croatia','Ghana','Panama']
+    };
+
+    function aliasesGrupoFifaIndex_(nome){
+      const n=normalizarTextoPais(nome);
+      const mapa={
+        'USA':'UNITED STATES',
+        'ESTADOS UNIDOS':'UNITED STATES',
+        'US':'UNITED STATES',
+        'SOUTH KOREA':'KOREA REPUBLIC',
+        'COREIA DO SUL':'KOREA REPUBLIC',
+        'CZECHIA':'CZECH REPUBLIC',
+        'REPUBLICA TCHECA':'CZECH REPUBLIC',
+        'BOSNIA HERZEGOVINA':'BOSNIA AND HERZEGOVINA',
+        'BOSNIA-H':'BOSNIA AND HERZEGOVINA',
+        'BOSNIA E HERZEGOVINA':'BOSNIA AND HERZEGOVINA',
+        'TURKEY':'TURKIYE',
+        'TURQUIA':'TURKIYE',
+        'TÜRKIYE':'TURKIYE',
+        'IVORY COAST':'COTE DIVOIRE',
+        'COSTA DO MARFIM':'COTE DIVOIRE',
+        "COTE D'IVOIRE":'COTE DIVOIRE',
+        'CÔTE DIVOIRE':'COTE DIVOIRE',
+        "CÔTE D'IVOIRE":'COTE DIVOIRE',
+        'CURAÇAO':'CURACAO',
+        'CABO VERDE':'CAPE VERDE ISLANDS',
+        'CAPE VERDE':'CAPE VERDE ISLANDS',
+        'DR CONGO':'CONGO DR',
+        'REPUBLICA DEMOCRATICA DO CONGO':'CONGO DR'
+      };
+      return mapa[n]||n;
+    }
+
+    function grupoOficialPorTimeIndex_(time){
+      const alvo=aliasesGrupoFifaIndex_(time);
+      const letras=Object.keys(PSS_GRUPOS_FIFA_2026_OFICIAIS_INDEX);
+      for(let i=0;i<letras.length;i++){
+        const letra=letras[i];
+        const times=PSS_GRUPOS_FIFA_2026_OFICIAIS_INDEX[letra]||[];
+        for(let j=0;j<times.length;j++){
+          if(aliasesGrupoFifaIndex_(times[j])===alvo)return letra;
+        }
+      }
+      return '';
+    }
+
     function montarGruposCopa(){
       const candidatos=jogosGrupoCandidatos();
       if(!candidatos.length)return [];
+
+      // V063: primeiro tenta montar pela tabela oficial FIFA 2026.
+      // Isso corrige visualmente grupos já conhecidos, inclusive C e D, mesmo se o JSON antigo
+      // ainda trouxer rodada/grupo deslocado.
+      const gruposOficiais={};
+      Object.keys(PSS_GRUPOS_FIFA_2026_OFICIAIS_INDEX).forEach(function(letra){
+        gruposOficiais[letra]={
+          nome:'Grupo '+letra,
+          times:(PSS_GRUPOS_FIFA_2026_OFICIAIS_INDEX[letra]||[]).slice(),
+          jogos:[]
+        };
+      });
+
+      candidatos.forEach(function(j){
+        const gm=grupoOficialPorTimeIndex_(j.mandante);
+        const gv=grupoOficialPorTimeIndex_(j.visitante);
+        if(gm&&gv&&gm===gv){
+          gruposOficiais[gm].jogos.push(j);
+        }
+      });
+
+      const oficiais=Object.keys(gruposOficiais).sort().map(function(k){return gruposOficiais[k]});
+      const jogosOficiais=oficiais.reduce(function(s,g){return s+(g.jogos||[]).length},0);
+      if(jogosOficiais>0)return oficiais.sort(ordenarGruposCopa);
+
+      // Fallback antigo: se não houver nomes compatíveis, usa campo grupo do JSON.
       const gruposCampo={};
       candidatos.forEach(function(j){
         const g=String(j.grupo||'').trim();
@@ -1716,6 +1804,110 @@
       var reg=document.getElementById('abrirRegulamentoCopa'); if(reg)reg.onclick=function(){screen('regulamento')};
     }
 
+
+    /***********************
+     * V063 — PALPITE AUTOMÁTICO NO MINI APP
+     * Apenas tela/controle visual. A execução real continua no GS/triggers.
+     ***********************/
+    function textoStatusAutoPalpite_(cfg){
+      cfg=cfg||{};
+      const ativo=String(cfg.ativo||cfg.palpite_auto_ativo||cfg.status||'').toUpperCase();
+      if(ativo==='SIM'||ativo==='ATIVO'||cfg.ativo===true)return 'Ativado';
+      return 'Desativado';
+    }
+
+    function estiloAutoAtual_(cfg){
+      cfg=cfg||{};
+      return String(cfg.estilo||cfg.tipo||cfg.modo||'EQUILIBRADO').toUpperCase();
+    }
+
+    function htmlOpcaoEstiloAuto_(valor,label,desc,atual){
+      const ativo=String(atual||'').toUpperCase()===String(valor||'').toUpperCase();
+      return '<button class="opt '+(ativo?'active':'')+'" data-auto-estilo="'+esc(valor)+'"><span><b>'+esc(label)+'</b><br><small style="color:#52635a;font-weight:800">'+esc(desc)+'</small></span><span>'+ (ativo?'✓':'›') +'</span></button>';
+    }
+
+    async function carregarConfigPalpiteAutomatico_(){
+      try{
+        const r=await chamarApiAcao('obterConfigPalpiteAutomatico',{
+          id_bolao:CONFIG.ID_BOLAO,
+          telegram_id:estado.usuario.idTelegram,
+          nome:estado.usuario.nome,
+          username:estado.usuario.username
+        });
+        if(r&&r.ok)return r.config||r.dados||r;
+        return {};
+      }catch(e){
+        console.warn('Config palpite automático indisponível.',e);
+        return {};
+      }
+    }
+
+    async function salvarConfigPalpiteAutomatico_(ativo,estilo){
+      const r=await chamarApiAcao('salvarConfigPalpiteAutomatico',{
+        id_bolao:CONFIG.ID_BOLAO,
+        telegram_id:estado.usuario.idTelegram,
+        nome:estado.usuario.nome,
+        username:estado.usuario.username,
+        ativo:ativo?'SIM':'NAO',
+        estilo:String(estilo||'EQUILIBRADO').toUpperCase()
+      });
+      if(!r||r.ok===false)throw new Error((r&&r.erro)||(r&&r.mensagem)||'API não confirmou a configuração.');
+      return r;
+    }
+
+    async function abrirPalpiteAutomatico(){
+      if(!estado.usuario.idTelegram){
+        return openModal('🤖 Palpite automático',
+          '<div class="mini"><strong>Abra pelo Telegram</strong><p>Para ativar palpite automático, o Mini App precisa identificar seu Telegram ID.</p></div>',
+          '<button class="btn primary" id="ok">Fechar</button>');
+      }
+      openModal('🤖 Palpite automático',
+        htmlBolaoContexto('Configuração exclusiva deste bolão. Não altera outros bolões.')+
+        '<div class="mini"><strong>Carregando configuração...</strong><p>Aguarde a leitura do GS.</p></div>',
+        '<button class="btn primary" id="ok">Fechar</button>');
+      const cfg=await carregarConfigPalpiteAutomatico_();
+      const atual=estiloAutoAtual_(cfg);
+      const ativo=textoStatusAutoPalpite_(cfg)==='Ativado';
+      const corpo=htmlBolaoContexto('Configuração exclusiva deste bolão. Não altera outros bolões.')+
+        '<div class="mini"><strong>Status atual: '+(ativo?'✅ Ativado':'⛔ Desativado')+'</strong><p>O sistema só aplica em jogos futuros ainda sem palpite manual. Não preenche jogos antigos e não substitui palpite manual já salvo.</p></div>'+
+        '<div class="mini"><strong>Estilo do palpite automático</strong><div class="opts">'+
+        htmlOpcaoEstiloAuto_('EQUILIBRADO','Equilibrado','Mistura favoritos, empates e placares comuns.',atual)+
+        htmlOpcaoEstiloAuto_('FAVORITOS','Favoritos','Tende a favorecer seleções mais fortes.',atual)+
+        htmlOpcaoEstiloAuto_('SURPRESA','Surpresa','Inclui mais empates e resultados inesperados.',atual)+
+        '</div></div>'+
+        '<div id="autoPalpiteMsg" class="auto-status">Escolha o estilo e salve a configuração.</div>';
+      openModal('🤖 Palpite automático',corpo,'<button class="btn light" id="desativarAutoPalpite">Desativar</button><button class="btn primary" id="salvarAutoPalpite">Ativar/Salvar</button>');
+      let estiloEscolhido=atual;
+      document.querySelectorAll('[data-auto-estilo]').forEach(function(btn){
+        btn.onclick=function(){
+          estiloEscolhido=String(btn.dataset.autoEstilo||'EQUILIBRADO').toUpperCase();
+          document.querySelectorAll('[data-auto-estilo]').forEach(function(b){b.classList.toggle('active',String(b.dataset.autoEstilo||'').toUpperCase()===estiloEscolhido)});
+        };
+      });
+      const msg=document.getElementById('autoPalpiteMsg');
+      const btnSalvar=document.getElementById('salvarAutoPalpite');
+      const btnDesativar=document.getElementById('desativarAutoPalpite');
+      async function executarSalvar(flag){
+        try{
+          if(msg){msg.className='auto-status';msg.textContent='Salvando configuração...';}
+          if(btnSalvar)btnSalvar.disabled=true;
+          if(btnDesativar)btnDesativar.disabled=true;
+          await salvarConfigPalpiteAutomatico_(flag,estiloEscolhido);
+          if(msg){msg.className='auto-status ok';msg.textContent=flag?'✅ Palpite automático ativado.':'✅ Palpite automático desativado.';}
+          toastMsg(flag?'Palpite automático ativado.':'Palpite automático desativado.');
+          success();
+        }catch(e){
+          if(msg){msg.className='auto-status err';msg.textContent='Erro ao salvar: '+(e&&e.message?e.message:e);}
+          toastMsg('Erro ao salvar configuração.');
+        }finally{
+          if(btnSalvar)btnSalvar.disabled=false;
+          if(btnDesativar)btnDesativar.disabled=false;
+        }
+      }
+      if(btnSalvar)btnSalvar.onclick=function(){executarSalvar(true)};
+      if(btnDesativar)btnDesativar.onclick=function(){executarSalvar(false)};
+    }
+
     function screen(name){
       if(name==='boloes'){
         // V031: diferencia claramente modo publico (navegador) de modo Telegram identificado.
@@ -1846,15 +2038,19 @@
       }
 
       if(name==='mais'){
-        openModal('☰ Mais',`<div class="mini"><strong>Central do Bolão</strong><p>Acesse regulamento, ranking, jogos, bolões ativos e dados do participante.</p><div class="mini-actions"><button class="mini-action" id="abrirCopaMais">🏆 Copa</button><button class="mini-action secondary" id="abrirRegulamentoMais">📄 Regulamento</button></div></div><div class="mini"><strong>Participante</strong><p>${esc(estado.usuario.nome||'Participante')}</p><p>Telegram ID: <b>${esc(estado.usuario.idTelegram||'não identificado')}</b></p></div><div class="mini"><strong>Bolão atual</strong><p>${esc((estado.bolaoAtual&&estado.bolaoAtual.nome_bolao)||CONFIG.ID_BOLAO)}</p></div><div class="mini"><strong>Dados</strong><p>Leitura: JSON estático</p><p>API gravação: ${apiUrl()?'configurada':'não configurada'}</p><p>${estado.cacheAtualizadoEm?'Última carga salva: '+esc(estado.cacheAtualizadoEm):'Nenhum cache salvo ainda.'}</p><p>${estado.cacheUsado?'Dados exibidos pelo JSON público/cache local.':'Dados carregados pelo JSON público.'}</p></div>`, '<button class="btn light" id="entrarCodigo">Entrar Código</button><button class="btn primary" id="criarBolao">Criar Bolão</button>');
+        openModal('☰ Mais',`<div class="mini"><strong>Central do Bolão</strong><p>Acesse regulamento, ranking, jogos, bolões ativos e dados do participante.</p><div class="mini-actions"><button class="mini-action" id="abrirCopaMais">🏆 Copa</button><button class="mini-action secondary" id="abrirRegulamentoMais">📄 Regulamento</button></div></div><div class="mini"><strong>🤖 Automação do bolão</strong><p>Ative seu palpite automático por estilo. O Desafiante IA aparece no ranking quando o GS publicar os dados.</p><div class="mini-actions"><button class="mini-action" id="abrirPalpiteAutoMais">Palpite automático</button><button class="mini-action secondary" id="abrirRankingIaMais">Ranking / IA</button></div></div><div class="mini"><strong>Participante</strong><p>${esc(estado.usuario.nome||'Participante')}</p><p>Telegram ID: <b>${esc(estado.usuario.idTelegram||'não identificado')}</b></p></div><div class="mini"><strong>Bolão atual</strong><p>${esc((estado.bolaoAtual&&estado.bolaoAtual.nome_bolao)||CONFIG.ID_BOLAO)}</p></div><div class="mini"><strong>Dados</strong><p>Leitura: JSON estático</p><p>API gravação: ${apiUrl()?'configurada':'não configurada'}</p><p>${estado.cacheAtualizadoEm?'Última carga salva: '+esc(estado.cacheAtualizadoEm):'Nenhum cache salvo ainda.'}</p><p>${estado.cacheUsado?'Dados exibidos pelo JSON público/cache local.':'Dados carregados pelo JSON público.'}</p></div>`, '<button class="btn light" id="entrarCodigo">Entrar Código</button><button class="btn primary" id="criarBolao">Criar Bolão</button>');
         const btnEntrarCodigo=document.getElementById('entrarCodigo');
         const btnCriarBolao=document.getElementById('criarBolao');
         const btnCopaMais=document.getElementById('abrirCopaMais');
         const btnRegMais=document.getElementById('abrirRegulamentoMais');
+        const btnPalpiteAutoMais=document.getElementById('abrirPalpiteAutoMais');
+        const btnRankingIaMais=document.getElementById('abrirRankingIaMais');
         if(btnEntrarCodigo)btnEntrarCodigo.onclick=abrirEntrarCodigo;
         if(btnCriarBolao)btnCriarBolao.onclick=abrirCriarBolao;
         if(btnCopaMais)btnCopaMais.onclick=function(){screen('copa')};
         if(btnRegMais)btnRegMais.onclick=function(){screen('regulamento')};
+        if(btnPalpiteAutoMais)btnPalpiteAutoMais.onclick=abrirPalpiteAutomatico;
+        if(btnRankingIaMais)btnRankingIaMais.onclick=function(){screen('ranking')};
         return;
       }
     }
