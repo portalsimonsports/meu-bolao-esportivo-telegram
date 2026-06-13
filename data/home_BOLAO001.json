@@ -2,7 +2,7 @@
   "ok": true,
   "versao": "V058_PLACAR_X_CENTRAL_ALINHADO",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "12/06/2026 22:06:57",
+  "dataHora": "12/06/2026 23:51:59",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V058_PLACAR_X_CENTRAL_ALINHADO&perfil=1",
@@ -50,16 +50,16 @@
       {
         "pos": 1,
         "nome": "Simon",
-        "total_pontos": 220,
-        "pontos": "220",
-        "palpites": 3,
+        "total_pontos": 370,
+        "pontos": "370",
+        "palpites": 4,
         "medalha": "👑",
         "classe": "gold",
         "avatar": "👨🏻"
       }
     ],
-    "rankingTipo": "DEFINITIVO_CALCULADO",
-    "rankingLegenda": "Ranking definitivo calculado com jogos finalizados.",
+    "rankingTipo": "PROVISORIO",
+    "rankingLegenda": "Ranking ao vivo/provisório calculado com o placar em andamento.",
     "boloes": [
       {
         "id_bolao": "BOLAO001",
@@ -199,11 +199,11 @@
         "hora": "22:00",
         "dataHora": "12/06/2026 22:00",
         "limitePalpite": "12/06/2026 22:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "gols_mandante": 3,
+        "gols_visitante": 1,
+        "status": "Ao vivo",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
@@ -1979,10 +1979,10 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "12/06/2026 22:07:44",
+    "cacheAtualizadoEm": "12/06/2026 23:52:48",
     "modoDados": "JSON_PUBLICO_ESTATICO"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "12/06/2026 22:07:44",
-  "gerado_ts": 1781312864789
+  "gerado_em": "12/06/2026 23:52:48",
+  "gerado_ts": 1781319168483
 }
