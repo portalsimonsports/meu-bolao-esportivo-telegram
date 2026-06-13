@@ -1806,7 +1806,7 @@
 
 
     /***********************
-     * V063 — PALPITE AUTOMÁTICO NO MINI APP
+     * V064 — PALPITE AUTOMÁTICO NO MINI APP SEM TIMEOUT CURTO
      * Apenas tela/controle visual. A execução real continua no GS/triggers.
      ***********************/
     function textoStatusAutoPalpite_(cfg){
@@ -1826,33 +1826,71 @@
       return '<button class="opt '+(ativo?'active':'')+'" data-auto-estilo="'+esc(valor)+'"><span><b>'+esc(label)+'</b><br><small style="color:#52635a;font-weight:800">'+esc(desc)+'</small></span><span>'+ (ativo?'✓':'›') +'</span></button>';
     }
 
+    function autoPalpiteLocalKey_(){
+      return 'PSS_MBE_AUTO_PALPITE_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'');
+    }
+
+    function salvarConfigAutoLocal_(ativo,estilo){
+      const cfg={
+        id_bolao:CONFIG.ID_BOLAO,
+        telegram_id:estado.usuario.idTelegram,
+        ativo:ativo?'SIM':'NAO',
+        estilo:String(estilo||'EQUILIBRADO').toUpperCase(),
+        atualizado_em:new Date().toISOString(),
+        origem:'LOCAL_MINIAPP'
+      };
+      try{localStorage.setItem(autoPalpiteLocalKey_(),JSON.stringify(cfg));}catch(e){}
+      return cfg;
+    }
+
+    function lerConfigAutoLocal_(){
+      try{
+        const raw=localStorage.getItem(autoPalpiteLocalKey_());
+        if(!raw)return null;
+        const cfg=JSON.parse(raw);
+        if(!cfg||!cfg.telegram_id)return null;
+        return cfg;
+      }catch(e){return null;}
+    }
+
     async function carregarConfigPalpiteAutomatico_(){
+      // V064: abre a tela rapidamente. Primeiro usa cache local; depois tenta GS com timeout curto.
+      const local=lerConfigAutoLocal_();
       try{
         const r=await chamarApiAcao('obterConfigPalpiteAutomatico',{
           id_bolao:CONFIG.ID_BOLAO,
           telegram_id:estado.usuario.idTelegram,
           nome:estado.usuario.nome,
           username:estado.usuario.username
-        });
-        if(r&&r.ok)return r.config||r.dados||r;
-        return {};
+        },{timeoutMs:9000,retries:0});
+        if(r&&r.ok){
+          const cfg=r.config||r.dados||r;
+          if(cfg&&cfg.telegram_id){
+            salvarConfigAutoLocal_(String(cfg.ativo||'').toUpperCase()==='SIM',cfg.estilo||'EQUILIBRADO');
+          }
+          return cfg;
+        }
+        return local||{};
       }catch(e){
-        console.warn('Config palpite automático indisponível.',e);
-        return {};
+        console.warn('Config palpite automático indisponível. Usando cache local se existir.',e);
+        return local||{};
       }
     }
 
     async function salvarConfigPalpiteAutomatico_(ativo,estilo){
+      // V064: salva localmente antes e dá mais tempo ao GS. O erro anterior era timeout curto no JSONP.
+      const estiloFinal=String(estilo||'EQUILIBRADO').toUpperCase();
+      const cfgLocal=salvarConfigAutoLocal_(!!ativo,estiloFinal);
       const r=await chamarApiAcao('salvarConfigPalpiteAutomatico',{
         id_bolao:CONFIG.ID_BOLAO,
         telegram_id:estado.usuario.idTelegram,
         nome:estado.usuario.nome,
         username:estado.usuario.username,
         ativo:ativo?'SIM':'NAO',
-        estilo:String(estilo||'EQUILIBRADO').toUpperCase()
-      });
+        estilo:estiloFinal
+      },{timeoutMs:80000,retries:1});
       if(!r||r.ok===false)throw new Error((r&&r.erro)||(r&&r.mensagem)||'API não confirmou a configuração.');
-      return r;
+      return r.config||r.dados||r||cfgLocal;
     }
 
     async function abrirPalpiteAutomatico(){
@@ -1889,16 +1927,21 @@
       const btnDesativar=document.getElementById('desativarAutoPalpite');
       async function executarSalvar(flag){
         try{
-          if(msg){msg.className='auto-status';msg.textContent='Salvando configuração...';}
+          salvarConfigAutoLocal_(flag,estiloEscolhido);
+          if(msg){msg.className='auto-status';msg.textContent='Salvo no app. Confirmando no GS...';}
           if(btnSalvar)btnSalvar.disabled=true;
           if(btnDesativar)btnDesativar.disabled=true;
           await salvarConfigPalpiteAutomatico_(flag,estiloEscolhido);
-          if(msg){msg.className='auto-status ok';msg.textContent=flag?'✅ Palpite automático ativado.':'✅ Palpite automático desativado.';}
+          if(msg){msg.className='auto-status ok';msg.textContent=flag?'✅ Palpite automático ativado e confirmado no GS.':'✅ Palpite automático desativado e confirmado no GS.';}
           toastMsg(flag?'Palpite automático ativado.':'Palpite automático desativado.');
           success();
         }catch(e){
-          if(msg){msg.className='auto-status err';msg.textContent='Erro ao salvar: '+(e&&e.message?e.message:e);}
-          toastMsg('Erro ao salvar configuração.');
+          console.warn('Falha ao confirmar palpite automático no GS.',e);
+          if(msg){
+            msg.className='auto-status err';
+            msg.textContent='Salvo no app, mas o GS não confirmou. Verifique se a V064/V063 GS está publicada e tente novamente.';
+          }
+          toastMsg('GS não confirmou a configuração.');
         }finally{
           if(btnSalvar)btnSalvar.disabled=false;
           if(btnDesativar)btnDesativar.disabled=false;
@@ -2331,10 +2374,23 @@
       try{localStorage.removeItem(cacheKey());localStorage.removeItem(cacheInfoKey())}catch(e){}
     }
 
-    async function chamarApiAcao(acao,params){
+    async function chamarApiAcao(acao,params,opcoes){
       const url=apiUrl();
       if(!url)throw new Error('API não configurada no Mini App.');
-      return await chamarApiJsonp(url,Object.assign({acao:acao,v:CONFIG.VERSAO,t:Date.now()},params||{}),30000);
+      opcoes=opcoes||{};
+      const timeoutMs=Number(opcoes.timeoutMs||30000);
+      const retries=Number(opcoes.retries||0);
+      let ultimoErro=null;
+      for(let tentativa=0;tentativa<=retries;tentativa++){
+        try{
+          return await chamarApiJsonp(url,Object.assign({acao:acao,v:CONFIG.VERSAO,t:Date.now(),tentativa:tentativa+1},params||{}),timeoutMs);
+        }catch(e){
+          ultimoErro=e;
+          if(tentativa>=retries)break;
+          await new Promise(r=>setTimeout(r,900));
+        }
+      }
+      throw ultimoErro||new Error('Tempo esgotado ao consultar API.');
     }
 
     function marcarNavAtiva(nav){
