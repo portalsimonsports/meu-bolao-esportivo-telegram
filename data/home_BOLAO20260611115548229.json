@@ -2,7 +2,7 @@
   "ok": true,
   "versao": "V058_PLACAR_X_CENTRAL_ALINHADO",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "12/06/2026 19:52:13",
+  "dataHora": "12/06/2026 23:21:44",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V058_PLACAR_X_CENTRAL_ALINHADO&perfil=1",
@@ -21,21 +21,21 @@
       "visibilidade_palpites": "APOS_FECHAMENTO_JOGO"
     },
     "jogoDestaque": {
-      "id": "e7c37205176a0bd9",
+      "id": "9105f73e4fe2c51b",
       "id_bolao": "BOLAO20260611115548229",
-      "id_jogo": "e7c37205176a0bd9",
-      "mandante": "United States",
-      "visitante": "Paraguay",
-      "flagMandante": "🇺🇸",
-      "flagVisitante": "🇵🇾",
-      "flagMandanteEmoji": "🇺🇸",
-      "flagVisitanteEmoji": "🇵🇾",
-      "codigoMandante": "us",
-      "codigoVisitante": "py",
-      "data": "12/06/2026",
-      "hora": "22:00",
-      "dataHora": "12/06/2026 22:00",
-      "limitePalpite": "12/06/2026 22:00",
+      "id_jogo": "9105f73e4fe2c51b",
+      "mandante": "Qatar",
+      "visitante": "Switzerland",
+      "flagMandante": "🇶🇦",
+      "flagVisitante": "🇨🇭",
+      "flagMandanteEmoji": "🇶🇦",
+      "flagVisitanteEmoji": "🇨🇭",
+      "codigoMandante": "qa",
+      "codigoVisitante": "ch",
+      "data": "13/06/2026",
+      "hora": "16:00",
+      "dataHora": "13/06/2026 16:00",
+      "limitePalpite": "13/06/2026 16:00",
       "gols_mandante": "",
       "gols_visitante": "",
       "status": "Aberto",
@@ -50,16 +50,16 @@
       {
         "pos": 1,
         "nome": "Simon",
-        "total_pontos": 0,
-        "pontos": "0",
-        "palpites": 1,
+        "total_pontos": 120,
+        "pontos": "120",
+        "palpites": 2,
         "medalha": "👑",
         "classe": "gold",
         "avatar": "👨🏻"
       }
     ],
-    "rankingTipo": "DEFINITIVO_CALCULADO",
-    "rankingLegenda": "Ranking definitivo calculado com jogos finalizados.",
+    "rankingTipo": "PROVISORIO",
+    "rankingLegenda": "Ranking ao vivo/provisório calculado com o placar em andamento.",
     "boloes": [
       {
         "id_bolao": "BOLAO001",
@@ -199,14 +199,14 @@
         "hora": "22:00",
         "dataHora": "12/06/2026 22:00",
         "limitePalpite": "12/06/2026 22:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Aberto",
-        "aceitaPalpite": true,
-        "status_jogo": "ABERTO",
-        "status_bolao": "ABERTO",
-        "palpites_liberados": "SIM",
-        "palpitesPublicosLiberados": false,
+        "gols_mandante": 3,
+        "gols_visitante": 0,
+        "status": "Ao vivo",
+        "aceitaPalpite": false,
+        "status_jogo": "AO_VIVO",
+        "status_bolao": "FECHADO",
+        "palpites_liberados": "NAO",
+        "palpitesPublicosLiberados": true,
         "meuPalpite": null
       },
       {
@@ -1979,10 +1979,10 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "12/06/2026 19:53:16",
+    "cacheAtualizadoEm": "12/06/2026 23:22:19",
     "modoDados": "JSON_PUBLICO_ESTATICO"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "12/06/2026 19:53:16",
-  "gerado_ts": 1781304796145
+  "gerado_em": "12/06/2026 23:22:19",
+  "gerado_ts": 1781317339933
 }
