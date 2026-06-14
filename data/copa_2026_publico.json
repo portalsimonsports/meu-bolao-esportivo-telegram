@@ -2,11 +2,11 @@
   "ok": true,
   "tipo": "COPA_2026_GLOBAL",
   "projeto": "Bolão Futebol Telegram — Portal SimonSports",
-  "versao": "V090_JSON_GLOBAL_COPA_E_BOLOES_ESCALAVEL",
-  "hotfix": "V090_JSON_GLOBAL_COPA_ESCALAVEL",
+  "versao": "V091_TRADUCAO_SELECOES_PTBR_JSON",
+  "hotfix": "V091_TRADUCAO_SELECOES_PTBR_JSON",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "14/06/2026 17:19:58",
-  "gerado_ts": 1781468398584,
+  "gerado_em": "14/06/2026 19:05:08",
+  "gerado_ts": 1781474708844,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -41,7 +41,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "México",
+        "mandante_nome_pt": "México",
+        "mandante_exibicao": "México",
+        "mandante_codigo": "mx",
+        "mandante_iso": "mx",
+        "visitante_pt": "África do Sul",
+        "visitante_nome_pt": "África do Sul",
+        "visitante_exibicao": "África do Sul",
+        "visitante_codigo": "za",
+        "visitante_iso": "za"
       },
       {
         "id": "01000048ef0bcecc",
@@ -74,7 +84,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Coreia do Sul",
+        "mandante_nome_pt": "Coreia do Sul",
+        "mandante_exibicao": "Coreia do Sul",
+        "mandante_codigo": "kr",
+        "mandante_iso": "kr",
+        "visitante_pt": "República Tcheca",
+        "visitante_nome_pt": "República Tcheca",
+        "visitante_exibicao": "República Tcheca",
+        "visitante_codigo": "cz",
+        "visitante_iso": "cz"
       },
       {
         "id": "4f5e7d9da1657c78",
@@ -107,7 +127,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Canadá",
+        "mandante_nome_pt": "Canadá",
+        "mandante_exibicao": "Canadá",
+        "mandante_codigo": "ca",
+        "mandante_iso": "ca",
+        "visitante_pt": "Bósnia e Herzegovina",
+        "visitante_nome_pt": "Bósnia e Herzegovina",
+        "visitante_exibicao": "Bósnia e Herzegovina",
+        "visitante_codigo": "ba",
+        "visitante_iso": "ba"
       },
       {
         "id": "e7c37205176a0bd9",
@@ -140,7 +170,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Estados Unidos",
+        "mandante_nome_pt": "Estados Unidos",
+        "mandante_exibicao": "Estados Unidos",
+        "mandante_codigo": "us",
+        "mandante_iso": "us",
+        "visitante_pt": "Paraguai",
+        "visitante_nome_pt": "Paraguai",
+        "visitante_exibicao": "Paraguai",
+        "visitante_codigo": "py",
+        "visitante_iso": "py"
       },
       {
         "id": "9105f73e4fe2c51b",
@@ -173,7 +213,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Catar",
+        "mandante_nome_pt": "Catar",
+        "mandante_exibicao": "Catar",
+        "mandante_codigo": "qa",
+        "mandante_iso": "qa",
+        "visitante_pt": "Suíça",
+        "visitante_nome_pt": "Suíça",
+        "visitante_exibicao": "Suíça",
+        "visitante_codigo": "ch",
+        "visitante_iso": "ch"
       },
       {
         "id": "ba16cee717032445",
@@ -206,7 +256,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Brasil",
+        "mandante_nome_pt": "Brasil",
+        "mandante_exibicao": "Brasil",
+        "mandante_codigo": "br",
+        "mandante_iso": "br",
+        "visitante_pt": "Marrocos",
+        "visitante_nome_pt": "Marrocos",
+        "visitante_exibicao": "Marrocos",
+        "visitante_codigo": "ma",
+        "visitante_iso": "ma"
       },
       {
         "id": "f2e0f8216f9efc6d",
@@ -239,7 +299,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Haiti",
+        "mandante_nome_pt": "Haiti",
+        "mandante_exibicao": "Haiti",
+        "mandante_codigo": "ht",
+        "mandante_iso": "ht",
+        "visitante_pt": "Escócia",
+        "visitante_nome_pt": "Escócia",
+        "visitante_exibicao": "Escócia",
+        "visitante_codigo": "gb-sct",
+        "visitante_iso": "gb-sct"
       },
       {
         "id": "60a048c2dfa676ce",
@@ -251,7 +321,7 @@
         "flagVisitante": "🇹🇷",
         "flagMandanteEmoji": "⚽",
         "flagVisitanteEmoji": "🇹🇷",
-        "codigoMandante": "",
+        "codigoMandante": "au",
         "codigoVisitante": "tr",
         "grupo": "Grupo D",
         "rodada_grupo": "Grupo D",
@@ -272,7 +342,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Austrália",
+        "mandante_nome_pt": "Austrália",
+        "mandante_exibicao": "Austrália",
+        "mandante_codigo": "au",
+        "mandante_iso": "au",
+        "visitante_pt": "Turquia",
+        "visitante_nome_pt": "Turquia",
+        "visitante_exibicao": "Turquia",
+        "visitante_codigo": "tr",
+        "visitante_iso": "tr"
       },
       {
         "id": "fe5c4539c30efafd",
@@ -305,7 +385,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Alemanha",
+        "mandante_nome_pt": "Alemanha",
+        "mandante_exibicao": "Alemanha",
+        "mandante_codigo": "de",
+        "mandante_iso": "de",
+        "visitante_pt": "Curaçao",
+        "visitante_nome_pt": "Curaçao",
+        "visitante_exibicao": "Curaçao",
+        "visitante_codigo": "cw",
+        "visitante_iso": "cw"
       },
       {
         "id": "49459bce304b41c3",
@@ -338,7 +428,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Países Baixos",
+        "mandante_nome_pt": "Países Baixos",
+        "mandante_exibicao": "Países Baixos",
+        "mandante_codigo": "nl",
+        "mandante_iso": "nl",
+        "visitante_pt": "Japão",
+        "visitante_nome_pt": "Japão",
+        "visitante_exibicao": "Japão",
+        "visitante_codigo": "jp",
+        "visitante_iso": "jp"
       },
       {
         "id": "096544d4b0a82f16",
@@ -371,7 +471,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Costa do Marfim",
+        "mandante_nome_pt": "Costa do Marfim",
+        "mandante_exibicao": "Costa do Marfim",
+        "mandante_codigo": "ci",
+        "mandante_iso": "ci",
+        "visitante_pt": "Equador",
+        "visitante_nome_pt": "Equador",
+        "visitante_exibicao": "Equador",
+        "visitante_codigo": "ec",
+        "visitante_iso": "ec"
       },
       {
         "id": "7e5655e08762248b",
@@ -404,7 +514,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Suécia",
+        "mandante_nome_pt": "Suécia",
+        "mandante_exibicao": "Suécia",
+        "mandante_codigo": "se",
+        "mandante_iso": "se",
+        "visitante_pt": "Tunísia",
+        "visitante_nome_pt": "Tunísia",
+        "visitante_exibicao": "Tunísia",
+        "visitante_codigo": "tn",
+        "visitante_iso": "tn"
       },
       {
         "id": "50a0549da0d5ab13",
@@ -437,7 +557,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Espanha",
+        "mandante_nome_pt": "Espanha",
+        "mandante_exibicao": "Espanha",
+        "mandante_codigo": "es",
+        "mandante_iso": "es",
+        "visitante_pt": "Cabo Verde",
+        "visitante_nome_pt": "Cabo Verde",
+        "visitante_exibicao": "Cabo Verde",
+        "visitante_codigo": "cv",
+        "visitante_iso": "cv"
       },
       {
         "id": "82414c1439b6a49a",
@@ -470,7 +600,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Bélgica",
+        "mandante_nome_pt": "Bélgica",
+        "mandante_exibicao": "Bélgica",
+        "mandante_codigo": "be",
+        "mandante_iso": "be",
+        "visitante_pt": "Egito",
+        "visitante_nome_pt": "Egito",
+        "visitante_exibicao": "Egito",
+        "visitante_codigo": "eg",
+        "visitante_iso": "eg"
       },
       {
         "id": "0cf3a618b2bc9f20",
@@ -503,7 +643,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Arábia Saudita",
+        "mandante_nome_pt": "Arábia Saudita",
+        "mandante_exibicao": "Arábia Saudita",
+        "mandante_codigo": "sa",
+        "mandante_iso": "sa",
+        "visitante_pt": "Uruguai",
+        "visitante_nome_pt": "Uruguai",
+        "visitante_exibicao": "Uruguai",
+        "visitante_codigo": "uy",
+        "visitante_iso": "uy"
       },
       {
         "id": "9a2422a2f8d16fa8",
@@ -536,7 +686,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Irã",
+        "mandante_nome_pt": "Irã",
+        "mandante_exibicao": "Irã",
+        "mandante_codigo": "ir",
+        "mandante_iso": "ir",
+        "visitante_pt": "Nova Zelândia",
+        "visitante_nome_pt": "Nova Zelândia",
+        "visitante_exibicao": "Nova Zelândia",
+        "visitante_codigo": "nz",
+        "visitante_iso": "nz"
       },
       {
         "id": "7690f50677b078be",
@@ -569,7 +729,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "França",
+        "mandante_nome_pt": "França",
+        "mandante_exibicao": "França",
+        "mandante_codigo": "fr",
+        "mandante_iso": "fr",
+        "visitante_pt": "Senegal",
+        "visitante_nome_pt": "Senegal",
+        "visitante_exibicao": "Senegal",
+        "visitante_codigo": "sn",
+        "visitante_iso": "sn"
       },
       {
         "id": "e7c25900b5445c79",
@@ -602,7 +772,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Iraque",
+        "mandante_nome_pt": "Iraque",
+        "mandante_exibicao": "Iraque",
+        "mandante_codigo": "iq",
+        "mandante_iso": "iq",
+        "visitante_pt": "Noruega",
+        "visitante_nome_pt": "Noruega",
+        "visitante_exibicao": "Noruega",
+        "visitante_codigo": "no",
+        "visitante_iso": "no"
       },
       {
         "id": "7b58e80f88ac4424",
@@ -635,7 +815,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Argentina",
+        "mandante_nome_pt": "Argentina",
+        "mandante_exibicao": "Argentina",
+        "mandante_codigo": "ar",
+        "mandante_iso": "ar",
+        "visitante_pt": "Argélia",
+        "visitante_nome_pt": "Argélia",
+        "visitante_exibicao": "Argélia",
+        "visitante_codigo": "dz",
+        "visitante_iso": "dz"
       },
       {
         "id": "119d3a2d15b62cfa",
@@ -668,7 +858,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Áustria",
+        "mandante_nome_pt": "Áustria",
+        "mandante_exibicao": "Áustria",
+        "mandante_codigo": "at",
+        "mandante_iso": "at",
+        "visitante_pt": "Jordânia",
+        "visitante_nome_pt": "Jordânia",
+        "visitante_exibicao": "Jordânia",
+        "visitante_codigo": "jo",
+        "visitante_iso": "jo"
       },
       {
         "id": "850076836082006c",
@@ -701,7 +901,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Portugal",
+        "mandante_nome_pt": "Portugal",
+        "mandante_exibicao": "Portugal",
+        "mandante_codigo": "pt",
+        "mandante_iso": "pt",
+        "visitante_pt": "República Democrática do Congo",
+        "visitante_nome_pt": "República Democrática do Congo",
+        "visitante_exibicao": "República Democrática do Congo",
+        "visitante_codigo": "cd",
+        "visitante_iso": "cd"
       },
       {
         "id": "a426c4d52e69d4a5",
@@ -734,7 +944,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Inglaterra",
+        "mandante_nome_pt": "Inglaterra",
+        "mandante_exibicao": "Inglaterra",
+        "mandante_codigo": "gb-eng",
+        "mandante_iso": "gb-eng",
+        "visitante_pt": "Croácia",
+        "visitante_nome_pt": "Croácia",
+        "visitante_exibicao": "Croácia",
+        "visitante_codigo": "hr",
+        "visitante_iso": "hr"
       },
       {
         "id": "35c14c865ca41f37",
@@ -767,7 +987,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Gana",
+        "mandante_nome_pt": "Gana",
+        "mandante_exibicao": "Gana",
+        "mandante_codigo": "gh",
+        "mandante_iso": "gh",
+        "visitante_pt": "Panamá",
+        "visitante_nome_pt": "Panamá",
+        "visitante_exibicao": "Panamá",
+        "visitante_codigo": "pa",
+        "visitante_iso": "pa"
       },
       {
         "id": "f192bdecb1f3cea0",
@@ -800,7 +1030,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Uzbequistão",
+        "mandante_nome_pt": "Uzbequistão",
+        "mandante_exibicao": "Uzbequistão",
+        "mandante_codigo": "uz",
+        "mandante_iso": "uz",
+        "visitante_pt": "Colômbia",
+        "visitante_nome_pt": "Colômbia",
+        "visitante_exibicao": "Colômbia",
+        "visitante_codigo": "co",
+        "visitante_iso": "co"
       },
       {
         "id": "9b6add01eada16a7",
@@ -833,7 +1073,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "República Tcheca",
+        "mandante_nome_pt": "República Tcheca",
+        "mandante_exibicao": "República Tcheca",
+        "mandante_codigo": "cz",
+        "mandante_iso": "cz",
+        "visitante_pt": "África do Sul",
+        "visitante_nome_pt": "África do Sul",
+        "visitante_exibicao": "África do Sul",
+        "visitante_codigo": "za",
+        "visitante_iso": "za"
       },
       {
         "id": "fc0a2dd29f3d08f0",
@@ -866,7 +1116,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Suíça",
+        "mandante_nome_pt": "Suíça",
+        "mandante_exibicao": "Suíça",
+        "mandante_codigo": "ch",
+        "mandante_iso": "ch",
+        "visitante_pt": "Bósnia e Herzegovina",
+        "visitante_nome_pt": "Bósnia e Herzegovina",
+        "visitante_exibicao": "Bósnia e Herzegovina",
+        "visitante_codigo": "ba",
+        "visitante_iso": "ba"
       },
       {
         "id": "9179a9d879d66eae",
@@ -899,7 +1159,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Canadá",
+        "mandante_nome_pt": "Canadá",
+        "mandante_exibicao": "Canadá",
+        "mandante_codigo": "ca",
+        "mandante_iso": "ca",
+        "visitante_pt": "Catar",
+        "visitante_nome_pt": "Catar",
+        "visitante_exibicao": "Catar",
+        "visitante_codigo": "qa",
+        "visitante_iso": "qa"
       },
       {
         "id": "480a16e08118cb4f",
@@ -932,7 +1202,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "México",
+        "mandante_nome_pt": "México",
+        "mandante_exibicao": "México",
+        "mandante_codigo": "mx",
+        "mandante_iso": "mx",
+        "visitante_pt": "Coreia do Sul",
+        "visitante_nome_pt": "Coreia do Sul",
+        "visitante_exibicao": "Coreia do Sul",
+        "visitante_codigo": "kr",
+        "visitante_iso": "kr"
       },
       {
         "id": "73b3234d754d5f78",
@@ -945,7 +1225,7 @@
         "flagMandanteEmoji": "🇺🇸",
         "flagVisitanteEmoji": "⚽",
         "codigoMandante": "us",
-        "codigoVisitante": "",
+        "codigoVisitante": "au",
         "grupo": "Grupo D",
         "rodada_grupo": "Grupo D",
         "data": "19/06/2026",
@@ -965,7 +1245,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Estados Unidos",
+        "mandante_nome_pt": "Estados Unidos",
+        "mandante_exibicao": "Estados Unidos",
+        "mandante_codigo": "us",
+        "mandante_iso": "us",
+        "visitante_pt": "Austrália",
+        "visitante_nome_pt": "Austrália",
+        "visitante_exibicao": "Austrália",
+        "visitante_codigo": "au",
+        "visitante_iso": "au"
       },
       {
         "id": "f6fe5166955bc9c3",
@@ -998,7 +1288,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Escócia",
+        "mandante_nome_pt": "Escócia",
+        "mandante_exibicao": "Escócia",
+        "mandante_codigo": "gb-sct",
+        "mandante_iso": "gb-sct",
+        "visitante_pt": "Marrocos",
+        "visitante_nome_pt": "Marrocos",
+        "visitante_exibicao": "Marrocos",
+        "visitante_codigo": "ma",
+        "visitante_iso": "ma"
       },
       {
         "id": "930f832770ba86f0",
@@ -1031,7 +1331,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Brasil",
+        "mandante_nome_pt": "Brasil",
+        "mandante_exibicao": "Brasil",
+        "mandante_codigo": "br",
+        "mandante_iso": "br",
+        "visitante_pt": "Haiti",
+        "visitante_nome_pt": "Haiti",
+        "visitante_exibicao": "Haiti",
+        "visitante_codigo": "ht",
+        "visitante_iso": "ht"
       },
       {
         "id": "5cd98c80db64d3b7",
@@ -1064,7 +1374,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Turquia",
+        "mandante_nome_pt": "Turquia",
+        "mandante_exibicao": "Turquia",
+        "mandante_codigo": "tr",
+        "mandante_iso": "tr",
+        "visitante_pt": "Paraguai",
+        "visitante_nome_pt": "Paraguai",
+        "visitante_exibicao": "Paraguai",
+        "visitante_codigo": "py",
+        "visitante_iso": "py"
       },
       {
         "id": "29b930bfc1b8dbeb",
@@ -1097,7 +1417,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Países Baixos",
+        "mandante_nome_pt": "Países Baixos",
+        "mandante_exibicao": "Países Baixos",
+        "mandante_codigo": "nl",
+        "mandante_iso": "nl",
+        "visitante_pt": "Suécia",
+        "visitante_nome_pt": "Suécia",
+        "visitante_exibicao": "Suécia",
+        "visitante_codigo": "se",
+        "visitante_iso": "se"
       },
       {
         "id": "f5dfd82336ef2af7",
@@ -1130,7 +1460,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Alemanha",
+        "mandante_nome_pt": "Alemanha",
+        "mandante_exibicao": "Alemanha",
+        "mandante_codigo": "de",
+        "mandante_iso": "de",
+        "visitante_pt": "Costa do Marfim",
+        "visitante_nome_pt": "Costa do Marfim",
+        "visitante_exibicao": "Costa do Marfim",
+        "visitante_codigo": "ci",
+        "visitante_iso": "ci"
       },
       {
         "id": "891edab9ff279049",
@@ -1163,7 +1503,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Equador",
+        "mandante_nome_pt": "Equador",
+        "mandante_exibicao": "Equador",
+        "mandante_codigo": "ec",
+        "mandante_iso": "ec",
+        "visitante_pt": "Curaçao",
+        "visitante_nome_pt": "Curaçao",
+        "visitante_exibicao": "Curaçao",
+        "visitante_codigo": "cw",
+        "visitante_iso": "cw"
       },
       {
         "id": "fd3fe06844067e58",
@@ -1196,7 +1546,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Tunísia",
+        "mandante_nome_pt": "Tunísia",
+        "mandante_exibicao": "Tunísia",
+        "mandante_codigo": "tn",
+        "mandante_iso": "tn",
+        "visitante_pt": "Japão",
+        "visitante_nome_pt": "Japão",
+        "visitante_exibicao": "Japão",
+        "visitante_codigo": "jp",
+        "visitante_iso": "jp"
       },
       {
         "id": "538d6097555c30c8",
@@ -1229,7 +1589,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Espanha",
+        "mandante_nome_pt": "Espanha",
+        "mandante_exibicao": "Espanha",
+        "mandante_codigo": "es",
+        "mandante_iso": "es",
+        "visitante_pt": "Arábia Saudita",
+        "visitante_nome_pt": "Arábia Saudita",
+        "visitante_exibicao": "Arábia Saudita",
+        "visitante_codigo": "sa",
+        "visitante_iso": "sa"
       },
       {
         "id": "8fe9b559c808df97",
@@ -1262,7 +1632,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Bélgica",
+        "mandante_nome_pt": "Bélgica",
+        "mandante_exibicao": "Bélgica",
+        "mandante_codigo": "be",
+        "mandante_iso": "be",
+        "visitante_pt": "Irã",
+        "visitante_nome_pt": "Irã",
+        "visitante_exibicao": "Irã",
+        "visitante_codigo": "ir",
+        "visitante_iso": "ir"
       },
       {
         "id": "d88aa1bdb02afd0d",
@@ -1295,7 +1675,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Uruguai",
+        "mandante_nome_pt": "Uruguai",
+        "mandante_exibicao": "Uruguai",
+        "mandante_codigo": "uy",
+        "mandante_iso": "uy",
+        "visitante_pt": "Cabo Verde",
+        "visitante_nome_pt": "Cabo Verde",
+        "visitante_exibicao": "Cabo Verde",
+        "visitante_codigo": "cv",
+        "visitante_iso": "cv"
       },
       {
         "id": "ab54b41468be0b2f",
@@ -1328,7 +1718,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Nova Zelândia",
+        "mandante_nome_pt": "Nova Zelândia",
+        "mandante_exibicao": "Nova Zelândia",
+        "mandante_codigo": "nz",
+        "mandante_iso": "nz",
+        "visitante_pt": "Egito",
+        "visitante_nome_pt": "Egito",
+        "visitante_exibicao": "Egito",
+        "visitante_codigo": "eg",
+        "visitante_iso": "eg"
       },
       {
         "id": "00850022166d8fcb",
@@ -1361,7 +1761,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Argentina",
+        "mandante_nome_pt": "Argentina",
+        "mandante_exibicao": "Argentina",
+        "mandante_codigo": "ar",
+        "mandante_iso": "ar",
+        "visitante_pt": "Áustria",
+        "visitante_nome_pt": "Áustria",
+        "visitante_exibicao": "Áustria",
+        "visitante_codigo": "at",
+        "visitante_iso": "at"
       },
       {
         "id": "762ba800fd0211c8",
@@ -1394,7 +1804,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "França",
+        "mandante_nome_pt": "França",
+        "mandante_exibicao": "França",
+        "mandante_codigo": "fr",
+        "mandante_iso": "fr",
+        "visitante_pt": "Iraque",
+        "visitante_nome_pt": "Iraque",
+        "visitante_exibicao": "Iraque",
+        "visitante_codigo": "iq",
+        "visitante_iso": "iq"
       },
       {
         "id": "c4f8220d2ba8b5cb",
@@ -1427,7 +1847,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Noruega",
+        "mandante_nome_pt": "Noruega",
+        "mandante_exibicao": "Noruega",
+        "mandante_codigo": "no",
+        "mandante_iso": "no",
+        "visitante_pt": "Senegal",
+        "visitante_nome_pt": "Senegal",
+        "visitante_exibicao": "Senegal",
+        "visitante_codigo": "sn",
+        "visitante_iso": "sn"
       },
       {
         "id": "99e6a12ec9985662",
@@ -1460,7 +1890,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Jordânia",
+        "mandante_nome_pt": "Jordânia",
+        "mandante_exibicao": "Jordânia",
+        "mandante_codigo": "jo",
+        "mandante_iso": "jo",
+        "visitante_pt": "Argélia",
+        "visitante_nome_pt": "Argélia",
+        "visitante_exibicao": "Argélia",
+        "visitante_codigo": "dz",
+        "visitante_iso": "dz"
       },
       {
         "id": "e186a497c7491c6a",
@@ -1493,7 +1933,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Portugal",
+        "mandante_nome_pt": "Portugal",
+        "mandante_exibicao": "Portugal",
+        "mandante_codigo": "pt",
+        "mandante_iso": "pt",
+        "visitante_pt": "Uzbequistão",
+        "visitante_nome_pt": "Uzbequistão",
+        "visitante_exibicao": "Uzbequistão",
+        "visitante_codigo": "uz",
+        "visitante_iso": "uz"
       },
       {
         "id": "5acbf980cb373caa",
@@ -1526,7 +1976,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Inglaterra",
+        "mandante_nome_pt": "Inglaterra",
+        "mandante_exibicao": "Inglaterra",
+        "mandante_codigo": "gb-eng",
+        "mandante_iso": "gb-eng",
+        "visitante_pt": "Gana",
+        "visitante_nome_pt": "Gana",
+        "visitante_exibicao": "Gana",
+        "visitante_codigo": "gh",
+        "visitante_iso": "gh"
       },
       {
         "id": "b6aa56e91269d7d5",
@@ -1559,7 +2019,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Panamá",
+        "mandante_nome_pt": "Panamá",
+        "mandante_exibicao": "Panamá",
+        "mandante_codigo": "pa",
+        "mandante_iso": "pa",
+        "visitante_pt": "Croácia",
+        "visitante_nome_pt": "Croácia",
+        "visitante_exibicao": "Croácia",
+        "visitante_codigo": "hr",
+        "visitante_iso": "hr"
       },
       {
         "id": "1a0b194a0dc9b8c1",
@@ -1592,7 +2062,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Colômbia",
+        "mandante_nome_pt": "Colômbia",
+        "mandante_exibicao": "Colômbia",
+        "mandante_codigo": "co",
+        "mandante_iso": "co",
+        "visitante_pt": "República Democrática do Congo",
+        "visitante_nome_pt": "República Democrática do Congo",
+        "visitante_exibicao": "República Democrática do Congo",
+        "visitante_codigo": "cd",
+        "visitante_iso": "cd"
       },
       {
         "id": "5045a6795b7825ce",
@@ -1625,7 +2105,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Bósnia e Herzegovina",
+        "mandante_nome_pt": "Bósnia e Herzegovina",
+        "mandante_exibicao": "Bósnia e Herzegovina",
+        "mandante_codigo": "ba",
+        "mandante_iso": "ba",
+        "visitante_pt": "Catar",
+        "visitante_nome_pt": "Catar",
+        "visitante_exibicao": "Catar",
+        "visitante_codigo": "qa",
+        "visitante_iso": "qa"
       },
       {
         "id": "261fc0b1aaf0b597",
@@ -1658,7 +2148,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Suíça",
+        "mandante_nome_pt": "Suíça",
+        "mandante_exibicao": "Suíça",
+        "mandante_codigo": "ch",
+        "mandante_iso": "ch",
+        "visitante_pt": "Canadá",
+        "visitante_nome_pt": "Canadá",
+        "visitante_exibicao": "Canadá",
+        "visitante_codigo": "ca",
+        "visitante_iso": "ca"
       },
       {
         "id": "cd11d55a15319eaf",
@@ -1691,7 +2191,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Marrocos",
+        "mandante_nome_pt": "Marrocos",
+        "mandante_exibicao": "Marrocos",
+        "mandante_codigo": "ma",
+        "mandante_iso": "ma",
+        "visitante_pt": "Haiti",
+        "visitante_nome_pt": "Haiti",
+        "visitante_exibicao": "Haiti",
+        "visitante_codigo": "ht",
+        "visitante_iso": "ht"
       },
       {
         "id": "245e8a74ab4b2610",
@@ -1724,7 +2234,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Escócia",
+        "mandante_nome_pt": "Escócia",
+        "mandante_exibicao": "Escócia",
+        "mandante_codigo": "gb-sct",
+        "mandante_iso": "gb-sct",
+        "visitante_pt": "Brasil",
+        "visitante_nome_pt": "Brasil",
+        "visitante_exibicao": "Brasil",
+        "visitante_codigo": "br",
+        "visitante_iso": "br"
       },
       {
         "id": "c903cbdac92ad180",
@@ -1757,7 +2277,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "República Tcheca",
+        "mandante_nome_pt": "República Tcheca",
+        "mandante_exibicao": "República Tcheca",
+        "mandante_codigo": "cz",
+        "mandante_iso": "cz",
+        "visitante_pt": "México",
+        "visitante_nome_pt": "México",
+        "visitante_exibicao": "México",
+        "visitante_codigo": "mx",
+        "visitante_iso": "mx"
       },
       {
         "id": "cf08fa6e0bf81951",
@@ -1790,7 +2320,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "África do Sul",
+        "mandante_nome_pt": "África do Sul",
+        "mandante_exibicao": "África do Sul",
+        "mandante_codigo": "za",
+        "mandante_iso": "za",
+        "visitante_pt": "Coreia do Sul",
+        "visitante_nome_pt": "Coreia do Sul",
+        "visitante_exibicao": "Coreia do Sul",
+        "visitante_codigo": "kr",
+        "visitante_iso": "kr"
       },
       {
         "id": "2d5ca4ec26a26f2b",
@@ -1823,7 +2363,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Curaçao",
+        "mandante_nome_pt": "Curaçao",
+        "mandante_exibicao": "Curaçao",
+        "mandante_codigo": "cw",
+        "mandante_iso": "cw",
+        "visitante_pt": "Costa do Marfim",
+        "visitante_nome_pt": "Costa do Marfim",
+        "visitante_exibicao": "Costa do Marfim",
+        "visitante_codigo": "ci",
+        "visitante_iso": "ci"
       },
       {
         "id": "624d63bdee930b15",
@@ -1856,7 +2406,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Equador",
+        "mandante_nome_pt": "Equador",
+        "mandante_exibicao": "Equador",
+        "mandante_codigo": "ec",
+        "mandante_iso": "ec",
+        "visitante_pt": "Alemanha",
+        "visitante_nome_pt": "Alemanha",
+        "visitante_exibicao": "Alemanha",
+        "visitante_codigo": "de",
+        "visitante_iso": "de"
       },
       {
         "id": "0470a06f46949ef7",
@@ -1889,7 +2449,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Japão",
+        "mandante_nome_pt": "Japão",
+        "mandante_exibicao": "Japão",
+        "mandante_codigo": "jp",
+        "mandante_iso": "jp",
+        "visitante_pt": "Suécia",
+        "visitante_nome_pt": "Suécia",
+        "visitante_exibicao": "Suécia",
+        "visitante_codigo": "se",
+        "visitante_iso": "se"
       },
       {
         "id": "1c5461ec358f2382",
@@ -1922,7 +2492,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Tunísia",
+        "mandante_nome_pt": "Tunísia",
+        "mandante_exibicao": "Tunísia",
+        "mandante_codigo": "tn",
+        "mandante_iso": "tn",
+        "visitante_pt": "Países Baixos",
+        "visitante_nome_pt": "Países Baixos",
+        "visitante_exibicao": "Países Baixos",
+        "visitante_codigo": "nl",
+        "visitante_iso": "nl"
       },
       {
         "id": "d898b53944f3e098",
@@ -1935,7 +2515,7 @@
         "flagMandanteEmoji": "🇵🇾",
         "flagVisitanteEmoji": "⚽",
         "codigoMandante": "py",
-        "codigoVisitante": "",
+        "codigoVisitante": "au",
         "grupo": "Grupo D",
         "rodada_grupo": "Grupo D",
         "data": "25/06/2026",
@@ -1955,7 +2535,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Paraguai",
+        "mandante_nome_pt": "Paraguai",
+        "mandante_exibicao": "Paraguai",
+        "mandante_codigo": "py",
+        "mandante_iso": "py",
+        "visitante_pt": "Austrália",
+        "visitante_nome_pt": "Austrália",
+        "visitante_exibicao": "Austrália",
+        "visitante_codigo": "au",
+        "visitante_iso": "au"
       },
       {
         "id": "69a90c0428d4e2b8",
@@ -1988,7 +2578,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Turquia",
+        "mandante_nome_pt": "Turquia",
+        "mandante_exibicao": "Turquia",
+        "mandante_codigo": "tr",
+        "mandante_iso": "tr",
+        "visitante_pt": "Estados Unidos",
+        "visitante_nome_pt": "Estados Unidos",
+        "visitante_exibicao": "Estados Unidos",
+        "visitante_codigo": "us",
+        "visitante_iso": "us"
       },
       {
         "id": "a310d6109b3c29ca",
@@ -2021,7 +2621,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Noruega",
+        "mandante_nome_pt": "Noruega",
+        "mandante_exibicao": "Noruega",
+        "mandante_codigo": "no",
+        "mandante_iso": "no",
+        "visitante_pt": "França",
+        "visitante_nome_pt": "França",
+        "visitante_exibicao": "França",
+        "visitante_codigo": "fr",
+        "visitante_iso": "fr"
       },
       {
         "id": "26da5a7257e1d678",
@@ -2054,7 +2664,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Senegal",
+        "mandante_nome_pt": "Senegal",
+        "mandante_exibicao": "Senegal",
+        "mandante_codigo": "sn",
+        "mandante_iso": "sn",
+        "visitante_pt": "Iraque",
+        "visitante_nome_pt": "Iraque",
+        "visitante_exibicao": "Iraque",
+        "visitante_codigo": "iq",
+        "visitante_iso": "iq"
       },
       {
         "id": "fdb5984f020cfd9e",
@@ -2087,7 +2707,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Cabo Verde",
+        "mandante_nome_pt": "Cabo Verde",
+        "mandante_exibicao": "Cabo Verde",
+        "mandante_codigo": "cv",
+        "mandante_iso": "cv",
+        "visitante_pt": "Arábia Saudita",
+        "visitante_nome_pt": "Arábia Saudita",
+        "visitante_exibicao": "Arábia Saudita",
+        "visitante_codigo": "sa",
+        "visitante_iso": "sa"
       },
       {
         "id": "d78de2369989bdea",
@@ -2120,7 +2750,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Uruguai",
+        "mandante_nome_pt": "Uruguai",
+        "mandante_exibicao": "Uruguai",
+        "mandante_codigo": "uy",
+        "mandante_iso": "uy",
+        "visitante_pt": "Espanha",
+        "visitante_nome_pt": "Espanha",
+        "visitante_exibicao": "Espanha",
+        "visitante_codigo": "es",
+        "visitante_iso": "es"
       },
       {
         "id": "81ecedce80717eb1",
@@ -2153,7 +2793,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Egito",
+        "mandante_nome_pt": "Egito",
+        "mandante_exibicao": "Egito",
+        "mandante_codigo": "eg",
+        "mandante_iso": "eg",
+        "visitante_pt": "Irã",
+        "visitante_nome_pt": "Irã",
+        "visitante_exibicao": "Irã",
+        "visitante_codigo": "ir",
+        "visitante_iso": "ir"
       },
       {
         "id": "f47575c21eade3f9",
@@ -2186,7 +2836,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Nova Zelândia",
+        "mandante_nome_pt": "Nova Zelândia",
+        "mandante_exibicao": "Nova Zelândia",
+        "mandante_codigo": "nz",
+        "mandante_iso": "nz",
+        "visitante_pt": "Bélgica",
+        "visitante_nome_pt": "Bélgica",
+        "visitante_exibicao": "Bélgica",
+        "visitante_codigo": "be",
+        "visitante_iso": "be"
       },
       {
         "id": "7a762b9dae2738c7",
@@ -2219,7 +2879,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Croácia",
+        "mandante_nome_pt": "Croácia",
+        "mandante_exibicao": "Croácia",
+        "mandante_codigo": "hr",
+        "mandante_iso": "hr",
+        "visitante_pt": "Gana",
+        "visitante_nome_pt": "Gana",
+        "visitante_exibicao": "Gana",
+        "visitante_codigo": "gh",
+        "visitante_iso": "gh"
       },
       {
         "id": "4838b7550b79c38e",
@@ -2252,7 +2922,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Panamá",
+        "mandante_nome_pt": "Panamá",
+        "mandante_exibicao": "Panamá",
+        "mandante_codigo": "pa",
+        "mandante_iso": "pa",
+        "visitante_pt": "Inglaterra",
+        "visitante_nome_pt": "Inglaterra",
+        "visitante_exibicao": "Inglaterra",
+        "visitante_codigo": "gb-eng",
+        "visitante_iso": "gb-eng"
       },
       {
         "id": "3333b64d80b8e0ce",
@@ -2285,7 +2965,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Colômbia",
+        "mandante_nome_pt": "Colômbia",
+        "mandante_exibicao": "Colômbia",
+        "mandante_codigo": "co",
+        "mandante_iso": "co",
+        "visitante_pt": "Portugal",
+        "visitante_nome_pt": "Portugal",
+        "visitante_exibicao": "Portugal",
+        "visitante_codigo": "pt",
+        "visitante_iso": "pt"
       },
       {
         "id": "6d58c022d4c368d9",
@@ -2318,7 +3008,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "República Democrática do Congo",
+        "mandante_nome_pt": "República Democrática do Congo",
+        "mandante_exibicao": "República Democrática do Congo",
+        "mandante_codigo": "cd",
+        "mandante_iso": "cd",
+        "visitante_pt": "Uzbequistão",
+        "visitante_nome_pt": "Uzbequistão",
+        "visitante_exibicao": "Uzbequistão",
+        "visitante_codigo": "uz",
+        "visitante_iso": "uz"
       },
       {
         "id": "2535f80a6bcfa523",
@@ -2351,7 +3051,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Argélia",
+        "mandante_nome_pt": "Argélia",
+        "mandante_exibicao": "Argélia",
+        "mandante_codigo": "dz",
+        "mandante_iso": "dz",
+        "visitante_pt": "Áustria",
+        "visitante_nome_pt": "Áustria",
+        "visitante_exibicao": "Áustria",
+        "visitante_codigo": "at",
+        "visitante_iso": "at"
       },
       {
         "id": "8084ec873f117e1a",
@@ -2384,7 +3094,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Jordânia",
+        "mandante_nome_pt": "Jordânia",
+        "mandante_exibicao": "Jordânia",
+        "mandante_codigo": "jo",
+        "mandante_iso": "jo",
+        "visitante_pt": "Argentina",
+        "visitante_nome_pt": "Argentina",
+        "visitante_exibicao": "Argentina",
+        "visitante_codigo": "ar",
+        "visitante_iso": "ar"
       }
     ],
     "resultados": [
@@ -2419,7 +3139,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "México",
+        "mandante_nome_pt": "México",
+        "mandante_exibicao": "México",
+        "mandante_codigo": "mx",
+        "mandante_iso": "mx",
+        "visitante_pt": "África do Sul",
+        "visitante_nome_pt": "África do Sul",
+        "visitante_exibicao": "África do Sul",
+        "visitante_codigo": "za",
+        "visitante_iso": "za"
       },
       {
         "id": "01000048ef0bcecc",
@@ -2452,7 +3182,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Coreia do Sul",
+        "mandante_nome_pt": "Coreia do Sul",
+        "mandante_exibicao": "Coreia do Sul",
+        "mandante_codigo": "kr",
+        "mandante_iso": "kr",
+        "visitante_pt": "República Tcheca",
+        "visitante_nome_pt": "República Tcheca",
+        "visitante_exibicao": "República Tcheca",
+        "visitante_codigo": "cz",
+        "visitante_iso": "cz"
       },
       {
         "id": "4f5e7d9da1657c78",
@@ -2485,7 +3225,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Canadá",
+        "mandante_nome_pt": "Canadá",
+        "mandante_exibicao": "Canadá",
+        "mandante_codigo": "ca",
+        "mandante_iso": "ca",
+        "visitante_pt": "Bósnia e Herzegovina",
+        "visitante_nome_pt": "Bósnia e Herzegovina",
+        "visitante_exibicao": "Bósnia e Herzegovina",
+        "visitante_codigo": "ba",
+        "visitante_iso": "ba"
       },
       {
         "id": "e7c37205176a0bd9",
@@ -2518,7 +3268,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Estados Unidos",
+        "mandante_nome_pt": "Estados Unidos",
+        "mandante_exibicao": "Estados Unidos",
+        "mandante_codigo": "us",
+        "mandante_iso": "us",
+        "visitante_pt": "Paraguai",
+        "visitante_nome_pt": "Paraguai",
+        "visitante_exibicao": "Paraguai",
+        "visitante_codigo": "py",
+        "visitante_iso": "py"
       },
       {
         "id": "9105f73e4fe2c51b",
@@ -2551,7 +3311,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Catar",
+        "mandante_nome_pt": "Catar",
+        "mandante_exibicao": "Catar",
+        "mandante_codigo": "qa",
+        "mandante_iso": "qa",
+        "visitante_pt": "Suíça",
+        "visitante_nome_pt": "Suíça",
+        "visitante_exibicao": "Suíça",
+        "visitante_codigo": "ch",
+        "visitante_iso": "ch"
       },
       {
         "id": "ba16cee717032445",
@@ -2584,7 +3354,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Brasil",
+        "mandante_nome_pt": "Brasil",
+        "mandante_exibicao": "Brasil",
+        "mandante_codigo": "br",
+        "mandante_iso": "br",
+        "visitante_pt": "Marrocos",
+        "visitante_nome_pt": "Marrocos",
+        "visitante_exibicao": "Marrocos",
+        "visitante_codigo": "ma",
+        "visitante_iso": "ma"
       },
       {
         "id": "f2e0f8216f9efc6d",
@@ -2617,7 +3397,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Haiti",
+        "mandante_nome_pt": "Haiti",
+        "mandante_exibicao": "Haiti",
+        "mandante_codigo": "ht",
+        "mandante_iso": "ht",
+        "visitante_pt": "Escócia",
+        "visitante_nome_pt": "Escócia",
+        "visitante_exibicao": "Escócia",
+        "visitante_codigo": "gb-sct",
+        "visitante_iso": "gb-sct"
       },
       {
         "id": "60a048c2dfa676ce",
@@ -2629,7 +3419,7 @@
         "flagVisitante": "🇹🇷",
         "flagMandanteEmoji": "⚽",
         "flagVisitanteEmoji": "🇹🇷",
-        "codigoMandante": "",
+        "codigoMandante": "au",
         "codigoVisitante": "tr",
         "grupo": "Grupo D",
         "rodada_grupo": "Grupo D",
@@ -2650,7 +3440,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Austrália",
+        "mandante_nome_pt": "Austrália",
+        "mandante_exibicao": "Austrália",
+        "mandante_codigo": "au",
+        "mandante_iso": "au",
+        "visitante_pt": "Turquia",
+        "visitante_nome_pt": "Turquia",
+        "visitante_exibicao": "Turquia",
+        "visitante_codigo": "tr",
+        "visitante_iso": "tr"
       },
       {
         "id": "fe5c4539c30efafd",
@@ -2683,7 +3483,17 @@
         "estadio": "",
         "cidade": "",
         "transmissao": "",
-        "fonte": ""
+        "fonte": "",
+        "mandante_pt": "Alemanha",
+        "mandante_nome_pt": "Alemanha",
+        "mandante_exibicao": "Alemanha",
+        "mandante_codigo": "de",
+        "mandante_iso": "de",
+        "visitante_pt": "Curaçao",
+        "visitante_nome_pt": "Curaçao",
+        "visitante_exibicao": "Curaçao",
+        "visitante_codigo": "cw",
+        "visitante_iso": "cw"
       }
     ],
     "jogoDestaque": {
@@ -2717,7 +3527,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Costa do Marfim",
+      "mandante_nome_pt": "Costa do Marfim",
+      "mandante_exibicao": "Costa do Marfim",
+      "mandante_codigo": "ci",
+      "mandante_iso": "ci",
+      "visitante_pt": "Equador",
+      "visitante_nome_pt": "Equador",
+      "visitante_exibicao": "Equador",
+      "visitante_codigo": "ec",
+      "visitante_iso": "ec"
     },
     "classificacao": [],
     "classificacaoGrupos": [
@@ -2744,7 +3564,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 1,
             "slot": "1A",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "México",
+            "time_pt": "México",
+            "selecao_pt": "México",
+            "nome_exibicao": "México",
+            "codigo_pais": "mx"
           },
           {
             "grupo": "A",
@@ -2766,7 +3591,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 2,
             "slot": "2A",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Coreia do Sul",
+            "time_pt": "Coreia do Sul",
+            "selecao_pt": "Coreia do Sul",
+            "nome_exibicao": "Coreia do Sul",
+            "codigo_pais": "kr"
           },
           {
             "grupo": "A",
@@ -2788,7 +3618,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "slot": "3A",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "República Tcheca",
+            "time_pt": "República Tcheca",
+            "selecao_pt": "República Tcheca",
+            "nome_exibicao": "República Tcheca",
+            "codigo_pais": "cz"
           },
           {
             "grupo": "A",
@@ -2810,7 +3645,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 4,
             "slot": "4A",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "África do Sul",
+            "time_pt": "África do Sul",
+            "selecao_pt": "África do Sul",
+            "nome_exibicao": "África do Sul",
+            "codigo_pais": "za"
           }
         ],
         "jogos_total": 6,
@@ -2842,7 +3682,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 1,
             "slot": "1B",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Bósnia e Herzegovina",
+            "time_pt": "Bósnia e Herzegovina",
+            "selecao_pt": "Bósnia e Herzegovina",
+            "nome_exibicao": "Bósnia e Herzegovina",
+            "codigo_pais": "ba"
           },
           {
             "grupo": "B",
@@ -2864,7 +3709,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 2,
             "slot": "2B",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Canadá",
+            "time_pt": "Canadá",
+            "selecao_pt": "Canadá",
+            "nome_exibicao": "Canadá",
+            "codigo_pais": "ca"
           },
           {
             "grupo": "B",
@@ -2886,7 +3736,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "slot": "3B",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Catar",
+            "time_pt": "Catar",
+            "selecao_pt": "Catar",
+            "nome_exibicao": "Catar",
+            "codigo_pais": "qa"
           },
           {
             "grupo": "B",
@@ -2908,7 +3763,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 4,
             "slot": "4B",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Suíça",
+            "time_pt": "Suíça",
+            "selecao_pt": "Suíça",
+            "nome_exibicao": "Suíça",
+            "codigo_pais": "ch"
           }
         ],
         "jogos_total": 6,
@@ -2940,7 +3800,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 1,
             "slot": "1C",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Escócia",
+            "time_pt": "Escócia",
+            "selecao_pt": "Escócia",
+            "nome_exibicao": "Escócia",
+            "codigo_pais": "gb-sct"
           },
           {
             "grupo": "C",
@@ -2962,7 +3827,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 2,
             "slot": "2C",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Brasil",
+            "time_pt": "Brasil",
+            "selecao_pt": "Brasil",
+            "nome_exibicao": "Brasil",
+            "codigo_pais": "br"
           },
           {
             "grupo": "C",
@@ -2984,7 +3854,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "slot": "3C",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Marrocos",
+            "time_pt": "Marrocos",
+            "selecao_pt": "Marrocos",
+            "nome_exibicao": "Marrocos",
+            "codigo_pais": "ma"
           },
           {
             "grupo": "C",
@@ -3006,7 +3881,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 4,
             "slot": "4C",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Haiti",
+            "time_pt": "Haiti",
+            "selecao_pt": "Haiti",
+            "nome_exibicao": "Haiti",
+            "codigo_pais": "ht"
           }
         ],
         "jogos_total": 6,
@@ -3038,14 +3918,19 @@
             "rankingFifaAnterior": 9999,
             "posicao": 1,
             "slot": "1D",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Estados Unidos",
+            "time_pt": "Estados Unidos",
+            "selecao_pt": "Estados Unidos",
+            "nome_exibicao": "Estados Unidos",
+            "codigo_pais": "us"
           },
           {
             "grupo": "D",
             "nome": "Australia",
             "time": "Australia",
             "flag": "⚽",
-            "codigo": "",
+            "codigo": "au",
             "jogos": 1,
             "vitorias": 1,
             "empates": 0,
@@ -3060,7 +3945,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 2,
             "slot": "2D",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Austrália",
+            "time_pt": "Austrália",
+            "selecao_pt": "Austrália",
+            "nome_exibicao": "Austrália",
+            "codigo_pais": "au"
           },
           {
             "grupo": "D",
@@ -3082,7 +3972,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "slot": "3D",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Turquia",
+            "time_pt": "Turquia",
+            "selecao_pt": "Turquia",
+            "nome_exibicao": "Turquia",
+            "codigo_pais": "tr"
           },
           {
             "grupo": "D",
@@ -3104,7 +3999,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 4,
             "slot": "4D",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Paraguai",
+            "time_pt": "Paraguai",
+            "selecao_pt": "Paraguai",
+            "nome_exibicao": "Paraguai",
+            "codigo_pais": "py"
           }
         ],
         "jogos_total": 6,
@@ -3136,7 +4036,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 1,
             "slot": "1E",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Alemanha",
+            "time_pt": "Alemanha",
+            "selecao_pt": "Alemanha",
+            "nome_exibicao": "Alemanha",
+            "codigo_pais": "de"
           },
           {
             "grupo": "E",
@@ -3158,7 +4063,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 2,
             "slot": "2E",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Costa do Marfim",
+            "time_pt": "Costa do Marfim",
+            "selecao_pt": "Costa do Marfim",
+            "nome_exibicao": "Costa do Marfim",
+            "codigo_pais": "ci"
           },
           {
             "grupo": "E",
@@ -3180,7 +4090,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "slot": "3E",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Equador",
+            "time_pt": "Equador",
+            "selecao_pt": "Equador",
+            "nome_exibicao": "Equador",
+            "codigo_pais": "ec"
           },
           {
             "grupo": "E",
@@ -3202,7 +4117,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 4,
             "slot": "4E",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Curaçao",
+            "time_pt": "Curaçao",
+            "selecao_pt": "Curaçao",
+            "nome_exibicao": "Curaçao",
+            "codigo_pais": "cw"
           }
         ],
         "jogos_total": 6,
@@ -3234,7 +4154,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 1,
             "slot": "1F",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Japão",
+            "time_pt": "Japão",
+            "selecao_pt": "Japão",
+            "nome_exibicao": "Japão",
+            "codigo_pais": "jp"
           },
           {
             "grupo": "F",
@@ -3256,7 +4181,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 2,
             "slot": "2F",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Países Baixos",
+            "time_pt": "Países Baixos",
+            "selecao_pt": "Países Baixos",
+            "nome_exibicao": "Países Baixos",
+            "codigo_pais": "nl"
           },
           {
             "grupo": "F",
@@ -3278,7 +4208,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "slot": "3F",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Suécia",
+            "time_pt": "Suécia",
+            "selecao_pt": "Suécia",
+            "nome_exibicao": "Suécia",
+            "codigo_pais": "se"
           },
           {
             "grupo": "F",
@@ -3300,7 +4235,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 4,
             "slot": "4F",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Tunísia",
+            "time_pt": "Tunísia",
+            "selecao_pt": "Tunísia",
+            "nome_exibicao": "Tunísia",
+            "codigo_pais": "tn"
           }
         ],
         "jogos_total": 6,
@@ -3332,7 +4272,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 1,
             "slot": "1G",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Cabo Verde",
+            "time_pt": "Cabo Verde",
+            "selecao_pt": "Cabo Verde",
+            "nome_exibicao": "Cabo Verde",
+            "codigo_pais": "cv"
           },
           {
             "grupo": "G",
@@ -3354,7 +4299,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 2,
             "slot": "2G",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Arábia Saudita",
+            "time_pt": "Arábia Saudita",
+            "selecao_pt": "Arábia Saudita",
+            "nome_exibicao": "Arábia Saudita",
+            "codigo_pais": "sa"
           },
           {
             "grupo": "G",
@@ -3376,7 +4326,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "slot": "3G",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Espanha",
+            "time_pt": "Espanha",
+            "selecao_pt": "Espanha",
+            "nome_exibicao": "Espanha",
+            "codigo_pais": "es"
           },
           {
             "grupo": "G",
@@ -3398,7 +4353,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 4,
             "slot": "4G",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Uruguai",
+            "time_pt": "Uruguai",
+            "selecao_pt": "Uruguai",
+            "nome_exibicao": "Uruguai",
+            "codigo_pais": "uy"
           }
         ],
         "jogos_total": 6,
@@ -3430,7 +4390,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 1,
             "slot": "1H",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Bélgica",
+            "time_pt": "Bélgica",
+            "selecao_pt": "Bélgica",
+            "nome_exibicao": "Bélgica",
+            "codigo_pais": "be"
           },
           {
             "grupo": "H",
@@ -3452,7 +4417,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 2,
             "slot": "2H",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Egito",
+            "time_pt": "Egito",
+            "selecao_pt": "Egito",
+            "nome_exibicao": "Egito",
+            "codigo_pais": "eg"
           },
           {
             "grupo": "H",
@@ -3474,7 +4444,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "slot": "3H",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Irã",
+            "time_pt": "Irã",
+            "selecao_pt": "Irã",
+            "nome_exibicao": "Irã",
+            "codigo_pais": "ir"
           },
           {
             "grupo": "H",
@@ -3496,7 +4471,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 4,
             "slot": "4H",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Nova Zelândia",
+            "time_pt": "Nova Zelândia",
+            "selecao_pt": "Nova Zelândia",
+            "nome_exibicao": "Nova Zelândia",
+            "codigo_pais": "nz"
           }
         ],
         "jogos_total": 6,
@@ -3528,7 +4508,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 1,
             "slot": "1I",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "França",
+            "time_pt": "França",
+            "selecao_pt": "França",
+            "nome_exibicao": "França",
+            "codigo_pais": "fr"
           },
           {
             "grupo": "I",
@@ -3550,7 +4535,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 2,
             "slot": "2I",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Iraque",
+            "time_pt": "Iraque",
+            "selecao_pt": "Iraque",
+            "nome_exibicao": "Iraque",
+            "codigo_pais": "iq"
           },
           {
             "grupo": "I",
@@ -3572,7 +4562,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "slot": "3I",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Noruega",
+            "time_pt": "Noruega",
+            "selecao_pt": "Noruega",
+            "nome_exibicao": "Noruega",
+            "codigo_pais": "no"
           },
           {
             "grupo": "I",
@@ -3594,7 +4589,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 4,
             "slot": "4I",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Senegal",
+            "time_pt": "Senegal",
+            "selecao_pt": "Senegal",
+            "nome_exibicao": "Senegal",
+            "codigo_pais": "sn"
           }
         ],
         "jogos_total": 6,
@@ -3626,7 +4626,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 1,
             "slot": "1J",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Argélia",
+            "time_pt": "Argélia",
+            "selecao_pt": "Argélia",
+            "nome_exibicao": "Argélia",
+            "codigo_pais": "dz"
           },
           {
             "grupo": "J",
@@ -3648,7 +4653,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 2,
             "slot": "2J",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Argentina",
+            "time_pt": "Argentina",
+            "selecao_pt": "Argentina",
+            "nome_exibicao": "Argentina",
+            "codigo_pais": "ar"
           },
           {
             "grupo": "J",
@@ -3670,7 +4680,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "slot": "3J",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Áustria",
+            "time_pt": "Áustria",
+            "selecao_pt": "Áustria",
+            "nome_exibicao": "Áustria",
+            "codigo_pais": "at"
           },
           {
             "grupo": "J",
@@ -3692,7 +4707,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 4,
             "slot": "4J",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Jordânia",
+            "time_pt": "Jordânia",
+            "selecao_pt": "Jordânia",
+            "nome_exibicao": "Jordânia",
+            "codigo_pais": "jo"
           }
         ],
         "jogos_total": 6,
@@ -3724,7 +4744,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 1,
             "slot": "1K",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Colômbia",
+            "time_pt": "Colômbia",
+            "selecao_pt": "Colômbia",
+            "nome_exibicao": "Colômbia",
+            "codigo_pais": "co"
           },
           {
             "grupo": "K",
@@ -3746,7 +4771,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 2,
             "slot": "2K",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "República Democrática do Congo",
+            "time_pt": "República Democrática do Congo",
+            "selecao_pt": "República Democrática do Congo",
+            "nome_exibicao": "República Democrática do Congo",
+            "codigo_pais": "cd"
           },
           {
             "grupo": "K",
@@ -3768,7 +4798,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "slot": "3K",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Portugal",
+            "time_pt": "Portugal",
+            "selecao_pt": "Portugal",
+            "nome_exibicao": "Portugal",
+            "codigo_pais": "pt"
           },
           {
             "grupo": "K",
@@ -3790,7 +4825,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 4,
             "slot": "4K",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Uzbequistão",
+            "time_pt": "Uzbequistão",
+            "selecao_pt": "Uzbequistão",
+            "nome_exibicao": "Uzbequistão",
+            "codigo_pais": "uz"
           }
         ],
         "jogos_total": 6,
@@ -3822,7 +4862,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 1,
             "slot": "1L",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Croácia",
+            "time_pt": "Croácia",
+            "selecao_pt": "Croácia",
+            "nome_exibicao": "Croácia",
+            "codigo_pais": "hr"
           },
           {
             "grupo": "L",
@@ -3844,7 +4889,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 2,
             "slot": "2L",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Inglaterra",
+            "time_pt": "Inglaterra",
+            "selecao_pt": "Inglaterra",
+            "nome_exibicao": "Inglaterra",
+            "codigo_pais": "gb-eng"
           },
           {
             "grupo": "L",
@@ -3866,7 +4916,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "slot": "3L",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Gana",
+            "time_pt": "Gana",
+            "selecao_pt": "Gana",
+            "nome_exibicao": "Gana",
+            "codigo_pais": "gh"
           },
           {
             "grupo": "L",
@@ -3888,7 +4943,12 @@
             "rankingFifaAnterior": 9999,
             "posicao": 4,
             "slot": "4L",
-            "provisoria": true
+            "provisoria": true,
+            "nome_pt": "Panamá",
+            "time_pt": "Panamá",
+            "selecao_pt": "Panamá",
+            "nome_exibicao": "Panamá",
+            "codigo_pais": "pa"
           }
         ],
         "jogos_total": 6,
@@ -3921,7 +4981,12 @@
         "slot": "3B",
         "provisoria": true,
         "posicao_terceiros": 1,
-        "classificado_melhor_terceiro": true
+        "classificado_melhor_terceiro": true,
+        "nome_pt": "Catar",
+        "time_pt": "Catar",
+        "selecao_pt": "Catar",
+        "nome_exibicao": "Catar",
+        "codigo_pais": "qa"
       },
       {
         "grupo": "C",
@@ -3945,7 +5010,12 @@
         "slot": "3C",
         "provisoria": true,
         "posicao_terceiros": 2,
-        "classificado_melhor_terceiro": true
+        "classificado_melhor_terceiro": true,
+        "nome_pt": "Marrocos",
+        "time_pt": "Marrocos",
+        "selecao_pt": "Marrocos",
+        "nome_exibicao": "Marrocos",
+        "codigo_pais": "ma"
       },
       {
         "grupo": "E",
@@ -3969,7 +5039,12 @@
         "slot": "3E",
         "provisoria": true,
         "posicao_terceiros": 3,
-        "classificado_melhor_terceiro": true
+        "classificado_melhor_terceiro": true,
+        "nome_pt": "Equador",
+        "time_pt": "Equador",
+        "selecao_pt": "Equador",
+        "nome_exibicao": "Equador",
+        "codigo_pais": "ec"
       },
       {
         "grupo": "F",
@@ -3993,7 +5068,12 @@
         "slot": "3F",
         "provisoria": true,
         "posicao_terceiros": 4,
-        "classificado_melhor_terceiro": true
+        "classificado_melhor_terceiro": true,
+        "nome_pt": "Suécia",
+        "time_pt": "Suécia",
+        "selecao_pt": "Suécia",
+        "nome_exibicao": "Suécia",
+        "codigo_pais": "se"
       },
       {
         "grupo": "G",
@@ -4017,7 +5097,12 @@
         "slot": "3G",
         "provisoria": true,
         "posicao_terceiros": 5,
-        "classificado_melhor_terceiro": true
+        "classificado_melhor_terceiro": true,
+        "nome_pt": "Espanha",
+        "time_pt": "Espanha",
+        "selecao_pt": "Espanha",
+        "nome_exibicao": "Espanha",
+        "codigo_pais": "es"
       },
       {
         "grupo": "H",
@@ -4041,7 +5126,12 @@
         "slot": "3H",
         "provisoria": true,
         "posicao_terceiros": 6,
-        "classificado_melhor_terceiro": true
+        "classificado_melhor_terceiro": true,
+        "nome_pt": "Irã",
+        "time_pt": "Irã",
+        "selecao_pt": "Irã",
+        "nome_exibicao": "Irã",
+        "codigo_pais": "ir"
       },
       {
         "grupo": "I",
@@ -4065,7 +5155,12 @@
         "slot": "3I",
         "provisoria": true,
         "posicao_terceiros": 7,
-        "classificado_melhor_terceiro": true
+        "classificado_melhor_terceiro": true,
+        "nome_pt": "Noruega",
+        "time_pt": "Noruega",
+        "selecao_pt": "Noruega",
+        "nome_exibicao": "Noruega",
+        "codigo_pais": "no"
       },
       {
         "grupo": "J",
@@ -4089,7 +5184,12 @@
         "slot": "3J",
         "provisoria": true,
         "posicao_terceiros": 8,
-        "classificado_melhor_terceiro": true
+        "classificado_melhor_terceiro": true,
+        "nome_pt": "Áustria",
+        "time_pt": "Áustria",
+        "selecao_pt": "Áustria",
+        "nome_exibicao": "Áustria",
+        "codigo_pais": "at"
       },
       {
         "grupo": "K",
@@ -4113,7 +5213,12 @@
         "slot": "3K",
         "provisoria": true,
         "posicao_terceiros": 9,
-        "classificado_melhor_terceiro": false
+        "classificado_melhor_terceiro": false,
+        "nome_pt": "Portugal",
+        "time_pt": "Portugal",
+        "selecao_pt": "Portugal",
+        "nome_exibicao": "Portugal",
+        "codigo_pais": "pt"
       },
       {
         "grupo": "L",
@@ -4137,7 +5242,12 @@
         "slot": "3L",
         "provisoria": true,
         "posicao_terceiros": 10,
-        "classificado_melhor_terceiro": false
+        "classificado_melhor_terceiro": false,
+        "nome_pt": "Gana",
+        "time_pt": "Gana",
+        "selecao_pt": "Gana",
+        "nome_exibicao": "Gana",
+        "codigo_pais": "gh"
       },
       {
         "grupo": "A",
@@ -4161,7 +5271,12 @@
         "slot": "3A",
         "provisoria": true,
         "posicao_terceiros": 11,
-        "classificado_melhor_terceiro": false
+        "classificado_melhor_terceiro": false,
+        "nome_pt": "República Tcheca",
+        "time_pt": "República Tcheca",
+        "selecao_pt": "República Tcheca",
+        "nome_exibicao": "República Tcheca",
+        "codigo_pais": "cz"
       },
       {
         "grupo": "D",
@@ -4185,7 +5300,12 @@
         "slot": "3D",
         "provisoria": true,
         "posicao_terceiros": 12,
-        "classificado_melhor_terceiro": false
+        "classificado_melhor_terceiro": false,
+        "nome_pt": "Turquia",
+        "time_pt": "Turquia",
+        "selecao_pt": "Turquia",
+        "nome_exibicao": "Turquia",
+        "codigo_pais": "tr"
       }
     ],
     "gruposTerceirosClassificados": [
@@ -4300,7 +5420,17 @@
           "grupoTerceiro": "C",
           "status": "PROVISORIO",
           "provisoria": true,
-          "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+          "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+          "mandante_pt": "Alemanha",
+          "mandante_nome_pt": "Alemanha",
+          "mandante_exibicao": "Alemanha",
+          "mandante_codigo": "de",
+          "mandante_iso": "de",
+          "visitante_pt": "Marrocos",
+          "visitante_nome_pt": "Marrocos",
+          "visitante_exibicao": "Marrocos",
+          "visitante_codigo": "ma",
+          "visitante_iso": "ma"
         },
         {
           "id": "M77",
@@ -4350,7 +5480,17 @@
           "grupoTerceiro": "F",
           "status": "PROVISORIO",
           "provisoria": true,
-          "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+          "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+          "mandante_pt": "França",
+          "mandante_nome_pt": "França",
+          "mandante_exibicao": "França",
+          "mandante_codigo": "fr",
+          "mandante_iso": "fr",
+          "visitante_pt": "Suécia",
+          "visitante_nome_pt": "Suécia",
+          "visitante_exibicao": "Suécia",
+          "visitante_codigo": "se",
+          "visitante_iso": "se"
         },
         {
           "id": "M79",
@@ -4400,7 +5540,17 @@
           "grupoTerceiro": "H",
           "status": "PROVISORIO",
           "provisoria": true,
-          "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+          "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+          "mandante_pt": "México",
+          "mandante_nome_pt": "México",
+          "mandante_exibicao": "México",
+          "mandante_codigo": "mx",
+          "mandante_iso": "mx",
+          "visitante_pt": "Irã",
+          "visitante_nome_pt": "Irã",
+          "visitante_exibicao": "Irã",
+          "visitante_codigo": "ir",
+          "visitante_iso": "ir"
         },
         {
           "id": "M80",
@@ -4450,7 +5600,17 @@
           "grupoTerceiro": "I",
           "status": "PROVISORIO",
           "provisoria": true,
-          "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+          "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+          "mandante_pt": "Croácia",
+          "mandante_nome_pt": "Croácia",
+          "mandante_exibicao": "Croácia",
+          "mandante_codigo": "hr",
+          "mandante_iso": "hr",
+          "visitante_pt": "Noruega",
+          "visitante_nome_pt": "Noruega",
+          "visitante_exibicao": "Noruega",
+          "visitante_codigo": "no",
+          "visitante_iso": "no"
         },
         {
           "id": "M81",
@@ -4500,7 +5660,17 @@
           "grupoTerceiro": "B",
           "status": "PROVISORIO",
           "provisoria": true,
-          "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+          "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+          "mandante_pt": "Estados Unidos",
+          "mandante_nome_pt": "Estados Unidos",
+          "mandante_exibicao": "Estados Unidos",
+          "mandante_codigo": "us",
+          "mandante_iso": "us",
+          "visitante_pt": "Catar",
+          "visitante_nome_pt": "Catar",
+          "visitante_exibicao": "Catar",
+          "visitante_codigo": "qa",
+          "visitante_iso": "qa"
         },
         {
           "id": "M82",
@@ -4550,7 +5720,17 @@
           "grupoTerceiro": "J",
           "status": "PROVISORIO",
           "provisoria": true,
-          "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+          "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+          "mandante_pt": "Cabo Verde",
+          "mandante_nome_pt": "Cabo Verde",
+          "mandante_exibicao": "Cabo Verde",
+          "mandante_codigo": "cv",
+          "mandante_iso": "cv",
+          "visitante_pt": "Áustria",
+          "visitante_nome_pt": "Áustria",
+          "visitante_exibicao": "Áustria",
+          "visitante_codigo": "at",
+          "visitante_iso": "at"
         },
         {
           "id": "M85",
@@ -4600,7 +5780,17 @@
           "grupoTerceiro": "G",
           "status": "PROVISORIO",
           "provisoria": true,
-          "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+          "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+          "mandante_pt": "Bósnia e Herzegovina",
+          "mandante_nome_pt": "Bósnia e Herzegovina",
+          "mandante_exibicao": "Bósnia e Herzegovina",
+          "mandante_codigo": "ba",
+          "mandante_iso": "ba",
+          "visitante_pt": "Espanha",
+          "visitante_nome_pt": "Espanha",
+          "visitante_exibicao": "Espanha",
+          "visitante_codigo": "es",
+          "visitante_iso": "es"
         },
         {
           "id": "M87",
@@ -4650,7 +5840,17 @@
           "grupoTerceiro": "E",
           "status": "PROVISORIO",
           "provisoria": true,
-          "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+          "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+          "mandante_pt": "Colômbia",
+          "mandante_nome_pt": "Colômbia",
+          "mandante_exibicao": "Colômbia",
+          "mandante_codigo": "co",
+          "mandante_iso": "co",
+          "visitante_pt": "Equador",
+          "visitante_nome_pt": "Equador",
+          "visitante_exibicao": "Equador",
+          "visitante_codigo": "ec",
+          "visitante_iso": "ec"
         }
       ]
     },
@@ -4703,7 +5903,17 @@
         "grupoTerceiro": "C",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Alemanha",
+        "mandante_nome_pt": "Alemanha",
+        "mandante_exibicao": "Alemanha",
+        "mandante_codigo": "de",
+        "mandante_iso": "de",
+        "visitante_pt": "Marrocos",
+        "visitante_nome_pt": "Marrocos",
+        "visitante_exibicao": "Marrocos",
+        "visitante_codigo": "ma",
+        "visitante_iso": "ma"
       },
       {
         "id": "M77",
@@ -4753,7 +5963,17 @@
         "grupoTerceiro": "F",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "França",
+        "mandante_nome_pt": "França",
+        "mandante_exibicao": "França",
+        "mandante_codigo": "fr",
+        "mandante_iso": "fr",
+        "visitante_pt": "Suécia",
+        "visitante_nome_pt": "Suécia",
+        "visitante_exibicao": "Suécia",
+        "visitante_codigo": "se",
+        "visitante_iso": "se"
       },
       {
         "id": "M79",
@@ -4803,7 +6023,17 @@
         "grupoTerceiro": "H",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "México",
+        "mandante_nome_pt": "México",
+        "mandante_exibicao": "México",
+        "mandante_codigo": "mx",
+        "mandante_iso": "mx",
+        "visitante_pt": "Irã",
+        "visitante_nome_pt": "Irã",
+        "visitante_exibicao": "Irã",
+        "visitante_codigo": "ir",
+        "visitante_iso": "ir"
       },
       {
         "id": "M80",
@@ -4853,7 +6083,17 @@
         "grupoTerceiro": "I",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Croácia",
+        "mandante_nome_pt": "Croácia",
+        "mandante_exibicao": "Croácia",
+        "mandante_codigo": "hr",
+        "mandante_iso": "hr",
+        "visitante_pt": "Noruega",
+        "visitante_nome_pt": "Noruega",
+        "visitante_exibicao": "Noruega",
+        "visitante_codigo": "no",
+        "visitante_iso": "no"
       },
       {
         "id": "M81",
@@ -4903,7 +6143,17 @@
         "grupoTerceiro": "B",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Estados Unidos",
+        "mandante_nome_pt": "Estados Unidos",
+        "mandante_exibicao": "Estados Unidos",
+        "mandante_codigo": "us",
+        "mandante_iso": "us",
+        "visitante_pt": "Catar",
+        "visitante_nome_pt": "Catar",
+        "visitante_exibicao": "Catar",
+        "visitante_codigo": "qa",
+        "visitante_iso": "qa"
       },
       {
         "id": "M82",
@@ -4953,7 +6203,17 @@
         "grupoTerceiro": "J",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Cabo Verde",
+        "mandante_nome_pt": "Cabo Verde",
+        "mandante_exibicao": "Cabo Verde",
+        "mandante_codigo": "cv",
+        "mandante_iso": "cv",
+        "visitante_pt": "Áustria",
+        "visitante_nome_pt": "Áustria",
+        "visitante_exibicao": "Áustria",
+        "visitante_codigo": "at",
+        "visitante_iso": "at"
       },
       {
         "id": "M85",
@@ -5003,7 +6263,17 @@
         "grupoTerceiro": "G",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Bósnia e Herzegovina",
+        "mandante_nome_pt": "Bósnia e Herzegovina",
+        "mandante_exibicao": "Bósnia e Herzegovina",
+        "mandante_codigo": "ba",
+        "mandante_iso": "ba",
+        "visitante_pt": "Espanha",
+        "visitante_nome_pt": "Espanha",
+        "visitante_exibicao": "Espanha",
+        "visitante_codigo": "es",
+        "visitante_iso": "es"
       },
       {
         "id": "M87",
@@ -5053,7 +6323,17 @@
         "grupoTerceiro": "E",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Colômbia",
+        "mandante_nome_pt": "Colômbia",
+        "mandante_exibicao": "Colômbia",
+        "mandante_codigo": "co",
+        "mandante_iso": "co",
+        "visitante_pt": "Equador",
+        "visitante_nome_pt": "Equador",
+        "visitante_exibicao": "Equador",
+        "visitante_codigo": "ec",
+        "visitante_iso": "ec"
       }
     ],
     "confrontosAnexoC": [
@@ -5105,7 +6385,17 @@
         "grupoTerceiro": "C",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Alemanha",
+        "mandante_nome_pt": "Alemanha",
+        "mandante_exibicao": "Alemanha",
+        "mandante_codigo": "de",
+        "mandante_iso": "de",
+        "visitante_pt": "Marrocos",
+        "visitante_nome_pt": "Marrocos",
+        "visitante_exibicao": "Marrocos",
+        "visitante_codigo": "ma",
+        "visitante_iso": "ma"
       },
       {
         "id": "M77",
@@ -5155,7 +6445,17 @@
         "grupoTerceiro": "F",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "França",
+        "mandante_nome_pt": "França",
+        "mandante_exibicao": "França",
+        "mandante_codigo": "fr",
+        "mandante_iso": "fr",
+        "visitante_pt": "Suécia",
+        "visitante_nome_pt": "Suécia",
+        "visitante_exibicao": "Suécia",
+        "visitante_codigo": "se",
+        "visitante_iso": "se"
       },
       {
         "id": "M79",
@@ -5205,7 +6505,17 @@
         "grupoTerceiro": "H",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "México",
+        "mandante_nome_pt": "México",
+        "mandante_exibicao": "México",
+        "mandante_codigo": "mx",
+        "mandante_iso": "mx",
+        "visitante_pt": "Irã",
+        "visitante_nome_pt": "Irã",
+        "visitante_exibicao": "Irã",
+        "visitante_codigo": "ir",
+        "visitante_iso": "ir"
       },
       {
         "id": "M80",
@@ -5255,7 +6565,17 @@
         "grupoTerceiro": "I",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Croácia",
+        "mandante_nome_pt": "Croácia",
+        "mandante_exibicao": "Croácia",
+        "mandante_codigo": "hr",
+        "mandante_iso": "hr",
+        "visitante_pt": "Noruega",
+        "visitante_nome_pt": "Noruega",
+        "visitante_exibicao": "Noruega",
+        "visitante_codigo": "no",
+        "visitante_iso": "no"
       },
       {
         "id": "M81",
@@ -5305,7 +6625,17 @@
         "grupoTerceiro": "B",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Estados Unidos",
+        "mandante_nome_pt": "Estados Unidos",
+        "mandante_exibicao": "Estados Unidos",
+        "mandante_codigo": "us",
+        "mandante_iso": "us",
+        "visitante_pt": "Catar",
+        "visitante_nome_pt": "Catar",
+        "visitante_exibicao": "Catar",
+        "visitante_codigo": "qa",
+        "visitante_iso": "qa"
       },
       {
         "id": "M82",
@@ -5355,7 +6685,17 @@
         "grupoTerceiro": "J",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Cabo Verde",
+        "mandante_nome_pt": "Cabo Verde",
+        "mandante_exibicao": "Cabo Verde",
+        "mandante_codigo": "cv",
+        "mandante_iso": "cv",
+        "visitante_pt": "Áustria",
+        "visitante_nome_pt": "Áustria",
+        "visitante_exibicao": "Áustria",
+        "visitante_codigo": "at",
+        "visitante_iso": "at"
       },
       {
         "id": "M85",
@@ -5405,7 +6745,17 @@
         "grupoTerceiro": "G",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Bósnia e Herzegovina",
+        "mandante_nome_pt": "Bósnia e Herzegovina",
+        "mandante_exibicao": "Bósnia e Herzegovina",
+        "mandante_codigo": "ba",
+        "mandante_iso": "ba",
+        "visitante_pt": "Espanha",
+        "visitante_nome_pt": "Espanha",
+        "visitante_exibicao": "Espanha",
+        "visitante_codigo": "es",
+        "visitante_iso": "es"
       },
       {
         "id": "M87",
@@ -5455,11 +6805,21 @@
         "grupoTerceiro": "E",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Colômbia",
+        "mandante_nome_pt": "Colômbia",
+        "mandante_exibicao": "Colômbia",
+        "mandante_codigo": "co",
+        "mandante_iso": "co",
+        "visitante_pt": "Equador",
+        "visitante_nome_pt": "Equador",
+        "visitante_exibicao": "Equador",
+        "visitante_codigo": "ec",
+        "visitante_iso": "ec"
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "14/06/2026 17:19:58"
+    "cacheAtualizadoEm": "14/06/2026 19:05:08"
   },
   "jogos": [
     {
@@ -5493,7 +6853,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "México",
+      "mandante_nome_pt": "México",
+      "mandante_exibicao": "México",
+      "mandante_codigo": "mx",
+      "mandante_iso": "mx",
+      "visitante_pt": "África do Sul",
+      "visitante_nome_pt": "África do Sul",
+      "visitante_exibicao": "África do Sul",
+      "visitante_codigo": "za",
+      "visitante_iso": "za"
     },
     {
       "id": "01000048ef0bcecc",
@@ -5526,7 +6896,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Coreia do Sul",
+      "mandante_nome_pt": "Coreia do Sul",
+      "mandante_exibicao": "Coreia do Sul",
+      "mandante_codigo": "kr",
+      "mandante_iso": "kr",
+      "visitante_pt": "República Tcheca",
+      "visitante_nome_pt": "República Tcheca",
+      "visitante_exibicao": "República Tcheca",
+      "visitante_codigo": "cz",
+      "visitante_iso": "cz"
     },
     {
       "id": "4f5e7d9da1657c78",
@@ -5559,7 +6939,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Canadá",
+      "mandante_nome_pt": "Canadá",
+      "mandante_exibicao": "Canadá",
+      "mandante_codigo": "ca",
+      "mandante_iso": "ca",
+      "visitante_pt": "Bósnia e Herzegovina",
+      "visitante_nome_pt": "Bósnia e Herzegovina",
+      "visitante_exibicao": "Bósnia e Herzegovina",
+      "visitante_codigo": "ba",
+      "visitante_iso": "ba"
     },
     {
       "id": "e7c37205176a0bd9",
@@ -5592,7 +6982,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Estados Unidos",
+      "mandante_nome_pt": "Estados Unidos",
+      "mandante_exibicao": "Estados Unidos",
+      "mandante_codigo": "us",
+      "mandante_iso": "us",
+      "visitante_pt": "Paraguai",
+      "visitante_nome_pt": "Paraguai",
+      "visitante_exibicao": "Paraguai",
+      "visitante_codigo": "py",
+      "visitante_iso": "py"
     },
     {
       "id": "9105f73e4fe2c51b",
@@ -5625,7 +7025,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Catar",
+      "mandante_nome_pt": "Catar",
+      "mandante_exibicao": "Catar",
+      "mandante_codigo": "qa",
+      "mandante_iso": "qa",
+      "visitante_pt": "Suíça",
+      "visitante_nome_pt": "Suíça",
+      "visitante_exibicao": "Suíça",
+      "visitante_codigo": "ch",
+      "visitante_iso": "ch"
     },
     {
       "id": "ba16cee717032445",
@@ -5658,7 +7068,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Brasil",
+      "mandante_nome_pt": "Brasil",
+      "mandante_exibicao": "Brasil",
+      "mandante_codigo": "br",
+      "mandante_iso": "br",
+      "visitante_pt": "Marrocos",
+      "visitante_nome_pt": "Marrocos",
+      "visitante_exibicao": "Marrocos",
+      "visitante_codigo": "ma",
+      "visitante_iso": "ma"
     },
     {
       "id": "f2e0f8216f9efc6d",
@@ -5691,7 +7111,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Haiti",
+      "mandante_nome_pt": "Haiti",
+      "mandante_exibicao": "Haiti",
+      "mandante_codigo": "ht",
+      "mandante_iso": "ht",
+      "visitante_pt": "Escócia",
+      "visitante_nome_pt": "Escócia",
+      "visitante_exibicao": "Escócia",
+      "visitante_codigo": "gb-sct",
+      "visitante_iso": "gb-sct"
     },
     {
       "id": "60a048c2dfa676ce",
@@ -5703,7 +7133,7 @@
       "flagVisitante": "🇹🇷",
       "flagMandanteEmoji": "⚽",
       "flagVisitanteEmoji": "🇹🇷",
-      "codigoMandante": "",
+      "codigoMandante": "au",
       "codigoVisitante": "tr",
       "grupo": "Grupo D",
       "rodada_grupo": "Grupo D",
@@ -5724,7 +7154,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Austrália",
+      "mandante_nome_pt": "Austrália",
+      "mandante_exibicao": "Austrália",
+      "mandante_codigo": "au",
+      "mandante_iso": "au",
+      "visitante_pt": "Turquia",
+      "visitante_nome_pt": "Turquia",
+      "visitante_exibicao": "Turquia",
+      "visitante_codigo": "tr",
+      "visitante_iso": "tr"
     },
     {
       "id": "fe5c4539c30efafd",
@@ -5757,7 +7197,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Alemanha",
+      "mandante_nome_pt": "Alemanha",
+      "mandante_exibicao": "Alemanha",
+      "mandante_codigo": "de",
+      "mandante_iso": "de",
+      "visitante_pt": "Curaçao",
+      "visitante_nome_pt": "Curaçao",
+      "visitante_exibicao": "Curaçao",
+      "visitante_codigo": "cw",
+      "visitante_iso": "cw"
     },
     {
       "id": "49459bce304b41c3",
@@ -5790,7 +7240,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Países Baixos",
+      "mandante_nome_pt": "Países Baixos",
+      "mandante_exibicao": "Países Baixos",
+      "mandante_codigo": "nl",
+      "mandante_iso": "nl",
+      "visitante_pt": "Japão",
+      "visitante_nome_pt": "Japão",
+      "visitante_exibicao": "Japão",
+      "visitante_codigo": "jp",
+      "visitante_iso": "jp"
     },
     {
       "id": "096544d4b0a82f16",
@@ -5823,7 +7283,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Costa do Marfim",
+      "mandante_nome_pt": "Costa do Marfim",
+      "mandante_exibicao": "Costa do Marfim",
+      "mandante_codigo": "ci",
+      "mandante_iso": "ci",
+      "visitante_pt": "Equador",
+      "visitante_nome_pt": "Equador",
+      "visitante_exibicao": "Equador",
+      "visitante_codigo": "ec",
+      "visitante_iso": "ec"
     },
     {
       "id": "7e5655e08762248b",
@@ -5856,7 +7326,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Suécia",
+      "mandante_nome_pt": "Suécia",
+      "mandante_exibicao": "Suécia",
+      "mandante_codigo": "se",
+      "mandante_iso": "se",
+      "visitante_pt": "Tunísia",
+      "visitante_nome_pt": "Tunísia",
+      "visitante_exibicao": "Tunísia",
+      "visitante_codigo": "tn",
+      "visitante_iso": "tn"
     },
     {
       "id": "50a0549da0d5ab13",
@@ -5889,7 +7369,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Espanha",
+      "mandante_nome_pt": "Espanha",
+      "mandante_exibicao": "Espanha",
+      "mandante_codigo": "es",
+      "mandante_iso": "es",
+      "visitante_pt": "Cabo Verde",
+      "visitante_nome_pt": "Cabo Verde",
+      "visitante_exibicao": "Cabo Verde",
+      "visitante_codigo": "cv",
+      "visitante_iso": "cv"
     },
     {
       "id": "82414c1439b6a49a",
@@ -5922,7 +7412,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Bélgica",
+      "mandante_nome_pt": "Bélgica",
+      "mandante_exibicao": "Bélgica",
+      "mandante_codigo": "be",
+      "mandante_iso": "be",
+      "visitante_pt": "Egito",
+      "visitante_nome_pt": "Egito",
+      "visitante_exibicao": "Egito",
+      "visitante_codigo": "eg",
+      "visitante_iso": "eg"
     },
     {
       "id": "0cf3a618b2bc9f20",
@@ -5955,7 +7455,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Arábia Saudita",
+      "mandante_nome_pt": "Arábia Saudita",
+      "mandante_exibicao": "Arábia Saudita",
+      "mandante_codigo": "sa",
+      "mandante_iso": "sa",
+      "visitante_pt": "Uruguai",
+      "visitante_nome_pt": "Uruguai",
+      "visitante_exibicao": "Uruguai",
+      "visitante_codigo": "uy",
+      "visitante_iso": "uy"
     },
     {
       "id": "9a2422a2f8d16fa8",
@@ -5988,7 +7498,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Irã",
+      "mandante_nome_pt": "Irã",
+      "mandante_exibicao": "Irã",
+      "mandante_codigo": "ir",
+      "mandante_iso": "ir",
+      "visitante_pt": "Nova Zelândia",
+      "visitante_nome_pt": "Nova Zelândia",
+      "visitante_exibicao": "Nova Zelândia",
+      "visitante_codigo": "nz",
+      "visitante_iso": "nz"
     },
     {
       "id": "7690f50677b078be",
@@ -6021,7 +7541,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "França",
+      "mandante_nome_pt": "França",
+      "mandante_exibicao": "França",
+      "mandante_codigo": "fr",
+      "mandante_iso": "fr",
+      "visitante_pt": "Senegal",
+      "visitante_nome_pt": "Senegal",
+      "visitante_exibicao": "Senegal",
+      "visitante_codigo": "sn",
+      "visitante_iso": "sn"
     },
     {
       "id": "e7c25900b5445c79",
@@ -6054,7 +7584,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Iraque",
+      "mandante_nome_pt": "Iraque",
+      "mandante_exibicao": "Iraque",
+      "mandante_codigo": "iq",
+      "mandante_iso": "iq",
+      "visitante_pt": "Noruega",
+      "visitante_nome_pt": "Noruega",
+      "visitante_exibicao": "Noruega",
+      "visitante_codigo": "no",
+      "visitante_iso": "no"
     },
     {
       "id": "7b58e80f88ac4424",
@@ -6087,7 +7627,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Argentina",
+      "mandante_nome_pt": "Argentina",
+      "mandante_exibicao": "Argentina",
+      "mandante_codigo": "ar",
+      "mandante_iso": "ar",
+      "visitante_pt": "Argélia",
+      "visitante_nome_pt": "Argélia",
+      "visitante_exibicao": "Argélia",
+      "visitante_codigo": "dz",
+      "visitante_iso": "dz"
     },
     {
       "id": "119d3a2d15b62cfa",
@@ -6120,7 +7670,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Áustria",
+      "mandante_nome_pt": "Áustria",
+      "mandante_exibicao": "Áustria",
+      "mandante_codigo": "at",
+      "mandante_iso": "at",
+      "visitante_pt": "Jordânia",
+      "visitante_nome_pt": "Jordânia",
+      "visitante_exibicao": "Jordânia",
+      "visitante_codigo": "jo",
+      "visitante_iso": "jo"
     },
     {
       "id": "850076836082006c",
@@ -6153,7 +7713,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Portugal",
+      "mandante_nome_pt": "Portugal",
+      "mandante_exibicao": "Portugal",
+      "mandante_codigo": "pt",
+      "mandante_iso": "pt",
+      "visitante_pt": "República Democrática do Congo",
+      "visitante_nome_pt": "República Democrática do Congo",
+      "visitante_exibicao": "República Democrática do Congo",
+      "visitante_codigo": "cd",
+      "visitante_iso": "cd"
     },
     {
       "id": "a426c4d52e69d4a5",
@@ -6186,7 +7756,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Inglaterra",
+      "mandante_nome_pt": "Inglaterra",
+      "mandante_exibicao": "Inglaterra",
+      "mandante_codigo": "gb-eng",
+      "mandante_iso": "gb-eng",
+      "visitante_pt": "Croácia",
+      "visitante_nome_pt": "Croácia",
+      "visitante_exibicao": "Croácia",
+      "visitante_codigo": "hr",
+      "visitante_iso": "hr"
     },
     {
       "id": "35c14c865ca41f37",
@@ -6219,7 +7799,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Gana",
+      "mandante_nome_pt": "Gana",
+      "mandante_exibicao": "Gana",
+      "mandante_codigo": "gh",
+      "mandante_iso": "gh",
+      "visitante_pt": "Panamá",
+      "visitante_nome_pt": "Panamá",
+      "visitante_exibicao": "Panamá",
+      "visitante_codigo": "pa",
+      "visitante_iso": "pa"
     },
     {
       "id": "f192bdecb1f3cea0",
@@ -6252,7 +7842,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Uzbequistão",
+      "mandante_nome_pt": "Uzbequistão",
+      "mandante_exibicao": "Uzbequistão",
+      "mandante_codigo": "uz",
+      "mandante_iso": "uz",
+      "visitante_pt": "Colômbia",
+      "visitante_nome_pt": "Colômbia",
+      "visitante_exibicao": "Colômbia",
+      "visitante_codigo": "co",
+      "visitante_iso": "co"
     },
     {
       "id": "9b6add01eada16a7",
@@ -6285,7 +7885,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "República Tcheca",
+      "mandante_nome_pt": "República Tcheca",
+      "mandante_exibicao": "República Tcheca",
+      "mandante_codigo": "cz",
+      "mandante_iso": "cz",
+      "visitante_pt": "África do Sul",
+      "visitante_nome_pt": "África do Sul",
+      "visitante_exibicao": "África do Sul",
+      "visitante_codigo": "za",
+      "visitante_iso": "za"
     },
     {
       "id": "fc0a2dd29f3d08f0",
@@ -6318,7 +7928,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Suíça",
+      "mandante_nome_pt": "Suíça",
+      "mandante_exibicao": "Suíça",
+      "mandante_codigo": "ch",
+      "mandante_iso": "ch",
+      "visitante_pt": "Bósnia e Herzegovina",
+      "visitante_nome_pt": "Bósnia e Herzegovina",
+      "visitante_exibicao": "Bósnia e Herzegovina",
+      "visitante_codigo": "ba",
+      "visitante_iso": "ba"
     },
     {
       "id": "9179a9d879d66eae",
@@ -6351,7 +7971,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Canadá",
+      "mandante_nome_pt": "Canadá",
+      "mandante_exibicao": "Canadá",
+      "mandante_codigo": "ca",
+      "mandante_iso": "ca",
+      "visitante_pt": "Catar",
+      "visitante_nome_pt": "Catar",
+      "visitante_exibicao": "Catar",
+      "visitante_codigo": "qa",
+      "visitante_iso": "qa"
     },
     {
       "id": "480a16e08118cb4f",
@@ -6384,7 +8014,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "México",
+      "mandante_nome_pt": "México",
+      "mandante_exibicao": "México",
+      "mandante_codigo": "mx",
+      "mandante_iso": "mx",
+      "visitante_pt": "Coreia do Sul",
+      "visitante_nome_pt": "Coreia do Sul",
+      "visitante_exibicao": "Coreia do Sul",
+      "visitante_codigo": "kr",
+      "visitante_iso": "kr"
     },
     {
       "id": "73b3234d754d5f78",
@@ -6397,7 +8037,7 @@
       "flagMandanteEmoji": "🇺🇸",
       "flagVisitanteEmoji": "⚽",
       "codigoMandante": "us",
-      "codigoVisitante": "",
+      "codigoVisitante": "au",
       "grupo": "Grupo D",
       "rodada_grupo": "Grupo D",
       "data": "19/06/2026",
@@ -6417,7 +8057,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Estados Unidos",
+      "mandante_nome_pt": "Estados Unidos",
+      "mandante_exibicao": "Estados Unidos",
+      "mandante_codigo": "us",
+      "mandante_iso": "us",
+      "visitante_pt": "Austrália",
+      "visitante_nome_pt": "Austrália",
+      "visitante_exibicao": "Austrália",
+      "visitante_codigo": "au",
+      "visitante_iso": "au"
     },
     {
       "id": "f6fe5166955bc9c3",
@@ -6450,7 +8100,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Escócia",
+      "mandante_nome_pt": "Escócia",
+      "mandante_exibicao": "Escócia",
+      "mandante_codigo": "gb-sct",
+      "mandante_iso": "gb-sct",
+      "visitante_pt": "Marrocos",
+      "visitante_nome_pt": "Marrocos",
+      "visitante_exibicao": "Marrocos",
+      "visitante_codigo": "ma",
+      "visitante_iso": "ma"
     },
     {
       "id": "930f832770ba86f0",
@@ -6483,7 +8143,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Brasil",
+      "mandante_nome_pt": "Brasil",
+      "mandante_exibicao": "Brasil",
+      "mandante_codigo": "br",
+      "mandante_iso": "br",
+      "visitante_pt": "Haiti",
+      "visitante_nome_pt": "Haiti",
+      "visitante_exibicao": "Haiti",
+      "visitante_codigo": "ht",
+      "visitante_iso": "ht"
     },
     {
       "id": "5cd98c80db64d3b7",
@@ -6516,7 +8186,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Turquia",
+      "mandante_nome_pt": "Turquia",
+      "mandante_exibicao": "Turquia",
+      "mandante_codigo": "tr",
+      "mandante_iso": "tr",
+      "visitante_pt": "Paraguai",
+      "visitante_nome_pt": "Paraguai",
+      "visitante_exibicao": "Paraguai",
+      "visitante_codigo": "py",
+      "visitante_iso": "py"
     },
     {
       "id": "29b930bfc1b8dbeb",
@@ -6549,7 +8229,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Países Baixos",
+      "mandante_nome_pt": "Países Baixos",
+      "mandante_exibicao": "Países Baixos",
+      "mandante_codigo": "nl",
+      "mandante_iso": "nl",
+      "visitante_pt": "Suécia",
+      "visitante_nome_pt": "Suécia",
+      "visitante_exibicao": "Suécia",
+      "visitante_codigo": "se",
+      "visitante_iso": "se"
     },
     {
       "id": "f5dfd82336ef2af7",
@@ -6582,7 +8272,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Alemanha",
+      "mandante_nome_pt": "Alemanha",
+      "mandante_exibicao": "Alemanha",
+      "mandante_codigo": "de",
+      "mandante_iso": "de",
+      "visitante_pt": "Costa do Marfim",
+      "visitante_nome_pt": "Costa do Marfim",
+      "visitante_exibicao": "Costa do Marfim",
+      "visitante_codigo": "ci",
+      "visitante_iso": "ci"
     },
     {
       "id": "891edab9ff279049",
@@ -6615,7 +8315,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Equador",
+      "mandante_nome_pt": "Equador",
+      "mandante_exibicao": "Equador",
+      "mandante_codigo": "ec",
+      "mandante_iso": "ec",
+      "visitante_pt": "Curaçao",
+      "visitante_nome_pt": "Curaçao",
+      "visitante_exibicao": "Curaçao",
+      "visitante_codigo": "cw",
+      "visitante_iso": "cw"
     },
     {
       "id": "fd3fe06844067e58",
@@ -6648,7 +8358,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Tunísia",
+      "mandante_nome_pt": "Tunísia",
+      "mandante_exibicao": "Tunísia",
+      "mandante_codigo": "tn",
+      "mandante_iso": "tn",
+      "visitante_pt": "Japão",
+      "visitante_nome_pt": "Japão",
+      "visitante_exibicao": "Japão",
+      "visitante_codigo": "jp",
+      "visitante_iso": "jp"
     },
     {
       "id": "538d6097555c30c8",
@@ -6681,7 +8401,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Espanha",
+      "mandante_nome_pt": "Espanha",
+      "mandante_exibicao": "Espanha",
+      "mandante_codigo": "es",
+      "mandante_iso": "es",
+      "visitante_pt": "Arábia Saudita",
+      "visitante_nome_pt": "Arábia Saudita",
+      "visitante_exibicao": "Arábia Saudita",
+      "visitante_codigo": "sa",
+      "visitante_iso": "sa"
     },
     {
       "id": "8fe9b559c808df97",
@@ -6714,7 +8444,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Bélgica",
+      "mandante_nome_pt": "Bélgica",
+      "mandante_exibicao": "Bélgica",
+      "mandante_codigo": "be",
+      "mandante_iso": "be",
+      "visitante_pt": "Irã",
+      "visitante_nome_pt": "Irã",
+      "visitante_exibicao": "Irã",
+      "visitante_codigo": "ir",
+      "visitante_iso": "ir"
     },
     {
       "id": "d88aa1bdb02afd0d",
@@ -6747,7 +8487,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Uruguai",
+      "mandante_nome_pt": "Uruguai",
+      "mandante_exibicao": "Uruguai",
+      "mandante_codigo": "uy",
+      "mandante_iso": "uy",
+      "visitante_pt": "Cabo Verde",
+      "visitante_nome_pt": "Cabo Verde",
+      "visitante_exibicao": "Cabo Verde",
+      "visitante_codigo": "cv",
+      "visitante_iso": "cv"
     },
     {
       "id": "ab54b41468be0b2f",
@@ -6780,7 +8530,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Nova Zelândia",
+      "mandante_nome_pt": "Nova Zelândia",
+      "mandante_exibicao": "Nova Zelândia",
+      "mandante_codigo": "nz",
+      "mandante_iso": "nz",
+      "visitante_pt": "Egito",
+      "visitante_nome_pt": "Egito",
+      "visitante_exibicao": "Egito",
+      "visitante_codigo": "eg",
+      "visitante_iso": "eg"
     },
     {
       "id": "00850022166d8fcb",
@@ -6813,7 +8573,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Argentina",
+      "mandante_nome_pt": "Argentina",
+      "mandante_exibicao": "Argentina",
+      "mandante_codigo": "ar",
+      "mandante_iso": "ar",
+      "visitante_pt": "Áustria",
+      "visitante_nome_pt": "Áustria",
+      "visitante_exibicao": "Áustria",
+      "visitante_codigo": "at",
+      "visitante_iso": "at"
     },
     {
       "id": "762ba800fd0211c8",
@@ -6846,7 +8616,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "França",
+      "mandante_nome_pt": "França",
+      "mandante_exibicao": "França",
+      "mandante_codigo": "fr",
+      "mandante_iso": "fr",
+      "visitante_pt": "Iraque",
+      "visitante_nome_pt": "Iraque",
+      "visitante_exibicao": "Iraque",
+      "visitante_codigo": "iq",
+      "visitante_iso": "iq"
     },
     {
       "id": "c4f8220d2ba8b5cb",
@@ -6879,7 +8659,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Noruega",
+      "mandante_nome_pt": "Noruega",
+      "mandante_exibicao": "Noruega",
+      "mandante_codigo": "no",
+      "mandante_iso": "no",
+      "visitante_pt": "Senegal",
+      "visitante_nome_pt": "Senegal",
+      "visitante_exibicao": "Senegal",
+      "visitante_codigo": "sn",
+      "visitante_iso": "sn"
     },
     {
       "id": "99e6a12ec9985662",
@@ -6912,7 +8702,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Jordânia",
+      "mandante_nome_pt": "Jordânia",
+      "mandante_exibicao": "Jordânia",
+      "mandante_codigo": "jo",
+      "mandante_iso": "jo",
+      "visitante_pt": "Argélia",
+      "visitante_nome_pt": "Argélia",
+      "visitante_exibicao": "Argélia",
+      "visitante_codigo": "dz",
+      "visitante_iso": "dz"
     },
     {
       "id": "e186a497c7491c6a",
@@ -6945,7 +8745,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Portugal",
+      "mandante_nome_pt": "Portugal",
+      "mandante_exibicao": "Portugal",
+      "mandante_codigo": "pt",
+      "mandante_iso": "pt",
+      "visitante_pt": "Uzbequistão",
+      "visitante_nome_pt": "Uzbequistão",
+      "visitante_exibicao": "Uzbequistão",
+      "visitante_codigo": "uz",
+      "visitante_iso": "uz"
     },
     {
       "id": "5acbf980cb373caa",
@@ -6978,7 +8788,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Inglaterra",
+      "mandante_nome_pt": "Inglaterra",
+      "mandante_exibicao": "Inglaterra",
+      "mandante_codigo": "gb-eng",
+      "mandante_iso": "gb-eng",
+      "visitante_pt": "Gana",
+      "visitante_nome_pt": "Gana",
+      "visitante_exibicao": "Gana",
+      "visitante_codigo": "gh",
+      "visitante_iso": "gh"
     },
     {
       "id": "b6aa56e91269d7d5",
@@ -7011,7 +8831,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Panamá",
+      "mandante_nome_pt": "Panamá",
+      "mandante_exibicao": "Panamá",
+      "mandante_codigo": "pa",
+      "mandante_iso": "pa",
+      "visitante_pt": "Croácia",
+      "visitante_nome_pt": "Croácia",
+      "visitante_exibicao": "Croácia",
+      "visitante_codigo": "hr",
+      "visitante_iso": "hr"
     },
     {
       "id": "1a0b194a0dc9b8c1",
@@ -7044,7 +8874,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Colômbia",
+      "mandante_nome_pt": "Colômbia",
+      "mandante_exibicao": "Colômbia",
+      "mandante_codigo": "co",
+      "mandante_iso": "co",
+      "visitante_pt": "República Democrática do Congo",
+      "visitante_nome_pt": "República Democrática do Congo",
+      "visitante_exibicao": "República Democrática do Congo",
+      "visitante_codigo": "cd",
+      "visitante_iso": "cd"
     },
     {
       "id": "5045a6795b7825ce",
@@ -7077,7 +8917,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Bósnia e Herzegovina",
+      "mandante_nome_pt": "Bósnia e Herzegovina",
+      "mandante_exibicao": "Bósnia e Herzegovina",
+      "mandante_codigo": "ba",
+      "mandante_iso": "ba",
+      "visitante_pt": "Catar",
+      "visitante_nome_pt": "Catar",
+      "visitante_exibicao": "Catar",
+      "visitante_codigo": "qa",
+      "visitante_iso": "qa"
     },
     {
       "id": "261fc0b1aaf0b597",
@@ -7110,7 +8960,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Suíça",
+      "mandante_nome_pt": "Suíça",
+      "mandante_exibicao": "Suíça",
+      "mandante_codigo": "ch",
+      "mandante_iso": "ch",
+      "visitante_pt": "Canadá",
+      "visitante_nome_pt": "Canadá",
+      "visitante_exibicao": "Canadá",
+      "visitante_codigo": "ca",
+      "visitante_iso": "ca"
     },
     {
       "id": "cd11d55a15319eaf",
@@ -7143,7 +9003,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Marrocos",
+      "mandante_nome_pt": "Marrocos",
+      "mandante_exibicao": "Marrocos",
+      "mandante_codigo": "ma",
+      "mandante_iso": "ma",
+      "visitante_pt": "Haiti",
+      "visitante_nome_pt": "Haiti",
+      "visitante_exibicao": "Haiti",
+      "visitante_codigo": "ht",
+      "visitante_iso": "ht"
     },
     {
       "id": "245e8a74ab4b2610",
@@ -7176,7 +9046,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Escócia",
+      "mandante_nome_pt": "Escócia",
+      "mandante_exibicao": "Escócia",
+      "mandante_codigo": "gb-sct",
+      "mandante_iso": "gb-sct",
+      "visitante_pt": "Brasil",
+      "visitante_nome_pt": "Brasil",
+      "visitante_exibicao": "Brasil",
+      "visitante_codigo": "br",
+      "visitante_iso": "br"
     },
     {
       "id": "c903cbdac92ad180",
@@ -7209,7 +9089,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "República Tcheca",
+      "mandante_nome_pt": "República Tcheca",
+      "mandante_exibicao": "República Tcheca",
+      "mandante_codigo": "cz",
+      "mandante_iso": "cz",
+      "visitante_pt": "México",
+      "visitante_nome_pt": "México",
+      "visitante_exibicao": "México",
+      "visitante_codigo": "mx",
+      "visitante_iso": "mx"
     },
     {
       "id": "cf08fa6e0bf81951",
@@ -7242,7 +9132,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "África do Sul",
+      "mandante_nome_pt": "África do Sul",
+      "mandante_exibicao": "África do Sul",
+      "mandante_codigo": "za",
+      "mandante_iso": "za",
+      "visitante_pt": "Coreia do Sul",
+      "visitante_nome_pt": "Coreia do Sul",
+      "visitante_exibicao": "Coreia do Sul",
+      "visitante_codigo": "kr",
+      "visitante_iso": "kr"
     },
     {
       "id": "2d5ca4ec26a26f2b",
@@ -7275,7 +9175,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Curaçao",
+      "mandante_nome_pt": "Curaçao",
+      "mandante_exibicao": "Curaçao",
+      "mandante_codigo": "cw",
+      "mandante_iso": "cw",
+      "visitante_pt": "Costa do Marfim",
+      "visitante_nome_pt": "Costa do Marfim",
+      "visitante_exibicao": "Costa do Marfim",
+      "visitante_codigo": "ci",
+      "visitante_iso": "ci"
     },
     {
       "id": "624d63bdee930b15",
@@ -7308,7 +9218,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Equador",
+      "mandante_nome_pt": "Equador",
+      "mandante_exibicao": "Equador",
+      "mandante_codigo": "ec",
+      "mandante_iso": "ec",
+      "visitante_pt": "Alemanha",
+      "visitante_nome_pt": "Alemanha",
+      "visitante_exibicao": "Alemanha",
+      "visitante_codigo": "de",
+      "visitante_iso": "de"
     },
     {
       "id": "0470a06f46949ef7",
@@ -7341,7 +9261,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Japão",
+      "mandante_nome_pt": "Japão",
+      "mandante_exibicao": "Japão",
+      "mandante_codigo": "jp",
+      "mandante_iso": "jp",
+      "visitante_pt": "Suécia",
+      "visitante_nome_pt": "Suécia",
+      "visitante_exibicao": "Suécia",
+      "visitante_codigo": "se",
+      "visitante_iso": "se"
     },
     {
       "id": "1c5461ec358f2382",
@@ -7374,7 +9304,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Tunísia",
+      "mandante_nome_pt": "Tunísia",
+      "mandante_exibicao": "Tunísia",
+      "mandante_codigo": "tn",
+      "mandante_iso": "tn",
+      "visitante_pt": "Países Baixos",
+      "visitante_nome_pt": "Países Baixos",
+      "visitante_exibicao": "Países Baixos",
+      "visitante_codigo": "nl",
+      "visitante_iso": "nl"
     },
     {
       "id": "d898b53944f3e098",
@@ -7387,7 +9327,7 @@
       "flagMandanteEmoji": "🇵🇾",
       "flagVisitanteEmoji": "⚽",
       "codigoMandante": "py",
-      "codigoVisitante": "",
+      "codigoVisitante": "au",
       "grupo": "Grupo D",
       "rodada_grupo": "Grupo D",
       "data": "25/06/2026",
@@ -7407,7 +9347,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Paraguai",
+      "mandante_nome_pt": "Paraguai",
+      "mandante_exibicao": "Paraguai",
+      "mandante_codigo": "py",
+      "mandante_iso": "py",
+      "visitante_pt": "Austrália",
+      "visitante_nome_pt": "Austrália",
+      "visitante_exibicao": "Austrália",
+      "visitante_codigo": "au",
+      "visitante_iso": "au"
     },
     {
       "id": "69a90c0428d4e2b8",
@@ -7440,7 +9390,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Turquia",
+      "mandante_nome_pt": "Turquia",
+      "mandante_exibicao": "Turquia",
+      "mandante_codigo": "tr",
+      "mandante_iso": "tr",
+      "visitante_pt": "Estados Unidos",
+      "visitante_nome_pt": "Estados Unidos",
+      "visitante_exibicao": "Estados Unidos",
+      "visitante_codigo": "us",
+      "visitante_iso": "us"
     },
     {
       "id": "a310d6109b3c29ca",
@@ -7473,7 +9433,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Noruega",
+      "mandante_nome_pt": "Noruega",
+      "mandante_exibicao": "Noruega",
+      "mandante_codigo": "no",
+      "mandante_iso": "no",
+      "visitante_pt": "França",
+      "visitante_nome_pt": "França",
+      "visitante_exibicao": "França",
+      "visitante_codigo": "fr",
+      "visitante_iso": "fr"
     },
     {
       "id": "26da5a7257e1d678",
@@ -7506,7 +9476,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Senegal",
+      "mandante_nome_pt": "Senegal",
+      "mandante_exibicao": "Senegal",
+      "mandante_codigo": "sn",
+      "mandante_iso": "sn",
+      "visitante_pt": "Iraque",
+      "visitante_nome_pt": "Iraque",
+      "visitante_exibicao": "Iraque",
+      "visitante_codigo": "iq",
+      "visitante_iso": "iq"
     },
     {
       "id": "fdb5984f020cfd9e",
@@ -7539,7 +9519,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Cabo Verde",
+      "mandante_nome_pt": "Cabo Verde",
+      "mandante_exibicao": "Cabo Verde",
+      "mandante_codigo": "cv",
+      "mandante_iso": "cv",
+      "visitante_pt": "Arábia Saudita",
+      "visitante_nome_pt": "Arábia Saudita",
+      "visitante_exibicao": "Arábia Saudita",
+      "visitante_codigo": "sa",
+      "visitante_iso": "sa"
     },
     {
       "id": "d78de2369989bdea",
@@ -7572,7 +9562,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Uruguai",
+      "mandante_nome_pt": "Uruguai",
+      "mandante_exibicao": "Uruguai",
+      "mandante_codigo": "uy",
+      "mandante_iso": "uy",
+      "visitante_pt": "Espanha",
+      "visitante_nome_pt": "Espanha",
+      "visitante_exibicao": "Espanha",
+      "visitante_codigo": "es",
+      "visitante_iso": "es"
     },
     {
       "id": "81ecedce80717eb1",
@@ -7605,7 +9605,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Egito",
+      "mandante_nome_pt": "Egito",
+      "mandante_exibicao": "Egito",
+      "mandante_codigo": "eg",
+      "mandante_iso": "eg",
+      "visitante_pt": "Irã",
+      "visitante_nome_pt": "Irã",
+      "visitante_exibicao": "Irã",
+      "visitante_codigo": "ir",
+      "visitante_iso": "ir"
     },
     {
       "id": "f47575c21eade3f9",
@@ -7638,7 +9648,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Nova Zelândia",
+      "mandante_nome_pt": "Nova Zelândia",
+      "mandante_exibicao": "Nova Zelândia",
+      "mandante_codigo": "nz",
+      "mandante_iso": "nz",
+      "visitante_pt": "Bélgica",
+      "visitante_nome_pt": "Bélgica",
+      "visitante_exibicao": "Bélgica",
+      "visitante_codigo": "be",
+      "visitante_iso": "be"
     },
     {
       "id": "7a762b9dae2738c7",
@@ -7671,7 +9691,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Croácia",
+      "mandante_nome_pt": "Croácia",
+      "mandante_exibicao": "Croácia",
+      "mandante_codigo": "hr",
+      "mandante_iso": "hr",
+      "visitante_pt": "Gana",
+      "visitante_nome_pt": "Gana",
+      "visitante_exibicao": "Gana",
+      "visitante_codigo": "gh",
+      "visitante_iso": "gh"
     },
     {
       "id": "4838b7550b79c38e",
@@ -7704,7 +9734,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Panamá",
+      "mandante_nome_pt": "Panamá",
+      "mandante_exibicao": "Panamá",
+      "mandante_codigo": "pa",
+      "mandante_iso": "pa",
+      "visitante_pt": "Inglaterra",
+      "visitante_nome_pt": "Inglaterra",
+      "visitante_exibicao": "Inglaterra",
+      "visitante_codigo": "gb-eng",
+      "visitante_iso": "gb-eng"
     },
     {
       "id": "3333b64d80b8e0ce",
@@ -7737,7 +9777,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Colômbia",
+      "mandante_nome_pt": "Colômbia",
+      "mandante_exibicao": "Colômbia",
+      "mandante_codigo": "co",
+      "mandante_iso": "co",
+      "visitante_pt": "Portugal",
+      "visitante_nome_pt": "Portugal",
+      "visitante_exibicao": "Portugal",
+      "visitante_codigo": "pt",
+      "visitante_iso": "pt"
     },
     {
       "id": "6d58c022d4c368d9",
@@ -7770,7 +9820,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "República Democrática do Congo",
+      "mandante_nome_pt": "República Democrática do Congo",
+      "mandante_exibicao": "República Democrática do Congo",
+      "mandante_codigo": "cd",
+      "mandante_iso": "cd",
+      "visitante_pt": "Uzbequistão",
+      "visitante_nome_pt": "Uzbequistão",
+      "visitante_exibicao": "Uzbequistão",
+      "visitante_codigo": "uz",
+      "visitante_iso": "uz"
     },
     {
       "id": "2535f80a6bcfa523",
@@ -7803,7 +9863,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Argélia",
+      "mandante_nome_pt": "Argélia",
+      "mandante_exibicao": "Argélia",
+      "mandante_codigo": "dz",
+      "mandante_iso": "dz",
+      "visitante_pt": "Áustria",
+      "visitante_nome_pt": "Áustria",
+      "visitante_exibicao": "Áustria",
+      "visitante_codigo": "at",
+      "visitante_iso": "at"
     },
     {
       "id": "8084ec873f117e1a",
@@ -7836,7 +9906,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Jordânia",
+      "mandante_nome_pt": "Jordânia",
+      "mandante_exibicao": "Jordânia",
+      "mandante_codigo": "jo",
+      "mandante_iso": "jo",
+      "visitante_pt": "Argentina",
+      "visitante_nome_pt": "Argentina",
+      "visitante_exibicao": "Argentina",
+      "visitante_codigo": "ar",
+      "visitante_iso": "ar"
     }
   ],
   "resultados": [
@@ -7871,7 +9951,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "México",
+      "mandante_nome_pt": "México",
+      "mandante_exibicao": "México",
+      "mandante_codigo": "mx",
+      "mandante_iso": "mx",
+      "visitante_pt": "África do Sul",
+      "visitante_nome_pt": "África do Sul",
+      "visitante_exibicao": "África do Sul",
+      "visitante_codigo": "za",
+      "visitante_iso": "za"
     },
     {
       "id": "01000048ef0bcecc",
@@ -7904,7 +9994,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Coreia do Sul",
+      "mandante_nome_pt": "Coreia do Sul",
+      "mandante_exibicao": "Coreia do Sul",
+      "mandante_codigo": "kr",
+      "mandante_iso": "kr",
+      "visitante_pt": "República Tcheca",
+      "visitante_nome_pt": "República Tcheca",
+      "visitante_exibicao": "República Tcheca",
+      "visitante_codigo": "cz",
+      "visitante_iso": "cz"
     },
     {
       "id": "4f5e7d9da1657c78",
@@ -7937,7 +10037,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Canadá",
+      "mandante_nome_pt": "Canadá",
+      "mandante_exibicao": "Canadá",
+      "mandante_codigo": "ca",
+      "mandante_iso": "ca",
+      "visitante_pt": "Bósnia e Herzegovina",
+      "visitante_nome_pt": "Bósnia e Herzegovina",
+      "visitante_exibicao": "Bósnia e Herzegovina",
+      "visitante_codigo": "ba",
+      "visitante_iso": "ba"
     },
     {
       "id": "e7c37205176a0bd9",
@@ -7970,7 +10080,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Estados Unidos",
+      "mandante_nome_pt": "Estados Unidos",
+      "mandante_exibicao": "Estados Unidos",
+      "mandante_codigo": "us",
+      "mandante_iso": "us",
+      "visitante_pt": "Paraguai",
+      "visitante_nome_pt": "Paraguai",
+      "visitante_exibicao": "Paraguai",
+      "visitante_codigo": "py",
+      "visitante_iso": "py"
     },
     {
       "id": "9105f73e4fe2c51b",
@@ -8003,7 +10123,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Catar",
+      "mandante_nome_pt": "Catar",
+      "mandante_exibicao": "Catar",
+      "mandante_codigo": "qa",
+      "mandante_iso": "qa",
+      "visitante_pt": "Suíça",
+      "visitante_nome_pt": "Suíça",
+      "visitante_exibicao": "Suíça",
+      "visitante_codigo": "ch",
+      "visitante_iso": "ch"
     },
     {
       "id": "ba16cee717032445",
@@ -8036,7 +10166,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Brasil",
+      "mandante_nome_pt": "Brasil",
+      "mandante_exibicao": "Brasil",
+      "mandante_codigo": "br",
+      "mandante_iso": "br",
+      "visitante_pt": "Marrocos",
+      "visitante_nome_pt": "Marrocos",
+      "visitante_exibicao": "Marrocos",
+      "visitante_codigo": "ma",
+      "visitante_iso": "ma"
     },
     {
       "id": "f2e0f8216f9efc6d",
@@ -8069,7 +10209,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Haiti",
+      "mandante_nome_pt": "Haiti",
+      "mandante_exibicao": "Haiti",
+      "mandante_codigo": "ht",
+      "mandante_iso": "ht",
+      "visitante_pt": "Escócia",
+      "visitante_nome_pt": "Escócia",
+      "visitante_exibicao": "Escócia",
+      "visitante_codigo": "gb-sct",
+      "visitante_iso": "gb-sct"
     },
     {
       "id": "60a048c2dfa676ce",
@@ -8081,7 +10231,7 @@
       "flagVisitante": "🇹🇷",
       "flagMandanteEmoji": "⚽",
       "flagVisitanteEmoji": "🇹🇷",
-      "codigoMandante": "",
+      "codigoMandante": "au",
       "codigoVisitante": "tr",
       "grupo": "Grupo D",
       "rodada_grupo": "Grupo D",
@@ -8102,7 +10252,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Austrália",
+      "mandante_nome_pt": "Austrália",
+      "mandante_exibicao": "Austrália",
+      "mandante_codigo": "au",
+      "mandante_iso": "au",
+      "visitante_pt": "Turquia",
+      "visitante_nome_pt": "Turquia",
+      "visitante_exibicao": "Turquia",
+      "visitante_codigo": "tr",
+      "visitante_iso": "tr"
     },
     {
       "id": "fe5c4539c30efafd",
@@ -8135,7 +10295,17 @@
       "estadio": "",
       "cidade": "",
       "transmissao": "",
-      "fonte": ""
+      "fonte": "",
+      "mandante_pt": "Alemanha",
+      "mandante_nome_pt": "Alemanha",
+      "mandante_exibicao": "Alemanha",
+      "mandante_codigo": "de",
+      "mandante_iso": "de",
+      "visitante_pt": "Curaçao",
+      "visitante_nome_pt": "Curaçao",
+      "visitante_exibicao": "Curaçao",
+      "visitante_codigo": "cw",
+      "visitante_iso": "cw"
     }
   ],
   "classificacao": [],
@@ -8163,7 +10333,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 1,
           "slot": "1A",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "México",
+          "time_pt": "México",
+          "selecao_pt": "México",
+          "nome_exibicao": "México",
+          "codigo_pais": "mx"
         },
         {
           "grupo": "A",
@@ -8185,7 +10360,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 2,
           "slot": "2A",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Coreia do Sul",
+          "time_pt": "Coreia do Sul",
+          "selecao_pt": "Coreia do Sul",
+          "nome_exibicao": "Coreia do Sul",
+          "codigo_pais": "kr"
         },
         {
           "grupo": "A",
@@ -8207,7 +10387,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "slot": "3A",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "República Tcheca",
+          "time_pt": "República Tcheca",
+          "selecao_pt": "República Tcheca",
+          "nome_exibicao": "República Tcheca",
+          "codigo_pais": "cz"
         },
         {
           "grupo": "A",
@@ -8229,7 +10414,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 4,
           "slot": "4A",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "África do Sul",
+          "time_pt": "África do Sul",
+          "selecao_pt": "África do Sul",
+          "nome_exibicao": "África do Sul",
+          "codigo_pais": "za"
         }
       ],
       "jogos_total": 6,
@@ -8261,7 +10451,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 1,
           "slot": "1B",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Bósnia e Herzegovina",
+          "time_pt": "Bósnia e Herzegovina",
+          "selecao_pt": "Bósnia e Herzegovina",
+          "nome_exibicao": "Bósnia e Herzegovina",
+          "codigo_pais": "ba"
         },
         {
           "grupo": "B",
@@ -8283,7 +10478,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 2,
           "slot": "2B",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Canadá",
+          "time_pt": "Canadá",
+          "selecao_pt": "Canadá",
+          "nome_exibicao": "Canadá",
+          "codigo_pais": "ca"
         },
         {
           "grupo": "B",
@@ -8305,7 +10505,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "slot": "3B",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Catar",
+          "time_pt": "Catar",
+          "selecao_pt": "Catar",
+          "nome_exibicao": "Catar",
+          "codigo_pais": "qa"
         },
         {
           "grupo": "B",
@@ -8327,7 +10532,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 4,
           "slot": "4B",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Suíça",
+          "time_pt": "Suíça",
+          "selecao_pt": "Suíça",
+          "nome_exibicao": "Suíça",
+          "codigo_pais": "ch"
         }
       ],
       "jogos_total": 6,
@@ -8359,7 +10569,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 1,
           "slot": "1C",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Escócia",
+          "time_pt": "Escócia",
+          "selecao_pt": "Escócia",
+          "nome_exibicao": "Escócia",
+          "codigo_pais": "gb-sct"
         },
         {
           "grupo": "C",
@@ -8381,7 +10596,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 2,
           "slot": "2C",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Brasil",
+          "time_pt": "Brasil",
+          "selecao_pt": "Brasil",
+          "nome_exibicao": "Brasil",
+          "codigo_pais": "br"
         },
         {
           "grupo": "C",
@@ -8403,7 +10623,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "slot": "3C",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Marrocos",
+          "time_pt": "Marrocos",
+          "selecao_pt": "Marrocos",
+          "nome_exibicao": "Marrocos",
+          "codigo_pais": "ma"
         },
         {
           "grupo": "C",
@@ -8425,7 +10650,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 4,
           "slot": "4C",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Haiti",
+          "time_pt": "Haiti",
+          "selecao_pt": "Haiti",
+          "nome_exibicao": "Haiti",
+          "codigo_pais": "ht"
         }
       ],
       "jogos_total": 6,
@@ -8457,14 +10687,19 @@
           "rankingFifaAnterior": 9999,
           "posicao": 1,
           "slot": "1D",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Estados Unidos",
+          "time_pt": "Estados Unidos",
+          "selecao_pt": "Estados Unidos",
+          "nome_exibicao": "Estados Unidos",
+          "codigo_pais": "us"
         },
         {
           "grupo": "D",
           "nome": "Australia",
           "time": "Australia",
           "flag": "⚽",
-          "codigo": "",
+          "codigo": "au",
           "jogos": 1,
           "vitorias": 1,
           "empates": 0,
@@ -8479,7 +10714,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 2,
           "slot": "2D",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Austrália",
+          "time_pt": "Austrália",
+          "selecao_pt": "Austrália",
+          "nome_exibicao": "Austrália",
+          "codigo_pais": "au"
         },
         {
           "grupo": "D",
@@ -8501,7 +10741,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "slot": "3D",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Turquia",
+          "time_pt": "Turquia",
+          "selecao_pt": "Turquia",
+          "nome_exibicao": "Turquia",
+          "codigo_pais": "tr"
         },
         {
           "grupo": "D",
@@ -8523,7 +10768,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 4,
           "slot": "4D",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Paraguai",
+          "time_pt": "Paraguai",
+          "selecao_pt": "Paraguai",
+          "nome_exibicao": "Paraguai",
+          "codigo_pais": "py"
         }
       ],
       "jogos_total": 6,
@@ -8555,7 +10805,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 1,
           "slot": "1E",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Alemanha",
+          "time_pt": "Alemanha",
+          "selecao_pt": "Alemanha",
+          "nome_exibicao": "Alemanha",
+          "codigo_pais": "de"
         },
         {
           "grupo": "E",
@@ -8577,7 +10832,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 2,
           "slot": "2E",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Costa do Marfim",
+          "time_pt": "Costa do Marfim",
+          "selecao_pt": "Costa do Marfim",
+          "nome_exibicao": "Costa do Marfim",
+          "codigo_pais": "ci"
         },
         {
           "grupo": "E",
@@ -8599,7 +10859,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "slot": "3E",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Equador",
+          "time_pt": "Equador",
+          "selecao_pt": "Equador",
+          "nome_exibicao": "Equador",
+          "codigo_pais": "ec"
         },
         {
           "grupo": "E",
@@ -8621,7 +10886,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 4,
           "slot": "4E",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Curaçao",
+          "time_pt": "Curaçao",
+          "selecao_pt": "Curaçao",
+          "nome_exibicao": "Curaçao",
+          "codigo_pais": "cw"
         }
       ],
       "jogos_total": 6,
@@ -8653,7 +10923,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 1,
           "slot": "1F",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Japão",
+          "time_pt": "Japão",
+          "selecao_pt": "Japão",
+          "nome_exibicao": "Japão",
+          "codigo_pais": "jp"
         },
         {
           "grupo": "F",
@@ -8675,7 +10950,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 2,
           "slot": "2F",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Países Baixos",
+          "time_pt": "Países Baixos",
+          "selecao_pt": "Países Baixos",
+          "nome_exibicao": "Países Baixos",
+          "codigo_pais": "nl"
         },
         {
           "grupo": "F",
@@ -8697,7 +10977,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "slot": "3F",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Suécia",
+          "time_pt": "Suécia",
+          "selecao_pt": "Suécia",
+          "nome_exibicao": "Suécia",
+          "codigo_pais": "se"
         },
         {
           "grupo": "F",
@@ -8719,7 +11004,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 4,
           "slot": "4F",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Tunísia",
+          "time_pt": "Tunísia",
+          "selecao_pt": "Tunísia",
+          "nome_exibicao": "Tunísia",
+          "codigo_pais": "tn"
         }
       ],
       "jogos_total": 6,
@@ -8751,7 +11041,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 1,
           "slot": "1G",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Cabo Verde",
+          "time_pt": "Cabo Verde",
+          "selecao_pt": "Cabo Verde",
+          "nome_exibicao": "Cabo Verde",
+          "codigo_pais": "cv"
         },
         {
           "grupo": "G",
@@ -8773,7 +11068,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 2,
           "slot": "2G",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Arábia Saudita",
+          "time_pt": "Arábia Saudita",
+          "selecao_pt": "Arábia Saudita",
+          "nome_exibicao": "Arábia Saudita",
+          "codigo_pais": "sa"
         },
         {
           "grupo": "G",
@@ -8795,7 +11095,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "slot": "3G",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Espanha",
+          "time_pt": "Espanha",
+          "selecao_pt": "Espanha",
+          "nome_exibicao": "Espanha",
+          "codigo_pais": "es"
         },
         {
           "grupo": "G",
@@ -8817,7 +11122,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 4,
           "slot": "4G",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Uruguai",
+          "time_pt": "Uruguai",
+          "selecao_pt": "Uruguai",
+          "nome_exibicao": "Uruguai",
+          "codigo_pais": "uy"
         }
       ],
       "jogos_total": 6,
@@ -8849,7 +11159,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 1,
           "slot": "1H",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Bélgica",
+          "time_pt": "Bélgica",
+          "selecao_pt": "Bélgica",
+          "nome_exibicao": "Bélgica",
+          "codigo_pais": "be"
         },
         {
           "grupo": "H",
@@ -8871,7 +11186,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 2,
           "slot": "2H",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Egito",
+          "time_pt": "Egito",
+          "selecao_pt": "Egito",
+          "nome_exibicao": "Egito",
+          "codigo_pais": "eg"
         },
         {
           "grupo": "H",
@@ -8893,7 +11213,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "slot": "3H",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Irã",
+          "time_pt": "Irã",
+          "selecao_pt": "Irã",
+          "nome_exibicao": "Irã",
+          "codigo_pais": "ir"
         },
         {
           "grupo": "H",
@@ -8915,7 +11240,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 4,
           "slot": "4H",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Nova Zelândia",
+          "time_pt": "Nova Zelândia",
+          "selecao_pt": "Nova Zelândia",
+          "nome_exibicao": "Nova Zelândia",
+          "codigo_pais": "nz"
         }
       ],
       "jogos_total": 6,
@@ -8947,7 +11277,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 1,
           "slot": "1I",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "França",
+          "time_pt": "França",
+          "selecao_pt": "França",
+          "nome_exibicao": "França",
+          "codigo_pais": "fr"
         },
         {
           "grupo": "I",
@@ -8969,7 +11304,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 2,
           "slot": "2I",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Iraque",
+          "time_pt": "Iraque",
+          "selecao_pt": "Iraque",
+          "nome_exibicao": "Iraque",
+          "codigo_pais": "iq"
         },
         {
           "grupo": "I",
@@ -8991,7 +11331,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "slot": "3I",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Noruega",
+          "time_pt": "Noruega",
+          "selecao_pt": "Noruega",
+          "nome_exibicao": "Noruega",
+          "codigo_pais": "no"
         },
         {
           "grupo": "I",
@@ -9013,7 +11358,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 4,
           "slot": "4I",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Senegal",
+          "time_pt": "Senegal",
+          "selecao_pt": "Senegal",
+          "nome_exibicao": "Senegal",
+          "codigo_pais": "sn"
         }
       ],
       "jogos_total": 6,
@@ -9045,7 +11395,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 1,
           "slot": "1J",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Argélia",
+          "time_pt": "Argélia",
+          "selecao_pt": "Argélia",
+          "nome_exibicao": "Argélia",
+          "codigo_pais": "dz"
         },
         {
           "grupo": "J",
@@ -9067,7 +11422,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 2,
           "slot": "2J",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Argentina",
+          "time_pt": "Argentina",
+          "selecao_pt": "Argentina",
+          "nome_exibicao": "Argentina",
+          "codigo_pais": "ar"
         },
         {
           "grupo": "J",
@@ -9089,7 +11449,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "slot": "3J",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Áustria",
+          "time_pt": "Áustria",
+          "selecao_pt": "Áustria",
+          "nome_exibicao": "Áustria",
+          "codigo_pais": "at"
         },
         {
           "grupo": "J",
@@ -9111,7 +11476,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 4,
           "slot": "4J",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Jordânia",
+          "time_pt": "Jordânia",
+          "selecao_pt": "Jordânia",
+          "nome_exibicao": "Jordânia",
+          "codigo_pais": "jo"
         }
       ],
       "jogos_total": 6,
@@ -9143,7 +11513,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 1,
           "slot": "1K",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Colômbia",
+          "time_pt": "Colômbia",
+          "selecao_pt": "Colômbia",
+          "nome_exibicao": "Colômbia",
+          "codigo_pais": "co"
         },
         {
           "grupo": "K",
@@ -9165,7 +11540,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 2,
           "slot": "2K",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "República Democrática do Congo",
+          "time_pt": "República Democrática do Congo",
+          "selecao_pt": "República Democrática do Congo",
+          "nome_exibicao": "República Democrática do Congo",
+          "codigo_pais": "cd"
         },
         {
           "grupo": "K",
@@ -9187,7 +11567,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "slot": "3K",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Portugal",
+          "time_pt": "Portugal",
+          "selecao_pt": "Portugal",
+          "nome_exibicao": "Portugal",
+          "codigo_pais": "pt"
         },
         {
           "grupo": "K",
@@ -9209,7 +11594,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 4,
           "slot": "4K",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Uzbequistão",
+          "time_pt": "Uzbequistão",
+          "selecao_pt": "Uzbequistão",
+          "nome_exibicao": "Uzbequistão",
+          "codigo_pais": "uz"
         }
       ],
       "jogos_total": 6,
@@ -9241,7 +11631,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 1,
           "slot": "1L",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Croácia",
+          "time_pt": "Croácia",
+          "selecao_pt": "Croácia",
+          "nome_exibicao": "Croácia",
+          "codigo_pais": "hr"
         },
         {
           "grupo": "L",
@@ -9263,7 +11658,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 2,
           "slot": "2L",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Inglaterra",
+          "time_pt": "Inglaterra",
+          "selecao_pt": "Inglaterra",
+          "nome_exibicao": "Inglaterra",
+          "codigo_pais": "gb-eng"
         },
         {
           "grupo": "L",
@@ -9285,7 +11685,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "slot": "3L",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Gana",
+          "time_pt": "Gana",
+          "selecao_pt": "Gana",
+          "nome_exibicao": "Gana",
+          "codigo_pais": "gh"
         },
         {
           "grupo": "L",
@@ -9307,7 +11712,12 @@
           "rankingFifaAnterior": 9999,
           "posicao": 4,
           "slot": "4L",
-          "provisoria": true
+          "provisoria": true,
+          "nome_pt": "Panamá",
+          "time_pt": "Panamá",
+          "selecao_pt": "Panamá",
+          "nome_exibicao": "Panamá",
+          "codigo_pais": "pa"
         }
       ],
       "jogos_total": 6,
@@ -9340,7 +11750,12 @@
       "slot": "3B",
       "provisoria": true,
       "posicao_terceiros": 1,
-      "classificado_melhor_terceiro": true
+      "classificado_melhor_terceiro": true,
+      "nome_pt": "Catar",
+      "time_pt": "Catar",
+      "selecao_pt": "Catar",
+      "nome_exibicao": "Catar",
+      "codigo_pais": "qa"
     },
     {
       "grupo": "C",
@@ -9364,7 +11779,12 @@
       "slot": "3C",
       "provisoria": true,
       "posicao_terceiros": 2,
-      "classificado_melhor_terceiro": true
+      "classificado_melhor_terceiro": true,
+      "nome_pt": "Marrocos",
+      "time_pt": "Marrocos",
+      "selecao_pt": "Marrocos",
+      "nome_exibicao": "Marrocos",
+      "codigo_pais": "ma"
     },
     {
       "grupo": "E",
@@ -9388,7 +11808,12 @@
       "slot": "3E",
       "provisoria": true,
       "posicao_terceiros": 3,
-      "classificado_melhor_terceiro": true
+      "classificado_melhor_terceiro": true,
+      "nome_pt": "Equador",
+      "time_pt": "Equador",
+      "selecao_pt": "Equador",
+      "nome_exibicao": "Equador",
+      "codigo_pais": "ec"
     },
     {
       "grupo": "F",
@@ -9412,7 +11837,12 @@
       "slot": "3F",
       "provisoria": true,
       "posicao_terceiros": 4,
-      "classificado_melhor_terceiro": true
+      "classificado_melhor_terceiro": true,
+      "nome_pt": "Suécia",
+      "time_pt": "Suécia",
+      "selecao_pt": "Suécia",
+      "nome_exibicao": "Suécia",
+      "codigo_pais": "se"
     },
     {
       "grupo": "G",
@@ -9436,7 +11866,12 @@
       "slot": "3G",
       "provisoria": true,
       "posicao_terceiros": 5,
-      "classificado_melhor_terceiro": true
+      "classificado_melhor_terceiro": true,
+      "nome_pt": "Espanha",
+      "time_pt": "Espanha",
+      "selecao_pt": "Espanha",
+      "nome_exibicao": "Espanha",
+      "codigo_pais": "es"
     },
     {
       "grupo": "H",
@@ -9460,7 +11895,12 @@
       "slot": "3H",
       "provisoria": true,
       "posicao_terceiros": 6,
-      "classificado_melhor_terceiro": true
+      "classificado_melhor_terceiro": true,
+      "nome_pt": "Irã",
+      "time_pt": "Irã",
+      "selecao_pt": "Irã",
+      "nome_exibicao": "Irã",
+      "codigo_pais": "ir"
     },
     {
       "grupo": "I",
@@ -9484,7 +11924,12 @@
       "slot": "3I",
       "provisoria": true,
       "posicao_terceiros": 7,
-      "classificado_melhor_terceiro": true
+      "classificado_melhor_terceiro": true,
+      "nome_pt": "Noruega",
+      "time_pt": "Noruega",
+      "selecao_pt": "Noruega",
+      "nome_exibicao": "Noruega",
+      "codigo_pais": "no"
     },
     {
       "grupo": "J",
@@ -9508,7 +11953,12 @@
       "slot": "3J",
       "provisoria": true,
       "posicao_terceiros": 8,
-      "classificado_melhor_terceiro": true
+      "classificado_melhor_terceiro": true,
+      "nome_pt": "Áustria",
+      "time_pt": "Áustria",
+      "selecao_pt": "Áustria",
+      "nome_exibicao": "Áustria",
+      "codigo_pais": "at"
     },
     {
       "grupo": "K",
@@ -9532,7 +11982,12 @@
       "slot": "3K",
       "provisoria": true,
       "posicao_terceiros": 9,
-      "classificado_melhor_terceiro": false
+      "classificado_melhor_terceiro": false,
+      "nome_pt": "Portugal",
+      "time_pt": "Portugal",
+      "selecao_pt": "Portugal",
+      "nome_exibicao": "Portugal",
+      "codigo_pais": "pt"
     },
     {
       "grupo": "L",
@@ -9556,7 +12011,12 @@
       "slot": "3L",
       "provisoria": true,
       "posicao_terceiros": 10,
-      "classificado_melhor_terceiro": false
+      "classificado_melhor_terceiro": false,
+      "nome_pt": "Gana",
+      "time_pt": "Gana",
+      "selecao_pt": "Gana",
+      "nome_exibicao": "Gana",
+      "codigo_pais": "gh"
     },
     {
       "grupo": "A",
@@ -9580,7 +12040,12 @@
       "slot": "3A",
       "provisoria": true,
       "posicao_terceiros": 11,
-      "classificado_melhor_terceiro": false
+      "classificado_melhor_terceiro": false,
+      "nome_pt": "República Tcheca",
+      "time_pt": "República Tcheca",
+      "selecao_pt": "República Tcheca",
+      "nome_exibicao": "República Tcheca",
+      "codigo_pais": "cz"
     },
     {
       "grupo": "D",
@@ -9604,7 +12069,12 @@
       "slot": "3D",
       "provisoria": true,
       "posicao_terceiros": 12,
-      "classificado_melhor_terceiro": false
+      "classificado_melhor_terceiro": false,
+      "nome_pt": "Turquia",
+      "time_pt": "Turquia",
+      "selecao_pt": "Turquia",
+      "nome_exibicao": "Turquia",
+      "codigo_pais": "tr"
     }
   ],
   "gruposTerceirosClassificados": [
@@ -9719,7 +12189,17 @@
         "grupoTerceiro": "C",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Alemanha",
+        "mandante_nome_pt": "Alemanha",
+        "mandante_exibicao": "Alemanha",
+        "mandante_codigo": "de",
+        "mandante_iso": "de",
+        "visitante_pt": "Marrocos",
+        "visitante_nome_pt": "Marrocos",
+        "visitante_exibicao": "Marrocos",
+        "visitante_codigo": "ma",
+        "visitante_iso": "ma"
       },
       {
         "id": "M77",
@@ -9769,7 +12249,17 @@
         "grupoTerceiro": "F",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "França",
+        "mandante_nome_pt": "França",
+        "mandante_exibicao": "França",
+        "mandante_codigo": "fr",
+        "mandante_iso": "fr",
+        "visitante_pt": "Suécia",
+        "visitante_nome_pt": "Suécia",
+        "visitante_exibicao": "Suécia",
+        "visitante_codigo": "se",
+        "visitante_iso": "se"
       },
       {
         "id": "M79",
@@ -9819,7 +12309,17 @@
         "grupoTerceiro": "H",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "México",
+        "mandante_nome_pt": "México",
+        "mandante_exibicao": "México",
+        "mandante_codigo": "mx",
+        "mandante_iso": "mx",
+        "visitante_pt": "Irã",
+        "visitante_nome_pt": "Irã",
+        "visitante_exibicao": "Irã",
+        "visitante_codigo": "ir",
+        "visitante_iso": "ir"
       },
       {
         "id": "M80",
@@ -9869,7 +12369,17 @@
         "grupoTerceiro": "I",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Croácia",
+        "mandante_nome_pt": "Croácia",
+        "mandante_exibicao": "Croácia",
+        "mandante_codigo": "hr",
+        "mandante_iso": "hr",
+        "visitante_pt": "Noruega",
+        "visitante_nome_pt": "Noruega",
+        "visitante_exibicao": "Noruega",
+        "visitante_codigo": "no",
+        "visitante_iso": "no"
       },
       {
         "id": "M81",
@@ -9919,7 +12429,17 @@
         "grupoTerceiro": "B",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Estados Unidos",
+        "mandante_nome_pt": "Estados Unidos",
+        "mandante_exibicao": "Estados Unidos",
+        "mandante_codigo": "us",
+        "mandante_iso": "us",
+        "visitante_pt": "Catar",
+        "visitante_nome_pt": "Catar",
+        "visitante_exibicao": "Catar",
+        "visitante_codigo": "qa",
+        "visitante_iso": "qa"
       },
       {
         "id": "M82",
@@ -9969,7 +12489,17 @@
         "grupoTerceiro": "J",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Cabo Verde",
+        "mandante_nome_pt": "Cabo Verde",
+        "mandante_exibicao": "Cabo Verde",
+        "mandante_codigo": "cv",
+        "mandante_iso": "cv",
+        "visitante_pt": "Áustria",
+        "visitante_nome_pt": "Áustria",
+        "visitante_exibicao": "Áustria",
+        "visitante_codigo": "at",
+        "visitante_iso": "at"
       },
       {
         "id": "M85",
@@ -10019,7 +12549,17 @@
         "grupoTerceiro": "G",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Bósnia e Herzegovina",
+        "mandante_nome_pt": "Bósnia e Herzegovina",
+        "mandante_exibicao": "Bósnia e Herzegovina",
+        "mandante_codigo": "ba",
+        "mandante_iso": "ba",
+        "visitante_pt": "Espanha",
+        "visitante_nome_pt": "Espanha",
+        "visitante_exibicao": "Espanha",
+        "visitante_codigo": "es",
+        "visitante_iso": "es"
       },
       {
         "id": "M87",
@@ -10069,7 +12609,17 @@
         "grupoTerceiro": "E",
         "status": "PROVISORIO",
         "provisoria": true,
-        "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+        "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+        "mandante_pt": "Colômbia",
+        "mandante_nome_pt": "Colômbia",
+        "mandante_exibicao": "Colômbia",
+        "mandante_codigo": "co",
+        "mandante_iso": "co",
+        "visitante_pt": "Equador",
+        "visitante_nome_pt": "Equador",
+        "visitante_exibicao": "Equador",
+        "visitante_codigo": "ec",
+        "visitante_iso": "ec"
       }
     ]
   },
@@ -10122,7 +12672,17 @@
       "grupoTerceiro": "C",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "Alemanha",
+      "mandante_nome_pt": "Alemanha",
+      "mandante_exibicao": "Alemanha",
+      "mandante_codigo": "de",
+      "mandante_iso": "de",
+      "visitante_pt": "Marrocos",
+      "visitante_nome_pt": "Marrocos",
+      "visitante_exibicao": "Marrocos",
+      "visitante_codigo": "ma",
+      "visitante_iso": "ma"
     },
     {
       "id": "M77",
@@ -10172,7 +12732,17 @@
       "grupoTerceiro": "F",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "França",
+      "mandante_nome_pt": "França",
+      "mandante_exibicao": "França",
+      "mandante_codigo": "fr",
+      "mandante_iso": "fr",
+      "visitante_pt": "Suécia",
+      "visitante_nome_pt": "Suécia",
+      "visitante_exibicao": "Suécia",
+      "visitante_codigo": "se",
+      "visitante_iso": "se"
     },
     {
       "id": "M79",
@@ -10222,7 +12792,17 @@
       "grupoTerceiro": "H",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "México",
+      "mandante_nome_pt": "México",
+      "mandante_exibicao": "México",
+      "mandante_codigo": "mx",
+      "mandante_iso": "mx",
+      "visitante_pt": "Irã",
+      "visitante_nome_pt": "Irã",
+      "visitante_exibicao": "Irã",
+      "visitante_codigo": "ir",
+      "visitante_iso": "ir"
     },
     {
       "id": "M80",
@@ -10272,7 +12852,17 @@
       "grupoTerceiro": "I",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "Croácia",
+      "mandante_nome_pt": "Croácia",
+      "mandante_exibicao": "Croácia",
+      "mandante_codigo": "hr",
+      "mandante_iso": "hr",
+      "visitante_pt": "Noruega",
+      "visitante_nome_pt": "Noruega",
+      "visitante_exibicao": "Noruega",
+      "visitante_codigo": "no",
+      "visitante_iso": "no"
     },
     {
       "id": "M81",
@@ -10322,7 +12912,17 @@
       "grupoTerceiro": "B",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "Estados Unidos",
+      "mandante_nome_pt": "Estados Unidos",
+      "mandante_exibicao": "Estados Unidos",
+      "mandante_codigo": "us",
+      "mandante_iso": "us",
+      "visitante_pt": "Catar",
+      "visitante_nome_pt": "Catar",
+      "visitante_exibicao": "Catar",
+      "visitante_codigo": "qa",
+      "visitante_iso": "qa"
     },
     {
       "id": "M82",
@@ -10372,7 +12972,17 @@
       "grupoTerceiro": "J",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "Cabo Verde",
+      "mandante_nome_pt": "Cabo Verde",
+      "mandante_exibicao": "Cabo Verde",
+      "mandante_codigo": "cv",
+      "mandante_iso": "cv",
+      "visitante_pt": "Áustria",
+      "visitante_nome_pt": "Áustria",
+      "visitante_exibicao": "Áustria",
+      "visitante_codigo": "at",
+      "visitante_iso": "at"
     },
     {
       "id": "M85",
@@ -10422,7 +13032,17 @@
       "grupoTerceiro": "G",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "Bósnia e Herzegovina",
+      "mandante_nome_pt": "Bósnia e Herzegovina",
+      "mandante_exibicao": "Bósnia e Herzegovina",
+      "mandante_codigo": "ba",
+      "mandante_iso": "ba",
+      "visitante_pt": "Espanha",
+      "visitante_nome_pt": "Espanha",
+      "visitante_exibicao": "Espanha",
+      "visitante_codigo": "es",
+      "visitante_iso": "es"
     },
     {
       "id": "M87",
@@ -10472,7 +13092,17 @@
       "grupoTerceiro": "E",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "Colômbia",
+      "mandante_nome_pt": "Colômbia",
+      "mandante_exibicao": "Colômbia",
+      "mandante_codigo": "co",
+      "mandante_iso": "co",
+      "visitante_pt": "Equador",
+      "visitante_nome_pt": "Equador",
+      "visitante_exibicao": "Equador",
+      "visitante_codigo": "ec",
+      "visitante_iso": "ec"
     }
   ],
   "confrontosAnexoC": [
@@ -10524,7 +13154,17 @@
       "grupoTerceiro": "C",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "Alemanha",
+      "mandante_nome_pt": "Alemanha",
+      "mandante_exibicao": "Alemanha",
+      "mandante_codigo": "de",
+      "mandante_iso": "de",
+      "visitante_pt": "Marrocos",
+      "visitante_nome_pt": "Marrocos",
+      "visitante_exibicao": "Marrocos",
+      "visitante_codigo": "ma",
+      "visitante_iso": "ma"
     },
     {
       "id": "M77",
@@ -10574,7 +13214,17 @@
       "grupoTerceiro": "F",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "França",
+      "mandante_nome_pt": "França",
+      "mandante_exibicao": "França",
+      "mandante_codigo": "fr",
+      "mandante_iso": "fr",
+      "visitante_pt": "Suécia",
+      "visitante_nome_pt": "Suécia",
+      "visitante_exibicao": "Suécia",
+      "visitante_codigo": "se",
+      "visitante_iso": "se"
     },
     {
       "id": "M79",
@@ -10624,7 +13274,17 @@
       "grupoTerceiro": "H",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "México",
+      "mandante_nome_pt": "México",
+      "mandante_exibicao": "México",
+      "mandante_codigo": "mx",
+      "mandante_iso": "mx",
+      "visitante_pt": "Irã",
+      "visitante_nome_pt": "Irã",
+      "visitante_exibicao": "Irã",
+      "visitante_codigo": "ir",
+      "visitante_iso": "ir"
     },
     {
       "id": "M80",
@@ -10674,7 +13334,17 @@
       "grupoTerceiro": "I",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "Croácia",
+      "mandante_nome_pt": "Croácia",
+      "mandante_exibicao": "Croácia",
+      "mandante_codigo": "hr",
+      "mandante_iso": "hr",
+      "visitante_pt": "Noruega",
+      "visitante_nome_pt": "Noruega",
+      "visitante_exibicao": "Noruega",
+      "visitante_codigo": "no",
+      "visitante_iso": "no"
     },
     {
       "id": "M81",
@@ -10724,7 +13394,17 @@
       "grupoTerceiro": "B",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "Estados Unidos",
+      "mandante_nome_pt": "Estados Unidos",
+      "mandante_exibicao": "Estados Unidos",
+      "mandante_codigo": "us",
+      "mandante_iso": "us",
+      "visitante_pt": "Catar",
+      "visitante_nome_pt": "Catar",
+      "visitante_exibicao": "Catar",
+      "visitante_codigo": "qa",
+      "visitante_iso": "qa"
     },
     {
       "id": "M82",
@@ -10774,7 +13454,17 @@
       "grupoTerceiro": "J",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "Cabo Verde",
+      "mandante_nome_pt": "Cabo Verde",
+      "mandante_exibicao": "Cabo Verde",
+      "mandante_codigo": "cv",
+      "mandante_iso": "cv",
+      "visitante_pt": "Áustria",
+      "visitante_nome_pt": "Áustria",
+      "visitante_exibicao": "Áustria",
+      "visitante_codigo": "at",
+      "visitante_iso": "at"
     },
     {
       "id": "M85",
@@ -10824,7 +13514,17 @@
       "grupoTerceiro": "G",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "Bósnia e Herzegovina",
+      "mandante_nome_pt": "Bósnia e Herzegovina",
+      "mandante_exibicao": "Bósnia e Herzegovina",
+      "mandante_codigo": "ba",
+      "mandante_iso": "ba",
+      "visitante_pt": "Espanha",
+      "visitante_nome_pt": "Espanha",
+      "visitante_exibicao": "Espanha",
+      "visitante_codigo": "es",
+      "visitante_iso": "es"
     },
     {
       "id": "M87",
@@ -10874,7 +13574,23 @@
       "grupoTerceiro": "E",
       "status": "PROVISORIO",
       "provisoria": true,
-      "observacao": "Confronto provisório calculado pelo GS com a classificação atual."
+      "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
+      "mandante_pt": "Colômbia",
+      "mandante_nome_pt": "Colômbia",
+      "mandante_exibicao": "Colômbia",
+      "mandante_codigo": "co",
+      "mandante_iso": "co",
+      "visitante_pt": "Equador",
+      "visitante_nome_pt": "Equador",
+      "visitante_exibicao": "Equador",
+      "visitante_codigo": "ec",
+      "visitante_iso": "ec"
     }
-  ]
+  ],
+  "traducaoSelecoes": {
+    "ativo": true,
+    "idioma": "pt-BR",
+    "modo": "DICIONARIO_LOCAL_SEM_API_EXTERNA",
+    "aviso": "Campos originais mandante/visitante foram preservados. Para exibir em português, o HTML deve usar mandante_pt/visitante_pt quando existirem."
+  }
 }
