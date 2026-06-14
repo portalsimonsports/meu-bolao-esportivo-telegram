@@ -1,9 +1,9 @@
 {
   "ok": true,
   "projeto": "Bolão Futebol Telegram — Portal SimonSports",
-  "versao": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
-  "gerado_em": "14/06/2026 17:12:00",
-  "gerado_ts": 1781467920333,
+  "versao": "V090_JSON_GLOBAL_COPA_E_BOLOES_ESCALAVEL",
+  "gerado_em": "14/06/2026 17:17:16",
+  "gerado_ts": 1781468236591,
   "site": "https://bolaodacopa.portalsimonsports.com/",
   "base_path": "data",
   "leitura": "JSON_ESTATICO_CLOUDFLARE_GITHUB",
