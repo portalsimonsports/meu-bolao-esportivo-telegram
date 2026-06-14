@@ -1,12 +1,12 @@
 {
   "ok": true,
-  "versao": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
+  "versao": "V090_JSON_GLOBAL_COPA_E_BOLOES_ESCALAVEL",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "14/06/2026 17:04:48",
+  "dataHora": "14/06/2026 17:16:17",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
-    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V089_CHAVEAMENTO_ANEXO_C_FIFA_2026&perfil=1",
+    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V090_JSON_GLOBAL_COPA_E_BOLOES_ESCALAVEL&perfil=1",
     "id_bolao": "BOLAO001",
     "id_bolao_solicitado": "BOLAO001",
     "bolaoAtual": {
@@ -94,7 +94,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V090_JSON_GLOBAL_COPA_E_BOLOES_ESCALAVEL",
         "souCriador": false,
         "participantes": 2,
         "jogos": 72
@@ -111,7 +111,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V090_JSON_GLOBAL_COPA_E_BOLOES_ESCALAVEL",
         "souCriador": false,
         "participantes": 2,
         "jogos": 72
@@ -3922,7 +3922,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "14/06/2026 17:05:53",
+    "cacheAtualizadoEm": "14/06/2026 17:17:10",
     "modoDados": "JSON_PUBLICO_ESTATICO_V089_CHAVEAMENTO_GS",
     "classificacaoGrupos": [
       {
@@ -6664,6 +6664,6 @@
     }
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "14/06/2026 17:05:53",
-  "gerado_ts": 1781467553433
+  "gerado_em": "14/06/2026 17:17:10",
+  "gerado_ts": 1781468230879
 }
