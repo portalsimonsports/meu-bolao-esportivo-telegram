@@ -1,0 +1,358 @@
+{
+  "ok": true,
+  "tipo": "BOLAO_LEVE",
+  "projeto": "Bolão Futebol Telegram — Portal SimonSports",
+  "versao": "V090_JSON_GLOBAL_COPA_E_BOLOES_ESCALAVEL",
+  "hotfix": "V090_JSON_GLOBAL_COPA_ESCALAVEL",
+  "id_bolao": "BOLAO20260607182904806",
+  "gerado_em": "14/06/2026 17:35:41",
+  "gerado_ts": 1781469341228,
+  "dados": {
+    "id_bolao": "BOLAO20260607182904806",
+    "bolaoAtual": {
+      "id_bolao": "BOLAO20260607182904806",
+      "nome_bolao": "Bolao da Luisinha",
+      "campeonato_id": "CUP",
+      "status": "ATIVO",
+      "tipo_bolao": "PRIVADO",
+      "codigo_convite": "BRXA2L",
+      "criador_telegram_id": "197139159",
+      "criador_nome": "Simon",
+      "limite_participantes": "",
+      "visibilidade_palpites": "APOS_FECHAMENTO_JOGO"
+    },
+    "ranking": [
+      {
+        "pos": 1,
+        "nome": "🤖 Desafiante IA",
+        "total_pontos": 630,
+        "pontos": "630",
+        "palpites": 8,
+        "medalha": "👑",
+        "classe": "gold",
+        "avatar": "👨🏻"
+      },
+      {
+        "pos": 2,
+        "nome": "Simon",
+        "total_pontos": 410,
+        "pontos": "410",
+        "palpites": 7,
+        "medalha": "🏅",
+        "classe": "silver",
+        "avatar": "👩🏻"
+      }
+    ],
+    "participantes": [],
+    "totalParticipantes": 0,
+    "palpitesLiberados": [
+      {
+        "id_jogo": "dff5182881d55565",
+        "mandante": "Mexico",
+        "visitante": "South Africa",
+        "status_jogo": "FINALIZADO",
+        "palpites": [
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "dff5182881d55565",
+            "telegram_id": "",
+            "nome": "🤖 Desafiante IA",
+            "mandante": "Mexico",
+            "visitante": "South Africa",
+            "palpite_mandante": 3,
+            "palpite_visitante": 0,
+            "placarMandante": 3,
+            "placarVisitante": 0,
+            "pontos": 120,
+            "status": "VALIDO",
+            "data_hora": "11/06/2026 16:00:00",
+            "proprio": false
+          },
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "dff5182881d55565",
+            "telegram_id": "",
+            "nome": "Simon",
+            "mandante": "Mexico",
+            "visitante": "South Africa",
+            "palpite_mandante": 1,
+            "palpite_visitante": 0,
+            "placarMandante": 1,
+            "placarVisitante": 0,
+            "pontos": 120,
+            "status": "VALIDO",
+            "data_hora": "",
+            "proprio": false
+          }
+        ]
+      },
+      {
+        "id_jogo": "01000048ef0bcecc",
+        "mandante": "Korea Republic",
+        "visitante": "Czech Republic",
+        "status_jogo": "FINALIZADO",
+        "palpites": [
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "01000048ef0bcecc",
+            "telegram_id": "",
+            "nome": "🤖 Desafiante IA",
+            "mandante": "Korea Republic",
+            "visitante": "Czech Republic",
+            "palpite_mandante": 0,
+            "palpite_visitante": 2,
+            "placarMandante": 0,
+            "placarVisitante": 2,
+            "pontos": 0,
+            "status": "VALIDO",
+            "data_hora": "11/06/2026 23:00:00",
+            "proprio": false
+          },
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "01000048ef0bcecc",
+            "telegram_id": "",
+            "nome": "Simon",
+            "mandante": "Korea Republic",
+            "visitante": "Czech Republic",
+            "palpite_mandante": 1,
+            "palpite_visitante": 2,
+            "placarMandante": 1,
+            "placarVisitante": 2,
+            "pontos": 0,
+            "status": "VALIDO",
+            "data_hora": "",
+            "proprio": false
+          }
+        ]
+      },
+      {
+        "id_jogo": "4f5e7d9da1657c78",
+        "mandante": "Canada",
+        "visitante": "Bosnia and Herzegovina",
+        "status_jogo": "FINALIZADO",
+        "palpites": [
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "4f5e7d9da1657c78",
+            "telegram_id": "",
+            "nome": "🤖 Desafiante IA",
+            "mandante": "Canada",
+            "visitante": "Bosnia and Herzegovina",
+            "palpite_mandante": 1,
+            "palpite_visitante": 1,
+            "placarMandante": 1,
+            "placarVisitante": 1,
+            "pontos": 250,
+            "status": "VALIDO",
+            "data_hora": "12/06/2026 16:00:00",
+            "proprio": false
+          }
+        ]
+      },
+      {
+        "id_jogo": "e7c37205176a0bd9",
+        "mandante": "United States",
+        "visitante": "Paraguay",
+        "status_jogo": "FINALIZADO",
+        "palpites": [
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "e7c37205176a0bd9",
+            "telegram_id": "",
+            "nome": "🤖 Desafiante IA",
+            "mandante": "United States",
+            "visitante": "Paraguay",
+            "palpite_mandante": 2,
+            "palpite_visitante": 0,
+            "placarMandante": 2,
+            "placarVisitante": 0,
+            "pontos": 100,
+            "status": "VALIDO",
+            "data_hora": "12/06/2026 22:00:00",
+            "proprio": false
+          },
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "e7c37205176a0bd9",
+            "telegram_id": "",
+            "nome": "Simon",
+            "mandante": "United States",
+            "visitante": "Paraguay",
+            "palpite_mandante": 1,
+            "palpite_visitante": 2,
+            "placarMandante": 1,
+            "placarVisitante": 2,
+            "pontos": 0,
+            "status": "VALIDO",
+            "data_hora": "12/06/2026 21:31:29",
+            "proprio": false
+          }
+        ]
+      },
+      {
+        "id_jogo": "9105f73e4fe2c51b",
+        "mandante": "Qatar",
+        "visitante": "Switzerland",
+        "status_jogo": "FINALIZADO",
+        "palpites": [
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "9105f73e4fe2c51b",
+            "telegram_id": "",
+            "nome": "🤖 Desafiante IA",
+            "mandante": "Qatar",
+            "visitante": "Switzerland",
+            "palpite_mandante": 0,
+            "palpite_visitante": 2,
+            "placarMandante": 0,
+            "placarVisitante": 2,
+            "pontos": 0,
+            "status": "VALIDO",
+            "data_hora": "13/06/2026 16:00:00",
+            "proprio": false
+          },
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "9105f73e4fe2c51b",
+            "telegram_id": "",
+            "nome": "Simon",
+            "mandante": "Qatar",
+            "visitante": "Switzerland",
+            "palpite_mandante": 1,
+            "palpite_visitante": 2,
+            "placarMandante": 1,
+            "placarVisitante": 2,
+            "pontos": 0,
+            "status": "VALIDO",
+            "data_hora": "12/06/2026 21:31:49",
+            "proprio": false
+          }
+        ]
+      },
+      {
+        "id_jogo": "ba16cee717032445",
+        "mandante": "Brazil",
+        "visitante": "Morocco",
+        "status_jogo": "FINALIZADO",
+        "palpites": [
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "ba16cee717032445",
+            "telegram_id": "",
+            "nome": "🤖 Desafiante IA",
+            "mandante": "Brazil",
+            "visitante": "Morocco",
+            "palpite_mandante": 2,
+            "palpite_visitante": 1,
+            "placarMandante": 2,
+            "placarVisitante": 1,
+            "pontos": 0,
+            "status": "VALIDO",
+            "data_hora": "13/06/2026 19:00:00",
+            "proprio": false
+          },
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "ba16cee717032445",
+            "telegram_id": "",
+            "nome": "Simon",
+            "mandante": "Brazil",
+            "visitante": "Morocco",
+            "palpite_mandante": 2,
+            "palpite_visitante": 0,
+            "placarMandante": 2,
+            "placarVisitante": 0,
+            "pontos": 0,
+            "status": "VALIDO",
+            "data_hora": "12/06/2026 21:32:10",
+            "proprio": false
+          }
+        ]
+      },
+      {
+        "id_jogo": "f2e0f8216f9efc6d",
+        "mandante": "Haiti",
+        "visitante": "Scotland",
+        "status_jogo": "FINALIZADO",
+        "palpites": [
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "f2e0f8216f9efc6d",
+            "telegram_id": "",
+            "nome": "🤖 Desafiante IA",
+            "mandante": "Haiti",
+            "visitante": "Scotland",
+            "palpite_mandante": 0,
+            "palpite_visitante": 2,
+            "placarMandante": 0,
+            "placarVisitante": 2,
+            "pontos": 120,
+            "status": "VALIDO",
+            "data_hora": "13/06/2026 22:00:00",
+            "proprio": false
+          },
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "f2e0f8216f9efc6d",
+            "telegram_id": "",
+            "nome": "Simon",
+            "mandante": "Haiti",
+            "visitante": "Scotland",
+            "palpite_mandante": 0,
+            "palpite_visitante": 1,
+            "placarMandante": 0,
+            "placarVisitante": 1,
+            "pontos": 250,
+            "status": "VALIDO",
+            "data_hora": "12/06/2026 21:32:26",
+            "proprio": false
+          }
+        ]
+      },
+      {
+        "id_jogo": "60a048c2dfa676ce",
+        "mandante": "Australia",
+        "visitante": "Türkiye",
+        "status_jogo": "FINALIZADO",
+        "palpites": [
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "60a048c2dfa676ce",
+            "telegram_id": "",
+            "nome": "🤖 Desafiante IA",
+            "mandante": "Australia",
+            "visitante": "Türkiye",
+            "palpite_mandante": 1,
+            "palpite_visitante": 1,
+            "placarMandante": 1,
+            "placarVisitante": 1,
+            "pontos": 40,
+            "status": "VALIDO",
+            "data_hora": "14/06/2026 01:00:00",
+            "proprio": false
+          },
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "60a048c2dfa676ce",
+            "telegram_id": "",
+            "nome": "Simon",
+            "mandante": "Australia",
+            "visitante": "Türkiye",
+            "palpite_mandante": 1,
+            "palpite_visitante": 1,
+            "placarMandante": 1,
+            "placarVisitante": 1,
+            "pontos": 40,
+            "status": "VALIDO",
+            "data_hora": "14/06/2026 01:00:00",
+            "proprio": false
+          }
+        ]
+      }
+    ],
+    "meusPalpites": [],
+    "cacheAtualizadoEm": "14/06/2026 17:35:41",
+    "copaGlobalPath": "data/copa_2026_publico.json"
+  }
+}
