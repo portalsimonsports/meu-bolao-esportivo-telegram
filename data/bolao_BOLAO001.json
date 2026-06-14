@@ -5,8 +5,8 @@
   "versao": "V090_JSON_GLOBAL_COPA_E_BOLOES_ESCALAVEL",
   "hotfix": "V090_JSON_GLOBAL_COPA_ESCALAVEL",
   "id_bolao": "BOLAO001",
-  "gerado_em": "14/06/2026 17:22:08",
-  "gerado_ts": 1781468528308,
+  "gerado_em": "14/06/2026 18:37:10",
+  "gerado_ts": 1781473030459,
   "dados": {
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
@@ -368,7 +368,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "14/06/2026 17:22:08",
+    "cacheAtualizadoEm": "14/06/2026 18:37:10",
     "copaGlobalPath": "data/copa_2026_publico.json"
   }
 }
