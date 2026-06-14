@@ -2,11 +2,11 @@
   "ok": true,
   "tipo": "BOLAO_LEVE",
   "projeto": "Bolão Futebol Telegram — Portal SimonSports",
-  "versao": "V090_JSON_GLOBAL_COPA_E_BOLOES_ESCALAVEL",
-  "hotfix": "V090_JSON_GLOBAL_COPA_ESCALAVEL",
+  "versao": "V091_TRADUCAO_SELECOES_PTBR_JSON",
+  "hotfix": "V091_TRADUCAO_SELECOES_PTBR_JSON",
   "id_bolao": "BOLAO20260607185133484",
-  "gerado_em": "14/06/2026 17:50:54",
-  "gerado_ts": 1781470254953,
+  "gerado_em": "14/06/2026 19:09:29",
+  "gerado_ts": 1781474969611,
   "dados": {
     "id_bolao": "BOLAO20260607185133484",
     "bolaoAtual": {
@@ -50,6 +50,10 @@
         "id_jogo": "dff5182881d55565",
         "mandante": "Mexico",
         "visitante": "South Africa",
+        "mandante_pt": "México",
+        "visitante_pt": "África do Sul",
+        "codigoMandante": "mx",
+        "codigoVisitante": "za",
         "status_jogo": "FINALIZADO",
         "palpites": [
           {
@@ -66,7 +70,9 @@
             "pontos": 120,
             "status": "VALIDO",
             "data_hora": "11/06/2026 16:00:00",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "México",
+            "visitante_pt": "África do Sul"
           },
           {
             "id_bolao": "BOLAO20260607185133484",
@@ -82,14 +88,28 @@
             "pontos": 40,
             "status": "VALIDO",
             "data_hora": "",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "México",
+            "visitante_pt": "África do Sul"
           }
-        ]
+        ],
+        "mandante_nome_pt": "México",
+        "mandante_exibicao": "México",
+        "mandante_codigo": "mx",
+        "mandante_iso": "mx",
+        "visitante_nome_pt": "África do Sul",
+        "visitante_exibicao": "África do Sul",
+        "visitante_codigo": "za",
+        "visitante_iso": "za"
       },
       {
         "id_jogo": "01000048ef0bcecc",
         "mandante": "Korea Republic",
         "visitante": "Czech Republic",
+        "mandante_pt": "Coreia do Sul",
+        "visitante_pt": "República Tcheca",
+        "codigoMandante": "kr",
+        "codigoVisitante": "cz",
         "status_jogo": "FINALIZADO",
         "palpites": [
           {
@@ -106,14 +126,28 @@
             "pontos": 0,
             "status": "VALIDO",
             "data_hora": "11/06/2026 23:00:00",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "Coreia do Sul",
+            "visitante_pt": "República Tcheca"
           }
-        ]
+        ],
+        "mandante_nome_pt": "Coreia do Sul",
+        "mandante_exibicao": "Coreia do Sul",
+        "mandante_codigo": "kr",
+        "mandante_iso": "kr",
+        "visitante_nome_pt": "República Tcheca",
+        "visitante_exibicao": "República Tcheca",
+        "visitante_codigo": "cz",
+        "visitante_iso": "cz"
       },
       {
         "id_jogo": "4f5e7d9da1657c78",
         "mandante": "Canada",
         "visitante": "Bosnia and Herzegovina",
+        "mandante_pt": "Canadá",
+        "visitante_pt": "Bósnia e Herzegovina",
+        "codigoMandante": "ca",
+        "codigoVisitante": "ba",
         "status_jogo": "FINALIZADO",
         "palpites": [
           {
@@ -130,14 +164,28 @@
             "pontos": 250,
             "status": "VALIDO",
             "data_hora": "12/06/2026 16:00:00",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "Canadá",
+            "visitante_pt": "Bósnia e Herzegovina"
           }
-        ]
+        ],
+        "mandante_nome_pt": "Canadá",
+        "mandante_exibicao": "Canadá",
+        "mandante_codigo": "ca",
+        "mandante_iso": "ca",
+        "visitante_nome_pt": "Bósnia e Herzegovina",
+        "visitante_exibicao": "Bósnia e Herzegovina",
+        "visitante_codigo": "ba",
+        "visitante_iso": "ba"
       },
       {
         "id_jogo": "e7c37205176a0bd9",
         "mandante": "United States",
         "visitante": "Paraguay",
+        "mandante_pt": "Estados Unidos",
+        "visitante_pt": "Paraguai",
+        "codigoMandante": "us",
+        "codigoVisitante": "py",
         "status_jogo": "FINALIZADO",
         "palpites": [
           {
@@ -154,7 +202,9 @@
             "pontos": 100,
             "status": "VALIDO",
             "data_hora": "12/06/2026 22:00:00",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "Estados Unidos",
+            "visitante_pt": "Paraguai"
           },
           {
             "id_bolao": "BOLAO20260607185133484",
@@ -170,14 +220,28 @@
             "pontos": 120,
             "status": "VALIDO",
             "data_hora": "12/06/2026 19:39:54",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "Estados Unidos",
+            "visitante_pt": "Paraguai"
           }
-        ]
+        ],
+        "mandante_nome_pt": "Estados Unidos",
+        "mandante_exibicao": "Estados Unidos",
+        "mandante_codigo": "us",
+        "mandante_iso": "us",
+        "visitante_nome_pt": "Paraguai",
+        "visitante_exibicao": "Paraguai",
+        "visitante_codigo": "py",
+        "visitante_iso": "py"
       },
       {
         "id_jogo": "9105f73e4fe2c51b",
         "mandante": "Qatar",
         "visitante": "Switzerland",
+        "mandante_pt": "Catar",
+        "visitante_pt": "Suíça",
+        "codigoMandante": "qa",
+        "codigoVisitante": "ch",
         "status_jogo": "FINALIZADO",
         "palpites": [
           {
@@ -194,7 +258,9 @@
             "pontos": 0,
             "status": "VALIDO",
             "data_hora": "13/06/2026 16:00:00",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "Catar",
+            "visitante_pt": "Suíça"
           },
           {
             "id_bolao": "BOLAO20260607185133484",
@@ -210,14 +276,28 @@
             "pontos": 0,
             "status": "VALIDO",
             "data_hora": "12/06/2026 19:40:18",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "Catar",
+            "visitante_pt": "Suíça"
           }
-        ]
+        ],
+        "mandante_nome_pt": "Catar",
+        "mandante_exibicao": "Catar",
+        "mandante_codigo": "qa",
+        "mandante_iso": "qa",
+        "visitante_nome_pt": "Suíça",
+        "visitante_exibicao": "Suíça",
+        "visitante_codigo": "ch",
+        "visitante_iso": "ch"
       },
       {
         "id_jogo": "ba16cee717032445",
         "mandante": "Brazil",
         "visitante": "Morocco",
+        "mandante_pt": "Brasil",
+        "visitante_pt": "Marrocos",
+        "codigoMandante": "br",
+        "codigoVisitante": "ma",
         "status_jogo": "FINALIZADO",
         "palpites": [
           {
@@ -234,7 +314,9 @@
             "pontos": 0,
             "status": "VALIDO",
             "data_hora": "13/06/2026 19:00:00",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "Brasil",
+            "visitante_pt": "Marrocos"
           },
           {
             "id_bolao": "BOLAO20260607185133484",
@@ -250,14 +332,28 @@
             "pontos": 0,
             "status": "VALIDO",
             "data_hora": "12/06/2026 19:45:49",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "Brasil",
+            "visitante_pt": "Marrocos"
           }
-        ]
+        ],
+        "mandante_nome_pt": "Brasil",
+        "mandante_exibicao": "Brasil",
+        "mandante_codigo": "br",
+        "mandante_iso": "br",
+        "visitante_nome_pt": "Marrocos",
+        "visitante_exibicao": "Marrocos",
+        "visitante_codigo": "ma",
+        "visitante_iso": "ma"
       },
       {
         "id_jogo": "f2e0f8216f9efc6d",
         "mandante": "Haiti",
         "visitante": "Scotland",
+        "mandante_pt": "Haiti",
+        "visitante_pt": "Escócia",
+        "codigoMandante": "ht",
+        "codigoVisitante": "gb-sct",
         "status_jogo": "FINALIZADO",
         "palpites": [
           {
@@ -274,7 +370,9 @@
             "pontos": 120,
             "status": "VALIDO",
             "data_hora": "13/06/2026 22:00:00",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "Haiti",
+            "visitante_pt": "Escócia"
           },
           {
             "id_bolao": "BOLAO20260607185133484",
@@ -290,14 +388,28 @@
             "pontos": 120,
             "status": "VALIDO",
             "data_hora": "13/06/2026 22:00:00",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "Haiti",
+            "visitante_pt": "Escócia"
           }
-        ]
+        ],
+        "mandante_nome_pt": "Haiti",
+        "mandante_exibicao": "Haiti",
+        "mandante_codigo": "ht",
+        "mandante_iso": "ht",
+        "visitante_nome_pt": "Escócia",
+        "visitante_exibicao": "Escócia",
+        "visitante_codigo": "gb-sct",
+        "visitante_iso": "gb-sct"
       },
       {
         "id_jogo": "60a048c2dfa676ce",
         "mandante": "Australia",
         "visitante": "Türkiye",
+        "mandante_pt": "Austrália",
+        "visitante_pt": "Turquia",
+        "codigoMandante": "au",
+        "codigoVisitante": "tr",
         "status_jogo": "FINALIZADO",
         "palpites": [
           {
@@ -314,7 +426,9 @@
             "pontos": 40,
             "status": "VALIDO",
             "data_hora": "14/06/2026 01:00:00",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "Austrália",
+            "visitante_pt": "Turquia"
           },
           {
             "id_bolao": "BOLAO20260607185133484",
@@ -330,13 +444,29 @@
             "pontos": 180,
             "status": "VALIDO",
             "data_hora": "14/06/2026 01:00:00",
-            "proprio": false
+            "proprio": false,
+            "mandante_pt": "Austrália",
+            "visitante_pt": "Turquia"
           }
-        ]
+        ],
+        "mandante_nome_pt": "Austrália",
+        "mandante_exibicao": "Austrália",
+        "mandante_codigo": "au",
+        "mandante_iso": "au",
+        "visitante_nome_pt": "Turquia",
+        "visitante_exibicao": "Turquia",
+        "visitante_codigo": "tr",
+        "visitante_iso": "tr"
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "14/06/2026 17:50:54",
+    "cacheAtualizadoEm": "14/06/2026 19:09:29",
     "copaGlobalPath": "data/copa_2026_publico.json"
+  },
+  "traducaoSelecoes": {
+    "ativo": true,
+    "idioma": "pt-BR",
+    "modo": "DICIONARIO_LOCAL_SEM_API_EXTERNA",
+    "aviso": "Campos originais mandante/visitante foram preservados. Para exibir em português, o HTML deve usar mandante_pt/visitante_pt quando existirem."
   }
 }
