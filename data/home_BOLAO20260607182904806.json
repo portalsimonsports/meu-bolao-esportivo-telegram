@@ -3,7 +3,7 @@
   "versao": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "14/06/2026 17:01:17",
+  "dataHora": "14/06/2026 17:07:27",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V089_CHAVEAMENTO_ANEXO_C_FIFA_2026&perfil=1",
@@ -3858,7 +3858,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "14/06/2026 17:02:00",
+    "cacheAtualizadoEm": "14/06/2026 17:08:22",
     "modoDados": "JSON_PUBLICO_ESTATICO_V089_CHAVEAMENTO_GS",
     "classificacaoGrupos": [
       {
@@ -6600,6 +6600,6 @@
     }
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "14/06/2026 17:02:00",
-  "gerado_ts": 1781467320691
+  "gerado_em": "14/06/2026 17:08:22",
+  "gerado_ts": 1781467702708
 }
