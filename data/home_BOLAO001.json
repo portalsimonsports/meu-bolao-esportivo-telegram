@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "versao": "V084_BASE_V055_PUBLICANDO_CORRECOES_V083",
+  "versao": "V085_BASE_V055_PUBLICANDO_ROTINA_RAPIDA_SEM_TRAVA",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "14/06/2026 12:11:33",
+  "dataHora": "14/06/2026 12:16:20",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
-    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V084_BASE_V055_PUBLICANDO_CORRECOES_V083&perfil=1",
+    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V085_BASE_V055_PUBLICANDO_ROTINA_RAPIDA_SEM_TRAVA&perfil=1",
     "id_bolao": "BOLAO001",
     "id_bolao_solicitado": "BOLAO001",
     "bolaoAtual": {
@@ -81,7 +81,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V084_BASE_V055_PUBLICANDO_CORRECOES_V083",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V085_BASE_V055_PUBLICANDO_ROTINA_RAPIDA_SEM_TRAVA",
         "souCriador": false,
         "participantes": 2,
         "jogos": 72
@@ -98,7 +98,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V084_BASE_V055_PUBLICANDO_CORRECOES_V083",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V085_BASE_V055_PUBLICANDO_ROTINA_RAPIDA_SEM_TRAVA",
         "souCriador": false,
         "participantes": 2,
         "jogos": 72
@@ -1989,10 +1989,10 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "14/06/2026 12:12:40",
+    "cacheAtualizadoEm": "14/06/2026 12:17:42",
     "modoDados": "JSON_PUBLICO_ESTATICO"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "14/06/2026 12:12:40",
-  "gerado_ts": 1781449960047
+  "gerado_em": "14/06/2026 12:17:42",
+  "gerado_ts": 1781450262559
 }
