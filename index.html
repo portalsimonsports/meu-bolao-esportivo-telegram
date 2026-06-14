@@ -283,18 +283,18 @@
     }
 
     const CONFIG={
-      VERSAO:'V063_PALPITE_AUTO_IA_GRUPOS_FIFA_INDEX',
+      VERSAO:'V078_ROTINA_V055_PLACAR_STATUS_RANKING_JSON',
       API_URL:API_PARAM||'', // V035: usado somente para gravação; leitura principal vem dos JSONs estáticos.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // Fallback somente para ações de gravação caso o JSON não traga apiUrl.
       ID_BOLAO:idBolaoInicial_(),
       CODIGO_CONVITE:codigoConviteInicial_(),
       ENVIAR_AO_BOT_SEM_API:true,
-      CACHE_TTL_MINUTOS:30,
-      CACHE_MAX_HORAS:24,
+      CACHE_TTL_MINUTOS:2,
+      CACHE_MAX_HORAS:2,
       TELEGRAM_MINIAPP_OFICIAL:'https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo',
       JSON_PUBLICO_ATIVO:true,
       JSON_PUBLICO_BASE:'data',
-      JSON_PUBLICO_TIMEOUT_MS:4500,
+      JSON_PUBLICO_TIMEOUT_MS:6000,
       API_REFRESH_SILENCIOSO:false,
       // V033: abertura pelo menu do Telegram sem id_bolao deve carregar o PERFIL do usuário,
       // não forçar BOLAO001 nem JSON público anônimo.
@@ -604,7 +604,8 @@
       const url=new URL(base+'/'+String(path||'').replace(/^\/+/,''),window.location.href);
       url.searchParams.set('v',CONFIG.VERSAO||'');
       const limpar=String(URL_PARAMS.get('limpar_cache')||'').toLowerCase();
-      if(limpar==='1'||limpar==='sim'||limpar==='true')url.searchParams.set('_',String(Date.now()));
+      const forcarCacheBust = limpar==='1'||limpar==='sim'||limpar==='true'||String(CONFIG.VERSAO||'').indexOf('V078')>=0;
+      if(forcarCacheBust)url.searchParams.set('_',String(Date.now()));
       return url.toString();
     }
 
