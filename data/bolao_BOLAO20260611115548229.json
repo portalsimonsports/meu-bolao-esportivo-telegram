@@ -5,8 +5,8 @@
   "versao": "V091_TRADUCAO_SELECOES_PTBR_JSON",
   "hotfix": "V091_TRADUCAO_SELECOES_PTBR_JSON",
   "id_bolao": "BOLAO20260611115548229",
-  "gerado_em": "14/06/2026 19:22:10",
-  "gerado_ts": 1781475730080,
+  "gerado_em": "14/06/2026 20:06:47",
+  "gerado_ts": 1781478407068,
   "dados": {
     "id_bolao": "BOLAO20260611115548229",
     "bolaoAtual": {
@@ -460,7 +460,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "14/06/2026 19:22:10",
+    "cacheAtualizadoEm": "14/06/2026 20:06:47",
     "copaGlobalPath": "data/copa_2026_publico.json"
   },
   "traducaoSelecoes": {
