@@ -156,9 +156,40 @@
   
     .mini-subbox{margin-top:10px;padding:10px;border:1px solid rgba(15,96,64,.18);border-radius:14px;background:#f6fff9}
     .mini-subbox strong{display:block;margin-bottom:6px;color:#06472d}
-    .palpite-row-publico{display:grid;grid-template-columns:1.2fr auto;gap:4px 10px;align-items:center;padding:7px 0;border-top:1px solid rgba(15,96,64,.12)}
+    .palpite-row-publico{
+      padding:10px 0;
+      border-top:1px solid rgba(15,96,64,.14);
+    }
     .palpite-row-publico:first-of-type{border-top:0}
-    .palpite-row-publico small{grid-column:1 / -1;color:#5b6b63;font-weight:700}
+    .palpite-publico-topo{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      line-height:1.2;
+    }
+    .palpite-publico-nome{
+      min-width:0;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+      color:#05351f;
+      font-weight:1000;
+      font-size:15px;
+    }
+    .palpite-publico-valor{
+      flex:0 0 auto;
+      color:#0b3521;
+      font-weight:1000;
+      font-size:15px;
+      white-space:nowrap;
+    }
+    .palpite-publico-origem{
+      margin-top:4px;
+      color:#5b6b63;
+      font-weight:900;
+      font-size:12px;
+    }
 
   </style>
 </head>
@@ -1266,14 +1297,32 @@
       p=p||{};
       const bruto=String(p.origem||'').toUpperCase();
       const ident=String(p.telegram_id||'')+' '+String(p.nome||'')+' '+String(p.username||'');
-      if(p.desafiante_ia||/DESAFIANTE|VIRTUAL_IA_DESAFIANTE/i.test(ident+' '+bruto))return '🤖 Desafiante IA';
-      if(p.automatico||/AUTO_USUARIO|PALPITE AUTOMATICO|PALPITE_AUTOMATICO|AUTOMATICO/i.test(bruto))return '🤖 Palpite automático';
+      if(p.desafiante_ia||/DESAFIANTE|VIRTUAL_IA_DESAFIANTE/i.test(ident+' '+bruto))return '';
+      if(p.automatico||/AUTO_USUARIO|PALPITE AUTOMATICO|PALPITE_AUTOMATICO|AUTOMATICO/i.test(bruto))return '⚙️ Automático';
       if(/MINIAPP|TELEGRAM|MANUAL|API/i.test(bruto))return '✍️ Manual';
       return '✍️ Manual';
     }
 
     function htmlOrigemPalpite_(p){
-      return '<p style="margin-top:4px"><span class="chip">'+esc(rotuloOrigemPalpite_(p))+'</span></p>';
+      const rotulo=rotuloOrigemPalpite_(p);
+      return rotulo?'<p style="margin-top:4px"><span class="chip">'+esc(rotulo)+'</span></p>':'';
+    }
+
+    function htmlLinhaPalpitePublico_(p){
+      p=p||{};
+      const nome=(p.desafiante_ia||/DESAFIANTE|VIRTUAL_IA_DESAFIANTE/i.test(String(p.telegram_id||'')+' '+String(p.nome||'')+' '+String(p.username||'')+' '+String(p.origem||'')))
+        ? '🤖 Desafiante IA'
+        : (p.nome||p.username||'Participante');
+
+      const rotulo=rotuloOrigemPalpite_(p);
+
+      return '<div class="palpite-row-publico">'+
+        '<div class="palpite-publico-topo">'+
+          '<span class="palpite-publico-nome">'+esc(nome)+'</span>'+
+          '<span class="palpite-publico-valor">'+esc(textoPalpiteComPontos_(p))+'</span>'+
+        '</div>'+
+        (rotulo?'<div class="palpite-publico-origem">'+esc(rotulo)+'</div>':'')+
+      '</div>';
     }
 
     function dedupPalpitesLista_(lista){
@@ -2380,8 +2429,7 @@
 
       return '<div class="mini-subbox"><strong>👥 Palpites do jogo</strong>'+
         lista.map(function(p){
-          var nome=p.desafiante_ia?'🤖 Desafiante IA':(p.nome||p.username||'Participante');
-          return '<div class="palpite-row-publico"><span><b>'+esc(nome)+'</b></span><span>'+esc(textoPalpiteComPontos_(p))+'</span><small>'+esc(rotuloOrigemPalpite_(p))+'</small></div>';
+          return htmlLinhaPalpitePublico_(p);
         }).join('')+
       '</div>';
     }
@@ -2428,10 +2476,11 @@
       let html=htmlBolaoContexto('Palpites públicos deste jogo após o fechamento/início.')+
         '<div class="mini"><div class="game-card-head">'+textoDataHoraStatus(j)+'</div>'+htmlLinhaTimesJogo(j)+'<p>'+esc(aviso)+'</p></div>';
       if(meu)html+='<div class="mini ja-palpitado"><strong>Seu palpite</strong><p class="saved-pick">'+esc(textoPalpiteComPontos_(meu))+'</p>'+htmlOrigemPalpite_(meu)+'</div>';
-      html+=lista.length?lista.map(function(p){
-        const nome=p.desafiante_ia?'🤖 Desafiante IA':(p.nome||p.username||'Participante');
-        return '<div class="mini"><strong>'+esc(nome)+'</strong><p class="saved-pick">Palpite: '+esc(textoPalpiteComPontos_(p))+'</p>'+htmlOrigemPalpite_(p)+'</div>';
-      }).join(''):'<div class="mini"><strong>Nenhum outro participante encontrado.</strong><p>O JSON/API não trouxe adversários válidos para este jogo ainda. Rode a publicação V102 do bolão e limpe o cache se necessário.</p></div>';
+      html+=lista.length?'<div class="mini-subbox"><strong>👥 Palpites do jogo</strong>'+
+        lista.map(function(p){
+          return htmlLinhaPalpitePublico_(p);
+        }).join('')+
+      '</div>':'<div class="mini"><strong>Nenhum outro participante encontrado.</strong><p>O JSON/API não trouxe adversários válidos para este jogo ainda. Rode a publicação do bolão e limpe o cache se necessário.</p></div>';
       html+='<div class="mini-actions"><button class="mini-action secondary" id="atualizarPalpitesJogoV102">Atualizar agora</button></div>';
       openModal('👥 Palpites do jogo',html,'<button class="btn primary" id="ok">Fechar</button>');
       setTimeout(function(){
@@ -3094,3 +3143,4 @@
   </script>
 </body>
 </html>
+
