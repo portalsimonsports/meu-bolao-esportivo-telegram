@@ -321,7 +321,7 @@
     }
 
     const CONFIG={
-      VERSAO:'V107_PALPITES_VISUAL_ID_JOGO_FIX',
+      VERSAO:'V108_PALPITES_SEM_DUPLICIDADE',
       API_URL:API_PARAM||'', // V035: usado somente para gravação; leitura principal vem dos JSONs estáticos.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // Fallback somente para ações de gravação caso o JSON não traga apiUrl.
       ID_BOLAO:idBolaoInicial_(),
@@ -700,7 +700,7 @@
       const url=new URL(base+'/'+String(path||'').replace(/^\/+/,''),window.location.href);
       url.searchParams.set('v',CONFIG.VERSAO||'');
       const limpar=String(URL_PARAMS.get('limpar_cache')||'').toLowerCase();
-      const forcarCacheBust = limpar==='1'||limpar==='sim'||limpar==='true'||String(CONFIG.VERSAO||'').indexOf('V078')>=0||String(CONFIG.VERSAO||'').indexOf('V102')>=0||String(CONFIG.VERSAO||'').indexOf('V107')>=0;
+      const forcarCacheBust = limpar==='1'||limpar==='sim'||limpar==='true'||String(CONFIG.VERSAO||'').indexOf('V078')>=0||String(CONFIG.VERSAO||'').indexOf('V102')>=0;
       if(forcarCacheBust)url.searchParams.set('_',String(Date.now()));
       return url.toString();
     }
@@ -1420,6 +1420,26 @@
         automatico:p.automatico===true
       });
       return normalizarPalpiteApi(base);
+    }
+
+    function listaJaTemMeuPalpite_(lista, meu, j){
+      const alvo=normalizarPalpiteApi(meu);
+      if(!alvo)return false;
+      const nomeAlvo=normalizarChave(alvo.nome||alvo.username||estado.usuario.nome||'');
+      const placarAlvo=textoPalpiteLocal(alvo);
+      const tgAlvo=String(alvo.telegram_id||estado.usuario.idTelegram||'').trim();
+      return (Array.isArray(lista)?lista:[]).some(function(item){
+        const p=normalizarPalpiteApi(item);
+        if(!p)return false;
+        if(j && !palpiteMesmoJogo_(p,j))return false;
+        const tg=String(p.telegram_id||'').trim();
+        const nome=normalizarChave(p.nome||p.username||'');
+        const placar=textoPalpiteLocal(p);
+        const mesmoTelegram=tgAlvo&&tg&&tgAlvo===tg;
+        const mesmoNome=!!nomeAlvo&&!!nome&&nomeAlvo===nome;
+        const mesmoPlacar=placarAlvo&&placar&&placarAlvo===placar;
+        return mesmoTelegram || (mesmoNome&&mesmoPlacar);
+      });
     }
 
     function palpitesPublicosDoJogoLocal_(j,telegramExcluir,extraPalpiteUsuario){
@@ -2588,14 +2608,13 @@
 
 
     function htmlPalpitesPublicosResumoNoCard_(j,telegramExcluir,palpiteUsuario){
-      if(!j)return '';
-      const liberado=palpitesPublicosLiberadosLocal(j);
-      if(!liberado&&palpiteUsuario){
-        const meu=palpiteUsuarioComoPublico_(palpiteUsuario,j);
-        return meu?'<div class="mini-subbox"><strong>👥 Palpites do jogo</strong>'+htmlLinhaPalpitePublico_(meu)+'</div>':'';
+      if(!j||!palpitesPublicosLiberadosLocal(j))return '';
+      var listaBase=palpitesPublicosDoJogoLocal_(j,telegramExcluir);
+      if(palpiteUsuario&&!listaJaTemMeuPalpite_(listaBase,palpiteUsuario,j)){
+        var meuPublico=palpiteUsuarioComoPublico_(palpiteUsuario,j);
+        if(meuPublico)listaBase=listaBase.concat([meuPublico]);
       }
-      if(!liberado)return '';
-      var lista=palpitesPublicosDoJogoLocal_(j,telegramExcluir,palpiteUsuario).sort(function(a,b){
+      var lista=dedupPalpitesLista_(listaBase).sort(function(a,b){
         if(a.desafiante_ia&&!b.desafiante_ia)return -1;
         if(!a.desafiante_ia&&b.desafiante_ia)return 1;
         return String(a.nome||'').localeCompare(String(b.nome||''));
@@ -2642,7 +2661,14 @@
 
       const meuLocal=getPalpiteLocal(j);
       const meu=meuLocal&&textoPalpiteLocal(meuLocal)?meuLocal:meuApi;
-      const lista=dedupPalpitesLista_(apiLista.concat(localLista).concat(meu?[palpiteUsuarioComoPublico_(meu,j)]:[])).filter(function(p){
+      let listaBase=apiLista.concat(localLista).filter(function(p){
+        return palpiteMesmoJogo_(p,j);
+      });
+      if(meu&&!listaJaTemMeuPalpite_(listaBase,meu,j)){
+        const meuPublico=palpiteUsuarioComoPublico_(meu,j);
+        if(meuPublico)listaBase=listaBase.concat([meuPublico]);
+      }
+      const lista=dedupPalpitesLista_(listaBase).filter(function(p){
         return palpiteMesmoJogo_(p,j);
       }).sort(function(a,b){
         if(a.desafiante_ia&&!b.desafiante_ia)return -1;
