@@ -3,8 +3,8 @@
   "versao": "V114_PUBLICACAO_PALPITES_TELEGRAM_SEPARADO",
   "hotfix_v114": "V114_PUBLICACAO_PALPITES_HOME_E_BOLAO",
   "id_bolao": "BOLAO001",
-  "gerado_em": "15/06/2026 20:36:19",
-  "gerado_ts": 1781566579921,
+  "gerado_em": "15/06/2026 20:50:28",
+  "gerado_ts": 1781567428886,
   "dados": {
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
@@ -11201,6 +11201,6 @@
       }
     ],
     "resultados": [],
-    "cacheAtualizadoEm": "15/06/2026 20:36:19"
+    "cacheAtualizadoEm": "15/06/2026 20:50:28"
   }
 }
