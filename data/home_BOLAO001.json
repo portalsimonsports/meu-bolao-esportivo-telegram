@@ -1,12 +1,12 @@
 {
   "ok": true,
-  "versao": "V106D_RANKING_RAPIDO_CRITERIO_SEM_DUPLICAR",
+  "versao": "V107_CALCULO_PONTUACAO_REVISADO",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "15/06/2026 11:16:53",
+  "dataHora": "15/06/2026 11:21:03",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
-    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V106D_RANKING_RAPIDO_CRITERIO_SEM_DUPLICAR&perfil=1",
+    "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V107_CALCULO_PONTUACAO_REVISADO&perfil=1",
     "id_bolao": "BOLAO001",
     "id_bolao_solicitado": "BOLAO001",
     "bolaoAtual": {
@@ -104,7 +104,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V106D_RANKING_RAPIDO_CRITERIO_SEM_DUPLICAR",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V107_CALCULO_PONTUACAO_REVISADO",
         "souCriador": false,
         "participantes": 2,
         "jogos": 72
@@ -121,7 +121,7 @@
         "codigo_convite": "PUBLICO",
         "link_convite": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
         "link_convite_oficial": "https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo?startapp=BOLAO001_PUBLICO",
-        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V106D_RANKING_RAPIDO_CRITERIO_SEM_DUPLICAR",
+        "link_convite_site": "https://bolaodacopa.portalsimonsports.com/?id_bolao=BOLAO001&codigo_convite=PUBLICO&v=V107_CALCULO_PONTUACAO_REVISADO",
         "souCriador": false,
         "participantes": 2,
         "jogos": 72
@@ -6620,7 +6620,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "15/06/2026 11:18:49",
+    "cacheAtualizadoEm": "15/06/2026 11:22:24",
     "modoDados": "JSON_PUBLICO_ESTATICO_V091_TRADUCAO_PTBR",
     "classificacaoGrupos": [
       {
@@ -13034,11 +13034,11 @@
         ]
       }
     ],
-    "gerado_em": "15/06/2026 11:18:49"
+    "gerado_em": "15/06/2026 11:22:24"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "15/06/2026 11:18:49",
-  "gerado_ts": 1781533129974,
+  "gerado_em": "15/06/2026 11:22:24",
+  "gerado_ts": 1781533344316,
   "traducaoSelecoes": {
     "ativo": true,
     "idioma": "pt-BR",
