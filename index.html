@@ -321,7 +321,7 @@
     }
 
     const CONFIG={
-      VERSAO:'V102_INDEX_RANKING_PALPITES_PUBLICOS_ORIGEM',
+      VERSAO:'V107_PALPITES_VISUAL_ID_JOGO_FIX',
       API_URL:API_PARAM||'', // V035: usado somente para gravação; leitura principal vem dos JSONs estáticos.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // Fallback somente para ações de gravação caso o JSON não traga apiUrl.
       ID_BOLAO:idBolaoInicial_(),
@@ -700,7 +700,7 @@
       const url=new URL(base+'/'+String(path||'').replace(/^\/+/,''),window.location.href);
       url.searchParams.set('v',CONFIG.VERSAO||'');
       const limpar=String(URL_PARAMS.get('limpar_cache')||'').toLowerCase();
-      const forcarCacheBust = limpar==='1'||limpar==='sim'||limpar==='true'||String(CONFIG.VERSAO||'').indexOf('V078')>=0||String(CONFIG.VERSAO||'').indexOf('V102')>=0;
+      const forcarCacheBust = limpar==='1'||limpar==='sim'||limpar==='true'||String(CONFIG.VERSAO||'').indexOf('V078')>=0||String(CONFIG.VERSAO||'').indexOf('V102')>=0||String(CONFIG.VERSAO||'').indexOf('V107')>=0;
       if(forcarCacheBust)url.searchParams.set('_',String(Date.now()));
       return url.toString();
     }
@@ -877,6 +877,73 @@
       return (pacote&&pacote.dados)?pacote.dados:(pacote||{});
     }
 
+    // V107: centraliza os palpites públicos por id_jogo.
+    // A tela nunca deve depender de cursor/último jogo publicado; a chave correta é id_bolao + id_jogo.
+    function adicionarPalpitesNoMapaPorJogo_(mapa,idj,fonte){
+      idj=String(idj||'').trim();
+      if(!idj)return;
+      let lista=[];
+      if(Array.isArray(fonte))lista=fonte;
+      else if(fonte&&Array.isArray(fonte.palpites))lista=fonte.palpites;
+      else if(fonte&&Array.isArray(fonte.palpitesPublicos))lista=fonte.palpitesPublicos;
+      else if(fonte&&Array.isArray(fonte.palpitesOutros))lista=fonte.palpitesOutros;
+      else if(fonte&&Array.isArray(fonte.palpitesParticipantes))lista=fonte.palpitesParticipantes;
+      else if(fonte&&typeof fonte==='object')lista=[fonte];
+      if(!lista.length)return;
+      if(!mapa[idj])mapa[idj]=[];
+      lista.forEach(function(p){
+        if(!p)return;
+        const normal=normalizarPalpiteApi(Object.assign({},p,{id_jogo:p.id_jogo||idj,id_bolao:p.id_bolao||CONFIG.ID_BOLAO}));
+        if(normal&&String(normal.id_jogo)===idj)mapa[idj].push(normal);
+      });
+    }
+
+    function mapaPalpitesPublicosPorJogo_(dados){
+      dados=dados||{};
+      const mapa={};
+      function incluirFonte(fonte){
+        if(!fonte)return;
+        if(Array.isArray(fonte)){
+          fonte.forEach(function(item){
+            if(!item)return;
+            const idj=String(item.id_jogo||item.id||'').trim();
+            if(Array.isArray(item.palpites)||Array.isArray(item.palpitesPublicos)||Array.isArray(item.palpitesOutros)||Array.isArray(item.palpitesParticipantes))adicionarPalpitesNoMapaPorJogo_(mapa,idj,item);
+            else if(idj)adicionarPalpitesNoMapaPorJogo_(mapa,idj,[item]);
+          });
+          return;
+        }
+        if(typeof fonte==='object'){
+          Object.keys(fonte).forEach(function(idj){adicionarPalpitesNoMapaPorJogo_(mapa,idj,fonte[idj]);});
+        }
+      }
+      incluirFonte(dados.palpitesLiberados);
+      incluirFonte(dados.palpitesPorJogo);
+      incluirFonte(dados.palpites_por_jogo);
+      incluirFonte(dados.palpitesPublicosPorJogo);
+      incluirFonte(dados.palpites_publicos_por_jogo);
+      incluirFonte(dados.palpitesPublicos);
+      Object.keys(mapa).forEach(function(idj){mapa[idj]=dedupPalpitesLista_(mapa[idj]);});
+      return mapa;
+    }
+
+    function aplicarPalpitesPublicosEmJogos_(jogos,dados){
+      const mapa=mapaPalpitesPublicosPorJogo_(dados||{});
+      if(!Array.isArray(jogos)||!Object.keys(mapa).length)return jogos;
+      return jogos.map(function(j){
+        const idj=String(j&&j.id_jogo||j&&j.id||'').trim();
+        if(!idj||!mapa[idj]||!mapa[idj].length)return j;
+        const atuais=[];
+        ['palpitesPublicos','palpitesOutros','palpitesParticipantes','palpites'].forEach(function(k){if(Array.isArray(j[k]))atuais.push.apply(atuais,j[k]);});
+        const lista=dedupPalpitesLista_(atuais.concat(mapa[idj])).filter(function(p){return String(p.id_jogo||'')===idj;});
+        return Object.assign({},j,{
+          palpitesPublicos:lista,
+          palpitesOutros:lista,
+          palpitesParticipantes:lista,
+          palpitesPublicosLiberados:true
+        });
+      });
+    }
+
     async function carregarCopaGlobalEstatico(force){
       if(!force&&JSON_ESTATICO_MEM.copaGlobal)return JSON_ESTATICO_MEM.copaGlobal;
       const copa=await fetchJsonComTimeout(jsonPublicoCopaGlobalUrl(),CONFIG.JSON_PUBLICO_TIMEOUT_MS||4500);
@@ -1003,6 +1070,7 @@
       const todosPalpites=Array.isArray(dPerfil.meusPalpites)?dPerfil.meusPalpites:[];
       dados.meusPalpites=todosPalpites.filter(function(p){return String(p.id_bolao||'')===String(dados.id_bolao)});
       dados.bolaoAtual=dados.boloes.find(function(b){return String(b.id_bolao)===String(dados.id_bolao)})||dados.bolaoAtual||null;
+      dados.jogos=aplicarPalpitesPublicosEmJogos_(dados.jogos,dados);
       return dados;
     }
 
@@ -1052,19 +1120,7 @@
       dados.meusPalpites=todosPalpites.filter(function(p){return String(p.id_bolao||'')===String(id)});
       dados.bolaoAtual=dados.boloes.find(function(b){return String(b.id_bolao)===String(id)})||bolao.bolaoAtual||dados.bolaoAtual||null;
 
-      const porJogo={};
-      (dados.palpitesLiberados||[]).forEach(function(p){if(p&&p.id_jogo)porJogo[String(p.id_jogo)]=p;});
-      dados.jogos=dados.jogos.map(function(j){
-        const idj=String(j.id_jogo||j.id||'');
-        const extra=porJogo[idj];
-        if(!extra)return j;
-        return Object.assign({},j,{
-          palpitesPublicos:extra.palpites||extra.palpitesPublicos||[],
-          palpitesOutros:extra.palpites||extra.palpitesOutros||[],
-          palpitesParticipantes:extra.palpites||extra.palpitesParticipantes||[],
-          palpitesPublicosLiberados:true
-        });
-      });
+      dados.jogos=aplicarPalpitesPublicosEmJogos_(dados.jogos,dados);
       return dados;
     }
 
@@ -1330,22 +1386,55 @@
       (Array.isArray(lista)?lista:[]).forEach(function(p){
         const n=normalizarPalpiteApi(p);
         if(!n)return;
-        const k=String(n.telegram_id||n.nome||'')+'|'+String(n.id_jogo||'')+'|'+textoPalpiteLocal(n);
-        if(!mapa[k])mapa[k]=n;
+        const ident=String(n.telegram_id||'').trim()
+          ? ('TG:'+String(n.telegram_id||'').trim())
+          : ('NOME:'+normalizarChave(n.nome||n.username||'')+'|'+textoPalpiteLocal(n));
+        const k=String(n.id_bolao||CONFIG.ID_BOLAO)+'|'+String(n.id_jogo||'')+'|'+ident;
+        if(!mapa[k] || (!pontosPalpiteTexto_(mapa[k])&&pontosPalpiteTexto_(n)))mapa[k]=n;
       });
       return Object.values(mapa);
     }
 
-    function palpitesPublicosDoJogoLocal_(j,telegramExcluir){
+    function palpiteMesmoJogo_(p,j){
+      if(!p||!j)return false;
+      const idj=String(idJogo(j)||'').trim();
+      const pid=String(p.id_jogo||p.id||'').trim();
+      if(idj&&pid)return pid===idj;
+      const pm=normalizarTextoPais(p.mandante||p.time_mandante||((p.jogo&&p.jogo.mandante)||''));
+      const pv=normalizarTextoPais(p.visitante||p.time_visitante||((p.jogo&&p.jogo.visitante)||''));
+      if(pm&&pv){
+        return pm===normalizarTextoPais(j.mandante)&&pv===normalizarTextoPais(j.visitante);
+      }
+      return false;
+    }
+
+    function palpiteUsuarioComoPublico_(p,j){
+      if(!p)return null;
+      const base=Object.assign({},p,{
+        id_bolao:p.id_bolao||(j&&j.id_bolao)||CONFIG.ID_BOLAO,
+        id_jogo:p.id_jogo||idJogo(j),
+        telegram_id:p.telegram_id||estado.usuario.idTelegram||'',
+        nome:p.nome||((p.usuario&&p.usuario.nome)||estado.usuario.nome||'Você'),
+        username:p.username||estado.usuario.username||'',
+        origem:p.origem||(p.automatico?'AUTO_USUARIO':'MANUAL_MINIAPP'),
+        automatico:p.automatico===true
+      });
+      return normalizarPalpiteApi(base);
+    }
+
+    function palpitesPublicosDoJogoLocal_(j,telegramExcluir,extraPalpiteUsuario){
       if(!j)return [];
       const fontes=[];
       ['palpitesPublicos','palpitesOutros','palpitesParticipantes','palpites'].forEach(function(k){
         if(Array.isArray(j[k]))fontes.push.apply(fontes,j[k]);
       });
+      const extra=Array.isArray(extraPalpiteUsuario)?extraPalpiteUsuario:[extraPalpiteUsuario];
+      extra.filter(Boolean).forEach(function(p){fontes.push(palpiteUsuarioComoPublico_(p,j));});
       const idj=String(idJogo(j));
       const uid=String(telegramExcluir||'');
-      return dedupPalpitesLista_(fontes).filter(function(p){
-        if(String(p.id_jogo||idj)!==idj)return false;
+      const preparadas=fontes.filter(Boolean).map(function(p){return Object.assign({},p,{id_jogo:p.id_jogo||idj,id_bolao:p.id_bolao||j.id_bolao||CONFIG.ID_BOLAO});});
+      return dedupPalpitesLista_(preparadas).filter(function(p){
+        if(!palpiteMesmoJogo_(p,j))return false;
         if(uid && String(p.telegram_id||'')===uid)return false;
         return true;
       });
@@ -2203,6 +2292,89 @@
       return '<div class="mini"><strong>'+esc(g.nome)+'</strong><div class="copa-class-table">'+header+linhas+'</div></div>';
     }
 
+
+    function htmlMelhoresTerceirosCopa(grupos){
+      const terceiros=[];
+
+      (grupos||[]).forEach(function(g){
+        const tabela=tabelaGrupoCopa(g);
+        const terceiro=tabela&&tabela[2];
+        if(!terceiro||!terceiro.time)return;
+
+        const nomeGrupo=String(g.nome||'').replace(/^Grupo\s*/i,'').trim() || '';
+        terceiros.push({
+          grupo:nomeGrupo,
+          time:terceiro.time,
+          pts:Number(terceiro.pts||0),
+          j:Number(terceiro.j||0),
+          v:Number(terceiro.v||0),
+          e:Number(terceiro.e||0),
+          d:Number(terceiro.d||0),
+          gp:Number(terceiro.gp||0),
+          gc:Number(terceiro.gc||0),
+          sg:Number(terceiro.sg||0),
+          raw:terceiro
+        });
+      });
+
+      if(!terceiros.length)return '';
+
+      terceiros.sort(function(a,b){
+        return (b.pts-a.pts)||
+               (b.sg-a.sg)||
+               (b.gp-a.gp)||
+               (a.gc-b.gc)||
+               String(nomeTimeClassificacao_(a.raw)).localeCompare(String(nomeTimeClassificacao_(b.raw)));
+      });
+
+      const classificados=new Set((estado.gruposTerceirosClassificados||[]).map(function(x){return String(x||'').toUpperCase()}));
+      const eliminados=new Set((estado.gruposTerceirosEliminados||[]).map(function(x){return String(x||'').toUpperCase()}));
+
+      const linhas=terceiros.map(function(r,idx){
+        const letra=String(r.grupo||'').toUpperCase();
+        let status=idx<8?'Classifica':'Eliminado';
+
+        if(classificados.has(letra))status='Classifica';
+        if(eliminados.has(letra))status='Eliminado';
+
+        return '<div class="copa-class-row">'+
+          '<span class="copa-class-cell">'+(idx+1)+'</span>'+
+          '<span class="sel">'+flagTimeHtml(r.time)+' <span>'+esc(nomeTimeClassificacao_(r.raw))+'</span></span>'+
+          '<span class="copa-class-cell">'+esc(letra)+'</span>'+
+          '<span class="copa-class-cell">'+r.pts+'</span>'+
+          '<span class="copa-class-cell extra">'+r.j+'</span>'+
+          '<span class="copa-class-cell extra">'+r.v+'</span>'+
+          '<span class="copa-class-cell extra">'+r.e+'</span>'+
+          '<span class="copa-class-cell extra">'+r.d+'</span>'+
+          '<span class="copa-class-cell extra">'+r.gp+'</span>'+
+          '<span class="copa-class-cell extra">'+r.gc+'</span>'+
+          '<span class="copa-class-cell">'+r.sg+'</span>'+
+          '<span class="copa-class-cell">'+esc(status)+'</span>'+
+        '</div>';
+      }).join('');
+
+      const header='<div class="copa-class-row header">'+
+        '<span>#</span>'+
+        '<span>Seleção</span>'+
+        '<span>Grupo</span>'+
+        '<span>P</span>'+
+        '<span class="copa-class-cell extra">J</span>'+
+        '<span class="copa-class-cell extra">V</span>'+
+        '<span class="copa-class-cell extra">E</span>'+
+        '<span class="copa-class-cell extra">D</span>'+
+        '<span class="copa-class-cell extra">GP</span>'+
+        '<span class="copa-class-cell extra">GC</span>'+
+        '<span>SG</span>'+
+        '<span>Status</span>'+
+      '</div>';
+
+      const nota=(estado.anexoC&&estado.anexoC.chave)
+        ? '<p>Ranking provisório dos terceiros colocados. Os 8 primeiros avançam. Anexo C: chave '+esc(estado.anexoC.chave)+'.</p>'
+        : '<p>Ranking provisório dos terceiros colocados. Os 8 primeiros avançam para a fase eliminatória.</p>';
+
+      return '<div class="mini"><strong>⭐ Melhores 3º colocados</strong>'+nota+'<div class="copa-class-table">'+header+linhas+'</div></div>';
+    }
+
     function mapaChaveamentoAnexoCJson_(){
       const arr=Array.isArray(estado.chaveamentoAnexoC)?estado.chaveamentoAnexoC:[];
       const mapa={};
@@ -2251,7 +2423,7 @@
       }else if(tab==='jogos'){
         corpo+=grupos.map(function(g){return '<div class="mini"><strong>'+esc(g.nome)+'</strong><p>Jogos da fase de grupos.</p></div>'+g.jogos.slice().sort(function(a,b){return millisJogo(a)-millisJogo(b)}).map(function(j){return htmlJogoCopaLinha(j,{semFase:true})}).join('')}).join('');
       }else if(tab==='classificacao'){
-        corpo+=grupos.map(htmlClassificacaoGrupoCopa).join('');
+        corpo+=grupos.map(htmlClassificacaoGrupoCopa).join('')+htmlMelhoresTerceirosCopa(grupos);
       }else if(tab==='chaveamento'){
         const usados={}; grupos.forEach(function(g){(g.jogos||[]).forEach(function(j){usados[idJogo(j)]=true})});
         const mata=jogosOrdenadosCopa().filter(function(j){return !usados[idJogo(j)]});
@@ -2415,19 +2587,25 @@
 
 
 
-    function htmlPalpitesPublicosResumoNoCard_(j,telegramExcluir){
-      if(!j||!palpitesPublicosLiberadosLocal(j))return '';
-      var lista=palpitesPublicosDoJogoLocal_(j,telegramExcluir).sort(function(a,b){
+    function htmlPalpitesPublicosResumoNoCard_(j,telegramExcluir,palpiteUsuario){
+      if(!j)return '';
+      const liberado=palpitesPublicosLiberadosLocal(j);
+      if(!liberado&&palpiteUsuario){
+        const meu=palpiteUsuarioComoPublico_(palpiteUsuario,j);
+        return meu?'<div class="mini-subbox"><strong>👥 Palpites do jogo</strong>'+htmlLinhaPalpitePublico_(meu)+'</div>':'';
+      }
+      if(!liberado)return '';
+      var lista=palpitesPublicosDoJogoLocal_(j,telegramExcluir,palpiteUsuario).sort(function(a,b){
         if(a.desafiante_ia&&!b.desafiante_ia)return -1;
         if(!a.desafiante_ia&&b.desafiante_ia)return 1;
         return String(a.nome||'').localeCompare(String(b.nome||''));
       });
 
       if(!lista.length){
-        return '<div class="mini-subbox"><strong>👥 Palpites do jogo</strong><p>Nenhum outro palpite publicado ainda.</p></div>';
+        return '<div class="mini-subbox"><strong>👥 Palpites do jogo</strong><p>Nenhum palpite publicado ainda.</p></div>';
       }
 
-      return '<div class="mini-subbox"><strong>👥 Palpites do jogo</strong>'+
+      return '<div class="mini-subbox"><strong>👥 Palpites do jogo</strong>'+ 
         lista.map(function(p){
           return htmlLinhaPalpitePublico_(p);
         }).join('')+
@@ -2435,57 +2613,56 @@
     }
 
     async function abrirPalpitesPublicosJogo(id){
-      let j=(estado.jogos||[]).find(function(x){return idJogo(x)===String(id)});
+      const idSolicitado=String(id||'').trim();
+      let j=(estado.jogos||[]).find(function(x){return idJogo(x)===idSolicitado});
       if(!j)return toastMsg('Jogo não localizado.');
       atualizarJogoFechadoLocal_(j);
       if(!palpitesPublicosLiberadosLocal(j))return toastMsg('Os palpites dos participantes só abrem após o fechamento do jogo.');
 
       openModal('👥 Palpites do jogo','<div class="mini"><strong>Atualizando dados do bolão...</strong><p>Carregando JSON recente e palpites públicos.</p></div>','<button class="btn primary" id="ok">Fechar</button>');
 
-      // V102: força leitura recente antes de montar a tela. Evita ranking/palpites presos no cache local.
+      // V107: força leitura recente, mas mantém a seleção pelo id_jogo clicado.
       await recarregarJsonBolaoAtualForcadoV102_(true);
-      j=(estado.jogos||[]).find(function(x){return idJogo(x)===String(id)})||j;
+      j=(estado.jogos||[]).find(function(x){return idJogo(x)===idSolicitado})||j;
       atualizarJogoFechadoLocal_(j);
 
-      const localLista=palpitesPublicosDoJogoLocal_(j,estado.usuario.idTelegram);
+      const localLista=palpitesPublicosDoJogoLocal_(j,'');
       let apiLista=[];
       let meuApi=null;
       let liberado=palpitesPublicosLiberadosLocal(j);
       try{
         const r=await chamarApiAcao('obterPalpitesJogo',{id_bolao:j.id_bolao||CONFIG.ID_BOLAO,id_jogo:idJogo(j),telegram_id:estado.usuario.idTelegram},{timeoutMs:18000,retries:0});
-        apiLista=Array.isArray(r&&r.palpites)?r.palpites:[];
+        apiLista=(Array.isArray(r&&r.palpites)?r.palpites:[]).map(function(p){return normalizarPalpiteApi(p);}).filter(function(p){return p&&String(p.id_jogo||'')===String(idJogo(j));});
         meuApi=r&&r.meuPalpite?normalizarPalpiteApi(r.meuPalpite):null;
+        if(meuApi&&String(meuApi.id_jogo||'')!==String(idJogo(j)))meuApi=null;
         liberado=(r&&r.palpitesPublicosLiberados)||liberado;
       }catch(e){
         console.warn('API de palpites demorou/falhou; usando JSON público/local.',e);
       }
 
-      const lista=dedupPalpitesLista_(apiLista.concat(localLista)).filter(function(p){
-        if(String(p.id_jogo||'') && String(p.id_jogo)!==String(idJogo(j)))return false;
-        if(estado.usuario.idTelegram && String(p.telegram_id||'')===String(estado.usuario.idTelegram))return false;
-        return true;
+      const meuLocal=getPalpiteLocal(j);
+      const meu=meuLocal&&textoPalpiteLocal(meuLocal)?meuLocal:meuApi;
+      const lista=dedupPalpitesLista_(apiLista.concat(localLista).concat(meu?[palpiteUsuarioComoPublico_(meu,j)]:[])).filter(function(p){
+        return palpiteMesmoJogo_(p,j);
       }).sort(function(a,b){
         if(a.desafiante_ia&&!b.desafiante_ia)return -1;
         if(!a.desafiante_ia&&b.desafiante_ia)return 1;
         return String(a.nome||'').localeCompare(String(b.nome||''));
       });
 
-      const meuLocal=getPalpiteLocal(j);
-      const meu=meuLocal&&textoPalpiteLocal(meuLocal)?meuLocal:meuApi;
       const aviso=liberado?'Palpites públicos liberados para este jogo.':'Palpites ainda não liberados pelo GS.';
       let html=htmlBolaoContexto('Palpites públicos deste jogo após o fechamento/início.')+
         '<div class="mini"><div class="game-card-head">'+textoDataHoraStatus(j)+'</div>'+htmlLinhaTimesJogo(j)+'<p>'+esc(aviso)+'</p></div>';
-      if(meu)html+='<div class="mini ja-palpitado"><strong>Seu palpite</strong><p class="saved-pick">'+esc(textoPalpiteComPontos_(meu))+'</p>'+htmlOrigemPalpite_(meu)+'</div>';
-      html+=lista.length?'<div class="mini-subbox"><strong>👥 Palpites do jogo</strong>'+
+      html+=lista.length?'<div class="mini-subbox"><strong>👥 Palpites do jogo</strong>'+ 
         lista.map(function(p){
           return htmlLinhaPalpitePublico_(p);
         }).join('')+
-      '</div>':'<div class="mini"><strong>Nenhum outro participante encontrado.</strong><p>O JSON/API não trouxe adversários válidos para este jogo ainda. Rode a publicação do bolão e limpe o cache se necessário.</p></div>';
-      html+='<div class="mini-actions"><button class="mini-action secondary" id="atualizarPalpitesJogoV102">Atualizar agora</button></div>';
+      '</div>':'<div class="mini"><strong>Nenhum participante encontrado neste jogo.</strong><p>O JSON/API não trouxe palpites vinculados ao id_jogo selecionado. Rode a publicação do bolão e limpe o cache se necessário.</p></div>';
+      html+='<div class="mini-actions"><button class="mini-action secondary" id="atualizarPalpitesJogoV107">Atualizar agora</button></div>';
       openModal('👥 Palpites do jogo',html,'<button class="btn primary" id="ok">Fechar</button>');
       setTimeout(function(){
-        const b=document.getElementById('atualizarPalpitesJogoV102');
-        if(b)b.onclick=function(){abrirPalpitesPublicosJogo(id)};
+        const b=document.getElementById('atualizarPalpitesJogoV107');
+        if(b)b.onclick=function(){abrirPalpitesPublicosJogo(idSolicitado)};
       },0);
     }
 
@@ -2599,7 +2776,7 @@
           var uidPalpite=String((p.usuario&&p.usuario.idTelegram)||p.telegram_id||'');
           if(uidAtual&&uidPalpite&&uidAtual!==uidPalpite)return false;
           return true;
-        }).map(function(p){return normalizarPalpiteApi({id_bolao:p.id_bolao,id_jogo:p.id_jogo,telegram_id:(p.usuario&&p.usuario.idTelegram)||p.telegram_id||'',placarMandante:p.palpite&&p.palpite.placarMandante,placarVisitante:p.palpite&&p.palpite.placarVisitante,dataHora:p.dataHora,status:'VALIDO'})}).filter(Boolean);
+        }).map(function(p){return normalizarPalpiteApi({id_bolao:p.id_bolao,id_jogo:p.id_jogo,telegram_id:(p.usuario&&p.usuario.idTelegram)||p.telegram_id||'',nome:(p.usuario&&p.usuario.nome)||p.nome||estado.usuario.nome||'',username:(p.usuario&&p.usuario.username)||p.username||estado.usuario.username||'',placarMandante:p.palpite&&p.palpite.placarMandante,placarVisitante:p.palpite&&p.palpite.placarVisitante,dataHora:p.dataHora,status:'VALIDO',origem:p.origem||'MANUAL_MINIAPP',automatico:p.automatico===true})}).filter(Boolean);
         var todos={};apiItens.concat(localItens).forEach(function(p){todos[String(p.id_bolao)+'|'+String(p.id_jogo)]=p});
         // Ordena pela data do jogo (ordem cronologica)
         var itens=Object.values(todos).sort(function(a,b){
@@ -2611,28 +2788,34 @@
         });
         var bodyPal=itens.length?itens.map(function(u){
           var jAtual=estado.jogos.find(function(j){return String(j.id_jogo||j.id)===String(u.id_jogo)})||u.jogo||{};
-          var nomeM=nomeMandante(Object.assign({},jAtual,u));
-          var nomeV=nomeVisitante(Object.assign({},jAtual,u));
-          // V102: não exibe placeholder "Mandante x Visitante" quando o JSON ainda não trouxe o jogo.
+          // V107: não exibe placeholder "Mandante x Visitante" quando o JSON ainda não trouxe o jogo.
           if((!jAtual||!jAtual.id_jogo)&&(!u.mandante||!u.visitante))return '';
-          var linhaResultado=temPlacarJogo(jAtual)?'<p><b>Resultado:</b> '+textoPlacarJogo(jAtual)+'</p>':'';
-          var quando=(jAtual&&jAtual.data)?(esc(jAtual.data)+(jAtual.hora?' às '+esc(jAtual.hora):'')):esc(u.dataHora||'');
+          var jCard=Object.assign({},jAtual,{
+            id_jogo:(jAtual&&jAtual.id_jogo)||u.id_jogo,
+            id_bolao:(jAtual&&jAtual.id_bolao)||u.id_bolao||CONFIG.ID_BOLAO,
+            mandante:(jAtual&&jAtual.mandante)||u.mandante||'Mandante',
+            visitante:(jAtual&&jAtual.visitante)||u.visitante||'Visitante',
+            data:(jAtual&&jAtual.data)||'',
+            hora:(jAtual&&jAtual.hora)||'',
+            status:(jAtual&&jAtual.status)||u.status||'VALIDO',
+            status_jogo:(jAtual&&jAtual.status_jogo)||''
+          });
           var palpiteExibicao = Object.assign({}, u);
           if(jAtual && jAtual.meuPalpite){
             palpiteExibicao = Object.assign({}, normalizarPalpiteApi(jAtual.meuPalpite)||{}, u);
           }
-          var blocoPublicos = htmlPalpitesPublicosResumoNoCard_(jAtual, estado.usuario.idTelegram);
-          return '<div class="mini ja-palpitado"><strong>'+flagHtml(jAtual,'mandante')+' '+esc(nomeM||u.mandante||'Mandante')+' x '+esc(nomeV||u.visitante||'Visitante')+' '+flagHtml(jAtual,'visitante')+'</strong><p>'+quando+' <span class="chip">'+esc(statusJogo(jAtual)||u.status||'VALIDO')+'</span></p>'+linhaResultado+'<p class="saved-pick">Meu palpite: '+esc(textoPalpiteComPontos_(palpiteExibicao))+'</p>'+htmlOrigemPalpite_(palpiteExibicao)+blocoPublicos+'</div>';
+          var blocoPublicos = htmlPalpitesPublicosResumoNoCard_(jCard, '', palpiteExibicao);
+          return '<div class="mini ja-palpitado"><div class="game-card-head">'+textoDataHoraStatus(jCard)+'</div>'+htmlLinhaTimesJogo(jCard)+blocoPublicos+'</div>';
         }).filter(Boolean).join(''):'<div class="mini"><strong>Nenhum palpite registrado.</strong><p>Abra um jogo e digite o placar. Ao preencher os dois campos, o palpite será salvo automaticamente.</p></div>';
-        bodyPal+='<div class="mini-actions"><button class="mini-action secondary" id="atualizarMeusPalpitesV102">Atualizar dados</button></div>';
+        bodyPal+='<div class="mini-actions"><button class="mini-action secondary" id="atualizarMeusPalpitesV107">Atualizar dados</button></div>';
         openModal('🎯 Meus Palpites',htmlBolaoContexto('Lista de palpites somente deste bolão ativo.')+bodyPal,'<button class="btn light" id="ok">Fechar</button><button class="btn primary" id="novo">▶ Próximo sem palpite</button>');
         setTimeout(function(){
           var btnNovo=document.getElementById('novo');
           var btnOkP=document.getElementById('ok');
           if(btnNovo)btnNovo.onclick=function(){var prox=proximoJogoParaPalpitar();if(prox){estado.jogo=prox;render();closeModal();setTimeout(function(){abrirPalpite()},150)}else toastMsg('Todos os jogos disponíveis já foram palpitados. ✅')};
           if(btnOkP)btnOkP.onclick=closeModal;
-          var btnAtualizarV102=document.getElementById('atualizarMeusPalpitesV102');
-          if(btnAtualizarV102)btnAtualizarV102.onclick=async function(){toastMsg('Atualizando JSON do bolão...');await recarregarJsonBolaoAtualForcadoV102_(false);screen('palpites');};
+          var btnAtualizarV107=document.getElementById('atualizarMeusPalpitesV107');
+          if(btnAtualizarV107)btnAtualizarV107.onclick=async function(){toastMsg('Atualizando JSON do bolão...');await recarregarJsonBolaoAtualForcadoV102_(false);screen('palpites');};
         },0);
         return;
       }
