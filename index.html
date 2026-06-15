@@ -283,7 +283,7 @@
     }
 
     const CONFIG={
-      VERSAO:'V092_INDEX_JSON_GLOBAL_TRADUCAO_CHAVEAMENTO',
+      VERSAO:'V102_INDEX_RANKING_PALPITES_PUBLICOS_ORIGEM',
       API_URL:API_PARAM||'', // V035: usado somente para gravação; leitura principal vem dos JSONs estáticos.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // Fallback somente para ações de gravação caso o JSON não traga apiUrl.
       ID_BOLAO:idBolaoInicial_(),
@@ -662,7 +662,7 @@
       const url=new URL(base+'/'+String(path||'').replace(/^\/+/,''),window.location.href);
       url.searchParams.set('v',CONFIG.VERSAO||'');
       const limpar=String(URL_PARAMS.get('limpar_cache')||'').toLowerCase();
-      const forcarCacheBust = limpar==='1'||limpar==='sim'||limpar==='true'||String(CONFIG.VERSAO||'').indexOf('V078')>=0;
+      const forcarCacheBust = limpar==='1'||limpar==='sim'||limpar==='true'||String(CONFIG.VERSAO||'').indexOf('V078')>=0||String(CONFIG.VERSAO||'').indexOf('V102')>=0;
       if(forcarCacheBust)url.searchParams.set('_',String(Date.now()));
       return url.toString();
     }
@@ -1080,11 +1080,11 @@
     }
 
     function cacheKey(){
-      return 'PSS_MBE_HOME_CACHE_V041_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_V102_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function cacheInfoKey(){
-      return 'PSS_MBE_HOME_CACHE_INFO_V041_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
+      return 'PSS_MBE_HOME_CACHE_INFO_V102_'+String(CONFIG.ID_BOLAO||'BOLAO001')+'_'+String(estado.usuario.idTelegram||'ANON');
     }
 
     function chavesCachePossiveis(){
@@ -1221,19 +1221,102 @@
       const idj=String(p.id_jogo||p.id||'');
       if(!idj)return null;
       const pal=p.palpite||{};
-      const pm=p.placarMandante!==undefined?p.placarMandante:(p.palpite_mandante!==undefined?p.palpite_mandante:pal.placarMandante);
-      const pv=p.placarVisitante!==undefined?p.placarVisitante:(p.palpite_visitante!==undefined?p.palpite_visitante:pal.placarVisitante);
+      const pm=p.placarMandante!==undefined?p.placarMandante:(p.palpite_mandante!==undefined?p.palpite_mandante:(p.gols_palpite_mandante!==undefined?p.gols_palpite_mandante:pal.placarMandante));
+      const pv=p.placarVisitante!==undefined?p.placarVisitante:(p.palpite_visitante!==undefined?p.palpite_visitante:(p.gols_palpite_visitante!==undefined?p.gols_palpite_visitante:pal.placarVisitante));
       if(pm===undefined||pv===undefined)return null;
+      const origem=String(p.origem||p.tipo_palpite||p.fonte_palpite||p.observacao||'').trim();
+      const automatico=(p.automatico===true)||String(p.automatico||'').toUpperCase()==='SIM'||/AUTO_USUARIO|PALPITE AUTOMATICO|PALPITE_AUTOMATICO|AUTOMATICO/i.test(origem);
+      const desafiante=/DESAFIANTE|VIRTUAL_IA_DESAFIANTE/i.test(String(p.telegram_id||'')+' '+String(p.nome||'')+' '+String(p.username||'')+' '+origem);
       return {
         id_bolao:idb,
         id_jogo:idj,
         telegram_id:String(p.telegram_id||((p.usuario&&p.usuario.idTelegram)||'')),
+        nome:p.nome||p.participante||((p.usuario&&p.usuario.nome)||''),
+        username:p.username||((p.usuario&&p.usuario.username)||''),
+        mandante:p.mandante||p.time_mandante||((p.jogo&&p.jogo.mandante)||''),
+        visitante:p.visitante||p.time_visitante||((p.jogo&&p.jogo.visitante)||''),
         jogo:p.jogo||null,
         palpite:{placarMandante:pm,placarVisitante:pv},
-        dataHora:p.dataHora||p.data_hora||'',
-        status:p.status||'VALIDO',
-        pontos:p.pontos||''
+        dataHora:p.dataHora||p.data_hora||p.data_hora_palpite||'',
+        status:p.status||p.status_palpite||'VALIDO',
+        pontos:p.pontos!==undefined?p.pontos:(p.total_pontos!==undefined?p.total_pontos:(p.ponto!==undefined?p.ponto:'')),
+        origem:origem,
+        automatico:automatico,
+        desafiante_ia:desafiante,
+        origem_label:p.origem_label||rotuloOrigemPalpite_({origem:origem,automatico:automatico,desafiante_ia:desafiante,telegram_id:p.telegram_id,nome:p.nome,username:p.username})
       };
+    }
+
+    function rotuloOrigemPalpite_(p){
+      p=p||{};
+      const bruto=String(p.origem||'').toUpperCase();
+      const ident=String(p.telegram_id||'')+' '+String(p.nome||'')+' '+String(p.username||'');
+      if(p.desafiante_ia||/DESAFIANTE|VIRTUAL_IA_DESAFIANTE/i.test(ident+' '+bruto))return '🤖 Desafiante IA';
+      if(p.automatico||/AUTO_USUARIO|PALPITE AUTOMATICO|PALPITE_AUTOMATICO|AUTOMATICO/i.test(bruto))return '🤖 Palpite automático';
+      if(/MINIAPP|TELEGRAM|MANUAL|API/i.test(bruto))return '✍️ Manual';
+      return '✍️ Manual';
+    }
+
+    function htmlOrigemPalpite_(p){
+      return '<p style="margin-top:4px"><span class="chip">'+esc(rotuloOrigemPalpite_(p))+'</span></p>';
+    }
+
+    function dedupPalpitesLista_(lista){
+      const mapa={};
+      (Array.isArray(lista)?lista:[]).forEach(function(p){
+        const n=normalizarPalpiteApi(p);
+        if(!n)return;
+        const k=String(n.telegram_id||n.nome||'')+'|'+String(n.id_jogo||'')+'|'+textoPalpiteLocal(n);
+        if(!mapa[k])mapa[k]=n;
+      });
+      return Object.values(mapa);
+    }
+
+    function palpitesPublicosDoJogoLocal_(j,telegramExcluir){
+      if(!j)return [];
+      const fontes=[];
+      ['palpitesPublicos','palpitesOutros','palpitesParticipantes','palpites'].forEach(function(k){
+        if(Array.isArray(j[k]))fontes.push.apply(fontes,j[k]);
+      });
+      const idj=String(idJogo(j));
+      const uid=String(telegramExcluir||'');
+      return dedupPalpitesLista_(fontes).filter(function(p){
+        if(String(p.id_jogo||idj)!==idj)return false;
+        if(uid && String(p.telegram_id||'')===uid)return false;
+        return true;
+      });
+    }
+
+    async function recarregarJsonBolaoAtualForcadoV102_(silencioso){
+      if(!CONFIG.JSON_PUBLICO_ATIVO)return false;
+      try{
+        const id=String(CONFIG.ID_BOLAO||'BOLAO001');
+        let manifest=null,perfil=null,copa=null,bolao=null;
+        try{manifest=await fetchJsonComTimeout(jsonPublicoManifestUrl(),CONFIG.JSON_PUBLICO_TIMEOUT_MS||6000);JSON_ESTATICO_MEM.manifest=manifest;}catch(e){}
+        if(estado.usuario.idTelegram){
+          try{perfil=await fetchJsonComTimeout(jsonPublicoPerfilUrl(estado.usuario.idTelegram),CONFIG.JSON_PUBLICO_TIMEOUT_MS||6000);JSON_ESTATICO_MEM.perfil=perfil;}catch(e){}
+        }else perfil=JSON_ESTATICO_MEM.perfil;
+        try{
+          copa=await carregarCopaGlobalEstatico(true);
+          bolao=await carregarBolaoLeveJsonEstatico(id,true);
+          const dados=mesclarCopaGlobalBolaoPerfilJson(copa,bolao,perfil||JSON_ESTATICO_MEM.perfil,manifest||JSON_ESTATICO_MEM.manifest,id);
+          aplicarDadosApi(dados,'json_global_v102_forcado');
+          salvarCache(dados);
+          render();
+          return true;
+        }catch(eNovo){
+          const home=await carregarHomeJsonEstatico(id,true);
+          const dados=mesclarHomeComPerfilJson(home,perfil||JSON_ESTATICO_MEM.perfil,manifest||JSON_ESTATICO_MEM.manifest,id);
+          aplicarDadosApi(dados,'home_v102_forcado');
+          salvarCache(dados);
+          render();
+          return true;
+        }
+      }catch(e){
+        console.warn('Recarregar JSON V102 falhou.',e);
+        if(!silencioso)toastMsg('Não consegui atualizar o JSON agora.');
+        return false;
+      }
     }
 
     function salvarMeusPalpitesApiNoLocal(){
@@ -1242,7 +1325,7 @@
         Object.keys(estado.meusPalpites||{}).forEach(k=>{
           const p=estado.meusPalpites[k];
           const jogo=estado.jogos.find(j=>String(j.id_bolao||CONFIG.ID_BOLAO)===String(p.id_bolao||CONFIG.ID_BOLAO)&&String(j.id_jogo||j.id)===String(p.id_jogo));
-          mapa[k]={tipo:'PALPITE_BOLAO_ESPORTIVO',versao:CONFIG.VERSAO,dataHora:p.dataHora||new Date().toISOString(),id_bolao:p.id_bolao,id_jogo:p.id_jogo,telegram_id:p.telegram_id||estado.usuario.idTelegram,usuario:estado.usuario,jogo:jogo||p.jogo||{},palpite:p.palpite};
+          mapa[k]={tipo:'PALPITE_BOLAO_ESPORTIVO',versao:CONFIG.VERSAO,dataHora:p.dataHora||new Date().toISOString(),id_bolao:p.id_bolao,id_jogo:p.id_jogo,telegram_id:p.telegram_id||estado.usuario.idTelegram,usuario:estado.usuario,jogo:jogo||p.jogo||{},palpite:p.palpite,origem:p.origem||'',automatico:p.automatico===true,desafiante_ia:p.desafiante_ia===true};
         });
         localStorage.setItem(palpitesKey(),JSON.stringify(mapa));
       }catch(e){}
@@ -1348,11 +1431,11 @@
       const key=palpiteKeyJogo(j);
       if(estado.meusPalpites&&estado.meusPalpites[key]){
         const p=estado.meusPalpites[key];
-        return {tipo:'PALPITE_BOLAO_ESPORTIVO',versao:CONFIG.VERSAO,dataHora:p.dataHora||'',id_bolao:p.id_bolao,id_jogo:p.id_jogo,usuario:estado.usuario,jogo:j,palpite:p.palpite};
+        return {tipo:'PALPITE_BOLAO_ESPORTIVO',versao:CONFIG.VERSAO,dataHora:p.dataHora||'',id_bolao:p.id_bolao,id_jogo:p.id_jogo,telegram_id:p.telegram_id||estado.usuario.idTelegram,usuario:estado.usuario,jogo:j,palpite:p.palpite,origem:p.origem||'',automatico:p.automatico===true,desafiante_ia:p.desafiante_ia===true};
       }
       if(j.meuPalpite){
         const p=normalizarPalpiteApi(j.meuPalpite);
-        if(p&&String(p.id_bolao||'')===String((j&&j.id_bolao)||CONFIG.ID_BOLAO||'')&&String(p.id_jogo||'')===String(idJogo(j)))return {tipo:'PALPITE_BOLAO_ESPORTIVO',versao:CONFIG.VERSAO,dataHora:p.dataHora||'',id_bolao:p.id_bolao,id_jogo:p.id_jogo,telegram_id:p.telegram_id||estado.usuario.idTelegram,usuario:estado.usuario,jogo:j,palpite:p.palpite};
+        if(p&&String(p.id_bolao||'')===String((j&&j.id_bolao)||CONFIG.ID_BOLAO||'')&&String(p.id_jogo||'')===String(idJogo(j)))return {tipo:'PALPITE_BOLAO_ESPORTIVO',versao:CONFIG.VERSAO,dataHora:p.dataHora||'',id_bolao:p.id_bolao,id_jogo:p.id_jogo,telegram_id:p.telegram_id||estado.usuario.idTelegram,usuario:estado.usuario,jogo:j,palpite:p.palpite,origem:p.origem||'',automatico:p.automatico===true,desafiante_ia:p.desafiante_ia===true};
       }
       const mapa=carregarPalpitesLocais();
       const local=mapa[key]||null;
@@ -1372,7 +1455,9 @@
       placarMandante: payload.palpite.placarMandante,
       placarVisitante: payload.palpite.placarVisitante,
       dataHora: payload.dataHora,
-      status: 'VALIDO'
+      status: 'VALIDO',
+      origem: payload.origem||'MANUAL_MINIAPP',
+      automatico: false
     });
     localStorage.setItem(palpitesKey(), JSON.stringify(mapa));
     localStorage.setItem('ultimo_palpite_bolao_esportivo', JSON.stringify(payload));
@@ -1664,7 +1749,9 @@
         id_jogo:j.id_jogo||j.id,
         usuario:estado.usuario,
         jogo:j,
-        palpite:{resultado:resultadoPorPlacar(gm,gv),placarMandante:gm,placarVisitante:gv}
+        palpite:{resultado:resultadoPorPlacar(gm,gv),placarMandante:gm,placarVisitante:gv},
+        origem:'MANUAL_MINIAPP',
+        automatico:false
       };
 
       try{
@@ -2251,29 +2338,57 @@
 
 
     async function abrirPalpitesPublicosJogo(id){
-      const j=(estado.jogos||[]).find(function(x){return idJogo(x)===String(id)});
+      let j=(estado.jogos||[]).find(function(x){return idJogo(x)===String(id)});
       if(!j)return toastMsg('Jogo não localizado.');
       atualizarJogoFechadoLocal_(j);
       if(!palpitesPublicosLiberadosLocal(j))return toastMsg('Os palpites dos participantes só abrem após o fechamento do jogo.');
-      openModal('👥 Palpites do jogo','<div class="mini"><div class="game-card-head">'+textoDataHoraStatus(j)+'</div>'+htmlLinhaTimesJogo(j)+'<p>Carregando palpites públicos...</p></div>','<button class="btn primary" id="ok">Fechar</button>');
+
+      openModal('👥 Palpites do jogo','<div class="mini"><strong>Atualizando dados do bolão...</strong><p>Carregando JSON recente e palpites públicos.</p></div>','<button class="btn primary" id="ok">Fechar</button>');
+
+      // V102: força leitura recente antes de montar a tela. Evita ranking/palpites presos no cache local.
+      await recarregarJsonBolaoAtualForcadoV102_(true);
+      j=(estado.jogos||[]).find(function(x){return idJogo(x)===String(id)})||j;
+      atualizarJogoFechadoLocal_(j);
+
+      const localLista=palpitesPublicosDoJogoLocal_(j,estado.usuario.idTelegram);
+      let apiLista=[];
+      let meuApi=null;
+      let liberado=palpitesPublicosLiberadosLocal(j);
       try{
-        const r=await chamarApiAcao('obterPalpitesJogo',{id_bolao:j.id_bolao||CONFIG.ID_BOLAO,id_jogo:idJogo(j),telegram_id:estado.usuario.idTelegram},{timeoutMs:45000,retries:1});
-        const lista=Array.isArray(r&&r.palpites)?r.palpites:[];
-        const meuApi=r&&r.meuPalpite?normalizarPalpiteApi(r.meuPalpite):null;
-        const meuLocal=getPalpiteLocal(j);
-        // V067: a API pode ainda estar com duplicidade antiga até rodar a correção no GS.
-        // Para o bloco "Seu palpite", o app prioriza o palpite local do próprio usuário quando existir.
-        const meu=meuLocal&&textoPalpiteLocal(meuLocal)?meuLocal:meuApi;
-        const liberado=(r&&r.palpitesPublicosLiberados)||palpitesPublicosLiberadosLocal(j);
-        const aviso=liberado?'Palpites públicos liberados após o fechamento do jogo.':'Palpites ainda não liberados pelo GS.';
-        let html=htmlBolaoContexto('Palpites públicos deste jogo após o fechamento para novos palpites.')+'<div class="mini"><div class="game-card-head">'+textoDataHoraStatus(j)+'</div>'+htmlLinhaTimesJogo(j)+'<p>'+esc(aviso)+'</p></div>';
-        if(meu)html+='<div class="mini ja-palpitado"><strong>Seu palpite</strong><p class="saved-pick">'+esc(textoPalpiteLocal(meu))+'</p></div>';
-        html+=lista.length?lista.map(function(p){return '<div class="mini"><strong>'+esc(p.nome||'Participante')+'</strong><p class="saved-pick">Palpite: '+esc(textoPalpiteLocal(p))+(p.pontos!==''&&p.pontos!==undefined?' • '+esc(p.pontos)+' pts':'')+'</p></div>';}).join(''):(liberado?'<div class="mini"><strong>Nenhum outro participante encontrado.</strong><p>Seu palpite aparece acima. Adversários só aparecem quando houver palpite válido publicado para este jogo.</p></div>':'<div class="mini"><strong>Nenhum palpite público encontrado.</strong><p>Se o jogo acabou de fechar, aguarde a rotina automática publicar o JSON.</p></div>');
-        openModal('👥 Palpites do jogo',html,'<button class="btn primary" id="ok">Fechar</button>');
+        const r=await chamarApiAcao('obterPalpitesJogo',{id_bolao:j.id_bolao||CONFIG.ID_BOLAO,id_jogo:idJogo(j),telegram_id:estado.usuario.idTelegram},{timeoutMs:18000,retries:0});
+        apiLista=Array.isArray(r&&r.palpites)?r.palpites:[];
+        meuApi=r&&r.meuPalpite?normalizarPalpiteApi(r.meuPalpite):null;
+        liberado=(r&&r.palpitesPublicosLiberados)||liberado;
       }catch(e){
-        console.warn('Erro ao obter palpites públicos.',e);
-        openModal('👥 Palpites do jogo','<div class="mini"><strong>Não foi possível carregar agora</strong><p>Verifique se o Web App foi implantado na versão nova e tente novamente.</p></div>','<button class="btn primary" id="ok">Fechar</button>');
+        console.warn('API de palpites demorou/falhou; usando JSON público/local.',e);
       }
+
+      const lista=dedupPalpitesLista_(apiLista.concat(localLista)).filter(function(p){
+        if(String(p.id_jogo||'') && String(p.id_jogo)!==String(idJogo(j)))return false;
+        if(estado.usuario.idTelegram && String(p.telegram_id||'')===String(estado.usuario.idTelegram))return false;
+        return true;
+      }).sort(function(a,b){
+        if(a.desafiante_ia&&!b.desafiante_ia)return -1;
+        if(!a.desafiante_ia&&b.desafiante_ia)return 1;
+        return String(a.nome||'').localeCompare(String(b.nome||''));
+      });
+
+      const meuLocal=getPalpiteLocal(j);
+      const meu=meuLocal&&textoPalpiteLocal(meuLocal)?meuLocal:meuApi;
+      const aviso=liberado?'Palpites públicos liberados para este jogo.':'Palpites ainda não liberados pelo GS.';
+      let html=htmlBolaoContexto('Palpites públicos deste jogo após o fechamento/início.')+
+        '<div class="mini"><div class="game-card-head">'+textoDataHoraStatus(j)+'</div>'+htmlLinhaTimesJogo(j)+'<p>'+esc(aviso)+'</p></div>';
+      if(meu)html+='<div class="mini ja-palpitado"><strong>Seu palpite</strong><p class="saved-pick">'+esc(textoPalpiteLocal(meu))+'</p>'+htmlOrigemPalpite_(meu)+'</div>';
+      html+=lista.length?lista.map(function(p){
+        const nome=p.desafiante_ia?'🤖 Desafiante IA':(p.nome||p.username||'Participante');
+        return '<div class="mini"><strong>'+esc(nome)+'</strong><p class="saved-pick">Palpite: '+esc(textoPalpiteLocal(p))+(p.pontos!==''&&p.pontos!==undefined?' • '+esc(p.pontos)+' pts':'')+'</p>'+htmlOrigemPalpite_(p)+'</div>';
+      }).join(''):'<div class="mini"><strong>Nenhum outro participante encontrado.</strong><p>O JSON/API não trouxe adversários válidos para este jogo ainda. Rode a publicação V102 do bolão e limpe o cache se necessário.</p></div>';
+      html+='<div class="mini-actions"><button class="mini-action secondary" id="atualizarPalpitesJogoV102">Atualizar agora</button></div>';
+      openModal('👥 Palpites do jogo',html,'<button class="btn primary" id="ok">Fechar</button>');
+      setTimeout(function(){
+        const b=document.getElementById('atualizarPalpitesJogoV102');
+        if(b)b.onclick=function(){abrirPalpitesPublicosJogo(id)};
+      },0);
     }
 
     function screen(name){
@@ -2365,7 +2480,10 @@
         var bodyRank=rankMod.length?((provis?'<div class="mini"><strong>🔴 Ao vivo / provisório</strong><p>Calculado com o placar em andamento. Será confirmado após o resultado final.</p></div>':'')+rankMod.map(function(r){
           return '<div class="mini"><strong>'+esc(r.pos)+'º — '+esc(r.nome)+'</strong><p>'+esc((r.total_pontos!==undefined?r.total_pontos:r.pontos)||0)+' pontos '+esc(r.medalha||'🏅')+'</p></div>';
         }).join('')):telaVazia('Ainda não há pontuação calculada. O ranking será exibido automaticamente após os resultados dos jogos serem processados.');
-        return openModal('🏆 Ranking do Bolão',htmlBolaoContexto(legenda)+bodyRank);
+        bodyRank+='<div class="mini-actions"><button class="mini-action secondary" id="atualizarRankingV102">Atualizar dados</button></div>';
+        openModal('🏆 Ranking do Bolão',htmlBolaoContexto(legenda)+bodyRank);
+        setTimeout(function(){var b=document.getElementById('atualizarRankingV102');if(b)b.onclick=async function(){toastMsg('Atualizando ranking publicado...');await recarregarJsonBolaoAtualForcadoV102_(false);screen('ranking');};},0);
+        return;
       }
 
       if(name==='copa')return abrirCopa('grupos');
@@ -2395,15 +2513,23 @@
         });
         var bodyPal=itens.length?itens.map(function(u){
           var jAtual=estado.jogos.find(function(j){return String(j.id_jogo||j.id)===String(u.id_jogo)})||u.jogo||{};
+          var nomeM=nomeMandante(Object.assign({},jAtual,u));
+          var nomeV=nomeVisitante(Object.assign({},jAtual,u));
+          // V102: não exibe placeholder "Mandante x Visitante" quando o JSON ainda não trouxe o jogo.
+          if((!jAtual||!jAtual.id_jogo)&&(!u.mandante||!u.visitante))return '';
           var linhaResultado=temPlacarJogo(jAtual)?'<p><b>Resultado:</b> '+textoPlacarJogo(jAtual)+'</p>':'';
-          return '<div class="mini ja-palpitado"><strong>'+flagHtml(jAtual,'mandante')+' '+esc(nomeMandante(Object.assign({},u,jAtual)))+' x '+esc(nomeVisitante(Object.assign({},u,jAtual)))+' '+flagHtml(jAtual,'visitante')+'</strong><p>'+esc(jAtual.data||'')+(jAtual.hora?' às '+esc(jAtual.hora):'')+' <span class="chip">'+esc(statusJogo(jAtual))+'</span></p>'+linhaResultado+'<p class="saved-pick">Meu palpite: '+esc(textoPalpiteLocal(u))+'</p></div>';
-        }).join(''):'<div class="mini"><strong>Nenhum palpite registrado.</strong><p>Abra um jogo e digite o placar. Ao preencher os dois campos, o palpite será salvo automaticamente.</p></div>';
+          var quando=(jAtual&&jAtual.data)?(esc(jAtual.data)+(jAtual.hora?' às '+esc(jAtual.hora):'')):esc(u.dataHora||'');
+          return '<div class="mini ja-palpitado"><strong>'+flagHtml(jAtual,'mandante')+' '+esc(nomeM||u.mandante||'Mandante')+' x '+esc(nomeV||u.visitante||'Visitante')+' '+flagHtml(jAtual,'visitante')+'</strong><p>'+quando+' <span class="chip">'+esc(statusJogo(jAtual)||u.status||'VALIDO')+'</span></p>'+linhaResultado+'<p class="saved-pick">Meu palpite: '+esc(textoPalpiteLocal(u))+'</p>'+htmlOrigemPalpite_(u)+'</div>';
+        }).filter(Boolean).join(''):'<div class="mini"><strong>Nenhum palpite registrado.</strong><p>Abra um jogo e digite o placar. Ao preencher os dois campos, o palpite será salvo automaticamente.</p></div>';
+        bodyPal+='<div class="mini-actions"><button class="mini-action secondary" id="atualizarMeusPalpitesV102">Atualizar dados</button></div>';
         openModal('🎯 Meus Palpites',htmlBolaoContexto('Lista de palpites somente deste bolão ativo.')+bodyPal,'<button class="btn light" id="ok">Fechar</button><button class="btn primary" id="novo">▶ Próximo sem palpite</button>');
         setTimeout(function(){
           var btnNovo=document.getElementById('novo');
           var btnOkP=document.getElementById('ok');
           if(btnNovo)btnNovo.onclick=function(){var prox=proximoJogoParaPalpitar();if(prox){estado.jogo=prox;render();closeModal();setTimeout(function(){abrirPalpite()},150)}else toastMsg('Todos os jogos disponíveis já foram palpitados. ✅')};
           if(btnOkP)btnOkP.onclick=closeModal;
+          var btnAtualizarV102=document.getElementById('atualizarMeusPalpitesV102');
+          if(btnAtualizarV102)btnAtualizarV102.onclick=async function(){toastMsg('Atualizando JSON do bolão...');await recarregarJsonBolaoAtualForcadoV102_(false);screen('palpites');};
         },0);
         return;
       }
