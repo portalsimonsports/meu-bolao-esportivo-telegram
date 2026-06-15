@@ -1,8 +1,8 @@
 {
   "ok": true,
   "versao": "V102_PUBLICAR_APP_RANKING_PALPITES_PUBLICOS",
-  "gerado_em": "15/06/2026 11:43:54",
-  "gerado_ts": 1781534639915,
+  "gerado_em": "15/06/2026 11:47:09",
+  "gerado_ts": 1781534833549,
   "dados": {
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
@@ -3176,7 +3176,7 @@
         ]
       }
     ],
-    "cacheAtualizadoEm": "15/06/2026 11:43:54",
+    "cacheAtualizadoEm": "15/06/2026 11:47:09",
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec"
   }
 }
