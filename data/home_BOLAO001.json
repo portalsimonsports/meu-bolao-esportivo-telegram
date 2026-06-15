@@ -3,7 +3,7 @@
   "versao": "V107_CALCULO_PONTUACAO_REVISADO",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "15/06/2026 11:36:03",
+  "dataHora": "15/06/2026 11:42:02",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V107_CALCULO_PONTUACAO_REVISADO&perfil=1",
@@ -6620,7 +6620,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "15/06/2026 11:37:28",
+    "cacheAtualizadoEm": "15/06/2026 11:43:54",
     "modoDados": "JSON_PUBLICO_ESTATICO_V091_TRADUCAO_PTBR",
     "classificacaoGrupos": [
       {
@@ -13034,11 +13034,11 @@
         ]
       }
     ],
-    "gerado_em": "15/06/2026 11:37:28"
+    "gerado_em": "15/06/2026 11:43:54"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "15/06/2026 11:37:28",
-  "gerado_ts": 1781534248360,
+  "gerado_em": "15/06/2026 11:43:54",
+  "gerado_ts": 1781534634724,
   "traducaoSelecoes": {
     "ativo": true,
     "idioma": "pt-BR",
