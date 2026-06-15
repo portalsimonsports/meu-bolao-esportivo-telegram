@@ -153,6 +153,13 @@
     }
 
 
+  
+    .mini-subbox{margin-top:10px;padding:10px;border:1px solid rgba(15,96,64,.18);border-radius:14px;background:#f6fff9}
+    .mini-subbox strong{display:block;margin-bottom:6px;color:#06472d}
+    .palpite-row-publico{display:grid;grid-template-columns:1.2fr auto;gap:4px 10px;align-items:center;padding:7px 0;border-top:1px solid rgba(15,96,64,.12)}
+    .palpite-row-publico:first-of-type{border-top:0}
+    .palpite-row-publico small{grid-column:1 / -1;color:#5b6b63;font-weight:700}
+
   </style>
 </head>
 <body>
@@ -1240,6 +1247,14 @@
         dataHora:p.dataHora||p.data_hora||p.data_hora_palpite||'',
         status:p.status||p.status_palpite||'VALIDO',
         pontos:p.pontos!==undefined?p.pontos:(p.total_pontos!==undefined?p.total_pontos:(p.ponto!==undefined?p.ponto:'')),
+        pontos_label:p.pontos_label||'',
+        criterio_pontuacao:p.criterio_pontuacao||p.criterio||'',
+        PTS_EXATO:p.PTS_EXATO||0,
+        PTS_GOL_VENCEDOR:p.PTS_GOL_VENCEDOR||0,
+        PTS_SALDO:p.PTS_SALDO||0,
+        PTS_GOL_PERDEDOR:p.PTS_GOL_PERDEDOR||0,
+        PTS_VENCEDOR:p.PTS_VENCEDOR||0,
+        PTS_EMPATE_GARANTIDO:p.PTS_EMPATE_GARANTIDO||0,
         origem:origem,
         automatico:automatico,
         desafiante_ia:desafiante,
@@ -1480,6 +1495,19 @@
       const b=pal.placarVisitante!==undefined?pal.placarVisitante:pal.palpite_visitante;
       if(a===undefined||b===undefined)return '';
       return `${a} x ${b}`;
+    }
+
+    function pontosPalpiteTexto_(p){
+      if(!p)return '';
+      const pts=p.pontos!==undefined?p.pontos:(p.total_pontos!==undefined?p.total_pontos:(p.ponto!==undefined?p.ponto:''));
+      if(pts===''||pts===null||pts===undefined)return '';
+      return String(pts)+' pts';
+    }
+
+    function textoPalpiteComPontos_(p){
+      const base=textoPalpiteLocal(p);
+      const pts=pontosPalpiteTexto_(p);
+      return pts?base+' • '+pts:base;
     }
 
     function parseDataHoraJogo(j){
@@ -2337,6 +2365,27 @@
     }
 
 
+
+    function htmlPalpitesPublicosResumoNoCard_(j,telegramExcluir){
+      if(!j||!palpitesPublicosLiberadosLocal(j))return '';
+      var lista=palpitesPublicosDoJogoLocal_(j,telegramExcluir).sort(function(a,b){
+        if(a.desafiante_ia&&!b.desafiante_ia)return -1;
+        if(!a.desafiante_ia&&b.desafiante_ia)return 1;
+        return String(a.nome||'').localeCompare(String(b.nome||''));
+      });
+
+      if(!lista.length){
+        return '<div class="mini-subbox"><strong>👥 Palpites do jogo</strong><p>Nenhum outro palpite publicado ainda.</p></div>';
+      }
+
+      return '<div class="mini-subbox"><strong>👥 Palpites do jogo</strong>'+
+        lista.map(function(p){
+          var nome=p.desafiante_ia?'🤖 Desafiante IA':(p.nome||p.username||'Participante');
+          return '<div class="palpite-row-publico"><span><b>'+esc(nome)+'</b></span><span>'+esc(textoPalpiteComPontos_(p))+'</span><small>'+esc(rotuloOrigemPalpite_(p))+'</small></div>';
+        }).join('')+
+      '</div>';
+    }
+
     async function abrirPalpitesPublicosJogo(id){
       let j=(estado.jogos||[]).find(function(x){return idJogo(x)===String(id)});
       if(!j)return toastMsg('Jogo não localizado.');
@@ -2378,10 +2427,10 @@
       const aviso=liberado?'Palpites públicos liberados para este jogo.':'Palpites ainda não liberados pelo GS.';
       let html=htmlBolaoContexto('Palpites públicos deste jogo após o fechamento/início.')+
         '<div class="mini"><div class="game-card-head">'+textoDataHoraStatus(j)+'</div>'+htmlLinhaTimesJogo(j)+'<p>'+esc(aviso)+'</p></div>';
-      if(meu)html+='<div class="mini ja-palpitado"><strong>Seu palpite</strong><p class="saved-pick">'+esc(textoPalpiteLocal(meu))+'</p>'+htmlOrigemPalpite_(meu)+'</div>';
+      if(meu)html+='<div class="mini ja-palpitado"><strong>Seu palpite</strong><p class="saved-pick">'+esc(textoPalpiteComPontos_(meu))+'</p>'+htmlOrigemPalpite_(meu)+'</div>';
       html+=lista.length?lista.map(function(p){
         const nome=p.desafiante_ia?'🤖 Desafiante IA':(p.nome||p.username||'Participante');
-        return '<div class="mini"><strong>'+esc(nome)+'</strong><p class="saved-pick">Palpite: '+esc(textoPalpiteLocal(p))+(p.pontos!==''&&p.pontos!==undefined?' • '+esc(p.pontos)+' pts':'')+'</p>'+htmlOrigemPalpite_(p)+'</div>';
+        return '<div class="mini"><strong>'+esc(nome)+'</strong><p class="saved-pick">Palpite: '+esc(textoPalpiteComPontos_(p))+'</p>'+htmlOrigemPalpite_(p)+'</div>';
       }).join(''):'<div class="mini"><strong>Nenhum outro participante encontrado.</strong><p>O JSON/API não trouxe adversários válidos para este jogo ainda. Rode a publicação V102 do bolão e limpe o cache se necessário.</p></div>';
       html+='<div class="mini-actions"><button class="mini-action secondary" id="atualizarPalpitesJogoV102">Atualizar agora</button></div>';
       openModal('👥 Palpites do jogo',html,'<button class="btn primary" id="ok">Fechar</button>');
@@ -2519,7 +2568,12 @@
           if((!jAtual||!jAtual.id_jogo)&&(!u.mandante||!u.visitante))return '';
           var linhaResultado=temPlacarJogo(jAtual)?'<p><b>Resultado:</b> '+textoPlacarJogo(jAtual)+'</p>':'';
           var quando=(jAtual&&jAtual.data)?(esc(jAtual.data)+(jAtual.hora?' às '+esc(jAtual.hora):'')):esc(u.dataHora||'');
-          return '<div class="mini ja-palpitado"><strong>'+flagHtml(jAtual,'mandante')+' '+esc(nomeM||u.mandante||'Mandante')+' x '+esc(nomeV||u.visitante||'Visitante')+' '+flagHtml(jAtual,'visitante')+'</strong><p>'+quando+' <span class="chip">'+esc(statusJogo(jAtual)||u.status||'VALIDO')+'</span></p>'+linhaResultado+'<p class="saved-pick">Meu palpite: '+esc(textoPalpiteLocal(u))+'</p>'+htmlOrigemPalpite_(u)+'</div>';
+          var palpiteExibicao = Object.assign({}, u);
+          if(jAtual && jAtual.meuPalpite){
+            palpiteExibicao = Object.assign({}, normalizarPalpiteApi(jAtual.meuPalpite)||{}, u);
+          }
+          var blocoPublicos = htmlPalpitesPublicosResumoNoCard_(jAtual, estado.usuario.idTelegram);
+          return '<div class="mini ja-palpitado"><strong>'+flagHtml(jAtual,'mandante')+' '+esc(nomeM||u.mandante||'Mandante')+' x '+esc(nomeV||u.visitante||'Visitante')+' '+flagHtml(jAtual,'visitante')+'</strong><p>'+quando+' <span class="chip">'+esc(statusJogo(jAtual)||u.status||'VALIDO')+'</span></p>'+linhaResultado+'<p class="saved-pick">Meu palpite: '+esc(textoPalpiteComPontos_(palpiteExibicao))+'</p>'+htmlOrigemPalpite_(palpiteExibicao)+blocoPublicos+'</div>';
         }).filter(Boolean).join(''):'<div class="mini"><strong>Nenhum palpite registrado.</strong><p>Abra um jogo e digite o placar. Ao preencher os dois campos, o palpite será salvo automaticamente.</p></div>';
         bodyPal+='<div class="mini-actions"><button class="mini-action secondary" id="atualizarMeusPalpitesV102">Atualizar dados</button></div>';
         openModal('🎯 Meus Palpites',htmlBolaoContexto('Lista de palpites somente deste bolão ativo.')+bodyPal,'<button class="btn light" id="ok">Fechar</button><button class="btn primary" id="novo">▶ Próximo sem palpite</button>');
