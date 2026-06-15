@@ -3,7 +3,7 @@
   "versao": "V106D_RANKING_RAPIDO_CRITERIO_SEM_DUPLICAR",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "15/06/2026 10:57:04",
+  "dataHora": "15/06/2026 11:01:20",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V106D_RANKING_RAPIDO_CRITERIO_SEM_DUPLICAR&perfil=1",
@@ -6620,7 +6620,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "15/06/2026 10:59:26",
+    "cacheAtualizadoEm": "15/06/2026 11:02:56",
     "modoDados": "JSON_PUBLICO_ESTATICO_V091_TRADUCAO_PTBR",
     "classificacaoGrupos": [
       {
@@ -13034,11 +13034,11 @@
         ]
       }
     ],
-    "gerado_em": "15/06/2026 10:59:26"
+    "gerado_em": "15/06/2026 11:02:56"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "15/06/2026 10:59:26",
-  "gerado_ts": 1781531967000,
+  "gerado_em": "15/06/2026 11:02:56",
+  "gerado_ts": 1781532176734,
   "traducaoSelecoes": {
     "ativo": true,
     "idioma": "pt-BR",
