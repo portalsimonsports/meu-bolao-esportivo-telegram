@@ -5,8 +5,8 @@
   "versao_execucao": "V115_PUBLICACAO_LIMPA_SEM_V090_MENU",
   "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
   "id_bolao": "BOLAO001",
-  "gerado_em": "16/06/2026 16:34:58",
-  "gerado_ts": 1781638498656,
+  "gerado_em": "16/06/2026 16:51:40",
+  "gerado_ts": 1781639500273,
   "dados": {
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
@@ -37,7 +37,7 @@
         "nome": "🤖 Desafiante IA",
         "total_pontos": 870,
         "pontos": "870",
-        "palpites": 17,
+        "palpites": 16,
         "medalha": "🏅",
         "classe": "silver",
         "avatar": "👩🏻"
@@ -4847,9 +4847,9 @@
         "visitante_iso": "nz"
       },
       {
-        "id": "7690f50677b078be",
+        "id": "80b81d07f5c52007",
         "id_bolao": "BOLAO001",
-        "id_jogo": "7690f50677b078be",
+        "id_jogo": "80b81d07f5c52007",
         "mandante": "France",
         "visitante": "Senegal",
         "flagMandante": "🇫🇷",
@@ -4861,9 +4861,9 @@
         "grupo": "Grupo I",
         "rodada_grupo": "Grupo I",
         "data": "16/06/2026",
-        "hora": "16:00",
-        "dataHora": "16/06/2026 16:00",
-        "limitePalpite": "16/06/2026 16:00",
+        "hora": "16:02",
+        "dataHora": "16/06/2026 16:02",
+        "limitePalpite": "16/06/2026 16:02",
         "gols_mandante": 0,
         "gols_visitante": 0,
         "status": "Ao vivo",
@@ -4909,7 +4909,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:06.832Z",
-            "id_jogo_json": "7690f50677b078be"
+            "id_jogo_json": "80b81d07f5c52007"
           },
           {
             "id_palpite": "ed802bf7b187c4c6ce3c",
@@ -4940,7 +4940,38 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-16T19:00:00.000Z",
-            "id_jogo_json": "7690f50677b078be"
+            "id_jogo_json": "80b81d07f5c52007"
+          },
+          {
+            "id_palpite": "8f64a77bbd24593042e3",
+            "id_bolao": "BOLAO001",
+            "id_jogo": "80b81d07f5c52007",
+            "telegram_id": "197139159",
+            "nome": "Simon",
+            "username": "",
+            "mandante": "France",
+            "visitante": "Senegal",
+            "palpite_mandante": 2,
+            "palpite_visitante": 1,
+            "placarMandante": 2,
+            "placarVisitante": 1,
+            "placar_texto": "2 x 1",
+            "pontos": 0,
+            "pontos_label": "0 pts",
+            "criterio_pontuacao": "SEM_ACERTO",
+            "PTS_EXATO": 0,
+            "PTS_GOL_VENCEDOR": 0,
+            "PTS_SALDO": 0,
+            "PTS_GOL_PERDEDOR": 0,
+            "PTS_VENCEDOR": 0,
+            "PTS_EMPATE_GARANTIDO": 0,
+            "status": "VALIDO",
+            "origem": "AUTOMATICO",
+            "automatico": true,
+            "desafiante_ia": false,
+            "origem_label": "🤖 Palpite automático",
+            "dataHora": "2026-06-16T19:02:00.000Z",
+            "id_jogo_json": "80b81d07f5c52007"
           }
         ],
         "palpitesOutros": [
@@ -4973,7 +5004,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:06.832Z",
-            "id_jogo_json": "7690f50677b078be"
+            "id_jogo_json": "80b81d07f5c52007"
           },
           {
             "id_palpite": "ed802bf7b187c4c6ce3c",
@@ -5004,7 +5035,38 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-16T19:00:00.000Z",
-            "id_jogo_json": "7690f50677b078be"
+            "id_jogo_json": "80b81d07f5c52007"
+          },
+          {
+            "id_palpite": "8f64a77bbd24593042e3",
+            "id_bolao": "BOLAO001",
+            "id_jogo": "80b81d07f5c52007",
+            "telegram_id": "197139159",
+            "nome": "Simon",
+            "username": "",
+            "mandante": "France",
+            "visitante": "Senegal",
+            "palpite_mandante": 2,
+            "palpite_visitante": 1,
+            "placarMandante": 2,
+            "placarVisitante": 1,
+            "placar_texto": "2 x 1",
+            "pontos": 0,
+            "pontos_label": "0 pts",
+            "criterio_pontuacao": "SEM_ACERTO",
+            "PTS_EXATO": 0,
+            "PTS_GOL_VENCEDOR": 0,
+            "PTS_SALDO": 0,
+            "PTS_GOL_PERDEDOR": 0,
+            "PTS_VENCEDOR": 0,
+            "PTS_EMPATE_GARANTIDO": 0,
+            "status": "VALIDO",
+            "origem": "AUTOMATICO",
+            "automatico": true,
+            "desafiante_ia": false,
+            "origem_label": "🤖 Palpite automático",
+            "dataHora": "2026-06-16T19:02:00.000Z",
+            "id_jogo_json": "80b81d07f5c52007"
           }
         ],
         "palpitesParticipantes": [
@@ -5037,7 +5099,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:06.832Z",
-            "id_jogo_json": "7690f50677b078be"
+            "id_jogo_json": "80b81d07f5c52007"
           },
           {
             "id_palpite": "ed802bf7b187c4c6ce3c",
@@ -5068,54 +5130,22 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-16T19:00:00.000Z",
-            "id_jogo_json": "7690f50677b078be"
-          }
-        ],
-        "palpites": [
-          {
-            "id_bolao": "BOLAO001",
-            "id_jogo": "7690f50677b078be",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "France",
-            "visitante": "Senegal",
-            "palpite_mandante": 2,
-            "palpite_visitante": 0,
-            "placarMandante": 2,
-            "placarVisitante": 0,
-            "placar_texto": "2 x 0",
-            "pontos": 0,
-            "pontos_label": "0 pts",
-            "criterio_pontuacao": "SEM_ACERTO",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 0,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "data_hora": "15/06/2026 21:47:06",
-            "dataHora": "15/06/2026 21:47:06",
-            "proprio": false
+            "id_jogo_json": "80b81d07f5c52007"
           },
           {
+            "id_palpite": "8f64a77bbd24593042e3",
             "id_bolao": "BOLAO001",
-            "id_jogo": "7690f50677b078be",
-            "telegram_id": "",
+            "id_jogo": "80b81d07f5c52007",
+            "telegram_id": "197139159",
             "nome": "Simon",
             "username": "",
             "mandante": "France",
             "visitante": "Senegal",
             "palpite_mandante": 2,
-            "palpite_visitante": 0,
+            "palpite_visitante": 1,
             "placarMandante": 2,
-            "placarVisitante": 0,
-            "placar_texto": "2 x 0",
+            "placarVisitante": 1,
+            "placar_texto": "2 x 1",
             "pontos": 0,
             "pontos_label": "0 pts",
             "criterio_pontuacao": "SEM_ACERTO",
@@ -5130,8 +5160,40 @@
             "automatico": true,
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
-            "data_hora": "16/06/2026 16:00:00",
-            "dataHora": "16/06/2026 16:00:00",
+            "dataHora": "2026-06-16T19:02:00.000Z",
+            "id_jogo_json": "80b81d07f5c52007"
+          }
+        ],
+        "palpites": [
+          {
+            "id_bolao": "BOLAO001",
+            "id_jogo": "80b81d07f5c52007",
+            "telegram_id": "",
+            "nome": "Simon",
+            "username": "",
+            "mandante": "France",
+            "visitante": "Senegal",
+            "palpite_mandante": 2,
+            "palpite_visitante": 1,
+            "placarMandante": 2,
+            "placarVisitante": 1,
+            "placar_texto": "2 x 1",
+            "pontos": 0,
+            "pontos_label": "0 pts",
+            "criterio_pontuacao": "SEM_ACERTO",
+            "PTS_EXATO": 0,
+            "PTS_GOL_VENCEDOR": 0,
+            "PTS_SALDO": 0,
+            "PTS_GOL_PERDEDOR": 0,
+            "PTS_VENCEDOR": 0,
+            "PTS_EMPATE_GARANTIDO": 0,
+            "status": "VALIDO",
+            "origem": "AUTOMATICO",
+            "automatico": true,
+            "desafiante_ia": false,
+            "origem_label": "🤖 Palpite automático",
+            "data_hora": "16/06/2026 16:02:00",
+            "dataHora": "16/06/2026 16:02:00",
             "proprio": false
           }
         ],
@@ -12159,7 +12221,7 @@
       },
       {
         "id_bolao": "BOLAO001",
-        "id_jogo": "7690f50677b078be",
+        "id_jogo": "80b81d07f5c52007",
         "mandante": "France",
         "visitante": "Senegal",
         "mandante_pt": "França",
@@ -12203,7 +12265,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:06.832Z",
-            "id_jogo_json": "7690f50677b078be"
+            "id_jogo_json": "80b81d07f5c52007"
           },
           {
             "id_palpite": "ed802bf7b187c4c6ce3c",
@@ -12234,7 +12296,38 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-16T19:00:00.000Z",
-            "id_jogo_json": "7690f50677b078be"
+            "id_jogo_json": "80b81d07f5c52007"
+          },
+          {
+            "id_palpite": "8f64a77bbd24593042e3",
+            "id_bolao": "BOLAO001",
+            "id_jogo": "80b81d07f5c52007",
+            "telegram_id": "197139159",
+            "nome": "Simon",
+            "username": "",
+            "mandante": "France",
+            "visitante": "Senegal",
+            "palpite_mandante": 2,
+            "palpite_visitante": 1,
+            "placarMandante": 2,
+            "placarVisitante": 1,
+            "placar_texto": "2 x 1",
+            "pontos": 0,
+            "pontos_label": "0 pts",
+            "criterio_pontuacao": "SEM_ACERTO",
+            "PTS_EXATO": 0,
+            "PTS_GOL_VENCEDOR": 0,
+            "PTS_SALDO": 0,
+            "PTS_GOL_PERDEDOR": 0,
+            "PTS_VENCEDOR": 0,
+            "PTS_EMPATE_GARANTIDO": 0,
+            "status": "VALIDO",
+            "origem": "AUTOMATICO",
+            "automatico": true,
+            "desafiante_ia": false,
+            "origem_label": "🤖 Palpite automático",
+            "dataHora": "2026-06-16T19:02:00.000Z",
+            "id_jogo_json": "80b81d07f5c52007"
           }
         ],
         "palpitesPublicos": [
@@ -12267,7 +12360,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:06.832Z",
-            "id_jogo_json": "7690f50677b078be"
+            "id_jogo_json": "80b81d07f5c52007"
           },
           {
             "id_palpite": "ed802bf7b187c4c6ce3c",
@@ -12298,7 +12391,38 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-16T19:00:00.000Z",
-            "id_jogo_json": "7690f50677b078be"
+            "id_jogo_json": "80b81d07f5c52007"
+          },
+          {
+            "id_palpite": "8f64a77bbd24593042e3",
+            "id_bolao": "BOLAO001",
+            "id_jogo": "80b81d07f5c52007",
+            "telegram_id": "197139159",
+            "nome": "Simon",
+            "username": "",
+            "mandante": "France",
+            "visitante": "Senegal",
+            "palpite_mandante": 2,
+            "palpite_visitante": 1,
+            "placarMandante": 2,
+            "placarVisitante": 1,
+            "placar_texto": "2 x 1",
+            "pontos": 0,
+            "pontos_label": "0 pts",
+            "criterio_pontuacao": "SEM_ACERTO",
+            "PTS_EXATO": 0,
+            "PTS_GOL_VENCEDOR": 0,
+            "PTS_SALDO": 0,
+            "PTS_GOL_PERDEDOR": 0,
+            "PTS_VENCEDOR": 0,
+            "PTS_EMPATE_GARANTIDO": 0,
+            "status": "VALIDO",
+            "origem": "AUTOMATICO",
+            "automatico": true,
+            "desafiante_ia": false,
+            "origem_label": "🤖 Palpite automático",
+            "dataHora": "2026-06-16T19:02:00.000Z",
+            "id_jogo_json": "80b81d07f5c52007"
           }
         ],
         "palpitesOutros": [
@@ -12331,7 +12455,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:06.832Z",
-            "id_jogo_json": "7690f50677b078be"
+            "id_jogo_json": "80b81d07f5c52007"
           },
           {
             "id_palpite": "ed802bf7b187c4c6ce3c",
@@ -12362,7 +12486,38 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-16T19:00:00.000Z",
-            "id_jogo_json": "7690f50677b078be"
+            "id_jogo_json": "80b81d07f5c52007"
+          },
+          {
+            "id_palpite": "8f64a77bbd24593042e3",
+            "id_bolao": "BOLAO001",
+            "id_jogo": "80b81d07f5c52007",
+            "telegram_id": "197139159",
+            "nome": "Simon",
+            "username": "",
+            "mandante": "France",
+            "visitante": "Senegal",
+            "palpite_mandante": 2,
+            "palpite_visitante": 1,
+            "placarMandante": 2,
+            "placarVisitante": 1,
+            "placar_texto": "2 x 1",
+            "pontos": 0,
+            "pontos_label": "0 pts",
+            "criterio_pontuacao": "SEM_ACERTO",
+            "PTS_EXATO": 0,
+            "PTS_GOL_VENCEDOR": 0,
+            "PTS_SALDO": 0,
+            "PTS_GOL_PERDEDOR": 0,
+            "PTS_VENCEDOR": 0,
+            "PTS_EMPATE_GARANTIDO": 0,
+            "status": "VALIDO",
+            "origem": "AUTOMATICO",
+            "automatico": true,
+            "desafiante_ia": false,
+            "origem_label": "🤖 Palpite automático",
+            "dataHora": "2026-06-16T19:02:00.000Z",
+            "id_jogo_json": "80b81d07f5c52007"
           }
         ],
         "palpitesParticipantes": [
@@ -12395,7 +12550,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:06.832Z",
-            "id_jogo_json": "7690f50677b078be"
+            "id_jogo_json": "80b81d07f5c52007"
           },
           {
             "id_palpite": "ed802bf7b187c4c6ce3c",
@@ -12426,15 +12581,46 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-16T19:00:00.000Z",
-            "id_jogo_json": "7690f50677b078be"
+            "id_jogo_json": "80b81d07f5c52007"
+          },
+          {
+            "id_palpite": "8f64a77bbd24593042e3",
+            "id_bolao": "BOLAO001",
+            "id_jogo": "80b81d07f5c52007",
+            "telegram_id": "197139159",
+            "nome": "Simon",
+            "username": "",
+            "mandante": "France",
+            "visitante": "Senegal",
+            "palpite_mandante": 2,
+            "palpite_visitante": 1,
+            "placarMandante": 2,
+            "placarVisitante": 1,
+            "placar_texto": "2 x 1",
+            "pontos": 0,
+            "pontos_label": "0 pts",
+            "criterio_pontuacao": "SEM_ACERTO",
+            "PTS_EXATO": 0,
+            "PTS_GOL_VENCEDOR": 0,
+            "PTS_SALDO": 0,
+            "PTS_GOL_PERDEDOR": 0,
+            "PTS_VENCEDOR": 0,
+            "PTS_EMPATE_GARANTIDO": 0,
+            "status": "VALIDO",
+            "origem": "AUTOMATICO",
+            "automatico": true,
+            "desafiante_ia": false,
+            "origem_label": "🤖 Palpite automático",
+            "dataHora": "2026-06-16T19:02:00.000Z",
+            "id_jogo_json": "80b81d07f5c52007"
           }
         ]
       }
     ],
     "totalJogosComPalpitesPublicos": 17,
-    "totalPalpitesPublicos": 34,
+    "totalPalpitesPublicos": 35,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "16/06/2026 16:34:58",
+    "cacheAtualizadoEm": "16/06/2026 16:51:40",
     "copaGlobalPath": "data/copa_2026_publico.json"
   }
 }
