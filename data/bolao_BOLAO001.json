@@ -5,8 +5,8 @@
   "versao_execucao": "V115_PUBLICACAO_LIMPA_SEM_V090_MENU",
   "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
   "id_bolao": "BOLAO001",
-  "gerado_em": "16/06/2026 20:36:02",
-  "gerado_ts": 1781652962913,
+  "gerado_em": "16/06/2026 20:49:49",
+  "gerado_ts": 1781653789392,
   "dados": {
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
@@ -35,8 +35,8 @@
       {
         "pos": 2,
         "nome": "🤖 Desafiante IA",
-        "total_pontos": 1050,
-        "pontos": "1.050",
+        "total_pontos": 1020,
+        "pontos": "1.020",
         "palpites": 17,
         "medalha": "🏅",
         "classe": "silver",
@@ -5227,7 +5227,7 @@
         "dataHora": "16/06/2026 19:00",
         "limitePalpite": "16/06/2026 19:00",
         "gols_mandante": 1,
-        "gols_visitante": 2,
+        "gols_visitante": 3,
         "status": "Ao vivo",
         "aceitaPalpite": false,
         "status_jogo": "AO_VIVO",
@@ -12881,8 +12881,8 @@
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "gols_mandante": 1,
-        "gols_visitante": 2,
-        "placar": "1 x 2",
+        "gols_visitante": 3,
+        "placar": "1 x 3",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -13145,7 +13145,7 @@
     "totalJogosComPalpitesPublicos": 18,
     "totalPalpitesPublicos": 37,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "16/06/2026 20:36:02",
+    "cacheAtualizadoEm": "16/06/2026 20:49:49",
     "copaGlobalPath": "data/copa_2026_publico.json"
   }
 }
