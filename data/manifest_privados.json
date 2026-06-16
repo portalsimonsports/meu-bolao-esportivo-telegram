@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "tipo": "MANIFEST_BOLOES_PRIVADOS",
+  "versao": "V116_JSON_TODOS_BOLOES_PRIVADOS_E_PERFIS",
+  "gerado_em": "16/06/2026 15:22:57",
+  "gerado_ts": 1781634177104,
+  "base_path": "data",
+  "total_privados": 4,
+  "leitura_recomendada_html": "Para bolão privado, carregar /data/bolao_<ID_BOLAO>.json e, para Meus Palpites, também /data/perfis/perfil_<TELEGRAM_ID>.json.",
+  "boloes": [
+    {
+      "id_bolao": "BOLAO20260607182904806",
+      "nome_bolao": "Bolao da Luisinha",
+      "tipo_bolao": "PRIVADO",
+      "status": "ATIVO",
+      "ok": true,
+      "home_path": "data/home_BOLAO20260607182904806.json",
+      "bolao_path": "data/bolao_BOLAO20260607182904806.json",
+      "home_url": "https://bolaodacopa.portalsimonsports.com/data/home_BOLAO20260607182904806.json",
+      "bolao_url": "https://bolaodacopa.portalsimonsports.com/data/bolao_BOLAO20260607182904806.json",
+      "erro": ""
+    },
+    {
+      "id_bolao": "BOLAO20260607185133484",
+      "nome_bolao": "Bolao de Pinheirao",
+      "tipo_bolao": "PRIVADO",
+      "status": "ATIVO",
+      "ok": true,
+      "home_path": "data/home_BOLAO20260607185133484.json",
+      "bolao_path": "data/bolao_BOLAO20260607185133484.json",
+      "home_url": "https://bolaodacopa.portalsimonsports.com/data/home_BOLAO20260607185133484.json",
+      "bolao_url": "https://bolaodacopa.portalsimonsports.com/data/bolao_BOLAO20260607185133484.json",
+      "erro": ""
+    },
+    {
+      "id_bolao": "BOLAO20260611115548229",
+      "nome_bolao": "Família Simon",
+      "tipo_bolao": "PRIVADO",
+      "status": "ATIVO",
+      "ok": true,
+      "home_path": "data/home_BOLAO20260611115548229.json",
+      "bolao_path": "data/bolao_BOLAO20260611115548229.json",
+      "home_url": "https://bolaodacopa.portalsimonsports.com/data/home_BOLAO20260611115548229.json",
+      "bolao_url": "https://bolaodacopa.portalsimonsports.com/data/bolao_BOLAO20260611115548229.json",
+      "erro": ""
+    },
+    {
+      "id_bolao": "BOLAO20260611135508480",
+      "nome_bolao": "Teste 1",
+      "tipo_bolao": "PRIVADO",
+      "status": "ATIVO",
+      "ok": true,
+      "home_path": "data/home_BOLAO20260611135508480.json",
+      "bolao_path": "data/bolao_BOLAO20260611135508480.json",
+      "home_url": "https://bolaodacopa.portalsimonsports.com/data/home_BOLAO20260611135508480.json",
+      "bolao_url": "https://bolaodacopa.portalsimonsports.com/data/bolao_BOLAO20260611135508480.json",
+      "erro": ""
+    }
+  ]
+}
