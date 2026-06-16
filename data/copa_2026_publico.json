@@ -5,8 +5,8 @@
   "versao": "V114_PUBLICACAO_PALPITES_TELEGRAM_SEPARADO",
   "hotfix": "V091_TRADUCAO_SELECOES_PTBR_JSON",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "16/06/2026 16:21:29",
-  "gerado_ts": 1781637689627,
+  "gerado_em": "16/06/2026 17:20:59",
+  "gerado_ts": 1781641259649,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -699,9 +699,9 @@
         "visitante_iso": "nz"
       },
       {
-        "id": "7690f50677b078be",
+        "id": "80b81d07f5c52007",
         "id_bolao": "BOLAO001",
-        "id_jogo": "7690f50677b078be",
+        "id_jogo": "80b81d07f5c52007",
         "mandante": "France",
         "visitante": "Senegal",
         "flagMandante": "🇫🇷",
@@ -713,9 +713,9 @@
         "grupo": "Grupo I",
         "rodada_grupo": "Grupo I",
         "data": "16/06/2026",
-        "hora": "16:00",
-        "dataHora": "16/06/2026 16:00",
-        "limitePalpite": "16/06/2026 16:00",
+        "hora": "16:02",
+        "dataHora": "16/06/2026 16:02",
+        "limitePalpite": "16/06/2026 16:02",
         "gols_mandante": 0,
         "gols_visitante": 0,
         "status": "Ao vivo",
@@ -3797,9 +3797,9 @@
         "visitante_iso": "nz"
       },
       {
-        "id": "7690f50677b078be",
+        "id": "80b81d07f5c52007",
         "id_bolao": "BOLAO001",
-        "id_jogo": "7690f50677b078be",
+        "id_jogo": "80b81d07f5c52007",
         "mandante": "France",
         "visitante": "Senegal",
         "flagMandante": "🇫🇷",
@@ -3811,9 +3811,9 @@
         "grupo": "Grupo I",
         "rodada_grupo": "Grupo I",
         "data": "16/06/2026",
-        "hora": "16:00",
-        "dataHora": "16/06/2026 16:00",
-        "limitePalpite": "16/06/2026 16:00",
+        "hora": "16:02",
+        "dataHora": "16/06/2026 16:02",
+        "limitePalpite": "16/06/2026 16:02",
         "gols_mandante": 0,
         "gols_visitante": 0,
         "status": "Ao vivo",
@@ -7352,7 +7352,7 @@
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "16/06/2026 16:21:29"
+    "cacheAtualizadoEm": "16/06/2026 17:20:59"
   },
   "jogos": [
     {
@@ -8044,9 +8044,9 @@
       "visitante_iso": "nz"
     },
     {
-      "id": "7690f50677b078be",
+      "id": "80b81d07f5c52007",
       "id_bolao": "BOLAO001",
-      "id_jogo": "7690f50677b078be",
+      "id_jogo": "80b81d07f5c52007",
       "mandante": "France",
       "visitante": "Senegal",
       "flagMandante": "🇫🇷",
@@ -8058,9 +8058,9 @@
       "grupo": "Grupo I",
       "rodada_grupo": "Grupo I",
       "data": "16/06/2026",
-      "hora": "16:00",
-      "dataHora": "16/06/2026 16:00",
-      "limitePalpite": "16/06/2026 16:00",
+      "hora": "16:02",
+      "dataHora": "16/06/2026 16:02",
+      "limitePalpite": "16/06/2026 16:02",
       "gols_mandante": 0,
       "gols_visitante": 0,
       "status": "Ao vivo",
@@ -11142,9 +11142,9 @@
       "visitante_iso": "nz"
     },
     {
-      "id": "7690f50677b078be",
+      "id": "80b81d07f5c52007",
       "id_bolao": "BOLAO001",
-      "id_jogo": "7690f50677b078be",
+      "id_jogo": "80b81d07f5c52007",
       "mandante": "France",
       "visitante": "Senegal",
       "flagMandante": "🇫🇷",
@@ -11156,9 +11156,9 @@
       "grupo": "Grupo I",
       "rodada_grupo": "Grupo I",
       "data": "16/06/2026",
-      "hora": "16:00",
-      "dataHora": "16/06/2026 16:00",
-      "limitePalpite": "16/06/2026 16:00",
+      "hora": "16:02",
+      "dataHora": "16/06/2026 16:02",
+      "limitePalpite": "16/06/2026 16:02",
       "gols_mandante": 0,
       "gols_visitante": 0,
       "status": "Ao vivo",
