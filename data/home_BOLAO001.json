@@ -3,7 +3,7 @@
   "versao": "V114_PUBLICACAO_PALPITES_TELEGRAM_SEPARADO",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "16/06/2026 20:34:38",
+  "dataHora": "16/06/2026 20:48:48",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V114_PUBLICACAO_PALPITES_TELEGRAM_SEPARADO&perfil=1",
@@ -83,8 +83,8 @@
       {
         "pos": 2,
         "nome": "🤖 Desafiante IA",
-        "total_pontos": 1050,
-        "pontos": "1.050",
+        "total_pontos": 1020,
+        "pontos": "1.020",
         "palpites": 17,
         "medalha": "🏅",
         "classe": "silver",
@@ -5319,7 +5319,7 @@
         "dataHora": "16/06/2026 19:00",
         "limitePalpite": "16/06/2026 19:00",
         "gols_mandante": 1,
-        "gols_visitante": 2,
+        "gols_visitante": 3,
         "status": "Ao vivo",
         "aceitaPalpite": false,
         "status_jogo": "AO_VIVO",
@@ -8194,7 +8194,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "16/06/2026 20:36:02",
+    "cacheAtualizadoEm": "16/06/2026 20:49:49",
     "modoDados": "JSON_PUBLICO_ESTATICO_V091_TRADUCAO_PTBR",
     "classificacaoGrupos": [
       {
@@ -9372,9 +9372,9 @@
             "derrotas": 0,
             "pontos": 3,
             "pts": 3,
-            "golsPro": 2,
+            "golsPro": 3,
             "golsContra": 1,
-            "saldo": 1,
+            "saldo": 2,
             "conduta": 0,
             "rankingFifa": 9999,
             "rankingFifaAnterior": 9999,
@@ -9400,8 +9400,8 @@
             "pontos": 0,
             "pts": 0,
             "golsPro": 1,
-            "golsContra": 2,
-            "saldo": -1,
+            "golsContra": 3,
+            "saldo": -2,
             "conduta": 0,
             "rankingFifa": 9999,
             "rankingFifaAnterior": 9999,
@@ -10136,8 +10136,8 @@
         "pontos": 0,
         "pts": 0,
         "golsPro": 1,
-        "golsContra": 2,
-        "saldo": -1,
+        "golsContra": 3,
+        "saldo": -2,
         "conduta": 0,
         "rankingFifa": 9999,
         "rankingFifaAnterior": 9999,
@@ -16442,8 +16442,8 @@
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "gols_mandante": 1,
-        "gols_visitante": 2,
-        "placar": "1 x 2",
+        "gols_visitante": 3,
+        "placar": "1 x 3",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -16708,8 +16708,8 @@
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "16/06/2026 20:36:02",
-  "gerado_ts": 1781652962913,
+  "gerado_em": "16/06/2026 20:49:49",
+  "gerado_ts": 1781653789392,
   "traducaoSelecoes": {
     "ativo": true,
     "idioma": "pt-BR",
