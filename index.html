@@ -321,7 +321,7 @@
     }
 
     const CONFIG={
-      VERSAO:'V108_PALPITES_SEM_DUPLICIDADE',
+      VERSAO:'V116_INDEX_MEUS_PALPITES_PUBLICOS',
       API_URL:API_PARAM||'', // V035: usado somente para gravação; leitura principal vem dos JSONs estáticos.
       API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // Fallback somente para ações de gravação caso o JSON não traga apiUrl.
       ID_BOLAO:idBolaoInicial_(),
@@ -700,7 +700,7 @@
       const url=new URL(base+'/'+String(path||'').replace(/^\/+/,''),window.location.href);
       url.searchParams.set('v',CONFIG.VERSAO||'');
       const limpar=String(URL_PARAMS.get('limpar_cache')||'').toLowerCase();
-      const forcarCacheBust = limpar==='1'||limpar==='sim'||limpar==='true'||String(CONFIG.VERSAO||'').indexOf('V078')>=0||String(CONFIG.VERSAO||'').indexOf('V102')>=0;
+      const forcarCacheBust = limpar==='1'||limpar==='sim'||limpar==='true'||String(CONFIG.VERSAO||'').indexOf('V078')>=0||String(CONFIG.VERSAO||'').indexOf('V102')>=0||String(CONFIG.VERSAO||'').indexOf('V116')>=0;
       if(forcarCacheBust)url.searchParams.set('_',String(Date.now()));
       return url.toString();
     }
@@ -1282,6 +1282,78 @@
       if (!novosMeusPalpites[k]) novosMeusPalpites[k] = normal;
     });
   }
+
+  // 2.1) V116 INDEX: também reconhece como "meus palpites" os palpites públicos do próprio usuário
+  // vindos do JSON do bolão, principalmente palpites automáticos publicados em palpitesLiberados.
+  const uidMeusPalpitesPublicos = String(estado.usuario.idTelegram || '').trim();
+
+  function incluirMeuPalpitePublicadoV116_(p, idJogoFallback, idBolaoFallback) {
+    if (!uidMeusPalpitesPublicos) return;
+    if (!p) return;
+
+    const normal = normalizarPalpiteApi(Object.assign({}, p, {
+      id_bolao: p.id_bolao || idBolaoFallback || CONFIG.ID_BOLAO,
+      id_jogo: p.id_jogo || p.id || idJogoFallback || ''
+    }));
+
+    if (!normal || !normal.id_jogo) return;
+
+    const idBolaoPalpite = String(normal.id_bolao || CONFIG.ID_BOLAO || '');
+    if (idBolaoPalpite !== String(CONFIG.ID_BOLAO || '')) return;
+
+    const uidPalpite = String(normal.telegram_id || '').trim();
+    if (!uidPalpite || uidPalpite !== uidMeusPalpitesPublicos) return;
+
+    const k = idBolaoPalpite + '|' + String(normal.id_jogo);
+    if (!novosMeusPalpites[k]) novosMeusPalpites[k] = normal;
+  }
+
+  function varrerListaPalpitesPublicosV116_(lista, idJogoFallback, idBolaoFallback) {
+    if (!Array.isArray(lista)) return;
+    lista.forEach(function(p) {
+      incluirMeuPalpitePublicadoV116_(p, idJogoFallback, idBolaoFallback);
+    });
+  }
+
+  // Palpites públicos publicados no bolão leve: dados.palpitesLiberados.
+  if (Array.isArray(dados.palpitesLiberados)) {
+    dados.palpitesLiberados.forEach(function(item) {
+      if (!item) return;
+      const idJogoItem = String(item.id_jogo || item.id || '').trim();
+      const idBolaoItem = String(item.id_bolao || CONFIG.ID_BOLAO || '').trim();
+
+      varrerListaPalpitesPublicosV116_(item.palpites, idJogoItem, idBolaoItem);
+      varrerListaPalpitesPublicosV116_(item.palpitesPublicos, idJogoItem, idBolaoItem);
+      varrerListaPalpitesPublicosV116_(item.palpitesParticipantes, idJogoItem, idBolaoItem);
+      varrerListaPalpitesPublicosV116_(item.palpitesOutros, idJogoItem, idBolaoItem);
+    });
+  }
+
+  // Palpites públicos já embutidos nos jogos do JSON.
+  if (Array.isArray(dados.jogos)) {
+    dados.jogos.forEach(function(j) {
+      if (!j) return;
+      const idJogoItem = String(j.id_jogo || j.id || '').trim();
+      const idBolaoItem = String(j.id_bolao || CONFIG.ID_BOLAO || '').trim();
+
+      varrerListaPalpitesPublicosV116_(j.palpites, idJogoItem, idBolaoItem);
+      varrerListaPalpitesPublicosV116_(j.palpitesPublicos, idJogoItem, idBolaoItem);
+      varrerListaPalpitesPublicosV116_(j.palpitesParticipantes, idJogoItem, idBolaoItem);
+      varrerListaPalpitesPublicosV116_(j.palpitesOutros, idJogoItem, idBolaoItem);
+    });
+  }
+
+  // Palpites públicos já normalizados/aplicados em estado.jogos.
+  estado.jogos.forEach(function(j) {
+    if (!j) return;
+    const idJogoItem = String(j.id_jogo || j.id || '').trim();
+    const idBolaoItem = String(j.id_bolao || CONFIG.ID_BOLAO || '').trim();
+
+    varrerListaPalpitesPublicosV116_(j.palpites, idJogoItem, idBolaoItem);
+    varrerListaPalpitesPublicosV116_(j.palpitesPublicos, idJogoItem, idBolaoItem);
+    varrerListaPalpitesPublicosV116_(j.palpitesParticipantes, idJogoItem, idBolaoItem);
+    varrerListaPalpitesPublicosV116_(j.palpitesOutros, idJogoItem, idBolaoItem);
+  });
 
   // 3) Palpites embutidos em cada jogo (vindos do campo meuPalpite do jogo)
   estado.jogos.forEach(function(j) {
@@ -3352,4 +3424,5 @@
   </script>
 </body>
 </html>
+
 
