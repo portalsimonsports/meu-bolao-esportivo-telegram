@@ -3,7 +3,7 @@
   "versao": "V114_PUBLICACAO_PALPITES_TELEGRAM_SEPARADO",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "15/06/2026 22:34:56",
+  "dataHora": "15/06/2026 22:49:26",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V114_PUBLICACAO_PALPITES_TELEGRAM_SEPARADO&perfil=1",
@@ -7628,7 +7628,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "15/06/2026 22:36:42",
+    "cacheAtualizadoEm": "15/06/2026 22:50:38",
     "modoDados": "JSON_PUBLICO_ESTATICO_V091_TRADUCAO_PTBR",
     "classificacaoGrupos": [
       {
@@ -15283,8 +15283,8 @@
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "15/06/2026 22:36:42",
-  "gerado_ts": 1781573802316,
+  "gerado_em": "15/06/2026 22:50:38",
+  "gerado_ts": 1781574638810,
   "traducaoSelecoes": {
     "ativo": true,
     "idioma": "pt-BR",
