@@ -5,8 +5,8 @@
   "versao_execucao": "V115_PUBLICACAO_LIMPA_SEM_V090_MENU",
   "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
   "id_bolao": "BOLAO001",
-  "gerado_em": "15/06/2026 23:49:57",
-  "gerado_ts": 1781578197690,
+  "gerado_em": "16/06/2026 00:05:04",
+  "gerado_ts": 1781579104670,
   "dados": {
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
@@ -4566,10 +4566,10 @@
         "limitePalpite": "15/06/2026 22:00",
         "gols_mandante": 2,
         "gols_visitante": 2,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -11642,8 +11642,8 @@
         "codigoMandante": "ir",
         "codigoVisitante": "nz",
         "data_jogo": "",
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "gols_mandante": 2,
         "gols_visitante": 2,
         "placar": "2 x 2",
@@ -11909,7 +11909,7 @@
     "totalJogosComPalpitesPublicos": 16,
     "totalPalpitesPublicos": 32,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "15/06/2026 23:49:57",
+    "cacheAtualizadoEm": "16/06/2026 00:05:04",
     "copaGlobalPath": "data/copa_2026_publico.json"
   }
 }
