@@ -5,8 +5,8 @@
   "versao_execucao": "V115_PUBLICACAO_LIMPA_SEM_V090_MENU",
   "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
   "id_bolao": "BOLAO001",
-  "gerado_em": "17/06/2026 01:19:35",
-  "gerado_ts": 1781669975813,
+  "gerado_em": "17/06/2026 01:35:36",
+  "gerado_ts": 1781670936790,
   "dados": {
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
@@ -27,7 +27,7 @@
         "nome": "Simon",
         "total_pontos": 1180,
         "pontos": "1.180",
-        "palpites": 19,
+        "palpites": 20,
         "medalha": "👑",
         "classe": "gold",
         "avatar": "👨🏻"
@@ -37,7 +37,7 @@
         "nome": "🤖 Desafiante IA",
         "total_pontos": 970,
         "pontos": "970",
-        "palpites": 17,
+        "palpites": 18,
         "medalha": "🏅",
         "classe": "silver",
         "avatar": "👩🏻"
@@ -5888,11 +5888,11 @@
         "hora": "01:00",
         "dataHora": "17/06/2026 01:00",
         "limitePalpite": "17/06/2026 01:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "status": "Ao vivo",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
@@ -14114,11 +14114,11 @@
         "codigoMandante": "at",
         "codigoVisitante": "jo",
         "data_jogo": "",
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "placar": " x ",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "placar": "0 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -14381,7 +14381,7 @@
     "totalJogosComPalpitesPublicos": 20,
     "totalPalpitesPublicos": 42,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "17/06/2026 01:19:35",
+    "cacheAtualizadoEm": "17/06/2026 01:35:36",
     "copaGlobalPath": "data/copa_2026_publico.json"
   }
 }
