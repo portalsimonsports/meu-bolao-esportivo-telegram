@@ -5,8 +5,8 @@
   "versao_execucao": "V115_PUBLICACAO_LIMPA_SEM_V090_MENU",
   "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
   "id_bolao": "BOLAO001",
-  "gerado_em": "16/06/2026 23:35:15",
-  "gerado_ts": 1781663715257,
+  "gerado_em": "16/06/2026 23:53:19",
+  "gerado_ts": 1781664799079,
   "dados": {
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
@@ -25,9 +25,9 @@
       {
         "pos": 1,
         "nome": "Simon",
-        "total_pontos": 1280,
-        "pontos": "1.280",
-        "palpites": 19,
+        "total_pontos": 1180,
+        "pontos": "1.180",
+        "palpites": 18,
         "medalha": "👑",
         "classe": "gold",
         "avatar": "👨🏻"
@@ -35,9 +35,9 @@
       {
         "pos": 2,
         "nome": "🤖 Desafiante IA",
-        "total_pontos": 1090,
-        "pontos": "1.090",
-        "palpites": 18,
+        "total_pontos": 970,
+        "pontos": "970",
+        "palpites": 17,
         "medalha": "🏅",
         "classe": "silver",
         "avatar": "👩🏻"
@@ -5509,9 +5509,9 @@
         "visitante_iso": "no"
       },
       {
-        "id": "7b58e80f88ac4424",
+        "id": "66c7e24f8dcb053a",
         "id_bolao": "BOLAO001",
-        "id_jogo": "7b58e80f88ac4424",
+        "id_jogo": "66c7e24f8dcb053a",
         "mandante": "Argentina",
         "visitante": "Algeria",
         "flagMandante": "🇦🇷",
@@ -5523,10 +5523,10 @@
         "grupo": "Grupo J",
         "rodada_grupo": "Grupo J",
         "data": "16/06/2026",
-        "hora": "22:00",
-        "dataHora": "16/06/2026 22:00",
-        "limitePalpite": "16/06/2026 22:00",
-        "gols_mandante": 1,
+        "hora": "22:02",
+        "dataHora": "16/06/2026 22:02",
+        "limitePalpite": "16/06/2026 22:02",
+        "gols_mandante": 2,
         "gols_visitante": 0,
         "status": "Ao vivo",
         "aceitaPalpite": false,
@@ -5571,7 +5571,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:14.410Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           },
           {
             "id_palpite": "a0a775c40c601c3bf75d",
@@ -5602,7 +5602,7 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-17T01:00:00.000Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           }
         ],
         "palpitesOutros": [
@@ -5635,7 +5635,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:14.410Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           },
           {
             "id_palpite": "a0a775c40c601c3bf75d",
@@ -5666,7 +5666,7 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-17T01:00:00.000Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           }
         ],
         "palpitesParticipantes": [
@@ -5699,7 +5699,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:14.410Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           },
           {
             "id_palpite": "a0a775c40c601c3bf75d",
@@ -5730,73 +5730,10 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-17T01:00:00.000Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           }
         ],
-        "palpites": [
-          {
-            "id_bolao": "BOLAO001",
-            "id_jogo": "7b58e80f88ac4424",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "Argentina",
-            "visitante": "Algeria",
-            "palpite_mandante": 3,
-            "palpite_visitante": 0,
-            "placarMandante": 3,
-            "placarVisitante": 0,
-            "placar_texto": "3 x 0",
-            "pontos": 120,
-            "pontos_label": "120 pts",
-            "criterio_pontuacao": "GOL_PERDEDOR",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 120,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "data_hora": "15/06/2026 21:47:14",
-            "dataHora": "15/06/2026 21:47:14",
-            "proprio": false
-          },
-          {
-            "id_bolao": "BOLAO001",
-            "id_jogo": "7b58e80f88ac4424",
-            "telegram_id": "",
-            "nome": "Simon",
-            "username": "",
-            "mandante": "Argentina",
-            "visitante": "Algeria",
-            "palpite_mandante": 3,
-            "palpite_visitante": 1,
-            "placarMandante": 3,
-            "placarVisitante": 1,
-            "placar_texto": "3 x 1",
-            "pontos": 100,
-            "pontos_label": "100 pts",
-            "criterio_pontuacao": "VENCEDOR",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 0,
-            "PTS_VENCEDOR": 100,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "AUTOMATICO",
-            "automatico": true,
-            "desafiante_ia": false,
-            "origem_label": "🤖 Palpite automático",
-            "data_hora": "16/06/2026 22:00:00",
-            "dataHora": "16/06/2026 22:00:00",
-            "proprio": false
-          }
-        ],
+        "palpites": [],
         "mandante_pt": "Argentina",
         "mandante_nome_pt": "Argentina",
         "mandante_exibicao": "Argentina",
@@ -13395,7 +13332,7 @@
       },
       {
         "id_bolao": "BOLAO001",
-        "id_jogo": "7b58e80f88ac4424",
+        "id_jogo": "66c7e24f8dcb053a",
         "mandante": "Argentina",
         "visitante": "Algeria",
         "mandante_pt": "Argentina",
@@ -13405,9 +13342,9 @@
         "data_jogo": "",
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": 1,
+        "gols_mandante": 2,
         "gols_visitante": 0,
-        "placar": "1 x 0",
+        "placar": "2 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -13439,7 +13376,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:14.410Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           },
           {
             "id_palpite": "a0a775c40c601c3bf75d",
@@ -13470,7 +13407,7 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-17T01:00:00.000Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           }
         ],
         "palpitesPublicos": [
@@ -13503,7 +13440,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:14.410Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           },
           {
             "id_palpite": "a0a775c40c601c3bf75d",
@@ -13534,7 +13471,7 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-17T01:00:00.000Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           }
         ],
         "palpitesOutros": [
@@ -13567,7 +13504,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:14.410Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           },
           {
             "id_palpite": "a0a775c40c601c3bf75d",
@@ -13598,7 +13535,7 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-17T01:00:00.000Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           }
         ],
         "palpitesParticipantes": [
@@ -13631,7 +13568,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T00:47:14.410Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           },
           {
             "id_palpite": "a0a775c40c601c3bf75d",
@@ -13662,7 +13599,7 @@
             "desafiante_ia": false,
             "origem_label": "🤖 Palpite automático",
             "dataHora": "2026-06-17T01:00:00.000Z",
-            "id_jogo_json": "7b58e80f88ac4424"
+            "id_jogo_json": "66c7e24f8dcb053a"
           }
         ]
       }
@@ -13670,7 +13607,7 @@
     "totalJogosComPalpitesPublicos": 19,
     "totalPalpitesPublicos": 39,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "16/06/2026 23:35:15",
+    "cacheAtualizadoEm": "16/06/2026 23:53:19",
     "copaGlobalPath": "data/copa_2026_publico.json"
   }
 }
