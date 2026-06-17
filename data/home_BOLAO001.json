@@ -3,7 +3,7 @@
   "versao": "V114_PUBLICACAO_PALPITES_TELEGRAM_SEPARADO",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "17/06/2026 00:05:46",
+  "dataHora": "17/06/2026 00:18:42",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V114_PUBLICACAO_PALPITES_TELEGRAM_SEPARADO&perfil=1",
@@ -5618,7 +5618,7 @@
         "hora": "22:02",
         "dataHora": "16/06/2026 22:02",
         "limitePalpite": "16/06/2026 22:02",
-        "gols_mandante": 2,
+        "gols_mandante": 3,
         "gols_visitante": 0,
         "status": "Finalizado",
         "aceitaPalpite": false,
@@ -5934,7 +5934,7 @@
             "placar_texto": "0 x 1",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -8508,7 +8508,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "17/06/2026 00:08:00",
+    "cacheAtualizadoEm": "17/06/2026 00:19:35",
     "modoDados": "JSON_PUBLICO_ESTATICO_V091_TRADUCAO_PTBR",
     "classificacaoGrupos": [
       {
@@ -9777,9 +9777,9 @@
             "derrotas": 0,
             "pontos": 3,
             "pts": 3,
-            "golsPro": 2,
+            "golsPro": 3,
             "golsContra": 0,
-            "saldo": 2,
+            "saldo": 3,
             "conduta": 0,
             "rankingFifa": 9999,
             "rankingFifaAnterior": 9999,
@@ -9859,8 +9859,8 @@
             "pontos": 0,
             "pts": 0,
             "golsPro": 0,
-            "golsContra": 2,
-            "saldo": -2,
+            "golsContra": 3,
+            "saldo": -3,
             "conduta": 0,
             "rankingFifa": 9999,
             "rankingFifaAnterior": 9999,
@@ -17028,9 +17028,9 @@
         "data_jogo": "",
         "status_jogo": "FINALIZADO",
         "status_bolao": "FINALIZADO",
-        "gols_mandante": 2,
+        "gols_mandante": 3,
         "gols_visitante": 0,
-        "placar": "2 x 0",
+        "placar": "3 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -17419,8 +17419,8 @@
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "17/06/2026 00:08:00",
-  "gerado_ts": 1781665680166,
+  "gerado_em": "17/06/2026 00:19:35",
+  "gerado_ts": 1781666375028,
   "traducaoSelecoes": {
     "ativo": true,
     "idioma": "pt-BR",
