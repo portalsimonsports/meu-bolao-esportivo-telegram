@@ -5,8 +5,8 @@
   "versao": "V114_PUBLICACAO_PALPITES_TELEGRAM_SEPARADO",
   "hotfix": "V091_TRADUCAO_SELECOES_PTBR_JSON",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "17/06/2026 03:08:13",
-  "gerado_ts": 1781676493041,
+  "gerado_em": "17/06/2026 03:35:39",
+  "gerado_ts": 1781678139046,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -845,7 +845,7 @@
         "hora": "01:02",
         "dataHora": "17/06/2026 01:02",
         "limitePalpite": "17/06/2026 01:02",
-        "gols_mandante": 2,
+        "gols_mandante": 3,
         "gols_visitante": 1,
         "status": "Finalizado",
         "aceitaPalpite": false,
@@ -3943,7 +3943,7 @@
         "hora": "01:02",
         "dataHora": "17/06/2026 01:02",
         "limitePalpite": "17/06/2026 01:02",
-        "gols_mandante": 2,
+        "gols_mandante": 3,
         "gols_visitante": 1,
         "status": "Finalizado",
         "aceitaPalpite": false,
@@ -5307,9 +5307,9 @@
             "derrotas": 0,
             "pontos": 3,
             "pts": 3,
-            "golsPro": 2,
+            "golsPro": 3,
             "golsContra": 1,
-            "saldo": 1,
+            "saldo": 2,
             "conduta": 0,
             "rankingFifa": 9999,
             "rankingFifaAnterior": 9999,
@@ -5335,8 +5335,8 @@
             "pontos": 0,
             "pts": 0,
             "golsPro": 1,
-            "golsContra": 2,
-            "saldo": -1,
+            "golsContra": 3,
+            "saldo": -2,
             "conduta": 0,
             "rankingFifa": 9999,
             "rankingFifaAnterior": 9999,
@@ -5912,35 +5912,6 @@
         "codigo_pais": "gh"
       },
       {
-        "grupo": "J",
-        "nome": "Jordan",
-        "time": "Jordan",
-        "flag": "🇯🇴",
-        "codigo": "jo",
-        "jogos": 1,
-        "vitorias": 0,
-        "empates": 0,
-        "derrotas": 1,
-        "pontos": 0,
-        "pts": 0,
-        "golsPro": 1,
-        "golsContra": 2,
-        "saldo": -1,
-        "conduta": 0,
-        "rankingFifa": 9999,
-        "rankingFifaAnterior": 9999,
-        "posicao": 3,
-        "slot": "3J",
-        "provisoria": true,
-        "posicao_terceiros": 11,
-        "classificado_melhor_terceiro": false,
-        "nome_pt": "Jordânia",
-        "time_pt": "Jordânia",
-        "selecao_pt": "Jordânia",
-        "nome_exibicao": "Jordânia",
-        "codigo_pais": "jo"
-      },
-      {
         "grupo": "I",
         "nome": "Senegal",
         "time": "Senegal",
@@ -5961,13 +5932,42 @@
         "posicao": 3,
         "slot": "3I",
         "provisoria": true,
-        "posicao_terceiros": 12,
+        "posicao_terceiros": 11,
         "classificado_melhor_terceiro": false,
         "nome_pt": "Senegal",
         "time_pt": "Senegal",
         "selecao_pt": "Senegal",
         "nome_exibicao": "Senegal",
         "codigo_pais": "sn"
+      },
+      {
+        "grupo": "J",
+        "nome": "Jordan",
+        "time": "Jordan",
+        "flag": "🇯🇴",
+        "codigo": "jo",
+        "jogos": 1,
+        "vitorias": 0,
+        "empates": 0,
+        "derrotas": 1,
+        "pontos": 0,
+        "pts": 0,
+        "golsPro": 1,
+        "golsContra": 3,
+        "saldo": -2,
+        "conduta": 0,
+        "rankingFifa": 9999,
+        "rankingFifaAnterior": 9999,
+        "posicao": 3,
+        "slot": "3J",
+        "provisoria": true,
+        "posicao_terceiros": 12,
+        "classificado_melhor_terceiro": false,
+        "nome_pt": "Jordânia",
+        "time_pt": "Jordânia",
+        "selecao_pt": "Jordânia",
+        "nome_exibicao": "Jordânia",
+        "codigo_pais": "jo"
       }
     ],
     "gruposTerceirosClassificados": [
@@ -5983,8 +5983,8 @@
     "gruposTerceirosEliminados": [
       "K",
       "L",
-      "J",
-      "I"
+      "I",
+      "J"
     ],
     "anexoC": {
       "ok": true,
@@ -6003,8 +6003,8 @@
       "gruposTerceirosEliminados": [
         "K",
         "L",
-        "J",
-        "I"
+        "I",
+        "J"
       ],
       "mensagem": "Chaveamento Anexo C calculado pelo GS."
     },
@@ -6028,8 +6028,8 @@
         "gruposTerceirosEliminados": [
           "K",
           "L",
-          "J",
-          "I"
+          "I",
+          "J"
         ],
         "mensagem": "Chaveamento Anexo C calculado pelo GS."
       },
@@ -7481,7 +7481,7 @@
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "17/06/2026 03:08:13"
+    "cacheAtualizadoEm": "17/06/2026 03:35:39"
   },
   "jogos": [
     {
@@ -8319,7 +8319,7 @@
       "hora": "01:02",
       "dataHora": "17/06/2026 01:02",
       "limitePalpite": "17/06/2026 01:02",
-      "gols_mandante": 2,
+      "gols_mandante": 3,
       "gols_visitante": 1,
       "status": "Finalizado",
       "aceitaPalpite": false,
@@ -11417,7 +11417,7 @@
       "hora": "01:02",
       "dataHora": "17/06/2026 01:02",
       "limitePalpite": "17/06/2026 01:02",
-      "gols_mandante": 2,
+      "gols_mandante": 3,
       "gols_visitante": 1,
       "status": "Finalizado",
       "aceitaPalpite": false,
@@ -12738,9 +12738,9 @@
           "derrotas": 0,
           "pontos": 3,
           "pts": 3,
-          "golsPro": 2,
+          "golsPro": 3,
           "golsContra": 1,
-          "saldo": 1,
+          "saldo": 2,
           "conduta": 0,
           "rankingFifa": 9999,
           "rankingFifaAnterior": 9999,
@@ -12766,8 +12766,8 @@
           "pontos": 0,
           "pts": 0,
           "golsPro": 1,
-          "golsContra": 2,
-          "saldo": -1,
+          "golsContra": 3,
+          "saldo": -2,
           "conduta": 0,
           "rankingFifa": 9999,
           "rankingFifaAnterior": 9999,
@@ -13343,35 +13343,6 @@
       "codigo_pais": "gh"
     },
     {
-      "grupo": "J",
-      "nome": "Jordan",
-      "time": "Jordan",
-      "flag": "🇯🇴",
-      "codigo": "jo",
-      "jogos": 1,
-      "vitorias": 0,
-      "empates": 0,
-      "derrotas": 1,
-      "pontos": 0,
-      "pts": 0,
-      "golsPro": 1,
-      "golsContra": 2,
-      "saldo": -1,
-      "conduta": 0,
-      "rankingFifa": 9999,
-      "rankingFifaAnterior": 9999,
-      "posicao": 3,
-      "slot": "3J",
-      "provisoria": true,
-      "posicao_terceiros": 11,
-      "classificado_melhor_terceiro": false,
-      "nome_pt": "Jordânia",
-      "time_pt": "Jordânia",
-      "selecao_pt": "Jordânia",
-      "nome_exibicao": "Jordânia",
-      "codigo_pais": "jo"
-    },
-    {
       "grupo": "I",
       "nome": "Senegal",
       "time": "Senegal",
@@ -13392,13 +13363,42 @@
       "posicao": 3,
       "slot": "3I",
       "provisoria": true,
-      "posicao_terceiros": 12,
+      "posicao_terceiros": 11,
       "classificado_melhor_terceiro": false,
       "nome_pt": "Senegal",
       "time_pt": "Senegal",
       "selecao_pt": "Senegal",
       "nome_exibicao": "Senegal",
       "codigo_pais": "sn"
+    },
+    {
+      "grupo": "J",
+      "nome": "Jordan",
+      "time": "Jordan",
+      "flag": "🇯🇴",
+      "codigo": "jo",
+      "jogos": 1,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 1,
+      "pontos": 0,
+      "pts": 0,
+      "golsPro": 1,
+      "golsContra": 3,
+      "saldo": -2,
+      "conduta": 0,
+      "rankingFifa": 9999,
+      "rankingFifaAnterior": 9999,
+      "posicao": 3,
+      "slot": "3J",
+      "provisoria": true,
+      "posicao_terceiros": 12,
+      "classificado_melhor_terceiro": false,
+      "nome_pt": "Jordânia",
+      "time_pt": "Jordânia",
+      "selecao_pt": "Jordânia",
+      "nome_exibicao": "Jordânia",
+      "codigo_pais": "jo"
     }
   ],
   "gruposTerceirosClassificados": [
@@ -13414,8 +13414,8 @@
   "gruposTerceirosEliminados": [
     "K",
     "L",
-    "J",
-    "I"
+    "I",
+    "J"
   ],
   "anexoC": {
     "ok": true,
@@ -13434,8 +13434,8 @@
     "gruposTerceirosEliminados": [
       "K",
       "L",
-      "J",
-      "I"
+      "I",
+      "J"
     ],
     "mensagem": "Chaveamento Anexo C calculado pelo GS."
   },
@@ -13459,8 +13459,8 @@
       "gruposTerceirosEliminados": [
         "K",
         "L",
-        "J",
-        "I"
+        "I",
+        "J"
       ],
       "mensagem": "Chaveamento Anexo C calculado pelo GS."
     },
