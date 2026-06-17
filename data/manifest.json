@@ -1,9 +1,9 @@
 {
   "ok": true,
   "projeto": "Bolão Futebol Telegram — Portal SimonSports",
-  "versao": "V120_JOGOS_FONTE_OFICIAL_RANKING_CLASSIFICACAO_FIFA",
-  "gerado_em": "17/06/2026 14:44:38",
-  "gerado_ts": 1781718278200,
+  "versao": "V122_CARTOES_ESPN_JSON_DESEMPATE_FIFA",
+  "gerado_em": "17/06/2026 16:50:37",
+  "gerado_ts": 1781725837595,
   "site": "https://bolaodacopa.portalsimonsports.com/",
   "base_path": "data",
   "leitura": "JSON_ESTATICO_CLOUDFLARE_GITHUB",
