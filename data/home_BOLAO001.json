@@ -3,7 +3,7 @@
   "versao": "V122_CARTOES_ESPN_JSON_DESEMPATE_FIFA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "18/06/2026 14:56:50",
+  "dataHora": "18/06/2026 15:11:20",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V122_CARTOES_ESPN_JSON_DESEMPATE_FIFA&perfil=1",
@@ -91,8 +91,8 @@
         "avatar": "👩🏻"
       }
     ],
-    "rankingTipo": "PROVISORIO",
-    "rankingLegenda": "Ranking ao vivo/provisório calculado com o placar em andamento.",
+    "rankingTipo": "DEFINITIVO_CALCULADO",
+    "rankingLegenda": "Ranking definitivo calculado com jogos finalizados.",
     "boloes": [
       {
         "id_bolao": "BOLAO001",
@@ -7358,10 +7358,10 @@
         "limitePalpite": "18/06/2026 13:00",
         "gols_mandante": 1,
         "gols_visitante": 1,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -9896,7 +9896,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "18/06/2026 14:58:34",
+    "cacheAtualizadoEm": "18/06/2026 15:12:59",
     "modoDados": "JSON_PUBLICO_ESTATICO_V122_CARTOES_ESPN_FIFA",
     "classificacaoGrupos": [
       {
@@ -10165,7 +10165,7 @@
         ],
         "jogos_total": 6,
         "jogos_com_placar": 3,
-        "jogos_ao_vivo": 1,
+        "jogos_ao_vivo": 0,
         "jogos_pendentes": 3,
         "status": "PROVISORIO"
       },
@@ -24048,8 +24048,8 @@
         "codigoMandante": "cz",
         "codigoVisitante": "za",
         "data_jogo": "",
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "gols_mandante": 1,
         "gols_visitante": 1,
         "placar": "1 x 1",
@@ -24317,8 +24317,8 @@
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "18/06/2026 14:58:34",
-  "gerado_ts": 1781805514646,
+  "gerado_em": "18/06/2026 15:12:59",
+  "gerado_ts": 1781806379435,
   "cartoes_selecoes": [
     {
       "chave_selecao": "africadosul",
