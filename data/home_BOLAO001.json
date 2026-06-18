@@ -3,7 +3,7 @@
   "versao": "V122_CARTOES_ESPN_JSON_DESEMPATE_FIFA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "18/06/2026 08:57:07",
+  "dataHora": "18/06/2026 09:11:52",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V122_CARTOES_ESPN_JSON_DESEMPATE_FIFA&perfil=1",
@@ -9644,7 +9644,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "18/06/2026 08:59:14",
+    "cacheAtualizadoEm": "18/06/2026 09:13:31",
     "modoDados": "JSON_PUBLICO_ESTATICO_V122_CARTOES_ESPN_FIFA",
     "classificacaoGrupos": [
       {
@@ -23792,8 +23792,8 @@
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "18/06/2026 08:59:14",
-  "gerado_ts": 1781783954646,
+  "gerado_em": "18/06/2026 09:13:31",
+  "gerado_ts": 1781784811019,
   "cartoes_selecoes": [
     {
       "chave_selecao": "africadosul",
