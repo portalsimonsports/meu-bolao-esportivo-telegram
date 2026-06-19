@@ -5,8 +5,8 @@
   "versao_execucao": "V115_PUBLICACAO_LIMPA_SEM_V090_MENU",
   "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
   "id_bolao": "BOLAO20260607185133484",
-  "gerado_em": "18/06/2026 20:14:04",
-  "gerado_ts": 1781824444539,
+  "gerado_em": "18/06/2026 21:14:49",
+  "gerado_ts": 1781828089309,
   "dados": {
     "id_bolao": "BOLAO20260607185133484",
     "bolaoAtual": {
@@ -7616,12 +7616,12 @@
         "hora": "19:00",
         "dataHora": "18/06/2026 19:00",
         "limitePalpite": "18/06/2026 19:00",
-        "gols_mandante": 3,
+        "gols_mandante": 6,
         "gols_visitante": 0,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -16797,11 +16797,11 @@
         "codigoMandante": "ca",
         "codigoVisitante": "qa",
         "data_jogo": "",
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
-        "gols_mandante": 3,
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
+        "gols_mandante": 6,
         "gols_visitante": 0,
-        "placar": "3 x 0",
+        "placar": "6 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -16940,7 +16940,7 @@
     "totalJogosComPalpitesPublicos": 27,
     "totalPalpitesPublicos": 51,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "18/06/2026 20:14:04",
+    "cacheAtualizadoEm": "18/06/2026 21:14:49",
     "copaGlobalPath": "data/copa_2026_publico.json"
   }
 }
