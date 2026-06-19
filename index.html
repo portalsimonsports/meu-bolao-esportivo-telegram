@@ -2190,11 +2190,12 @@ return '';
 
 function montarGruposCopa(){
 const candidatos=jogosGrupoCandidatos();
-if(!candidatos.length)return [];
+const todos=jogosOrdenadosCopa();
+if(!candidatos.length && !todos.length)return [];
 
-// V063: primeiro tenta montar pela tabela oficial FIFA 2026.
-// Isso corrige visualmente grupos já conhecidos, inclusive C e D, mesmo se o JSON antigo
-// ainda trouxer rodada/grupo deslocado.
+// V119: monta primeiro pelos grupos oficiais usando TODOS os jogos da Copa.
+// Assim, mesmo que parte do JSON venha sem campo grupo/fase, cada grupo continua
+// exibindo os 6 jogos corretos da fase de grupos em vez de apenas 4.
 const gruposOficiais={};
 Object.keys(PSS_GRUPOS_FIFA_2026_OFICIAIS_INDEX).forEach(function(letra){
 gruposOficiais[letra]={
@@ -2204,7 +2205,8 @@ jogos:[]
 };
 });
 
-candidatos.forEach(function(j){
+const jogosBase=(todos&&todos.length)?todos:candidatos;
+jogosBase.forEach(function(j){
 const gm=grupoOficialPorTimeIndex_(j.mandante);
 const gv=grupoOficialPorTimeIndex_(j.visitante);
 if(gm&&gv&&gm===gv){
@@ -2212,7 +2214,11 @@ gruposOficiais[gm].jogos.push(j);
 }
 });
 
-const oficiais=Object.keys(gruposOficiais).sort().map(function(k){return gruposOficiais[k]});
+const oficiais=Object.keys(gruposOficiais).sort().map(function(k){
+const g=gruposOficiais[k];
+g.jogos=deduplicarJogos(g.jogos||[]);
+return g;
+});
 const jogosOficiais=oficiais.reduce(function(s,g){return s+(g.jogos||[]).length},0);
 if(jogosOficiais>0)return oficiais.sort(ordenarGruposCopa);
 
@@ -2229,7 +2235,7 @@ gruposCampo[nome].times[normalizarTextoPais(j.visitante)]=j.visitante;
 }
 });
 if(Object.keys(gruposCampo).length){
-return Object.values(gruposCampo).map(function(g){g.times=Object.values(g.times);return g}).sort(ordenarGruposCopa);
+return Object.values(gruposCampo).map(function(g){g.times=Object.values(g.times);g.jogos=deduplicarJogos(g.jogos||[]);return g}).sort(ordenarGruposCopa);
 }
 
 // Sem coluna de grupo: monta grupos por componentes de confrontos da fase inicial.
@@ -2263,10 +2269,11 @@ const grupos=comps.map(function(comp,i){
 const set={}; comp.forEach(function(x){set[x]=true});
 const jogos=candidatos.filter(function(j){return set[normalizarTextoPais(j.mandante)]&&set[normalizarTextoPais(j.visitante)]});
 const times=comp.map(function(x){return nomes[x]}).sort(function(a,b){return a.localeCompare(b)});
-return {nome:'Grupo '+(letras[i]||String(i+1)),times:times,jogos:jogos};
+return {nome:'Grupo '+(letras[i]||String(i+1)),times:times,jogos:deduplicarJogos(jogos)};
 }).filter(function(g){return g.times.length||g.jogos.length});
 return grupos.sort(ordenarGruposCopa);
 }
+
 
 function numeroCopaCampo_(obj,nomes,padrao){
 for(let i=0;i<nomes.length;i++){
