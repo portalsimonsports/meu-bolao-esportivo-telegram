@@ -1,12 +1,12 @@
 {
   "ok": true,
   "tipo": "BOLAO_LEVE",
-  "versao": "V122_CARTOES_ESPN_JSON_DESEMPATE_FIFA",
+  "versao": "V123_RANKING_OFICIAL_JSON_JOGOS_COPA_FIX",
   "versao_execucao": "V115_PUBLICACAO_LIMPA_SEM_V090_MENU",
   "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
   "id_bolao": "BOLAO20260607182904806",
-  "gerado_em": "19/06/2026 04:59:13",
-  "gerado_ts": 1781855953040,
+  "gerado_em": "19/06/2026 05:59:16",
+  "gerado_ts": 1781859556665,
   "dados": {
     "id_bolao": "BOLAO20260607182904806",
     "bolaoAtual": {
@@ -24,20 +24,28 @@
     "ranking": [
       {
         "pos": 1,
+        "posicao": 1,
+        "telegram_id": "VIRTUAL_IA_DESAFIANTE",
         "nome": "🤖 Desafiante IA",
-        "total_pontos": 2184,
-        "pontos": "2.184",
-        "palpites": 28,
+        "username": "desafiante_ia",
+        "total_pontos": 2150,
+        "pontos": "2.150",
+        "palpites": 31,
+        "total_palpites": 31,
         "medalha": "👑",
         "classe": "gold",
         "avatar": "👨🏻"
       },
       {
         "pos": 2,
+        "posicao": 2,
+        "telegram_id": "197139159",
         "nome": "Simon",
-        "total_pontos": 1927,
-        "pontos": "1.927",
+        "username": "",
+        "total_pontos": 1890,
+        "pontos": "1.890",
         "palpites": 27,
+        "total_palpites": 27,
         "medalha": "🏅",
         "classe": "silver",
         "avatar": "👩🏻"
@@ -17961,7 +17969,7 @@
     "totalJogosComPalpitesPublicos": 28,
     "totalPalpitesPublicos": 55,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "19/06/2026 04:59:13",
+    "cacheAtualizadoEm": "19/06/2026 05:59:16",
     "copaGlobalPath": "data/copa_2026_publico.json"
   }
 }
