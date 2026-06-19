@@ -319,7 +319,7 @@ return 'BOLAO001';
 }
 
 const CONFIG={
-VERSAO:'V118_INDEX_COPA_CLASSIFICACAO_CHAVEAMENTO_BANDEIRAS_COMPARTILHAR_FIX',
+VERSAO:'V120_RANKING_TOTAL_PONTOS_CORRETO_6_JOGOS_GRUPOS',
 API_URL:API_PARAM||'', // V035: usado somente para gravação; leitura principal vem dos JSONs estáticos.
 API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // Fallback somente para ações de gravação caso o JSON não traga apiUrl.
 ID_BOLAO:idBolaoInicial_(),
@@ -709,8 +709,8 @@ const base=String(CONFIG.JSON_PUBLICO_BASE||'data').replace(/^\/+|\/+$/g,'')||'d
 const url=new URL(base+'/'+String(path||'').replace(/^\/+/,''),window.location.href);
 url.searchParams.set('v',CONFIG.VERSAO||'');
 const limpar=String(URL_PARAMS.get('limpar_cache')||'').toLowerCase();
-const forcarCacheBust = limpar==='1'||limpar==='sim'||limpar==='true'||String(CONFIG.VERSAO||'').indexOf('V078')>=0||String(CONFIG.VERSAO||'').indexOf('V102')>=0||String(CONFIG.VERSAO||'').indexOf('V116')>=0;
-if(forcarCacheBust)url.searchParams.set('_',String(Date.now()));
+const forcarCacheBust = true;
+url.searchParams.set('_',String(Date.now()));
 return url.toString();
 }
 
@@ -1233,7 +1233,7 @@ try { localStorage.setItem('PSS_MBE_BOLAO_ATIVO', dados.id_bolao); } catch(e) {}
 }
 estado.bolaoAtual = dados.bolaoAtual || null;
 estado.jogos = deduplicarJogos(Array.isArray(dados.jogos) ? dados.jogos.map(normalizarJogo).filter(Boolean) : []);
-estado.ranking = Array.isArray(dados.ranking) ? dados.ranking.map(normalizarRankingItem) : [];
+estado.ranking = rankingDoBolaoAtual_(dados.ranking);
 estado.rankingTipo = dados.rankingTipo || dados.ranking_tipo || 'AGUARDANDO_RESULTADOS';
 estado.rankingLegenda = dados.rankingLegenda || dados.ranking_legenda || '';
 estado.classificacao = Array.isArray(dados.classificacao) ? dados.classificacao : [];
@@ -1380,13 +1380,59 @@ estado.cacheUsado = origem === 'cache';
 estado.cacheAtualizadoEm = dados.cacheAtualizadoEm || dados.dataCache || estado.cacheAtualizadoEm || '';
 }
 
+function numeroRankingCampo_(v){
+if(v===undefined||v===null||v==='')return null;
+const n=Number(String(v).replace(',','.'));
+return (!Number.isNaN(n)&&Number.isFinite(n))?n:null;
+}
+
+function valorTotalPontosRanking_(r){
+r=r||{};
+// V120: a tela deve obedecer a coluna TOTAL_PONTOS da aba RANKING.
+// Em algumas publicações o cabeçalho pode chegar como total_ponto_s, totalPontos,
+// TOTAL_PONTOS ou variação parecida. O campo pontos pode vir contaminado por
+// subtotal/critério e por isso fica apenas como último fallback.
+const preferidos=['total_pontos','totalPontos','TOTAL_PONTOS','total_ponto_s','total_ponto','TOTAL_PONTO_S','pontos_total','pontosTotal','total','TOTAL'];
+for(let i=0;i<preferidos.length;i++){
+const n=numeroRankingCampo_(r[preferidos[i]]);
+if(n!==null)return n;
+}
+const chaves=Object.keys(r||{});
+for(let i=0;i<chaves.length;i++){
+const kNorm=String(chaves[i]||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]/g,'');
+if(kNorm==='totalpontos'||kNorm==='totalponto'||kNorm==='pontostotal'||kNorm==='totalpontuacao'){
+const n=numeroRankingCampo_(r[chaves[i]]);
+if(n!==null)return n;
+}
+}
+const fallback=numeroRankingCampo_(r.pontos);
+return fallback===null?0:fallback;
+}
+
 function normalizarRankingItem(r){
 r=r||{};
-// CORRECAO: so exibe ranking se ha palpites processados (total_pontos vindo da API)
-// Evita exibir pontuacao falsa antes de qualquer jogo ter sido computado.
-var pontos=(r.total_pontos!==undefined&&r.total_pontos!==null&&r.total_pontos!=='')?Number(r.total_pontos):Number(r.pontos||0);
-if(Number.isNaN(pontos))pontos=0;
+const pontos=valorTotalPontosRanking_(r);
 return Object.assign({},r,{pontos:pontos,total_pontos:pontos});
+}
+
+function rankingDoBolaoAtual_(ranking){
+const idAtual=String(CONFIG.ID_BOLAO||'').trim();
+let lista=(Array.isArray(ranking)?ranking:[]).map(normalizarRankingItem);
+if(idAtual){
+const comBolao=lista.filter(function(r){return r&&r.id_bolao!==undefined&&String(r.id_bolao||'').trim()===idAtual;});
+if(comBolao.length)lista=comBolao;
+}
+// Deduplica por telegram_id/username/nome, mantendo a maior pontuação correta.
+const mapa={};
+lista.forEach(function(r){
+const chave=String(r.telegram_id||r.idTelegram||r.username||r.nome||'').trim().toUpperCase();
+if(!chave)return;
+if(!mapa[chave]||Number(r.total_pontos||0)>Number(mapa[chave].total_pontos||0))mapa[chave]=r;
+});
+const saida=Object.keys(mapa).length?Object.values(mapa):lista;
+saida.sort(function(a,b){return Number(b.total_pontos||0)-Number(a.total_pontos||0)||String(a.nome||'').localeCompare(String(b.nome||''),'pt-BR')});
+saida.forEach(function(r,i){r.pos=i+1;if(i===0){r.classe='gold';r.medalha=r.medalha||'👑'}else if(i===1){r.classe='silver';r.medalha=r.medalha||'🥈'}else if(i===2){r.classe='bronze';r.medalha=r.medalha||'🥉'}});
+return saida;
 }
 
 function normalizarPalpiteApi(p){
@@ -2890,7 +2936,7 @@ secoesPrivadas+='<div class="mini"><strong>🔐 Área privada protegida</strong>
 var bodyBoloes=
 avisoUsuario+avisoSync+
 (estado.bolaoAtual?'<div class="mini" style="border-color:rgba(10,90,53,.4);background:#f0fff4"><strong>✅ Bolão ativo: '+esc(estado.bolaoAtual.nome_bolao||CONFIG.ID_BOLAO)+'</strong><p>'+esc(tipoBolaoSeguro(estado.bolaoAtual))+
-(estado.bolaoAtual.codigo_convite&&estado.bolaoAtual.codigo_convite!=='PUBLICO'?' • Código: <b>'+esc(estado.bolaoAtual.codigo_convite)+'</b>':'')+
+(estado.bolaoAtual.codigo_convite&&estado.bolaoAtual.codigo_convite!=='PUBLICO'?' • Código: <b>'+esc(estado.bolaoAtual.codigo_convite)+'</b>':'')+
 '</p></div>':'')+
 montarSecaoBoloes('🌎 Bolões públicos', boloesPublicos, true)+
 secoesPrivadas+
