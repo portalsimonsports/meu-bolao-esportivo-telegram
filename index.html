@@ -319,7 +319,7 @@ return 'BOLAO001';
 }
 
 const CONFIG={
-VERSAO:'V120_RANKING_TOTAL_PONTOS_CORRETO_6_JOGOS_GRUPOS',
+VERSAO:'V125_GRUPO_B_BOSNIA_HIFEN_6_JOGOS_FIX',
 API_URL:API_PARAM||'', // V035: usado somente para gravação; leitura principal vem dos JSONs estáticos.
 API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec', // Fallback somente para ações de gravação caso o JSON não traga apiUrl.
 ID_BOLAO:idBolaoInicial_(),
@@ -638,7 +638,7 @@ function codigoPais(nome){
 // V117: aliases PT-BR/EN reforçados para jogos, classificação, terceiros e chaveamento.
 const mapa={
 'MEXICO':'mx','SOUTH AFRICA':'za','AFRICA DO SUL':'za','KOREA REPUBLIC':'kr','SOUTH KOREA':'kr','COREIA DO SUL':'kr','CZECH REPUBLIC':'cz','CZECHIA':'cz','REPUBLICA TCHECA':'cz','CANADA':'ca',
-'BOSNIA AND HERZEGOVINA':'ba','BOSNIA AND HERZ':'ba','BOSNIA HERZEGOVINA':'ba','BOSNIA E HERZEGOVINA':'ba','BOSNIA E HERZ':'ba','BIH':'ba','UNITED STATES':'us','USA':'us','ESTADOS UNIDOS':'us',
+'BOSNIA AND HERZEGOVINA':'ba','BOSNIA AND HERZ':'ba','BOSNIA HERZEGOVINA':'ba','BOSNIA-HERZEGOVINA':'ba','BOSNIA E HERZEGOVINA':'ba','BOSNIA E HERZ':'ba','BIH':'ba','UNITED STATES':'us','USA':'us','ESTADOS UNIDOS':'us',
 'PARAGUAY':'py','PARAGUAI':'py','AUSTRALIA':'au','AUSTRÁLIA':'au','QATAR':'qa','CATAR':'qa','SWITZERLAND':'ch','SUICA':'ch','BRAZIL':'br','BRASIL':'br','MOROCCO':'ma','MARROCOS':'ma','HAITI':'ht',
 'SCOTLAND':'gb-sct','ESCOCIA':'gb-sct','TURKIYE':'tr','TÜRKIYE':'tr','TURKEY':'tr','TURQUIA':'tr','GERMANY':'de','ALEMANHA':'de','CURACAO':'cw','CURAÇAO':'cw','CURAÇÃO':'cw','NETHERLANDS':'nl','HOLANDA':'nl','PAISES BAIXOS':'nl',
 'JAPAN':'jp','JAPAO':'jp','COTE DIVOIRE':'ci',"COTE D'IVOIRE":'ci',"CÔTE D'IVOIRE":'ci','COTE D IVOIRE':'ci','IVORY COAST':'ci','COSTA DO MARFIM':'ci','ECUADOR':'ec','SWEDEN':'se','SUECIA':'se','TUNISIA':'tn',
@@ -2219,7 +2219,7 @@ L:['England','Croatia','Ghana','Panama']
 };
 
 function aliasesGrupoFifaIndex_(nome){
-const n=normalizarTextoPais(nome);
+const n=normalizarTextoPais(nome).replace(/[\u2010-\u2015-]+/g,'-');
 const mapa={
 'USA':'UNITED STATES',
 'ESTADOS UNIDOS':'UNITED STATES',
@@ -2229,6 +2229,7 @@ const mapa={
 'CZECHIA':'CZECH REPUBLIC',
 'REPUBLICA TCHECA':'CZECH REPUBLIC',
 'BOSNIA HERZEGOVINA':'BOSNIA AND HERZEGOVINA',
+'BOSNIA-HERZEGOVINA':'BOSNIA AND HERZEGOVINA',
 'BOSNIA-H':'BOSNIA AND HERZEGOVINA',
 'BOSNIA E HERZEGOVINA':'BOSNIA AND HERZEGOVINA',
 'TURKEY':'TURKIYE',
