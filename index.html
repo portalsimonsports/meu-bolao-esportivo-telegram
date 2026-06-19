@@ -325,7 +325,7 @@ API_URL_FIXA:'https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlv
 ID_BOLAO:idBolaoInicial_(),
 CODIGO_CONVITE:codigoConviteInicial_(),
 ENVIAR_AO_BOT_SEM_API:true,
-CACHE_TTL_MINUTOS:2,
+CACHE_TTL_MINUTOS:0,
 CACHE_MAX_HORAS:2,
 TELEGRAM_MINIAPP_OFICIAL:'https://t.me/MeuBolaoEsportivoBot/meubolaoesportivo',
 JSON_PUBLICO_ATIVO:true,
@@ -375,6 +375,31 @@ confrontosAnexoC:[]
 // V036: mantém manifesto, perfil e homes dos bolões em memória/localStorage.
 // Troca de bolão não deve chamar Apps Script/API; deve renderizar JSON estático já publicado.
 const JSON_ESTATICO_MEM={manifest:null,perfil:null,copaGlobal:null,boloesLeves:{},homes:{},preloadIniciado:false};
+
+function limparCacheJsonRuntimeV124_(){
+// V124: Telegram WebView pode manter JSON/localStorage antigo por sessão.
+// Limpa somente caches de leitura JSON; não remove palpites locais do usuário.
+try{
+JSON_ESTATICO_MEM.manifest=null;
+JSON_ESTATICO_MEM.perfil=null;
+JSON_ESTATICO_MEM.copaGlobal=null;
+JSON_ESTATICO_MEM.boloesLeves={};
+JSON_ESTATICO_MEM.homes={};
+JSON_ESTATICO_MEM.preloadIniciado=false;
+}catch(e){}
+try{
+const remover=[];
+for(let i=0;i<localStorage.length;i++){
+const k=localStorage.key(i)||'';
+if(k.startsWith('PSS_MBE_HOME_CACHE_')||
+k.startsWith('PSS_MBE_HOME_CACHE_INFO_')||
+k.startsWith('PSS_MBE_JSON_CACHE_')||
+k.startsWith('PSS_MBE_COPA_CACHE_')) remover.push(k);
+}
+remover.forEach(function(k){try{localStorage.removeItem(k)}catch(e){}});
+}catch(e){}
+try{sessionStorage.setItem('PSS_MBE_JSON_CACHE_LIMPO_V124','SIM')}catch(e){}
+}
 
 function initTelegram(){
 if(tg){
@@ -707,10 +732,11 @@ meuPalpite:normalizarPalpiteApi(j.meuPalpite)
 function jsonBaseUrl(path){
 const base=String(CONFIG.JSON_PUBLICO_BASE||'data').replace(/^\/+|\/+$/g,'')||'data';
 const url=new URL(base+'/'+String(path||'').replace(/^\/+/,''),window.location.href);
-url.searchParams.set('v',CONFIG.VERSAO||'');
-const limpar=String(URL_PARAMS.get('limpar_cache')||'').toLowerCase();
-const forcarCacheBust = true;
-url.searchParams.set('_',String(Date.now()));
+// V124: cada leitura do JSON precisa ser rede real, não cache do Telegram/Cloudflare/browser.
+const ts=String(Date.now());
+url.searchParams.set('v',(CONFIG.VERSAO||'')+'_'+ts);
+url.searchParams.set('_',ts);
+url.searchParams.set('nocache',Math.random().toString(36).slice(2));
 return url.toString();
 }
 
@@ -742,7 +768,7 @@ async function fetchJsonComTimeout(url,timeoutMs){
 const controller=window.AbortController?new AbortController():null;
 const timer=setTimeout(()=>{try{if(controller)controller.abort()}catch(e){}},Number(timeoutMs||4500));
 try{
-const resp=await fetch(url,{cache:'no-cache',signal:controller?controller.signal:undefined});
+const resp=await fetch(url,{cache:'reload',headers:{'Cache-Control':'no-cache, no-store, max-age=0','Pragma':'no-cache'},signal:controller?controller.signal:undefined});
 const texto=await resp.text();
 if(!resp.ok)throw new Error('HTTP '+resp.status+' em '+url);
 const t=String(texto||'').trim();
@@ -1634,7 +1660,8 @@ function salvarCache(dados){
 try{
 if(!dados)return;
 const pacote={salvoEm:Date.now(),versao:CONFIG.VERSAO,id_bolao:CONFIG.ID_BOLAO,dados:dados||{}};
-pacote.dados.cacheAtualizadoEm=new Date(pacote.salvoEm).toLocaleString('pt-BR');
+// V124: preserva o horário real do JSON publicado. Não troca por hora local de cache.
+pacote.dados.cacheAtualizadoEm=dados.cacheAtualizadoEm||dados.gerado_em||dados.geradoEm||dados.atualizado_em||new Date(pacote.salvoEm).toLocaleString('pt-BR');
 localStorage.setItem(cacheKey(),JSON.stringify(pacote));
 localStorage.setItem(cacheInfoKey(),JSON.stringify({salvoEm:pacote.salvoEm,versao:CONFIG.VERSAO}));
 estado.cacheAtualizadoEm=pacote.dados.cacheAtualizadoEm;
@@ -3049,7 +3076,7 @@ return;
 }
 
 if(name==='mais'){
-openModal('☰ Mais','<div class="mini"><strong>Central do Bolão</strong><p>Acesse regulamento, ranking, jogos, bolões ativos e dados do participante.</p><div class="mini-actions"><button class="mini-action" id="abrirCopaMais">🏆 Copa</button><button class="mini-action secondary" id="abrirRegulamentoMais">📄 Regulamento</button></div></div>'+'<div class="mini"><strong>🤖 Automação do bolão</strong><p>Ative seu palpite automático por estilo. O Desafiante IA aparece no ranking quando o GS publicar os dados.</p><div class="mini-actions"><button class="mini-action" id="abrirPalpiteAutoMais">Palpite automático</button><button class="mini-action secondary" id="abrirRankingIaMais">Ranking / IA</button></div></div>'+'<div class="mini"><strong>Participante</strong><p>'+esc(estado.usuario.nome||'Participante')+'</p><p>Telegram ID: <b>'+esc(estado.usuario.idTelegram||'não identificado')+'</b></p><p>Bolão: <b>'+esc((estado.bolaoAtual&&estado.bolaoAtual.nome_bolao)||CONFIG.ID_BOLAO)+'</b></p></div>'+'<div class="mini"><strong>Dados</strong><p>Leitura: JSON estático</p><p>API gravação: '+(estado.cacheAtualizadoEm?'Última carga salva: '+esc(estado.cacheAtualizadoEm):'Nenhum cache salvo ainda.')+'</p><p>'+(estado.cacheUsado?'Dados exibidos pelo JSON público/cache local.':'Dados carregados pelo JSON público.')+'</p></div>', '<button class="btn light" id="entrarCodigo">Entrar Código</button><button class="btn primary" id="criarBolao">Criar Bolão</button>');
+openModal('☰ Mais','<div class="mini"><strong>Central do Bolão</strong><p>Acesse regulamento, ranking, jogos, bolões ativos e dados do participante.</p><div class="mini-actions"><button class="mini-action" id="abrirCopaMais">🏆 Copa</button><button class="mini-action secondary" id="abrirRegulamentoMais">📄 Regulamento</button></div></div>'+'<div class="mini"><strong>🤖 Automação do bolão</strong><p>Ative seu palpite automático por estilo. O Desafiante IA aparece no ranking quando o GS publicar os dados.</p><div class="mini-actions"><button class="mini-action" id="abrirPalpiteAutoMais">Palpite automático</button><button class="mini-action secondary" id="abrirRankingIaMais">Ranking / IA</button></div></div>'+'<div class="mini"><strong>Participante</strong><p>'+esc(estado.usuario.nome||'Participante')+'</p><p>Telegram ID: <b>'+esc(estado.usuario.idTelegram||'não identificado')+'</b></p><p>Bolão: <b>'+esc((estado.bolaoAtual&&estado.bolaoAtual.nome_bolao)||CONFIG.ID_BOLAO)+'</b></p></div>'+'<div class="mini"><strong>Dados</strong><p>Leitura: JSON estático sem cache</p><p>Index: <b>'+esc(CONFIG.VERSAO||'')+'</b></p><p>API gravação: '+(estado.cacheAtualizadoEm?'Última carga salva: '+esc(estado.cacheAtualizadoEm):'Nenhum cache salvo ainda.')+'</p><p>'+(estado.cacheUsado?'Dados exibidos pelo JSON público/cache local.':'Dados carregados pelo JSON público.')+'</p></div>', '<button class="btn light" id="entrarCodigo">Entrar Código</button><button class="btn primary" id="criarBolao">Criar Bolão</button>');
 const btnEntrarCodigo=document.getElementById('entrarCodigo');
 const btnCriarBolao=document.getElementById('criarBolao');
 const btnCopaMais=document.getElementById('abrirCopaMais');
@@ -3546,7 +3573,7 @@ estado.erroApi='JSON público não encontrado para o perfil/bolão.';
 render();
 }
 
-(function(){initTelegram();limparCachesAntigosSeNecessario();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);setInterval(atualizarJsonAoVivoSilenciosoV072,30000);carregarCache();events();render();setTimeout(()=>iniciarCarregamentoInstantaneo(),50);setTimeout(atualizarJsonAoVivoSilenciosoV072,12000)})();
+(function(){initTelegram();limparCachesAntigosSeNecessario();limparCacheJsonRuntimeV124_();horaAtual();setInterval(horaAtual,30000);setInterval(atualizarTimersVisiveis,1000);setInterval(atualizarJsonAoVivoSilenciosoV072,30000);events();render();setTimeout(()=>iniciarCarregamentoInstantaneo(),50);setTimeout(atualizarJsonAoVivoSilenciosoV072,12000)})();
 </script>
 </body>
 </html>
