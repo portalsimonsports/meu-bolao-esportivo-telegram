@@ -5,8 +5,8 @@
   "versao_execucao": "V115_PUBLICACAO_LIMPA_SEM_V090_MENU",
   "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
   "id_bolao": "BOLAO20260607182904806",
-  "gerado_em": "18/06/2026 22:42:30",
-  "gerado_ts": 1781833350828,
+  "gerado_em": "18/06/2026 22:58:53",
+  "gerado_ts": 1781834333688,
   "dados": {
     "id_bolao": "BOLAO20260607182904806",
     "bolaoAtual": {
@@ -17961,7 +17961,7 @@
     "totalJogosComPalpitesPublicos": 28,
     "totalPalpitesPublicos": 55,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "18/06/2026 22:42:30",
+    "cacheAtualizadoEm": "18/06/2026 22:58:53",
     "copaGlobalPath": "data/copa_2026_publico.json"
   }
 }
