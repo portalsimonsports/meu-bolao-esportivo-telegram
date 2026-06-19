@@ -5,8 +5,8 @@
   "versao_execucao": "V115_PUBLICACAO_LIMPA_SEM_V090_MENU",
   "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
   "id_bolao": "BOLAO001",
-  "gerado_em": "18/06/2026 23:59:13",
-  "gerado_ts": 1781837953526,
+  "gerado_em": "19/06/2026 00:12:51",
+  "gerado_ts": 1781838771905,
   "dados": {
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
@@ -8166,10 +8166,10 @@
         "limitePalpite": "18/06/2026 22:00",
         "gols_mandante": 1,
         "gols_visitante": 0,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -17942,8 +17942,8 @@
         "codigoMandante": "mx",
         "codigoVisitante": "kr",
         "data_jogo": "",
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "gols_mandante": 1,
         "gols_visitante": 0,
         "placar": "1 x 0",
@@ -18209,7 +18209,7 @@
     "totalJogosComPalpitesPublicos": 28,
     "totalPalpitesPublicos": 56,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "18/06/2026 23:59:13",
+    "cacheAtualizadoEm": "19/06/2026 00:12:51",
     "copaGlobalPath": "data/copa_2026_publico.json"
   }
 }
