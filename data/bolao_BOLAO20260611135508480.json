@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260611135508480",
-  "gerado_em": "19/06/2026 22:39:22",
-  "gerado_ts": 1781919562828,
+  "gerado_em": "19/06/2026 23:06:29",
+  "gerado_ts": 1781921189214,
   "dados": {
     "id_bolao": "BOLAO20260611135508480",
     "bolaoAtual": {
@@ -7073,9 +7073,9 @@
         "visitante_iso": "ma"
       },
       {
-        "id": "930f832770ba86f0",
+        "id": "a133dfafa3d044f9",
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "930f832770ba86f0",
+        "id_jogo": "a133dfafa3d044f9",
         "mandante": "Brazil",
         "visitante": "Haiti",
         "flagMandante": "🇧🇷",
@@ -7087,10 +7087,10 @@
         "grupo": "Grupo C",
         "rodada_grupo": "Grupo C",
         "data": "19/06/2026",
-        "hora": "21:30",
-        "dataHora": "19/06/2026 21:30",
-        "limitePalpite": "19/06/2026 21:30",
-        "gols_mandante": 2,
+        "hora": "21:32",
+        "dataHora": "19/06/2026 21:32",
+        "limitePalpite": "19/06/2026 21:32",
+        "gols_mandante": 3,
         "gols_visitante": 0,
         "status": "Ao vivo",
         "aceitaPalpite": false,
@@ -7135,7 +7135,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-19T03:42:39.670Z",
-            "id_jogo_json": "930f832770ba86f0"
+            "id_jogo_json": "a133dfafa3d044f9"
           }
         ],
         "palpitesOutros": [
@@ -7168,7 +7168,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-19T03:42:39.670Z",
-            "id_jogo_json": "930f832770ba86f0"
+            "id_jogo_json": "a133dfafa3d044f9"
           }
         ],
         "palpitesParticipantes": [
@@ -7201,42 +7201,10 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-19T03:42:39.670Z",
-            "id_jogo_json": "930f832770ba86f0"
+            "id_jogo_json": "a133dfafa3d044f9"
           }
         ],
-        "palpites": [
-          {
-            "id_bolao": "BOLAO20260611135508480",
-            "id_jogo": "930f832770ba86f0",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "Brazil",
-            "visitante": "Haiti",
-            "palpite_mandante": 3,
-            "palpite_visitante": 0,
-            "placarMandante": 3,
-            "placarVisitante": 0,
-            "placar_texto": "3 x 0",
-            "pontos": 120,
-            "pontos_label": "120 pts",
-            "criterio_pontuacao": "GOL_PERDEDOR",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 120,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "data_hora": "19/06/2026 00:42:39",
-            "dataHora": "19/06/2026 00:42:39",
-            "proprio": false
-          }
-        ],
+        "palpites": [],
         "mandante_pt": "Brasil",
         "mandante_nome_pt": "Brasil",
         "mandante_exibicao": "Brasil",
@@ -15427,7 +15395,7 @@
       },
       {
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "930f832770ba86f0",
+        "id_jogo": "a133dfafa3d044f9",
         "mandante": "Brazil",
         "visitante": "Haiti",
         "mandante_pt": "Brasil",
@@ -15437,9 +15405,9 @@
         "data_jogo": "",
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": 2,
+        "gols_mandante": 3,
         "gols_visitante": 0,
-        "placar": "2 x 0",
+        "placar": "3 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -15471,7 +15439,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-19T03:42:39.670Z",
-            "id_jogo_json": "930f832770ba86f0"
+            "id_jogo_json": "a133dfafa3d044f9"
           }
         ],
         "palpitesPublicos": [
@@ -15504,7 +15472,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-19T03:42:39.670Z",
-            "id_jogo_json": "930f832770ba86f0"
+            "id_jogo_json": "a133dfafa3d044f9"
           }
         ],
         "palpitesOutros": [
@@ -15537,7 +15505,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-19T03:42:39.670Z",
-            "id_jogo_json": "930f832770ba86f0"
+            "id_jogo_json": "a133dfafa3d044f9"
           }
         ],
         "palpitesParticipantes": [
@@ -15570,7 +15538,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-19T03:42:39.670Z",
-            "id_jogo_json": "930f832770ba86f0"
+            "id_jogo_json": "a133dfafa3d044f9"
           }
         ]
       }
@@ -15578,7 +15546,7 @@
     "totalJogosComPalpitesPublicos": 31,
     "totalPalpitesPublicos": 45,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "19/06/2026 22:39:22",
+    "cacheAtualizadoEm": "19/06/2026 23:06:29",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
