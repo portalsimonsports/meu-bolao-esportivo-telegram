@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "21/06/2026 02:36:36",
+  "dataHora": "21/06/2026 02:53:45",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -9017,7 +9017,7 @@
         "dataHora": "21/06/2026 01:00",
         "limitePalpite": "21/06/2026 01:00",
         "gols_mandante": 0,
-        "gols_visitante": 2,
+        "gols_visitante": 3,
         "status": "Ao vivo",
         "aceitaPalpite": false,
         "status_jogo": "AO_VIVO",
@@ -10776,7 +10776,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "21/06/2026 02:37:44",
+    "cacheAtualizadoEm": "21/06/2026 02:55:43",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 72,
     "classificacaoGrupos": [
@@ -11989,9 +11989,9 @@
             "derrotas": 0,
             "pontos": 4,
             "pts": 4,
-            "golsPro": 4,
+            "golsPro": 5,
             "golsContra": 2,
-            "saldo": 2,
+            "saldo": 3,
             "conduta": 0,
             "fair_play": 0,
             "teamConductScore": 0,
@@ -12013,8 +12013,8 @@
             "provisoria": true,
             "criterios_fifa": {
               "pontos": 4,
-              "saldo": 2,
-              "gols_pro": 4,
+              "saldo": 3,
+              "gols_pro": 5,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
               "fair_play": 0,
               "penalidade_cartoes_pts": 0,
@@ -12094,8 +12094,8 @@
             "pontos": 0,
             "pts": 0,
             "golsPro": 1,
-            "golsContra": 7,
-            "saldo": -6,
+            "golsContra": 8,
+            "saldo": -7,
             "conduta": -1,
             "fair_play": -1,
             "teamConductScore": -1,
@@ -12117,7 +12117,7 @@
             "provisoria": true,
             "criterios_fifa": {
               "pontos": 0,
-              "saldo": -6,
+              "saldo": -7,
               "gols_pro": 1,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
               "fair_play": -1,
@@ -26290,11 +26290,11 @@
     "totalPalpitesPublicos": 57,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "21/06/2026 02:37:44"
+    "gerado_em": "21/06/2026 02:55:43"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "21/06/2026 02:37:44",
-  "gerado_ts": 1782020264896,
+  "gerado_em": "21/06/2026 02:55:43",
+  "gerado_ts": 1782021343207,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -35071,7 +35071,7 @@
       "dataHora": "21/06/2026 01:00",
       "limitePalpite": "21/06/2026 01:00",
       "gols_mandante": 0,
-      "gols_visitante": 2,
+      "gols_visitante": 3,
       "status": "Ao vivo",
       "aceitaPalpite": false,
       "status_jogo": "AO_VIVO",
