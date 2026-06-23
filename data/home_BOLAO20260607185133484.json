@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "23/06/2026 18:52:41",
+  "dataHora": "23/06/2026 19:35:14",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -11895,10 +11895,10 @@
         "limitePalpite": "23/06/2026 17:00",
         "gols_mandante": 0,
         "gols_visitante": 0,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -13301,7 +13301,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "23/06/2026 18:54:40",
+    "cacheAtualizadoEm": "23/06/2026 19:36:59",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 72,
     "classificacaoGrupos": [
@@ -15969,7 +15969,7 @@
         ],
         "jogos_total": 6,
         "jogos_com_placar": 3,
-        "jogos_ao_vivo": 1,
+        "jogos_ao_vivo": 0,
         "jogos_pendentes": 3,
         "status": "PROVISORIO"
       }
@@ -31426,8 +31426,8 @@
         "codigoMandante": "gb-eng",
         "codigoVisitante": "gh",
         "data_jogo": "",
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "gols_mandante": 0,
         "gols_visitante": 0,
         "placar": "0 x 0",
@@ -31570,11 +31570,11 @@
     "totalPalpitesPublicos": 77,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "23/06/2026 18:54:40"
+    "gerado_em": "23/06/2026 19:36:59"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "23/06/2026 18:54:40",
-  "gerado_ts": 1782251680892,
+  "gerado_em": "23/06/2026 19:36:59",
+  "gerado_ts": 1782254219496,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -43232,10 +43232,10 @@
       "limitePalpite": "23/06/2026 17:00",
       "gols_mandante": 0,
       "gols_visitante": 0,
-      "status": "Ao vivo",
+      "status": "Finalizado",
       "aceitaPalpite": false,
-      "status_jogo": "AO_VIVO",
-      "status_bolao": "FECHADO",
+      "status_jogo": "FINALIZADO",
+      "status_bolao": "FINALIZADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
