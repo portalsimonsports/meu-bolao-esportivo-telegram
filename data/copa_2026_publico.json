@@ -5,8 +5,8 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V123_RANKING_OFICIAL_JSON_JOGOS_COPA_FIX",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "23/06/2026 18:54:54",
-  "gerado_ts": 1782251694314,
+  "gerado_em": "23/06/2026 19:05:03",
+  "gerado_ts": 1782252303324,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -1965,10 +1965,10 @@
         "limitePalpite": "23/06/2026 17:00",
         "gols_mandante": 0,
         "gols_visitante": 0,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -5063,10 +5063,10 @@
         "limitePalpite": "23/06/2026 17:00",
         "gols_mandante": 0,
         "gols_visitante": 0,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -7796,7 +7796,7 @@
         ],
         "jogos_total": 6,
         "jogos_com_placar": 3,
-        "jogos_ao_vivo": 1,
+        "jogos_ao_vivo": 0,
         "jogos_pendentes": 3,
         "status": "PROVISORIO"
       }
@@ -12719,7 +12719,7 @@
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "23/06/2026 18:54:54"
+    "cacheAtualizadoEm": "23/06/2026 19:05:03"
   },
   "jogos": [
     {
@@ -14677,10 +14677,10 @@
       "limitePalpite": "23/06/2026 17:00",
       "gols_mandante": 0,
       "gols_visitante": 0,
-      "status": "Ao vivo",
+      "status": "Finalizado",
       "aceitaPalpite": false,
-      "status_jogo": "AO_VIVO",
-      "status_bolao": "FECHADO",
+      "status_jogo": "FINALIZADO",
+      "status_bolao": "FINALIZADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
@@ -17775,10 +17775,10 @@
       "limitePalpite": "23/06/2026 17:00",
       "gols_mandante": 0,
       "gols_visitante": 0,
-      "status": "Ao vivo",
+      "status": "Finalizado",
       "aceitaPalpite": false,
-      "status_jogo": "AO_VIVO",
-      "status_bolao": "FECHADO",
+      "status_jogo": "FINALIZADO",
+      "status_bolao": "FINALIZADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
@@ -20465,7 +20465,7 @@
       ],
       "jogos_total": 6,
       "jogos_com_placar": 3,
-      "jogos_ao_vivo": 1,
+      "jogos_ao_vivo": 0,
       "jogos_pendentes": 3,
       "status": "PROVISORIO"
     }
