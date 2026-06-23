@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "23/06/2026 00:05:17",
+  "dataHora": "23/06/2026 01:05:20",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -9182,11 +9182,11 @@
         "limitePalpite": "23/06/2026 00:00",
         "gols_mandante": "",
         "gols_visitante": "",
-        "status": "Ao vivo",
+        "status": "Fechado",
         "aceitaPalpite": false,
-        "status_jogo": "ABERTO",
-        "status_bolao": "ABERTO",
-        "palpites_liberados": "SIM",
+        "status_jogo": "FECHADO",
+        "status_bolao": "FECHADO",
+        "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
         "meuPalpite": null,
@@ -10556,7 +10556,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "23/06/2026 00:06:58",
+    "cacheAtualizadoEm": "23/06/2026 01:07:25",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 72,
     "classificacaoGrupos": [
@@ -12788,7 +12788,7 @@
         ],
         "jogos_total": 6,
         "jogos_com_placar": 3,
-        "jogos_ao_vivo": 1,
+        "jogos_ao_vivo": 0,
         "jogos_pendentes": 3,
         "status": "PROVISORIO"
       },
@@ -25997,11 +25997,11 @@
     "totalPalpitesPublicos": 55,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "23/06/2026 00:06:58"
+    "gerado_em": "23/06/2026 01:07:25"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "23/06/2026 00:06:58",
-  "gerado_ts": 1782184018350,
+  "gerado_em": "23/06/2026 01:07:25",
+  "gerado_ts": 1782187645992,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -34943,11 +34943,11 @@
       "limitePalpite": "23/06/2026 00:00",
       "gols_mandante": "",
       "gols_visitante": "",
-      "status": "Ao vivo",
+      "status": "Fechado",
       "aceitaPalpite": false,
-      "status_jogo": "ABERTO",
-      "status_bolao": "ABERTO",
-      "palpites_liberados": "SIM",
+      "status_jogo": "FECHADO",
+      "status_bolao": "FECHADO",
+      "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
       "meuPalpite": null,
