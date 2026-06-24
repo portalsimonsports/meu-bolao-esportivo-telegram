@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "24/06/2026 19:37:03",
+  "dataHora": "24/06/2026 20:53:51",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -11400,8 +11400,8 @@
         "hora": "19:00",
         "dataHora": "24/06/2026 19:00",
         "limitePalpite": "24/06/2026 19:00",
-        "gols_mandante": 0,
-        "gols_visitante": 1,
+        "gols_mandante": 2,
+        "gols_visitante": 2,
         "status": "Ao vivo",
         "aceitaPalpite": false,
         "status_jogo": "AO_VIVO",
@@ -11432,7 +11432,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -11465,7 +11465,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -11498,7 +11498,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -11530,7 +11530,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -11559,9 +11559,9 @@
         "visitante_iso": "ht"
       },
       {
-        "id": "245e8a74ab4b2610",
+        "id": "6517f241ab25bf42",
         "id_bolao": "BOLAO20260611115548229",
-        "id_jogo": "245e8a74ab4b2610",
+        "id_jogo": "6517f241ab25bf42",
         "mandante": "Scotland",
         "visitante": "Brazil",
         "flagMandante": "🏴",
@@ -11577,7 +11577,7 @@
         "dataHora": "24/06/2026 19:00",
         "limitePalpite": "24/06/2026 19:00",
         "gols_mandante": 0,
-        "gols_visitante": 2,
+        "gols_visitante": 3,
         "status": "Ao vivo",
         "aceitaPalpite": false,
         "status_jogo": "AO_VIVO",
@@ -11621,7 +11621,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:30:47.050Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ],
         "palpitesOutros": [
@@ -11654,7 +11654,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:30:47.050Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ],
         "palpitesParticipantes": [
@@ -11687,7 +11687,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:30:47.050Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ],
         "palpites": [
@@ -12696,7 +12696,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "24/06/2026 19:38:37",
+    "cacheAtualizadoEm": "24/06/2026 20:55:27",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 72,
     "classificacaoGrupos": [
@@ -13203,9 +13203,9 @@
             "derrotas": 0,
             "pontos": 7,
             "pts": 7,
-            "golsPro": 6,
+            "golsPro": 7,
             "golsContra": 1,
-            "saldo": 5,
+            "saldo": 6,
             "conduta": -3,
             "fair_play": -3,
             "teamConductScore": -3,
@@ -13227,8 +13227,8 @@
             "provisoria": true,
             "criterios_fifa": {
               "pontos": 7,
-              "saldo": 5,
-              "gols_pro": 6,
+              "saldo": 6,
+              "gols_pro": 7,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
               "fair_play": -3,
               "penalidade_cartoes_pts": 3,
@@ -13251,13 +13251,13 @@
             "codigo": "ma",
             "jogos": 3,
             "vitorias": 1,
-            "empates": 1,
-            "derrotas": 1,
-            "pontos": 4,
-            "pts": 4,
-            "golsPro": 2,
-            "golsContra": 2,
-            "saldo": 0,
+            "empates": 2,
+            "derrotas": 0,
+            "pontos": 5,
+            "pts": 5,
+            "golsPro": 4,
+            "golsContra": 3,
+            "saldo": 1,
             "conduta": -1,
             "fair_play": -1,
             "teamConductScore": -1,
@@ -13278,9 +13278,9 @@
             "slot": "2C",
             "provisoria": true,
             "criterios_fifa": {
-              "pontos": 4,
-              "saldo": 0,
-              "gols_pro": 2,
+              "pontos": 5,
+              "saldo": 1,
+              "gols_pro": 4,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
               "fair_play": -1,
               "penalidade_cartoes_pts": 1,
@@ -13308,8 +13308,8 @@
             "pontos": 3,
             "pts": 3,
             "golsPro": 1,
-            "golsContra": 3,
-            "saldo": -2,
+            "golsContra": 4,
+            "saldo": -3,
             "conduta": -4,
             "fair_play": -4,
             "teamConductScore": -4,
@@ -13331,7 +13331,7 @@
             "provisoria": true,
             "criterios_fifa": {
               "pontos": 3,
-              "saldo": -2,
+              "saldo": -3,
               "gols_pro": 1,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
               "fair_play": -4,
@@ -13354,14 +13354,14 @@
             "flag": "🇭🇹",
             "codigo": "ht",
             "jogos": 3,
-            "vitorias": 1,
-            "empates": 0,
+            "vitorias": 0,
+            "empates": 1,
             "derrotas": 2,
-            "pontos": 3,
-            "pts": 3,
-            "golsPro": 1,
-            "golsContra": 4,
-            "saldo": -3,
+            "pontos": 1,
+            "pts": 1,
+            "golsPro": 2,
+            "golsContra": 6,
+            "saldo": -4,
             "conduta": -4,
             "fair_play": -4,
             "teamConductScore": -4,
@@ -13382,9 +13382,9 @@
             "slot": "4C",
             "provisoria": true,
             "criterios_fifa": {
-              "pontos": 3,
-              "saldo": -3,
-              "gols_pro": 1,
+              "pontos": 1,
+              "saldo": -4,
+              "gols_pro": 2,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
               "fair_play": -4,
               "penalidade_cartoes_pts": 4,
@@ -15718,8 +15718,8 @@
         "pontos": 3,
         "pts": 3,
         "golsPro": 1,
-        "golsContra": 3,
-        "saldo": -2,
+        "golsContra": 4,
+        "saldo": -3,
         "conduta": -4,
         "fair_play": -4,
         "teamConductScore": -4,
@@ -15741,7 +15741,7 @@
         "provisoria": true,
         "criterios_fifa": {
           "pontos": 3,
-          "saldo": -2,
+          "saldo": -3,
           "gols_pro": 1,
           "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
           "fair_play": -4,
@@ -15756,7 +15756,7 @@
         "classificado_melhor_terceiro": true,
         "criterios_terceiros_fifa": {
           "pontos": 3,
-          "saldo": -2,
+          "saldo": -3,
           "gols_pro": 1,
           "fair_play": -4,
           "penalidade_cartoes_pts": 4,
@@ -16410,7 +16410,7 @@
           "flag": "🏴",
           "codigo": "gb-sct",
           "pontos": 3,
-          "saldo": -2,
+          "saldo": -3,
           "golsPro": 1,
           "conduta": -4,
           "fair_play": -4,
@@ -17020,7 +17020,7 @@
           "flag": "🏴",
           "codigo": "gb-sct",
           "pontos": 3,
-          "saldo": -2,
+          "saldo": -3,
           "golsPro": 1,
           "conduta": -4,
           "fair_play": -4,
@@ -17655,7 +17655,7 @@
             "flag": "🏴",
             "codigo": "gb-sct",
             "pontos": 3,
-            "saldo": -2,
+            "saldo": -3,
             "golsPro": 1,
             "conduta": -4,
             "fair_play": -4,
@@ -30154,9 +30154,9 @@
         "data_jogo": "",
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": 0,
-        "gols_visitante": 1,
-        "placar": "0 x 1",
+        "gols_mandante": 2,
+        "gols_visitante": 2,
+        "placar": "2 x 2",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -30175,7 +30175,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -30208,7 +30208,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -30241,7 +30241,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -30274,7 +30274,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -30293,7 +30293,7 @@
       },
       {
         "id_bolao": "BOLAO20260611115548229",
-        "id_jogo": "245e8a74ab4b2610",
+        "id_jogo": "6517f241ab25bf42",
         "mandante": "Scotland",
         "visitante": "Brazil",
         "mandante_pt": "Escócia",
@@ -30304,8 +30304,8 @@
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "gols_mandante": 0,
-        "gols_visitante": 2,
-        "placar": "0 x 2",
+        "gols_visitante": 3,
+        "placar": "0 x 3",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -30337,7 +30337,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:30:47.050Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ],
         "palpitesPublicos": [
@@ -30370,7 +30370,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:30:47.050Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ],
         "palpitesOutros": [
@@ -30403,7 +30403,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:30:47.050Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ],
         "palpitesParticipantes": [
@@ -30436,7 +30436,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:30:47.050Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ]
       }
@@ -30445,11 +30445,11 @@
     "totalPalpitesPublicos": 72,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "24/06/2026 19:38:37"
+    "gerado_em": "24/06/2026 20:55:27"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "24/06/2026 19:38:37",
-  "gerado_ts": 1782340717758,
+  "gerado_em": "24/06/2026 20:55:27",
+  "gerado_ts": 1782345327979,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -41609,8 +41609,8 @@
       "hora": "19:00",
       "dataHora": "24/06/2026 19:00",
       "limitePalpite": "24/06/2026 19:00",
-      "gols_mandante": 0,
-      "gols_visitante": 1,
+      "gols_mandante": 2,
+      "gols_visitante": 2,
       "status": "Ao vivo",
       "aceitaPalpite": false,
       "status_jogo": "AO_VIVO",
@@ -41640,7 +41640,7 @@
           "placar_texto": "2 x 0",
           "pontos": 0,
           "pontos_label": "0 pts",
-          "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+          "criterio_pontuacao": "SEM_ACERTO",
           "PTS_EXATO": 0,
           "PTS_GOL_VENCEDOR": 0,
           "PTS_SALDO": 0,
@@ -41673,7 +41673,7 @@
           "placar_texto": "2 x 0",
           "pontos": 0,
           "pontos_label": "0 pts",
-          "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+          "criterio_pontuacao": "SEM_ACERTO",
           "PTS_EXATO": 0,
           "PTS_GOL_VENCEDOR": 0,
           "PTS_SALDO": 0,
@@ -41706,7 +41706,7 @@
           "placar_texto": "2 x 0",
           "pontos": 0,
           "pontos_label": "0 pts",
-          "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+          "criterio_pontuacao": "SEM_ACERTO",
           "PTS_EXATO": 0,
           "PTS_GOL_VENCEDOR": 0,
           "PTS_SALDO": 0,
@@ -41739,7 +41739,7 @@
           "placar_texto": "2 x 0",
           "pontos": 0,
           "pontos_label": "0 pts",
-          "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+          "criterio_pontuacao": "SEM_ACERTO",
           "PTS_EXATO": 0,
           "PTS_GOL_VENCEDOR": 0,
           "PTS_SALDO": 0,
@@ -41768,9 +41768,9 @@
       "visitante_iso": "ht"
     },
     {
-      "id": "245e8a74ab4b2610",
+      "id": "6517f241ab25bf42",
       "id_bolao": "BOLAO20260611115548229",
-      "id_jogo": "245e8a74ab4b2610",
+      "id_jogo": "6517f241ab25bf42",
       "mandante": "Scotland",
       "visitante": "Brazil",
       "flagMandante": "🏴",
@@ -41786,7 +41786,7 @@
       "dataHora": "24/06/2026 19:00",
       "limitePalpite": "24/06/2026 19:00",
       "gols_mandante": 0,
-      "gols_visitante": 2,
+      "gols_visitante": 3,
       "status": "Ao vivo",
       "aceitaPalpite": false,
       "status_jogo": "AO_VIVO",
