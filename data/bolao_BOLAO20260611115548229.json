@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260611115548229",
-  "gerado_em": "24/06/2026 19:22:04",
-  "gerado_ts": 1782339724381,
+  "gerado_em": "24/06/2026 19:38:37",
+  "gerado_ts": 1782340717758,
   "dados": {
     "id_bolao": "BOLAO20260611115548229",
     "bolaoAtual": {
@@ -11311,7 +11311,7 @@
         "dataHora": "24/06/2026 19:00",
         "limitePalpite": "24/06/2026 19:00",
         "gols_mandante": 0,
-        "gols_visitante": 0,
+        "gols_visitante": 1,
         "status": "Ao vivo",
         "aceitaPalpite": false,
         "status_jogo": "AO_VIVO",
@@ -11487,7 +11487,7 @@
         "dataHora": "24/06/2026 19:00",
         "limitePalpite": "24/06/2026 19:00",
         "gols_mandante": 0,
-        "gols_visitante": 0,
+        "gols_visitante": 2,
         "status": "Ao vivo",
         "aceitaPalpite": false,
         "status_jogo": "AO_VIVO",
@@ -22475,8 +22475,8 @@
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "gols_mandante": 0,
-        "gols_visitante": 0,
-        "placar": "0 x 0",
+        "gols_visitante": 1,
+        "placar": "0 x 1",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -22624,8 +22624,8 @@
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "gols_mandante": 0,
-        "gols_visitante": 0,
-        "placar": "0 x 0",
+        "gols_visitante": 2,
+        "placar": "0 x 2",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -22764,7 +22764,7 @@
     "totalJogosComPalpitesPublicos": 49,
     "totalPalpitesPublicos": 72,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "24/06/2026 19:22:04",
+    "cacheAtualizadoEm": "24/06/2026 19:38:37",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
