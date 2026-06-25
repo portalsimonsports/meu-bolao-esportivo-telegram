@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260611135508480",
-  "gerado_em": "24/06/2026 19:40:41",
-  "gerado_ts": 1782340841496,
+  "gerado_em": "24/06/2026 21:24:21",
+  "gerado_ts": 1782347061695,
   "dados": {
     "id_bolao": "BOLAO20260611135508480",
     "bolaoAtual": {
@@ -28,8 +28,8 @@
         "telegram_id": "VIRTUAL_IA_DESAFIANTE",
         "nome": "🤖 Desafiante IA",
         "username": "desafiante_ia",
-        "total_pontos": 3790,
-        "pontos": "3.790",
+        "total_pontos": 3940,
+        "pontos": "3.940",
         "palpites": 51,
         "total_palpites": 51,
         "medalha": "👑",
@@ -10194,12 +10194,12 @@
         "hora": "19:00",
         "dataHora": "24/06/2026 19:00",
         "limitePalpite": "24/06/2026 19:00",
-        "gols_mandante": 0,
-        "gols_visitante": 1,
-        "status": "Ao vivo",
+        "gols_mandante": 4,
+        "gols_visitante": 2,
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -10224,12 +10224,12 @@
             "placarMandante": 2,
             "placarVisitante": 0,
             "placar_texto": "2 x 0",
-            "pontos": 0,
-            "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "pontos": 150,
+            "pontos_label": "150 pts",
+            "criterio_pontuacao": "SALDO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
+            "PTS_SALDO": 150,
             "PTS_GOL_PERDEDOR": 0,
             "PTS_VENCEDOR": 0,
             "PTS_EMPATE_GARANTIDO": 0,
@@ -10257,12 +10257,12 @@
             "placarMandante": 2,
             "placarVisitante": 0,
             "placar_texto": "2 x 0",
-            "pontos": 0,
-            "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "pontos": 150,
+            "pontos_label": "150 pts",
+            "criterio_pontuacao": "SALDO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
+            "PTS_SALDO": 150,
             "PTS_GOL_PERDEDOR": 0,
             "PTS_VENCEDOR": 0,
             "PTS_EMPATE_GARANTIDO": 0,
@@ -10290,12 +10290,12 @@
             "placarMandante": 2,
             "placarVisitante": 0,
             "placar_texto": "2 x 0",
-            "pontos": 0,
-            "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "pontos": 150,
+            "pontos_label": "150 pts",
+            "criterio_pontuacao": "SALDO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
+            "PTS_SALDO": 150,
             "PTS_GOL_PERDEDOR": 0,
             "PTS_VENCEDOR": 0,
             "PTS_EMPATE_GARANTIDO": 0,
@@ -10322,12 +10322,12 @@
             "placarMandante": 2,
             "placarVisitante": 0,
             "placar_texto": "2 x 0",
-            "pontos": 0,
-            "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "pontos": 150,
+            "pontos_label": "150 pts",
+            "criterio_pontuacao": "SALDO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
+            "PTS_SALDO": 150,
             "PTS_GOL_PERDEDOR": 0,
             "PTS_VENCEDOR": 0,
             "PTS_EMPATE_GARANTIDO": 0,
@@ -10353,9 +10353,9 @@
         "visitante_iso": "ht"
       },
       {
-        "id": "245e8a74ab4b2610",
+        "id": "6517f241ab25bf42",
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "245e8a74ab4b2610",
+        "id_jogo": "6517f241ab25bf42",
         "mandante": "Scotland",
         "visitante": "Brazil",
         "flagMandante": "🏴",
@@ -10371,11 +10371,11 @@
         "dataHora": "24/06/2026 19:00",
         "limitePalpite": "24/06/2026 19:00",
         "gols_mandante": 0,
-        "gols_visitante": 2,
-        "status": "Ao vivo",
+        "gols_visitante": 3,
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -10415,7 +10415,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:31:19.560Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ],
         "palpitesOutros": [
@@ -10448,7 +10448,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:31:19.560Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ],
         "palpitesParticipantes": [
@@ -10481,7 +10481,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:31:19.560Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ],
         "palpites": [
@@ -20240,11 +20240,11 @@
         "codigoMandante": "ma",
         "codigoVisitante": "ht",
         "data_jogo": "",
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
-        "gols_mandante": 0,
-        "gols_visitante": 1,
-        "placar": "0 x 1",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
+        "gols_mandante": 4,
+        "gols_visitante": 2,
+        "placar": "4 x 2",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -20261,12 +20261,12 @@
             "placarMandante": 2,
             "placarVisitante": 0,
             "placar_texto": "2 x 0",
-            "pontos": 0,
-            "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "pontos": 150,
+            "pontos_label": "150 pts",
+            "criterio_pontuacao": "SALDO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
+            "PTS_SALDO": 150,
             "PTS_GOL_PERDEDOR": 0,
             "PTS_VENCEDOR": 0,
             "PTS_EMPATE_GARANTIDO": 0,
@@ -20294,12 +20294,12 @@
             "placarMandante": 2,
             "placarVisitante": 0,
             "placar_texto": "2 x 0",
-            "pontos": 0,
-            "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "pontos": 150,
+            "pontos_label": "150 pts",
+            "criterio_pontuacao": "SALDO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
+            "PTS_SALDO": 150,
             "PTS_GOL_PERDEDOR": 0,
             "PTS_VENCEDOR": 0,
             "PTS_EMPATE_GARANTIDO": 0,
@@ -20327,12 +20327,12 @@
             "placarMandante": 2,
             "placarVisitante": 0,
             "placar_texto": "2 x 0",
-            "pontos": 0,
-            "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "pontos": 150,
+            "pontos_label": "150 pts",
+            "criterio_pontuacao": "SALDO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
+            "PTS_SALDO": 150,
             "PTS_GOL_PERDEDOR": 0,
             "PTS_VENCEDOR": 0,
             "PTS_EMPATE_GARANTIDO": 0,
@@ -20360,12 +20360,12 @@
             "placarMandante": 2,
             "placarVisitante": 0,
             "placar_texto": "2 x 0",
-            "pontos": 0,
-            "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "pontos": 150,
+            "pontos_label": "150 pts",
+            "criterio_pontuacao": "SALDO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
+            "PTS_SALDO": 150,
             "PTS_GOL_PERDEDOR": 0,
             "PTS_VENCEDOR": 0,
             "PTS_EMPATE_GARANTIDO": 0,
@@ -20381,7 +20381,7 @@
       },
       {
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "245e8a74ab4b2610",
+        "id_jogo": "6517f241ab25bf42",
         "mandante": "Scotland",
         "visitante": "Brazil",
         "mandante_pt": "Escócia",
@@ -20389,11 +20389,11 @@
         "codigoMandante": "gb-sct",
         "codigoVisitante": "br",
         "data_jogo": "",
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "gols_mandante": 0,
-        "gols_visitante": 2,
-        "placar": "0 x 2",
+        "gols_visitante": 3,
+        "placar": "0 x 3",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -20425,7 +20425,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:31:19.560Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ],
         "palpitesPublicos": [
@@ -20458,7 +20458,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:31:19.560Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ],
         "palpitesOutros": [
@@ -20491,7 +20491,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:31:19.560Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ],
         "palpitesParticipantes": [
@@ -20524,7 +20524,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-24T03:31:19.560Z",
-            "id_jogo_json": "245e8a74ab4b2610"
+            "id_jogo_json": "6517f241ab25bf42"
           }
         ]
       }
@@ -20532,7 +20532,7 @@
     "totalJogosComPalpitesPublicos": 49,
     "totalPalpitesPublicos": 63,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "24/06/2026 19:40:41",
+    "cacheAtualizadoEm": "24/06/2026 21:24:21",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
