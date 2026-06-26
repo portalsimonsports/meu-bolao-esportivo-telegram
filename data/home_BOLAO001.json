@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "26/06/2026 16:26:10",
+  "dataHora": "26/06/2026 17:11:15",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -17217,9 +17217,9 @@
         "visitante_iso": "us"
       },
       {
-        "id": "a310d6109b3c29ca",
+        "id": "4aa774124313846b",
         "id_bolao": "BOLAO001",
-        "id_jogo": "a310d6109b3c29ca",
+        "id_jogo": "4aa774124313846b",
         "mandante": "Norway",
         "visitante": "France",
         "flagMandante": "🇳🇴",
@@ -17234,8 +17234,8 @@
         "hora": "16:00",
         "dataHora": "26/06/2026 16:00",
         "limitePalpite": "26/06/2026 16:00",
-        "gols_mandante": 0,
-        "gols_visitante": 0,
+        "gols_mandante": 1,
+        "gols_visitante": 3,
         "status": "Ao vivo",
         "aceitaPalpite": false,
         "status_jogo": "AO_VIVO",
@@ -17279,7 +17279,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T05:17:30.905Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ],
         "palpitesOutros": [
@@ -17312,7 +17312,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T05:17:30.905Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ],
         "palpitesParticipantes": [
@@ -17345,7 +17345,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T05:17:30.905Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ],
         "palpites": [
@@ -17393,9 +17393,9 @@
         "visitante_iso": "fr"
       },
       {
-        "id": "26da5a7257e1d678",
+        "id": "8a2273a908a1ea9d",
         "id_bolao": "BOLAO001",
-        "id_jogo": "26da5a7257e1d678",
+        "id_jogo": "8a2273a908a1ea9d",
         "mandante": "Senegal",
         "visitante": "Iraq",
         "flagMandante": "🇸🇳",
@@ -17410,7 +17410,7 @@
         "hora": "16:00",
         "dataHora": "26/06/2026 16:00",
         "limitePalpite": "26/06/2026 16:00",
-        "gols_mandante": 0,
+        "gols_mandante": 1,
         "gols_visitante": 0,
         "status": "Ao vivo",
         "aceitaPalpite": false,
@@ -17455,7 +17455,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:44.385Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ],
         "palpitesOutros": [
@@ -17488,7 +17488,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:44.385Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ],
         "palpitesParticipantes": [
@@ -17521,7 +17521,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:44.385Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ],
         "palpites": [
@@ -18050,7 +18050,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "26/06/2026 16:29:17",
+    "cacheAtualizadoEm": "26/06/2026 17:12:41",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 72,
     "classificacaoGrupos": [
@@ -19860,14 +19860,14 @@
             "flag": "🇫🇷",
             "codigo": "fr",
             "jogos": 3,
-            "vitorias": 2,
-            "empates": 1,
+            "vitorias": 3,
+            "empates": 0,
             "derrotas": 0,
-            "pontos": 7,
-            "pts": 7,
-            "golsPro": 6,
-            "golsContra": 1,
-            "saldo": 5,
+            "pontos": 9,
+            "pts": 9,
+            "golsPro": 9,
+            "golsContra": 2,
+            "saldo": 7,
             "conduta": 0,
             "fair_play": 0,
             "teamConductScore": 0,
@@ -19888,9 +19888,9 @@
             "slot": "1I",
             "provisoria": true,
             "criterios_fifa": {
-              "pontos": 7,
-              "saldo": 5,
-              "gols_pro": 6,
+              "pontos": 9,
+              "saldo": 7,
+              "gols_pro": 9,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
               "fair_play": 0,
               "penalidade_cartoes_pts": 0,
@@ -19913,13 +19913,13 @@
             "codigo": "no",
             "jogos": 3,
             "vitorias": 2,
-            "empates": 1,
-            "derrotas": 0,
-            "pontos": 7,
-            "pts": 7,
-            "golsPro": 7,
-            "golsContra": 3,
-            "saldo": 4,
+            "empates": 0,
+            "derrotas": 1,
+            "pontos": 6,
+            "pts": 6,
+            "golsPro": 8,
+            "golsContra": 6,
+            "saldo": 2,
             "conduta": 0,
             "fair_play": 0,
             "teamConductScore": 0,
@@ -19940,9 +19940,9 @@
             "slot": "2I",
             "provisoria": true,
             "criterios_fifa": {
-              "pontos": 7,
-              "saldo": 4,
-              "gols_pro": 7,
+              "pontos": 6,
+              "saldo": 2,
+              "gols_pro": 8,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
               "fair_play": 0,
               "penalidade_cartoes_pts": 0,
@@ -19964,14 +19964,14 @@
             "flag": "🇸🇳",
             "codigo": "sn",
             "jogos": 3,
-            "vitorias": 0,
-            "empates": 1,
+            "vitorias": 1,
+            "empates": 0,
             "derrotas": 2,
-            "pontos": 1,
-            "pts": 1,
-            "golsPro": 3,
+            "pontos": 3,
+            "pts": 3,
+            "golsPro": 4,
             "golsContra": 6,
-            "saldo": -3,
+            "saldo": -2,
             "conduta": 0,
             "fair_play": 0,
             "teamConductScore": 0,
@@ -19992,9 +19992,9 @@
             "slot": "3I",
             "provisoria": true,
             "criterios_fifa": {
-              "pontos": 1,
-              "saldo": -3,
-              "gols_pro": 3,
+              "pontos": 3,
+              "saldo": -2,
+              "gols_pro": 4,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
               "fair_play": 0,
               "penalidade_cartoes_pts": 0,
@@ -20017,13 +20017,13 @@
             "codigo": "iq",
             "jogos": 3,
             "vitorias": 0,
-            "empates": 1,
-            "derrotas": 2,
-            "pontos": 1,
-            "pts": 1,
+            "empates": 0,
+            "derrotas": 3,
+            "pontos": 0,
+            "pts": 0,
             "golsPro": 1,
-            "golsContra": 7,
-            "saldo": -6,
+            "golsContra": 8,
+            "saldo": -7,
             "conduta": -2,
             "fair_play": -2,
             "teamConductScore": -2,
@@ -20044,8 +20044,8 @@
             "slot": "4I",
             "provisoria": true,
             "criterios_fifa": {
-              "pontos": 1,
-              "saldo": -6,
+              "pontos": 0,
+              "saldo": -7,
               "gols_pro": 1,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
               "fair_play": -2,
@@ -21127,6 +21127,73 @@
         "codigo_pais": "hr"
       },
       {
+        "grupo": "I",
+        "nome": "Senegal",
+        "time": "Senegal",
+        "flag": "🇸🇳",
+        "codigo": "sn",
+        "jogos": 3,
+        "vitorias": 1,
+        "empates": 0,
+        "derrotas": 2,
+        "pontos": 3,
+        "pts": 3,
+        "golsPro": 4,
+        "golsContra": 6,
+        "saldo": -2,
+        "conduta": 0,
+        "fair_play": 0,
+        "teamConductScore": 0,
+        "penalidade_cartoes": 0,
+        "cartoes_ca": 0,
+        "cartoes_cv": 0,
+        "cartoes_pts": 0,
+        "origemFairPlay": "ESPN_CARTOES_COPA",
+        "rankingFifa": 19,
+        "ranking_fifa": 19,
+        "rankingFifaAnterior": 9999,
+        "ranking_fifa_anterior": 9999,
+        "forca": 78,
+        "ataque": 77,
+        "defesa": 78,
+        "origemRanking": "FORCA_SELECOES",
+        "posicao": 3,
+        "slot": "3I",
+        "provisoria": true,
+        "criterios_fifa": {
+          "pontos": 3,
+          "saldo": -2,
+          "gols_pro": 4,
+          "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
+          "fair_play": 0,
+          "penalidade_cartoes_pts": 0,
+          "cartoes_ca": 0,
+          "cartoes_cv": 0,
+          "origem_cartoes": "ESPN_CARTOES_COPA",
+          "ranking_fifa": 19
+        },
+        "gols_pro": 4,
+        "posicao_terceiros": 7,
+        "classificado_melhor_terceiro": true,
+        "criterios_terceiros_fifa": {
+          "pontos": 3,
+          "saldo": -2,
+          "gols_pro": 4,
+          "fair_play": 0,
+          "penalidade_cartoes_pts": 0,
+          "cartoes_ca": 0,
+          "cartoes_cv": 0,
+          "origem_cartoes": "ESPN_CARTOES_COPA",
+          "ranking_fifa": 19,
+          "ranking_fifa_anterior": 9999
+        },
+        "nome_pt": "Senegal",
+        "time_pt": "Senegal",
+        "selecao_pt": "Senegal",
+        "nome_exibicao": "Senegal",
+        "codigo_pais": "sn"
+      },
+      {
         "grupo": "J",
         "nome": "Algeria",
         "time": "Algeria",
@@ -21173,7 +21240,7 @@
           "ranking_fifa": 32
         },
         "gols_pro": 2,
-        "posicao_terceiros": 7,
+        "posicao_terceiros": 8,
         "classificado_melhor_terceiro": true,
         "criterios_terceiros_fifa": {
           "pontos": 3,
@@ -21240,8 +21307,8 @@
           "ranking_fifa": 26
         },
         "gols_pro": 1,
-        "posicao_terceiros": 8,
-        "classificado_melhor_terceiro": true,
+        "posicao_terceiros": 9,
+        "classificado_melhor_terceiro": false,
         "criterios_terceiros_fifa": {
           "pontos": 3,
           "saldo": -3,
@@ -21307,7 +21374,7 @@
           "ranking_fifa": 47
         },
         "gols_pro": 2,
-        "posicao_terceiros": 9,
+        "posicao_terceiros": 10,
         "classificado_melhor_terceiro": false,
         "criterios_terceiros_fifa": {
           "pontos": 2,
@@ -21374,7 +21441,7 @@
           "ranking_fifa": 9
         },
         "gols_pro": 1,
-        "posicao_terceiros": 10,
+        "posicao_terceiros": 11,
         "classificado_melhor_terceiro": false,
         "criterios_terceiros_fifa": {
           "pontos": 2,
@@ -21441,7 +21508,7 @@
           "ranking_fifa": 48
         },
         "gols_pro": 1,
-        "posicao_terceiros": 11,
+        "posicao_terceiros": 12,
         "classificado_melhor_terceiro": false,
         "criterios_terceiros_fifa": {
           "pontos": 1,
@@ -21460,73 +21527,6 @@
         "selecao_pt": "República Democrática do Congo",
         "nome_exibicao": "República Democrática do Congo",
         "codigo_pais": "cd"
-      },
-      {
-        "grupo": "I",
-        "nome": "Senegal",
-        "time": "Senegal",
-        "flag": "🇸🇳",
-        "codigo": "sn",
-        "jogos": 3,
-        "vitorias": 0,
-        "empates": 1,
-        "derrotas": 2,
-        "pontos": 1,
-        "pts": 1,
-        "golsPro": 3,
-        "golsContra": 6,
-        "saldo": -3,
-        "conduta": 0,
-        "fair_play": 0,
-        "teamConductScore": 0,
-        "penalidade_cartoes": 0,
-        "cartoes_ca": 0,
-        "cartoes_cv": 0,
-        "cartoes_pts": 0,
-        "origemFairPlay": "ESPN_CARTOES_COPA",
-        "rankingFifa": 19,
-        "ranking_fifa": 19,
-        "rankingFifaAnterior": 9999,
-        "ranking_fifa_anterior": 9999,
-        "forca": 78,
-        "ataque": 77,
-        "defesa": 78,
-        "origemRanking": "FORCA_SELECOES",
-        "posicao": 3,
-        "slot": "3I",
-        "provisoria": true,
-        "criterios_fifa": {
-          "pontos": 1,
-          "saldo": -3,
-          "gols_pro": 3,
-          "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
-          "fair_play": 0,
-          "penalidade_cartoes_pts": 0,
-          "cartoes_ca": 0,
-          "cartoes_cv": 0,
-          "origem_cartoes": "ESPN_CARTOES_COPA",
-          "ranking_fifa": 19
-        },
-        "gols_pro": 3,
-        "posicao_terceiros": 12,
-        "classificado_melhor_terceiro": false,
-        "criterios_terceiros_fifa": {
-          "pontos": 1,
-          "saldo": -3,
-          "gols_pro": 3,
-          "fair_play": 0,
-          "penalidade_cartoes_pts": 0,
-          "cartoes_ca": 0,
-          "cartoes_cv": 0,
-          "origem_cartoes": "ESPN_CARTOES_COPA",
-          "ranking_fifa": 19,
-          "ranking_fifa_anterior": 9999
-        },
-        "nome_pt": "Senegal",
-        "time_pt": "Senegal",
-        "selecao_pt": "Senegal",
-        "nome_exibicao": "Senegal",
-        "codigo_pais": "sn"
       }
     ],
     "gruposTerceirosClassificados": [
@@ -21536,19 +21536,19 @@
       "D",
       "A",
       "L",
-      "J",
-      "C"
+      "I",
+      "J"
     ],
     "gruposTerceirosEliminados": [
+      "C",
       "G",
       "H",
-      "K",
-      "I"
+      "K"
     ],
     "anexoC": {
       "ok": true,
-      "opcao": 482,
-      "chave": "ABCDEFJL",
+      "opcao": 352,
+      "chave": "ABDEFIJL",
       "gruposTerceirosClassificados": [
         "F",
         "E",
@@ -21556,14 +21556,14 @@
         "D",
         "A",
         "L",
-        "J",
-        "C"
+        "I",
+        "J"
       ],
       "gruposTerceirosEliminados": [
+        "C",
         "G",
         "H",
-        "K",
-        "I"
+        "K"
       ],
       "mensagem": "Chaveamento Anexo C calculado pelo GS."
     },
@@ -21666,9 +21666,9 @@
           "time": "France",
           "flag": "🇫🇷",
           "codigo": "fr",
-          "pontos": 7,
-          "saldo": 5,
-          "golsPro": 6,
+          "pontos": 9,
+          "saldo": 7,
+          "golsPro": 9,
           "conduta": 0,
           "fair_play": 0,
           "penalidade_cartoes": 0,
@@ -21730,11 +21730,11 @@
         "origem": "FIFA_2026_ANEXO_C",
         "coluna": "1A",
         "slotFifa": "3CEFHI",
-        "textoRegra": "1A x 3C",
+        "textoRegra": "1A x 3E",
         "mandanteSlot": "1A",
-        "visitanteSlot": "3C",
+        "visitanteSlot": "3E",
         "mandante": "Mexico",
-        "visitante": "Scotland",
+        "visitante": "Ecuador",
         "mandanteObj": {
           "slot": "1A",
           "grupo": "A",
@@ -21757,31 +21757,31 @@
           "provisoria": false
         },
         "visitanteObj": {
-          "slot": "3C",
-          "grupo": "C",
-          "nome": "Scotland",
-          "time": "Scotland",
-          "flag": "🏴",
-          "codigo": "gb-sct",
-          "pontos": 3,
-          "saldo": -3,
-          "golsPro": 1,
+          "slot": "3E",
+          "grupo": "E",
+          "nome": "Ecuador",
+          "time": "Ecuador",
+          "flag": "🇪🇨",
+          "codigo": "ec",
+          "pontos": 4,
+          "saldo": 0,
+          "golsPro": 2,
           "conduta": -5,
           "fair_play": -5,
           "penalidade_cartoes": 5,
           "cartoes_ca": 5,
           "cartoes_cv": 0,
-          "rankingFifa": 26,
-          "ranking_fifa": 26,
+          "rankingFifa": 22,
+          "ranking_fifa": 22,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "provisoria": false
         },
         "flagMandante": "🇲🇽",
-        "flagVisitante": "🏴",
+        "flagVisitante": "🇪🇨",
         "codigoMandante": "mx",
-        "codigoVisitante": "gb-sct",
-        "grupoTerceiro": "C",
+        "codigoVisitante": "ec",
+        "grupoTerceiro": "E",
         "status": "PROVISORIO",
         "provisoria": true,
         "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
@@ -21790,11 +21790,11 @@
         "mandante_exibicao": "México",
         "mandante_codigo": "mx",
         "mandante_iso": "mx",
-        "visitante_pt": "Escócia",
-        "visitante_nome_pt": "Escócia",
-        "visitante_exibicao": "Escócia",
-        "visitante_codigo": "gb-sct",
-        "visitante_iso": "gb-sct"
+        "visitante_pt": "Equador",
+        "visitante_nome_pt": "Equador",
+        "visitante_exibicao": "Equador",
+        "visitante_codigo": "ec",
+        "visitante_iso": "ec"
       },
       {
         "id": "M80",
@@ -21806,11 +21806,11 @@
         "origem": "FIFA_2026_ANEXO_C",
         "coluna": "1L",
         "slotFifa": "3EHIJK",
-        "textoRegra": "1L x 3E",
+        "textoRegra": "1L x 3I",
         "mandanteSlot": "1L",
-        "visitanteSlot": "3E",
+        "visitanteSlot": "3I",
         "mandante": "England",
-        "visitante": "Ecuador",
+        "visitante": "Senegal",
         "mandanteObj": {
           "slot": "1L",
           "grupo": "L",
@@ -21833,31 +21833,31 @@
           "provisoria": true
         },
         "visitanteObj": {
-          "slot": "3E",
-          "grupo": "E",
-          "nome": "Ecuador",
-          "time": "Ecuador",
-          "flag": "🇪🇨",
-          "codigo": "ec",
-          "pontos": 4,
-          "saldo": 0,
-          "golsPro": 2,
-          "conduta": -5,
-          "fair_play": -5,
-          "penalidade_cartoes": 5,
-          "cartoes_ca": 5,
+          "slot": "3I",
+          "grupo": "I",
+          "nome": "Senegal",
+          "time": "Senegal",
+          "flag": "🇸🇳",
+          "codigo": "sn",
+          "pontos": 3,
+          "saldo": -2,
+          "golsPro": 4,
+          "conduta": 0,
+          "fair_play": 0,
+          "penalidade_cartoes": 0,
+          "cartoes_ca": 0,
           "cartoes_cv": 0,
-          "rankingFifa": 22,
-          "ranking_fifa": 22,
+          "rankingFifa": 19,
+          "ranking_fifa": 19,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
-          "provisoria": false
+          "provisoria": true
         },
         "flagMandante": "🏴",
-        "flagVisitante": "🇪🇨",
+        "flagVisitante": "🇸🇳",
         "codigoMandante": "gb-eng",
-        "codigoVisitante": "ec",
-        "grupoTerceiro": "E",
+        "codigoVisitante": "sn",
+        "grupoTerceiro": "I",
         "status": "PROVISORIO",
         "provisoria": true,
         "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
@@ -21866,11 +21866,11 @@
         "mandante_exibicao": "Inglaterra",
         "mandante_codigo": "gb-eng",
         "mandante_iso": "gb-eng",
-        "visitante_pt": "Equador",
-        "visitante_nome_pt": "Equador",
-        "visitante_exibicao": "Equador",
-        "visitante_codigo": "ec",
-        "visitante_iso": "ec"
+        "visitante_pt": "Senegal",
+        "visitante_nome_pt": "Senegal",
+        "visitante_exibicao": "Senegal",
+        "visitante_codigo": "sn",
+        "visitante_iso": "sn"
       },
       {
         "id": "M81",
@@ -22276,9 +22276,9 @@
           "time": "France",
           "flag": "🇫🇷",
           "codigo": "fr",
-          "pontos": 7,
-          "saldo": 5,
-          "golsPro": 6,
+          "pontos": 9,
+          "saldo": 7,
+          "golsPro": 9,
           "conduta": 0,
           "fair_play": 0,
           "penalidade_cartoes": 0,
@@ -22340,11 +22340,11 @@
         "origem": "FIFA_2026_ANEXO_C",
         "coluna": "1A",
         "slotFifa": "3CEFHI",
-        "textoRegra": "1A x 3C",
+        "textoRegra": "1A x 3E",
         "mandanteSlot": "1A",
-        "visitanteSlot": "3C",
+        "visitanteSlot": "3E",
         "mandante": "Mexico",
-        "visitante": "Scotland",
+        "visitante": "Ecuador",
         "mandanteObj": {
           "slot": "1A",
           "grupo": "A",
@@ -22367,31 +22367,31 @@
           "provisoria": false
         },
         "visitanteObj": {
-          "slot": "3C",
-          "grupo": "C",
-          "nome": "Scotland",
-          "time": "Scotland",
-          "flag": "🏴",
-          "codigo": "gb-sct",
-          "pontos": 3,
-          "saldo": -3,
-          "golsPro": 1,
+          "slot": "3E",
+          "grupo": "E",
+          "nome": "Ecuador",
+          "time": "Ecuador",
+          "flag": "🇪🇨",
+          "codigo": "ec",
+          "pontos": 4,
+          "saldo": 0,
+          "golsPro": 2,
           "conduta": -5,
           "fair_play": -5,
           "penalidade_cartoes": 5,
           "cartoes_ca": 5,
           "cartoes_cv": 0,
-          "rankingFifa": 26,
-          "ranking_fifa": 26,
+          "rankingFifa": 22,
+          "ranking_fifa": 22,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "provisoria": false
         },
         "flagMandante": "🇲🇽",
-        "flagVisitante": "🏴",
+        "flagVisitante": "🇪🇨",
         "codigoMandante": "mx",
-        "codigoVisitante": "gb-sct",
-        "grupoTerceiro": "C",
+        "codigoVisitante": "ec",
+        "grupoTerceiro": "E",
         "status": "PROVISORIO",
         "provisoria": true,
         "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
@@ -22400,11 +22400,11 @@
         "mandante_exibicao": "México",
         "mandante_codigo": "mx",
         "mandante_iso": "mx",
-        "visitante_pt": "Escócia",
-        "visitante_nome_pt": "Escócia",
-        "visitante_exibicao": "Escócia",
-        "visitante_codigo": "gb-sct",
-        "visitante_iso": "gb-sct"
+        "visitante_pt": "Equador",
+        "visitante_nome_pt": "Equador",
+        "visitante_exibicao": "Equador",
+        "visitante_codigo": "ec",
+        "visitante_iso": "ec"
       },
       {
         "id": "M80",
@@ -22416,11 +22416,11 @@
         "origem": "FIFA_2026_ANEXO_C",
         "coluna": "1L",
         "slotFifa": "3EHIJK",
-        "textoRegra": "1L x 3E",
+        "textoRegra": "1L x 3I",
         "mandanteSlot": "1L",
-        "visitanteSlot": "3E",
+        "visitanteSlot": "3I",
         "mandante": "England",
-        "visitante": "Ecuador",
+        "visitante": "Senegal",
         "mandanteObj": {
           "slot": "1L",
           "grupo": "L",
@@ -22443,31 +22443,31 @@
           "provisoria": true
         },
         "visitanteObj": {
-          "slot": "3E",
-          "grupo": "E",
-          "nome": "Ecuador",
-          "time": "Ecuador",
-          "flag": "🇪🇨",
-          "codigo": "ec",
-          "pontos": 4,
-          "saldo": 0,
-          "golsPro": 2,
-          "conduta": -5,
-          "fair_play": -5,
-          "penalidade_cartoes": 5,
-          "cartoes_ca": 5,
+          "slot": "3I",
+          "grupo": "I",
+          "nome": "Senegal",
+          "time": "Senegal",
+          "flag": "🇸🇳",
+          "codigo": "sn",
+          "pontos": 3,
+          "saldo": -2,
+          "golsPro": 4,
+          "conduta": 0,
+          "fair_play": 0,
+          "penalidade_cartoes": 0,
+          "cartoes_ca": 0,
           "cartoes_cv": 0,
-          "rankingFifa": 22,
-          "ranking_fifa": 22,
+          "rankingFifa": 19,
+          "ranking_fifa": 19,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
-          "provisoria": false
+          "provisoria": true
         },
         "flagMandante": "🏴",
-        "flagVisitante": "🇪🇨",
+        "flagVisitante": "🇸🇳",
         "codigoMandante": "gb-eng",
-        "codigoVisitante": "ec",
-        "grupoTerceiro": "E",
+        "codigoVisitante": "sn",
+        "grupoTerceiro": "I",
         "status": "PROVISORIO",
         "provisoria": true,
         "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
@@ -22476,11 +22476,11 @@
         "mandante_exibicao": "Inglaterra",
         "mandante_codigo": "gb-eng",
         "mandante_iso": "gb-eng",
-        "visitante_pt": "Equador",
-        "visitante_nome_pt": "Equador",
-        "visitante_exibicao": "Equador",
-        "visitante_codigo": "ec",
-        "visitante_iso": "ec"
+        "visitante_pt": "Senegal",
+        "visitante_nome_pt": "Senegal",
+        "visitante_exibicao": "Senegal",
+        "visitante_codigo": "sn",
+        "visitante_iso": "sn"
       },
       {
         "id": "M81",
@@ -22792,8 +22792,8 @@
       "status": "PROVISORIO",
       "anexoC": {
         "ok": true,
-        "opcao": 482,
-        "chave": "ABCDEFJL",
+        "opcao": 352,
+        "chave": "ABDEFIJL",
         "gruposTerceirosClassificados": [
           "F",
           "E",
@@ -22801,14 +22801,14 @@
           "D",
           "A",
           "L",
-          "J",
-          "C"
+          "I",
+          "J"
         ],
         "gruposTerceirosEliminados": [
+          "C",
           "G",
           "H",
-          "K",
-          "I"
+          "K"
         ],
         "mensagem": "Chaveamento Anexo C calculado pelo GS."
       },
@@ -22911,9 +22911,9 @@
             "time": "France",
             "flag": "🇫🇷",
             "codigo": "fr",
-            "pontos": 7,
-            "saldo": 5,
-            "golsPro": 6,
+            "pontos": 9,
+            "saldo": 7,
+            "golsPro": 9,
             "conduta": 0,
             "fair_play": 0,
             "penalidade_cartoes": 0,
@@ -22975,11 +22975,11 @@
           "origem": "FIFA_2026_ANEXO_C",
           "coluna": "1A",
           "slotFifa": "3CEFHI",
-          "textoRegra": "1A x 3C",
+          "textoRegra": "1A x 3E",
           "mandanteSlot": "1A",
-          "visitanteSlot": "3C",
+          "visitanteSlot": "3E",
           "mandante": "Mexico",
-          "visitante": "Scotland",
+          "visitante": "Ecuador",
           "mandanteObj": {
             "slot": "1A",
             "grupo": "A",
@@ -23002,31 +23002,31 @@
             "provisoria": false
           },
           "visitanteObj": {
-            "slot": "3C",
-            "grupo": "C",
-            "nome": "Scotland",
-            "time": "Scotland",
-            "flag": "🏴",
-            "codigo": "gb-sct",
-            "pontos": 3,
-            "saldo": -3,
-            "golsPro": 1,
+            "slot": "3E",
+            "grupo": "E",
+            "nome": "Ecuador",
+            "time": "Ecuador",
+            "flag": "🇪🇨",
+            "codigo": "ec",
+            "pontos": 4,
+            "saldo": 0,
+            "golsPro": 2,
             "conduta": -5,
             "fair_play": -5,
             "penalidade_cartoes": 5,
             "cartoes_ca": 5,
             "cartoes_cv": 0,
-            "rankingFifa": 26,
-            "ranking_fifa": 26,
+            "rankingFifa": 22,
+            "ranking_fifa": 22,
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "provisoria": false
           },
           "flagMandante": "🇲🇽",
-          "flagVisitante": "🏴",
+          "flagVisitante": "🇪🇨",
           "codigoMandante": "mx",
-          "codigoVisitante": "gb-sct",
-          "grupoTerceiro": "C",
+          "codigoVisitante": "ec",
+          "grupoTerceiro": "E",
           "status": "PROVISORIO",
           "provisoria": true,
           "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
@@ -23035,11 +23035,11 @@
           "mandante_exibicao": "México",
           "mandante_codigo": "mx",
           "mandante_iso": "mx",
-          "visitante_pt": "Escócia",
-          "visitante_nome_pt": "Escócia",
-          "visitante_exibicao": "Escócia",
-          "visitante_codigo": "gb-sct",
-          "visitante_iso": "gb-sct"
+          "visitante_pt": "Equador",
+          "visitante_nome_pt": "Equador",
+          "visitante_exibicao": "Equador",
+          "visitante_codigo": "ec",
+          "visitante_iso": "ec"
         },
         {
           "id": "M80",
@@ -23051,11 +23051,11 @@
           "origem": "FIFA_2026_ANEXO_C",
           "coluna": "1L",
           "slotFifa": "3EHIJK",
-          "textoRegra": "1L x 3E",
+          "textoRegra": "1L x 3I",
           "mandanteSlot": "1L",
-          "visitanteSlot": "3E",
+          "visitanteSlot": "3I",
           "mandante": "England",
-          "visitante": "Ecuador",
+          "visitante": "Senegal",
           "mandanteObj": {
             "slot": "1L",
             "grupo": "L",
@@ -23078,31 +23078,31 @@
             "provisoria": true
           },
           "visitanteObj": {
-            "slot": "3E",
-            "grupo": "E",
-            "nome": "Ecuador",
-            "time": "Ecuador",
-            "flag": "🇪🇨",
-            "codigo": "ec",
-            "pontos": 4,
-            "saldo": 0,
-            "golsPro": 2,
-            "conduta": -5,
-            "fair_play": -5,
-            "penalidade_cartoes": 5,
-            "cartoes_ca": 5,
+            "slot": "3I",
+            "grupo": "I",
+            "nome": "Senegal",
+            "time": "Senegal",
+            "flag": "🇸🇳",
+            "codigo": "sn",
+            "pontos": 3,
+            "saldo": -2,
+            "golsPro": 4,
+            "conduta": 0,
+            "fair_play": 0,
+            "penalidade_cartoes": 0,
+            "cartoes_ca": 0,
             "cartoes_cv": 0,
-            "rankingFifa": 22,
-            "ranking_fifa": 22,
+            "rankingFifa": 19,
+            "ranking_fifa": 19,
             "rankingFifaAnterior": 9999,
             "posicao": 3,
-            "provisoria": false
+            "provisoria": true
           },
           "flagMandante": "🏴",
-          "flagVisitante": "🇪🇨",
+          "flagVisitante": "🇸🇳",
           "codigoMandante": "gb-eng",
-          "codigoVisitante": "ec",
-          "grupoTerceiro": "E",
+          "codigoVisitante": "sn",
+          "grupoTerceiro": "I",
           "status": "PROVISORIO",
           "provisoria": true,
           "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
@@ -23111,11 +23111,11 @@
           "mandante_exibicao": "Inglaterra",
           "mandante_codigo": "gb-eng",
           "mandante_iso": "gb-eng",
-          "visitante_pt": "Equador",
-          "visitante_nome_pt": "Equador",
-          "visitante_exibicao": "Equador",
-          "visitante_codigo": "ec",
-          "visitante_iso": "ec"
+          "visitante_pt": "Senegal",
+          "visitante_nome_pt": "Senegal",
+          "visitante_exibicao": "Senegal",
+          "visitante_codigo": "sn",
+          "visitante_iso": "sn"
         },
         {
           "id": "M81",
@@ -41155,7 +41155,7 @@
       },
       {
         "id_bolao": "BOLAO001",
-        "id_jogo": "a310d6109b3c29ca",
+        "id_jogo": "4aa774124313846b",
         "mandante": "Norway",
         "visitante": "France",
         "mandante_pt": "Noruega",
@@ -41165,9 +41165,9 @@
         "data_jogo": "",
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": 0,
-        "gols_visitante": 0,
-        "placar": "0 x 0",
+        "gols_mandante": 1,
+        "gols_visitante": 3,
+        "placar": "1 x 3",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -41199,7 +41199,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T05:17:30.905Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ],
         "palpitesPublicos": [
@@ -41232,7 +41232,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T05:17:30.905Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ],
         "palpitesOutros": [
@@ -41265,7 +41265,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T05:17:30.905Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ],
         "palpitesParticipantes": [
@@ -41298,13 +41298,13 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-16T05:17:30.905Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ]
       },
       {
         "id_bolao": "BOLAO001",
-        "id_jogo": "26da5a7257e1d678",
+        "id_jogo": "8a2273a908a1ea9d",
         "mandante": "Senegal",
         "visitante": "Iraq",
         "mandante_pt": "Senegal",
@@ -41314,9 +41314,9 @@
         "data_jogo": "",
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": 0,
+        "gols_mandante": 1,
         "gols_visitante": 0,
-        "placar": "0 x 0",
+        "placar": "1 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -41348,7 +41348,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:44.385Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ],
         "palpitesPublicos": [
@@ -41381,7 +41381,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:44.385Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ],
         "palpitesOutros": [
@@ -41414,7 +41414,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:44.385Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ],
         "palpitesParticipantes": [
@@ -41447,7 +41447,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:44.385Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ]
       }
@@ -41456,11 +41456,11 @@
     "totalPalpitesPublicos": 115,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "26/06/2026 16:29:17"
+    "gerado_em": "26/06/2026 17:12:41"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "26/06/2026 16:29:17",
-  "gerado_ts": 1782502157331,
+  "gerado_em": "26/06/2026 17:12:41",
+  "gerado_ts": 1782504761464,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -58347,9 +58347,9 @@
       "visitante_iso": "us"
     },
     {
-      "id": "a310d6109b3c29ca",
+      "id": "4aa774124313846b",
       "id_bolao": "BOLAO001",
-      "id_jogo": "a310d6109b3c29ca",
+      "id_jogo": "4aa774124313846b",
       "mandante": "Norway",
       "visitante": "France",
       "flagMandante": "🇳🇴",
@@ -58364,8 +58364,8 @@
       "hora": "16:00",
       "dataHora": "26/06/2026 16:00",
       "limitePalpite": "26/06/2026 16:00",
-      "gols_mandante": 0,
-      "gols_visitante": 0,
+      "gols_mandante": 1,
+      "gols_visitante": 3,
       "status": "Ao vivo",
       "aceitaPalpite": false,
       "status_jogo": "AO_VIVO",
@@ -58523,9 +58523,9 @@
       "visitante_iso": "fr"
     },
     {
-      "id": "26da5a7257e1d678",
+      "id": "8a2273a908a1ea9d",
       "id_bolao": "BOLAO001",
-      "id_jogo": "26da5a7257e1d678",
+      "id_jogo": "8a2273a908a1ea9d",
       "mandante": "Senegal",
       "visitante": "Iraq",
       "flagMandante": "🇸🇳",
@@ -58540,7 +58540,7 @@
       "hora": "16:00",
       "dataHora": "26/06/2026 16:00",
       "limitePalpite": "26/06/2026 16:00",
-      "gols_mandante": 0,
+      "gols_mandante": 1,
       "gols_visitante": 0,
       "status": "Ao vivo",
       "aceitaPalpite": false,
