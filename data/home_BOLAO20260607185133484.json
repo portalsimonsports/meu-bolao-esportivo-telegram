@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "26/06/2026 00:35:11",
+  "dataHora": "26/06/2026 01:51:58",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -78,8 +78,8 @@
         "username": "desafiante_ia",
         "total_pontos": 4650,
         "pontos": "4.650",
-        "palpites": 57,
-        "total_palpites": 57,
+        "palpites": 61,
+        "total_palpites": 61,
         "medalha": "👑",
         "classe": "gold",
         "avatar": "👨🏻"
@@ -14183,10 +14183,10 @@
         "limitePalpite": "25/06/2026 23:00",
         "gols_mandante": 0,
         "gols_visitante": 0,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -14359,10 +14359,10 @@
         "limitePalpite": "25/06/2026 23:00",
         "gols_mandante": 2,
         "gols_visitante": 1,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -15093,7 +15093,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "26/06/2026 00:37:00",
+    "cacheAtualizadoEm": "26/06/2026 01:53:47",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 72,
     "classificacaoGrupos": [
@@ -15839,7 +15839,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 1,
             "slot": "1D",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 6,
               "saldo": 4,
@@ -15891,7 +15891,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 2,
             "slot": "2D",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 4,
               "saldo": 0,
@@ -15943,7 +15943,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 3,
             "slot": "3D",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 4,
               "saldo": -2,
@@ -15995,7 +15995,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 4,
             "slot": "4D",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 3,
               "saldo": -2,
@@ -16017,9 +16017,9 @@
         ],
         "jogos_total": 6,
         "jogos_com_placar": 6,
-        "jogos_ao_vivo": 2,
+        "jogos_ao_vivo": 0,
         "jogos_pendentes": 0,
-        "status": "PROVISORIO"
+        "status": "DEFINITIVO"
       },
       {
         "grupo": "E",
@@ -18001,7 +18001,7 @@
         "origemRanking": "FORCA_SELECOES",
         "posicao": 3,
         "slot": "3D",
-        "provisoria": true,
+        "provisoria": false,
         "criterios_fifa": {
           "pontos": 4,
           "saldo": -2,
@@ -18666,7 +18666,7 @@
           "ranking_fifa": 34,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
-          "provisoria": true
+          "provisoria": false
         },
         "flagMandante": "🇩🇪",
         "flagVisitante": "🇵🇾",
@@ -18949,7 +18949,7 @@
           "ranking_fifa": 16,
           "rankingFifaAnterior": 9999,
           "posicao": 1,
-          "provisoria": true
+          "provisoria": false
         },
         "visitanteObj": {
           "slot": "3B",
@@ -19276,7 +19276,7 @@
           "ranking_fifa": 34,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
-          "provisoria": true
+          "provisoria": false
         },
         "flagMandante": "🇩🇪",
         "flagVisitante": "🇵🇾",
@@ -19559,7 +19559,7 @@
           "ranking_fifa": 16,
           "rankingFifaAnterior": 9999,
           "posicao": 1,
-          "provisoria": true
+          "provisoria": false
         },
         "visitanteObj": {
           "slot": "3B",
@@ -19911,7 +19911,7 @@
             "ranking_fifa": 34,
             "rankingFifaAnterior": 9999,
             "posicao": 3,
-            "provisoria": true
+            "provisoria": false
           },
           "flagMandante": "🇩🇪",
           "flagVisitante": "🇵🇾",
@@ -20194,7 +20194,7 @@
             "ranking_fifa": 16,
             "rankingFifaAnterior": 9999,
             "posicao": 1,
-            "provisoria": true
+            "provisoria": false
           },
           "visitanteObj": {
             "slot": "3B",
@@ -35155,8 +35155,8 @@
         "codigoMandante": "py",
         "codigoVisitante": "au",
         "data_jogo": "",
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "gols_mandante": 0,
         "gols_visitante": 0,
         "placar": "0 x 0",
@@ -35304,8 +35304,8 @@
         "codigoMandante": "tr",
         "codigoVisitante": "us",
         "data_jogo": "",
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "gols_mandante": 2,
         "gols_visitante": 1,
         "placar": "2 x 1",
@@ -35448,11 +35448,11 @@
     "totalPalpitesPublicos": 91,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "26/06/2026 00:37:00"
+    "gerado_em": "26/06/2026 01:53:47"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "26/06/2026 00:37:00",
-  "gerado_ts": 1782445020274,
+  "gerado_em": "26/06/2026 01:53:47",
+  "gerado_ts": 1782449627314,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -49398,10 +49398,10 @@
       "limitePalpite": "25/06/2026 23:00",
       "gols_mandante": 0,
       "gols_visitante": 0,
-      "status": "Ao vivo",
+      "status": "Finalizado",
       "aceitaPalpite": false,
-      "status_jogo": "AO_VIVO",
-      "status_bolao": "FECHADO",
+      "status_jogo": "FINALIZADO",
+      "status_bolao": "FINALIZADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
@@ -49574,10 +49574,10 @@
       "limitePalpite": "25/06/2026 23:00",
       "gols_mandante": 2,
       "gols_visitante": 1,
-      "status": "Ao vivo",
+      "status": "Finalizado",
       "aceitaPalpite": false,
-      "status_jogo": "AO_VIVO",
-      "status_bolao": "FECHADO",
+      "status_jogo": "FINALIZADO",
+      "status_bolao": "FINALIZADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
@@ -50317,8 +50317,8 @@
       "username": "desafiante_ia",
       "total_pontos": 4650,
       "pontos": "4.650",
-      "palpites": 57,
-      "total_palpites": 57,
+      "palpites": 61,
+      "total_palpites": 61,
       "medalha": "👑",
       "classe": "gold",
       "avatar": "👨🏻"
