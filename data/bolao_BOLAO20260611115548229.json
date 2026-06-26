@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260611115548229",
-  "gerado_em": "26/06/2026 16:23:50",
-  "gerado_ts": 1782501830386,
+  "gerado_em": "26/06/2026 17:24:54",
+  "gerado_ts": 1782505494305,
   "dados": {
     "id_bolao": "BOLAO20260611115548229",
     "bolaoAtual": {
@@ -13053,9 +13053,9 @@
         "visitante_iso": "us"
       },
       {
-        "id": "a310d6109b3c29ca",
+        "id": "4aa774124313846b",
         "id_bolao": "BOLAO20260611115548229",
-        "id_jogo": "a310d6109b3c29ca",
+        "id_jogo": "4aa774124313846b",
         "mandante": "Norway",
         "visitante": "France",
         "flagMandante": "🇳🇴",
@@ -13070,8 +13070,8 @@
         "hora": "16:00",
         "dataHora": "26/06/2026 16:00",
         "limitePalpite": "26/06/2026 16:00",
-        "gols_mandante": 0,
-        "gols_visitante": 0,
+        "gols_mandante": 1,
+        "gols_visitante": 3,
         "status": "Ao vivo",
         "aceitaPalpite": false,
         "status_jogo": "AO_VIVO",
@@ -13115,7 +13115,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:14.684Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ],
         "palpitesOutros": [
@@ -13148,7 +13148,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:14.684Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ],
         "palpitesParticipantes": [
@@ -13181,7 +13181,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:14.684Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ],
         "palpites": [
@@ -13229,9 +13229,9 @@
         "visitante_iso": "fr"
       },
       {
-        "id": "26da5a7257e1d678",
+        "id": "8a2273a908a1ea9d",
         "id_bolao": "BOLAO20260611115548229",
-        "id_jogo": "26da5a7257e1d678",
+        "id_jogo": "8a2273a908a1ea9d",
         "mandante": "Senegal",
         "visitante": "Iraq",
         "flagMandante": "🇸🇳",
@@ -13246,7 +13246,7 @@
         "hora": "16:00",
         "dataHora": "26/06/2026 16:00",
         "limitePalpite": "26/06/2026 16:00",
-        "gols_mandante": 0,
+        "gols_mandante": 1,
         "gols_visitante": 0,
         "status": "Ao vivo",
         "aceitaPalpite": false,
@@ -13291,7 +13291,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:24.636Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ],
         "palpitesOutros": [
@@ -13324,7 +13324,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:24.636Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ],
         "palpitesParticipantes": [
@@ -13357,7 +13357,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:24.636Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ],
         "palpites": [
@@ -25234,7 +25234,7 @@
       },
       {
         "id_bolao": "BOLAO20260611115548229",
-        "id_jogo": "a310d6109b3c29ca",
+        "id_jogo": "4aa774124313846b",
         "mandante": "Norway",
         "visitante": "France",
         "mandante_pt": "Noruega",
@@ -25244,9 +25244,9 @@
         "data_jogo": "",
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": 0,
-        "gols_visitante": 0,
-        "placar": "0 x 0",
+        "gols_mandante": 1,
+        "gols_visitante": 3,
+        "placar": "1 x 3",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -25278,7 +25278,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:14.684Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ],
         "palpitesPublicos": [
@@ -25311,7 +25311,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:14.684Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ],
         "palpitesOutros": [
@@ -25344,7 +25344,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:14.684Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ],
         "palpitesParticipantes": [
@@ -25377,13 +25377,13 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:14.684Z",
-            "id_jogo_json": "a310d6109b3c29ca"
+            "id_jogo_json": "4aa774124313846b"
           }
         ]
       },
       {
         "id_bolao": "BOLAO20260611115548229",
-        "id_jogo": "26da5a7257e1d678",
+        "id_jogo": "8a2273a908a1ea9d",
         "mandante": "Senegal",
         "visitante": "Iraq",
         "mandante_pt": "Senegal",
@@ -25393,9 +25393,9 @@
         "data_jogo": "",
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": 0,
+        "gols_mandante": 1,
         "gols_visitante": 0,
-        "placar": "0 x 0",
+        "placar": "1 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -25427,7 +25427,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:24.636Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ],
         "palpitesPublicos": [
@@ -25460,7 +25460,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:24.636Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ],
         "palpitesOutros": [
@@ -25493,7 +25493,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:24.636Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ],
         "palpitesParticipantes": [
@@ -25526,7 +25526,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:33:24.636Z",
-            "id_jogo_json": "26da5a7257e1d678"
+            "id_jogo_json": "8a2273a908a1ea9d"
           }
         ]
       }
@@ -25534,7 +25534,7 @@
     "totalJogosComPalpitesPublicos": 59,
     "totalPalpitesPublicos": 82,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "26/06/2026 16:23:50",
+    "cacheAtualizadoEm": "26/06/2026 17:24:54",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
