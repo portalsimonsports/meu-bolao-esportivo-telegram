@@ -5,8 +5,8 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V123_RANKING_OFICIAL_JSON_JOGOS_COPA_FIX",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "25/06/2026 21:45:07",
-  "gerado_ts": 1782434707988,
+  "gerado_em": "25/06/2026 22:04:58",
+  "gerado_ts": 1782435898335,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -2438,10 +2438,10 @@
         "limitePalpite": "25/06/2026 20:00",
         "gols_mandante": 1,
         "gols_visitante": 1,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -2481,10 +2481,10 @@
         "limitePalpite": "25/06/2026 20:00",
         "gols_mandante": 1,
         "gols_visitante": 3,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -5536,10 +5536,10 @@
         "limitePalpite": "25/06/2026 20:00",
         "gols_mandante": 1,
         "gols_visitante": 1,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -5579,10 +5579,10 @@
         "limitePalpite": "25/06/2026 20:00",
         "gols_mandante": 1,
         "gols_visitante": 3,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -6826,7 +6826,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 1,
             "slot": "1F",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 7,
               "saldo": 6,
@@ -6878,7 +6878,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 2,
             "slot": "2F",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 5,
               "saldo": 4,
@@ -6930,7 +6930,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 3,
             "slot": "3F",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 4,
               "saldo": 0,
@@ -6982,7 +6982,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 4,
             "slot": "4F",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 0,
               "saldo": -10,
@@ -7004,9 +7004,9 @@
         ],
         "jogos_total": 6,
         "jogos_com_placar": 6,
-        "jogos_ao_vivo": 2,
+        "jogos_ao_vivo": 0,
         "jogos_pendentes": 0,
-        "status": "PROVISORIO"
+        "status": "DEFINITIVO"
       },
       {
         "grupo": "G",
@@ -8351,7 +8351,7 @@
         "origemRanking": "FORCA_SELECOES",
         "posicao": 3,
         "slot": "3F",
-        "provisoria": true,
+        "provisoria": false,
         "criterios_fifa": {
           "pontos": 4,
           "saldo": 0,
@@ -11535,7 +11535,7 @@
             "ranking_fifa": 23,
             "rankingFifaAnterior": 9999,
             "posicao": 3,
-            "provisoria": true
+            "provisoria": false
           },
           "flagMandante": "🇫🇷",
           "flagVisitante": "🇸🇪",
@@ -12146,7 +12146,7 @@
           "ranking_fifa": 23,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
-          "provisoria": true
+          "provisoria": false
         },
         "flagMandante": "🇫🇷",
         "flagVisitante": "🇸🇪",
@@ -12756,7 +12756,7 @@
           "ranking_fifa": 23,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
-          "provisoria": true
+          "provisoria": false
         },
         "flagMandante": "🇫🇷",
         "flagVisitante": "🇸🇪",
@@ -13235,7 +13235,7 @@
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "25/06/2026 21:45:07"
+    "cacheAtualizadoEm": "25/06/2026 22:04:58"
   },
   "jogos": [
     {
@@ -15666,10 +15666,10 @@
       "limitePalpite": "25/06/2026 20:00",
       "gols_mandante": 1,
       "gols_visitante": 1,
-      "status": "Ao vivo",
+      "status": "Finalizado",
       "aceitaPalpite": false,
-      "status_jogo": "AO_VIVO",
-      "status_bolao": "FECHADO",
+      "status_jogo": "FINALIZADO",
+      "status_bolao": "FINALIZADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
@@ -15709,10 +15709,10 @@
       "limitePalpite": "25/06/2026 20:00",
       "gols_mandante": 1,
       "gols_visitante": 3,
-      "status": "Ao vivo",
+      "status": "Finalizado",
       "aceitaPalpite": false,
-      "status_jogo": "AO_VIVO",
-      "status_bolao": "FECHADO",
+      "status_jogo": "FINALIZADO",
+      "status_bolao": "FINALIZADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
@@ -18764,10 +18764,10 @@
       "limitePalpite": "25/06/2026 20:00",
       "gols_mandante": 1,
       "gols_visitante": 1,
-      "status": "Ao vivo",
+      "status": "Finalizado",
       "aceitaPalpite": false,
-      "status_jogo": "AO_VIVO",
-      "status_bolao": "FECHADO",
+      "status_jogo": "FINALIZADO",
+      "status_bolao": "FINALIZADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
@@ -18807,10 +18807,10 @@
       "limitePalpite": "25/06/2026 20:00",
       "gols_mandante": 1,
       "gols_visitante": 3,
-      "status": "Ao vivo",
+      "status": "Finalizado",
       "aceitaPalpite": false,
-      "status_jogo": "AO_VIVO",
-      "status_bolao": "FECHADO",
+      "status_jogo": "FINALIZADO",
+      "status_bolao": "FINALIZADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
@@ -20011,7 +20011,7 @@
           "origemRanking": "FORCA_SELECOES",
           "posicao": 1,
           "slot": "1F",
-          "provisoria": true,
+          "provisoria": false,
           "criterios_fifa": {
             "pontos": 7,
             "saldo": 6,
@@ -20063,7 +20063,7 @@
           "origemRanking": "FORCA_SELECOES",
           "posicao": 2,
           "slot": "2F",
-          "provisoria": true,
+          "provisoria": false,
           "criterios_fifa": {
             "pontos": 5,
             "saldo": 4,
@@ -20115,7 +20115,7 @@
           "origemRanking": "FORCA_SELECOES",
           "posicao": 3,
           "slot": "3F",
-          "provisoria": true,
+          "provisoria": false,
           "criterios_fifa": {
             "pontos": 4,
             "saldo": 0,
@@ -20167,7 +20167,7 @@
           "origemRanking": "FORCA_SELECOES",
           "posicao": 4,
           "slot": "4F",
-          "provisoria": true,
+          "provisoria": false,
           "criterios_fifa": {
             "pontos": 0,
             "saldo": -10,
@@ -20189,9 +20189,9 @@
       ],
       "jogos_total": 6,
       "jogos_com_placar": 6,
-      "jogos_ao_vivo": 2,
+      "jogos_ao_vivo": 0,
       "jogos_pendentes": 0,
-      "status": "PROVISORIO"
+      "status": "DEFINITIVO"
     },
     {
       "grupo": "G",
@@ -21536,7 +21536,7 @@
       "origemRanking": "FORCA_SELECOES",
       "posicao": 3,
       "slot": "3F",
-      "provisoria": true,
+      "provisoria": false,
       "criterios_fifa": {
         "pontos": 4,
         "saldo": 0,
@@ -24720,7 +24720,7 @@
           "ranking_fifa": 23,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
-          "provisoria": true
+          "provisoria": false
         },
         "flagMandante": "🇫🇷",
         "flagVisitante": "🇸🇪",
@@ -25331,7 +25331,7 @@
         "ranking_fifa": 23,
         "rankingFifaAnterior": 9999,
         "posicao": 3,
-        "provisoria": true
+        "provisoria": false
       },
       "flagMandante": "🇫🇷",
       "flagVisitante": "🇸🇪",
@@ -25941,7 +25941,7 @@
         "ranking_fifa": 23,
         "rankingFifaAnterior": 9999,
         "posicao": 3,
-        "provisoria": true
+        "provisoria": false
       },
       "flagMandante": "🇫🇷",
       "flagVisitante": "🇸🇪",
