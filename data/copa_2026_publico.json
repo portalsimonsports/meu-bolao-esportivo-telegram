@@ -5,8 +5,8 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V123_RANKING_OFICIAL_JSON_JOGOS_COPA_FIX",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "26/06/2026 21:37:49",
-  "gerado_ts": 1782520669251,
+  "gerado_em": "26/06/2026 21:40:43",
+  "gerado_ts": 1782520843255,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -2677,9 +2677,9 @@
         "visitante_iso": "iq"
       },
       {
-        "id": "d92e1bb637c6f0ee",
+        "id": "0b53b4abe543af7d",
         "id_bolao": "BOLAO001",
-        "id_jogo": "d92e1bb637c6f0ee",
+        "id_jogo": "0b53b4abe543af7d",
         "mandante": "Cape Verde",
         "visitante": "Saudi Arabia",
         "flagMandante": "🇨🇻",
@@ -2720,9 +2720,9 @@
         "visitante_iso": "sa"
       },
       {
-        "id": "d78de2369989bdea",
+        "id": "55499f5a5590fc28",
         "id_bolao": "BOLAO001",
-        "id_jogo": "d78de2369989bdea",
+        "id_jogo": "55499f5a5590fc28",
         "mandante": "Uruguay",
         "visitante": "Spain",
         "flagMandante": "🇺🇾",
@@ -5775,9 +5775,9 @@
         "visitante_iso": "iq"
       },
       {
-        "id": "d92e1bb637c6f0ee",
+        "id": "0b53b4abe543af7d",
         "id_bolao": "BOLAO001",
-        "id_jogo": "d92e1bb637c6f0ee",
+        "id_jogo": "0b53b4abe543af7d",
         "mandante": "Cape Verde",
         "visitante": "Saudi Arabia",
         "flagMandante": "🇨🇻",
@@ -5818,9 +5818,9 @@
         "visitante_iso": "sa"
       },
       {
-        "id": "d78de2369989bdea",
+        "id": "55499f5a5590fc28",
         "id_bolao": "BOLAO001",
-        "id_jogo": "d78de2369989bdea",
+        "id_jogo": "55499f5a5590fc28",
         "mandante": "Uruguay",
         "visitante": "Spain",
         "flagMandante": "🇺🇾",
@@ -13493,7 +13493,7 @@
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "26/06/2026 21:37:49"
+    "cacheAtualizadoEm": "26/06/2026 21:40:43"
   },
   "jogos": [
     {
@@ -16163,9 +16163,9 @@
       "visitante_iso": "iq"
     },
     {
-      "id": "d92e1bb637c6f0ee",
+      "id": "0b53b4abe543af7d",
       "id_bolao": "BOLAO001",
-      "id_jogo": "d92e1bb637c6f0ee",
+      "id_jogo": "0b53b4abe543af7d",
       "mandante": "Cape Verde",
       "visitante": "Saudi Arabia",
       "flagMandante": "🇨🇻",
@@ -16206,9 +16206,9 @@
       "visitante_iso": "sa"
     },
     {
-      "id": "d78de2369989bdea",
+      "id": "55499f5a5590fc28",
       "id_bolao": "BOLAO001",
-      "id_jogo": "d78de2369989bdea",
+      "id_jogo": "55499f5a5590fc28",
       "mandante": "Uruguay",
       "visitante": "Spain",
       "flagMandante": "🇺🇾",
@@ -19261,9 +19261,9 @@
       "visitante_iso": "iq"
     },
     {
-      "id": "d92e1bb637c6f0ee",
+      "id": "0b53b4abe543af7d",
       "id_bolao": "BOLAO001",
-      "id_jogo": "d92e1bb637c6f0ee",
+      "id_jogo": "0b53b4abe543af7d",
       "mandante": "Cape Verde",
       "visitante": "Saudi Arabia",
       "flagMandante": "🇨🇻",
@@ -19304,9 +19304,9 @@
       "visitante_iso": "sa"
     },
     {
-      "id": "d78de2369989bdea",
+      "id": "55499f5a5590fc28",
       "id_bolao": "BOLAO001",
-      "id_jogo": "d78de2369989bdea",
+      "id_jogo": "55499f5a5590fc28",
       "mandante": "Uruguay",
       "visitante": "Spain",
       "flagMandante": "🇺🇾",
