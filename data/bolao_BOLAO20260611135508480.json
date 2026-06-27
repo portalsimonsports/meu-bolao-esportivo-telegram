@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260611135508480",
-  "gerado_em": "27/06/2026 18:23:13",
-  "gerado_ts": 1782595393949,
+  "gerado_em": "27/06/2026 20:07:20",
+  "gerado_ts": 1782601640884,
   "dados": {
     "id_bolao": "BOLAO20260611135508480",
     "bolaoAtual": {
@@ -12737,9 +12737,9 @@
         "visitante_iso": "be"
       },
       {
-        "id": "7a762b9dae2738c7",
+        "id": "d30fbdc08b8050fc",
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "7a762b9dae2738c7",
+        "id_jogo": "d30fbdc08b8050fc",
         "mandante": "Croatia",
         "visitante": "Ghana",
         "flagMandante": "🇭🇷",
@@ -12754,12 +12754,12 @@
         "hora": "18:00",
         "dataHora": "27/06/2026 18:00",
         "limitePalpite": "27/06/2026 18:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "gols_mandante": 1,
+        "gols_visitante": 1,
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -12799,7 +12799,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:32:47.686Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ],
         "palpitesOutros": [
@@ -12832,7 +12832,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:32:47.686Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ],
         "palpitesParticipantes": [
@@ -12865,7 +12865,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:32:47.686Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ],
         "palpites": [
@@ -12930,12 +12930,12 @@
         "hora": "18:00",
         "dataHora": "27/06/2026 18:00",
         "limitePalpite": "27/06/2026 18:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "gols_mandante": 0,
+        "gols_visitante": 2,
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -12962,7 +12962,7 @@
             "placar_texto": "0 x 3",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -12995,7 +12995,7 @@
             "placar_texto": "0 x 3",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -13028,7 +13028,7 @@
             "placar_texto": "0 x 3",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -13060,7 +13060,7 @@
             "placar_texto": "0 x 3",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -24110,7 +24110,7 @@
       },
       {
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "7a762b9dae2738c7",
+        "id_jogo": "d30fbdc08b8050fc",
         "mandante": "Croatia",
         "visitante": "Ghana",
         "mandante_pt": "Croácia",
@@ -24118,11 +24118,11 @@
         "codigoMandante": "hr",
         "codigoVisitante": "gh",
         "data_jogo": "",
-        "status_jogo": "FECHADO",
-        "status_bolao": "FECHADO",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "placar": " x ",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
+        "gols_mandante": 1,
+        "gols_visitante": 1,
+        "placar": "1 x 1",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -24154,7 +24154,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:32:47.686Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ],
         "palpitesPublicos": [
@@ -24187,7 +24187,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:32:47.686Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ],
         "palpitesOutros": [
@@ -24220,7 +24220,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:32:47.686Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ],
         "palpitesParticipantes": [
@@ -24253,7 +24253,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:32:47.686Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ]
       },
@@ -24267,11 +24267,11 @@
         "codigoMandante": "pa",
         "codigoVisitante": "gb-eng",
         "data_jogo": "",
-        "status_jogo": "FECHADO",
-        "status_bolao": "FECHADO",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "placar": " x ",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
+        "gols_mandante": 0,
+        "gols_visitante": 2,
+        "placar": "0 x 2",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -24290,7 +24290,7 @@
             "placar_texto": "0 x 3",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -24323,7 +24323,7 @@
             "placar_texto": "0 x 3",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -24356,7 +24356,7 @@
             "placar_texto": "0 x 3",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -24389,7 +24389,7 @@
             "placar_texto": "0 x 3",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "criterio_pontuacao": "SEM_ACERTO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -24410,7 +24410,7 @@
     "totalJogosComPalpitesPublicos": 63,
     "totalPalpitesPublicos": 77,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "27/06/2026 18:23:13",
+    "cacheAtualizadoEm": "27/06/2026 20:07:20",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
