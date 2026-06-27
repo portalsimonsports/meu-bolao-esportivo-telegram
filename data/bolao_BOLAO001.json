@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO001",
-  "gerado_em": "26/06/2026 21:13:02",
-  "gerado_ts": 1782519182192,
+  "gerado_em": "26/06/2026 21:43:07",
+  "gerado_ts": 1782520987647,
   "dados": {
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
@@ -18099,9 +18099,9 @@
         "visitante_iso": "iq"
       },
       {
-        "id": "d92e1bb637c6f0ee",
+        "id": "0b53b4abe543af7d",
         "id_bolao": "BOLAO001",
-        "id_jogo": "d92e1bb637c6f0ee",
+        "id_jogo": "0b53b4abe543af7d",
         "mandante": "Cape Verde",
         "visitante": "Saudi Arabia",
         "flagMandante": "🇨🇻",
@@ -18116,11 +18116,11 @@
         "hora": "21:00",
         "dataHora": "26/06/2026 21:00",
         "limitePalpite": "26/06/2026 21:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "status": "Ao vivo",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
@@ -18161,7 +18161,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ],
         "palpitesOutros": [
@@ -18194,7 +18194,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ],
         "palpitesParticipantes": [
@@ -18227,7 +18227,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ],
         "palpites": [
@@ -18275,9 +18275,9 @@
         "visitante_iso": "sa"
       },
       {
-        "id": "d78de2369989bdea",
+        "id": "55499f5a5590fc28",
         "id_bolao": "BOLAO001",
-        "id_jogo": "d78de2369989bdea",
+        "id_jogo": "55499f5a5590fc28",
         "mandante": "Uruguay",
         "visitante": "Spain",
         "flagMandante": "🇺🇾",
@@ -18292,11 +18292,11 @@
         "hora": "21:00",
         "dataHora": "26/06/2026 21:00",
         "limitePalpite": "26/06/2026 21:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "status": "Ao vivo",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
@@ -18337,7 +18337,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ],
         "palpitesOutros": [
@@ -18370,7 +18370,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ],
         "palpitesParticipantes": [
@@ -18403,7 +18403,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ],
         "palpites": [
@@ -35269,7 +35269,7 @@
       },
       {
         "id_bolao": "BOLAO001",
-        "id_jogo": "d92e1bb637c6f0ee",
+        "id_jogo": "0b53b4abe543af7d",
         "mandante": "Cape Verde",
         "visitante": "Saudi Arabia",
         "mandante_pt": "Cabo Verde",
@@ -35277,11 +35277,11 @@
         "codigoMandante": "cv",
         "codigoVisitante": "sa",
         "data_jogo": "",
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "placar": " x ",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "placar": "0 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -35313,7 +35313,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ],
         "palpitesPublicos": [
@@ -35346,7 +35346,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ],
         "palpitesOutros": [
@@ -35379,7 +35379,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ],
         "palpitesParticipantes": [
@@ -35412,13 +35412,13 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ]
       },
       {
         "id_bolao": "BOLAO001",
-        "id_jogo": "d78de2369989bdea",
+        "id_jogo": "55499f5a5590fc28",
         "mandante": "Uruguay",
         "visitante": "Spain",
         "mandante_pt": "Uruguai",
@@ -35426,11 +35426,11 @@
         "codigoMandante": "uy",
         "codigoVisitante": "es",
         "data_jogo": "",
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "placar": " x ",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "placar": "0 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -35462,7 +35462,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ],
         "palpitesPublicos": [
@@ -35495,7 +35495,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ],
         "palpitesOutros": [
@@ -35528,7 +35528,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ],
         "palpitesParticipantes": [
@@ -35561,7 +35561,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ]
       }
@@ -35569,7 +35569,7 @@
     "totalJogosComPalpitesPublicos": 64,
     "totalPalpitesPublicos": 122,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "26/06/2026 21:13:02",
+    "cacheAtualizadoEm": "26/06/2026 21:43:07",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
