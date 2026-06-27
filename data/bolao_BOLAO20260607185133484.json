@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260607185133484",
-  "gerado_em": "27/06/2026 18:52:43",
-  "gerado_ts": 1782597163671,
+  "gerado_em": "27/06/2026 19:39:06",
+  "gerado_ts": 1782599946523,
   "dados": {
     "id_bolao": "BOLAO20260607185133484",
     "bolaoAtual": {
@@ -15226,9 +15226,9 @@
         "visitante_iso": "be"
       },
       {
-        "id": "7a762b9dae2738c7",
+        "id": "d30fbdc08b8050fc",
         "id_bolao": "BOLAO20260607185133484",
-        "id_jogo": "7a762b9dae2738c7",
+        "id_jogo": "d30fbdc08b8050fc",
         "mandante": "Croatia",
         "visitante": "Ghana",
         "flagMandante": "🇭🇷",
@@ -15243,7 +15243,7 @@
         "hora": "18:00",
         "dataHora": "27/06/2026 18:00",
         "limitePalpite": "27/06/2026 18:00",
-        "gols_mandante": 0,
+        "gols_mandante": 1,
         "gols_visitante": 0,
         "status": "Ao vivo",
         "aceitaPalpite": false,
@@ -15275,7 +15275,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "SEM_ACERTO",
+            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -15288,7 +15288,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:22.151Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ],
         "palpitesOutros": [
@@ -15308,7 +15308,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "SEM_ACERTO",
+            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -15321,7 +15321,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:22.151Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ],
         "palpitesParticipantes": [
@@ -15341,7 +15341,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "SEM_ACERTO",
+            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -15354,7 +15354,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:22.151Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ],
         "palpites": [
@@ -15373,7 +15373,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "SEM_ACERTO",
+            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -15420,7 +15420,7 @@
         "dataHora": "27/06/2026 18:00",
         "limitePalpite": "27/06/2026 18:00",
         "gols_mandante": 0,
-        "gols_visitante": 0,
+        "gols_visitante": 1,
         "status": "Ao vivo",
         "aceitaPalpite": false,
         "status_jogo": "AO_VIVO",
@@ -29129,7 +29129,7 @@
       },
       {
         "id_bolao": "BOLAO20260607185133484",
-        "id_jogo": "7a762b9dae2738c7",
+        "id_jogo": "d30fbdc08b8050fc",
         "mandante": "Croatia",
         "visitante": "Ghana",
         "mandante_pt": "Croácia",
@@ -29139,9 +29139,9 @@
         "data_jogo": "",
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": 0,
+        "gols_mandante": 1,
         "gols_visitante": 0,
-        "placar": "0 x 0",
+        "placar": "1 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -29160,7 +29160,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "SEM_ACERTO",
+            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -29173,7 +29173,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:22.151Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ],
         "palpitesPublicos": [
@@ -29193,7 +29193,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "SEM_ACERTO",
+            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -29206,7 +29206,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:22.151Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ],
         "palpitesOutros": [
@@ -29226,7 +29226,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "SEM_ACERTO",
+            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -29239,7 +29239,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:22.151Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ],
         "palpitesParticipantes": [
@@ -29259,7 +29259,7 @@
             "placar_texto": "2 x 0",
             "pontos": 0,
             "pontos_label": "0 pts",
-            "criterio_pontuacao": "SEM_ACERTO",
+            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
             "PTS_EXATO": 0,
             "PTS_GOL_VENCEDOR": 0,
             "PTS_SALDO": 0,
@@ -29272,7 +29272,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:22.151Z",
-            "id_jogo_json": "7a762b9dae2738c7"
+            "id_jogo_json": "d30fbdc08b8050fc"
           }
         ]
       },
@@ -29289,8 +29289,8 @@
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "gols_mandante": 0,
-        "gols_visitante": 0,
-        "placar": "0 x 0",
+        "gols_visitante": 1,
+        "placar": "0 x 1",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -29429,7 +29429,7 @@
     "totalJogosComPalpitesPublicos": 65,
     "totalPalpitesPublicos": 97,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "27/06/2026 18:52:43",
+    "cacheAtualizadoEm": "27/06/2026 19:39:06",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
