@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "26/06/2026 21:11:09",
+  "dataHora": "26/06/2026 21:41:09",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -18189,9 +18189,9 @@
         "visitante_iso": "iq"
       },
       {
-        "id": "d92e1bb637c6f0ee",
+        "id": "0b53b4abe543af7d",
         "id_bolao": "BOLAO001",
-        "id_jogo": "d92e1bb637c6f0ee",
+        "id_jogo": "0b53b4abe543af7d",
         "mandante": "Cape Verde",
         "visitante": "Saudi Arabia",
         "flagMandante": "🇨🇻",
@@ -18206,11 +18206,11 @@
         "hora": "21:00",
         "dataHora": "26/06/2026 21:00",
         "limitePalpite": "26/06/2026 21:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "status": "Ao vivo",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
@@ -18251,7 +18251,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ],
         "palpitesOutros": [
@@ -18284,7 +18284,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ],
         "palpitesParticipantes": [
@@ -18317,7 +18317,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ],
         "palpites": [
@@ -18365,9 +18365,9 @@
         "visitante_iso": "sa"
       },
       {
-        "id": "d78de2369989bdea",
+        "id": "55499f5a5590fc28",
         "id_bolao": "BOLAO001",
-        "id_jogo": "d78de2369989bdea",
+        "id_jogo": "55499f5a5590fc28",
         "mandante": "Uruguay",
         "visitante": "Spain",
         "flagMandante": "🇺🇾",
@@ -18382,11 +18382,11 @@
         "hora": "21:00",
         "dataHora": "26/06/2026 21:00",
         "limitePalpite": "26/06/2026 21:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "status": "Ao vivo",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
@@ -18427,7 +18427,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ],
         "palpitesOutros": [
@@ -18460,7 +18460,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ],
         "palpitesParticipantes": [
@@ -18493,7 +18493,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ],
         "palpites": [
@@ -18926,7 +18926,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "26/06/2026 21:13:02",
+    "cacheAtualizadoEm": "26/06/2026 21:43:07",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 72,
     "classificacaoGrupos": [
@@ -20299,12 +20299,12 @@
             "time": "Spain",
             "flag": "🇪🇸",
             "codigo": "es",
-            "jogos": 2,
+            "jogos": 3,
             "vitorias": 1,
-            "empates": 1,
+            "empates": 2,
             "derrotas": 0,
-            "pontos": 4,
-            "pts": 4,
+            "pontos": 5,
+            "pts": 5,
             "golsPro": 4,
             "golsContra": 0,
             "saldo": 4,
@@ -20328,7 +20328,7 @@
             "slot": "1G",
             "provisoria": true,
             "criterios_fifa": {
-              "pontos": 4,
+              "pontos": 5,
               "saldo": 4,
               "gols_pro": 4,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
@@ -20351,12 +20351,12 @@
             "time": "Uruguay",
             "flag": "🇺🇾",
             "codigo": "uy",
-            "jogos": 2,
+            "jogos": 3,
             "vitorias": 0,
-            "empates": 2,
+            "empates": 3,
             "derrotas": 0,
-            "pontos": 2,
-            "pts": 2,
+            "pontos": 3,
+            "pts": 3,
             "golsPro": 3,
             "golsContra": 3,
             "saldo": 0,
@@ -20380,7 +20380,7 @@
             "slot": "2G",
             "provisoria": true,
             "criterios_fifa": {
-              "pontos": 2,
+              "pontos": 3,
               "saldo": 0,
               "gols_pro": 3,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
@@ -20403,12 +20403,12 @@
             "time": "Cape Verde Islands",
             "flag": "🇨🇻",
             "codigo": "cv",
-            "jogos": 2,
+            "jogos": 3,
             "vitorias": 0,
-            "empates": 2,
+            "empates": 3,
             "derrotas": 0,
-            "pontos": 2,
-            "pts": 2,
+            "pontos": 3,
+            "pts": 3,
             "golsPro": 2,
             "golsContra": 2,
             "saldo": 0,
@@ -20432,7 +20432,7 @@
             "slot": "3G",
             "provisoria": true,
             "criterios_fifa": {
-              "pontos": 2,
+              "pontos": 3,
               "saldo": 0,
               "gols_pro": 2,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
@@ -20455,12 +20455,12 @@
             "time": "Saudi Arabia",
             "flag": "🇸🇦",
             "codigo": "sa",
-            "jogos": 2,
+            "jogos": 3,
             "vitorias": 0,
-            "empates": 1,
+            "empates": 2,
             "derrotas": 1,
-            "pontos": 1,
-            "pts": 1,
+            "pontos": 2,
+            "pts": 2,
             "golsPro": 1,
             "golsContra": 5,
             "saldo": -4,
@@ -20484,7 +20484,7 @@
             "slot": "4G",
             "provisoria": true,
             "criterios_fifa": {
-              "pontos": 1,
+              "pontos": 2,
               "saldo": -4,
               "gols_pro": 1,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
@@ -20503,9 +20503,9 @@
           }
         ],
         "jogos_total": 6,
-        "jogos_com_placar": 4,
-        "jogos_ao_vivo": 0,
-        "jogos_pendentes": 2,
+        "jogos_com_placar": 6,
+        "jogos_ao_vivo": 2,
+        "jogos_pendentes": 0,
         "status": "PROVISORIO"
       },
       {
@@ -22003,6 +22003,73 @@
         "codigo_pais": "kr"
       },
       {
+        "grupo": "G",
+        "nome": "Cape Verde Islands",
+        "time": "Cape Verde Islands",
+        "flag": "🇨🇻",
+        "codigo": "cv",
+        "jogos": 3,
+        "vitorias": 0,
+        "empates": 3,
+        "derrotas": 0,
+        "pontos": 3,
+        "pts": 3,
+        "golsPro": 2,
+        "golsContra": 2,
+        "saldo": 0,
+        "conduta": -3,
+        "fair_play": -3,
+        "teamConductScore": -3,
+        "penalidade_cartoes": 3,
+        "cartoes_ca": 3,
+        "cartoes_cv": 0,
+        "cartoes_pts": 3,
+        "origemFairPlay": "ESPN_CARTOES_COPA",
+        "rankingFifa": 47,
+        "ranking_fifa": 47,
+        "rankingFifaAnterior": 9999,
+        "ranking_fifa_anterior": 9999,
+        "forca": 61,
+        "ataque": 61,
+        "defesa": 61,
+        "origemRanking": "FORCA_SELECOES",
+        "posicao": 3,
+        "slot": "3G",
+        "provisoria": true,
+        "criterios_fifa": {
+          "pontos": 3,
+          "saldo": 0,
+          "gols_pro": 2,
+          "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
+          "fair_play": -3,
+          "penalidade_cartoes_pts": 3,
+          "cartoes_ca": 3,
+          "cartoes_cv": 0,
+          "origem_cartoes": "ESPN_CARTOES_COPA",
+          "ranking_fifa": 47
+        },
+        "gols_pro": 2,
+        "posicao_terceiros": 7,
+        "classificado_melhor_terceiro": true,
+        "criterios_terceiros_fifa": {
+          "pontos": 3,
+          "saldo": 0,
+          "gols_pro": 2,
+          "fair_play": -3,
+          "penalidade_cartoes_pts": 3,
+          "cartoes_ca": 3,
+          "cartoes_cv": 0,
+          "origem_cartoes": "ESPN_CARTOES_COPA",
+          "ranking_fifa": 47,
+          "ranking_fifa_anterior": 9999
+        },
+        "nome_pt": "Cabo Verde",
+        "time_pt": "Cabo Verde",
+        "selecao_pt": "Cabo Verde",
+        "nome_exibicao": "Cabo Verde",
+        "codigo_pais": "cv"
+      },
+      {
         "grupo": "L",
         "nome": "Croatia",
         "time": "Croatia",
@@ -22049,7 +22116,7 @@
           "ranking_fifa": 11
         },
         "gols_pro": 3,
-        "posicao_terceiros": 7,
+        "posicao_terceiros": 8,
         "classificado_melhor_terceiro": true,
         "criterios_terceiros_fifa": {
           "pontos": 3,
@@ -22116,8 +22183,8 @@
           "ranking_fifa": 32
         },
         "gols_pro": 2,
-        "posicao_terceiros": 8,
-        "classificado_melhor_terceiro": true,
+        "posicao_terceiros": 9,
+        "classificado_melhor_terceiro": false,
         "criterios_terceiros_fifa": {
           "pontos": 3,
           "saldo": -2,
@@ -22183,7 +22250,7 @@
           "ranking_fifa": 26
         },
         "gols_pro": 1,
-        "posicao_terceiros": 9,
+        "posicao_terceiros": 10,
         "classificado_melhor_terceiro": false,
         "criterios_terceiros_fifa": {
           "pontos": 3,
@@ -22202,73 +22269,6 @@
         "selecao_pt": "Escócia",
         "nome_exibicao": "Escócia",
         "codigo_pais": "gb-sct"
-      },
-      {
-        "grupo": "G",
-        "nome": "Cape Verde Islands",
-        "time": "Cape Verde Islands",
-        "flag": "🇨🇻",
-        "codigo": "cv",
-        "jogos": 2,
-        "vitorias": 0,
-        "empates": 2,
-        "derrotas": 0,
-        "pontos": 2,
-        "pts": 2,
-        "golsPro": 2,
-        "golsContra": 2,
-        "saldo": 0,
-        "conduta": -3,
-        "fair_play": -3,
-        "teamConductScore": -3,
-        "penalidade_cartoes": 3,
-        "cartoes_ca": 3,
-        "cartoes_cv": 0,
-        "cartoes_pts": 3,
-        "origemFairPlay": "ESPN_CARTOES_COPA",
-        "rankingFifa": 47,
-        "ranking_fifa": 47,
-        "rankingFifaAnterior": 9999,
-        "ranking_fifa_anterior": 9999,
-        "forca": 61,
-        "ataque": 61,
-        "defesa": 61,
-        "origemRanking": "FORCA_SELECOES",
-        "posicao": 3,
-        "slot": "3G",
-        "provisoria": true,
-        "criterios_fifa": {
-          "pontos": 2,
-          "saldo": 0,
-          "gols_pro": 2,
-          "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
-          "fair_play": -3,
-          "penalidade_cartoes_pts": 3,
-          "cartoes_ca": 3,
-          "cartoes_cv": 0,
-          "origem_cartoes": "ESPN_CARTOES_COPA",
-          "ranking_fifa": 47
-        },
-        "gols_pro": 2,
-        "posicao_terceiros": 10,
-        "classificado_melhor_terceiro": false,
-        "criterios_terceiros_fifa": {
-          "pontos": 2,
-          "saldo": 0,
-          "gols_pro": 2,
-          "fair_play": -3,
-          "penalidade_cartoes_pts": 3,
-          "cartoes_ca": 3,
-          "cartoes_cv": 0,
-          "origem_cartoes": "ESPN_CARTOES_COPA",
-          "ranking_fifa": 47,
-          "ranking_fifa_anterior": 9999
-        },
-        "nome_pt": "Cabo Verde",
-        "time_pt": "Cabo Verde",
-        "selecao_pt": "Cabo Verde",
-        "nome_exibicao": "Cabo Verde",
-        "codigo_pais": "cv"
       },
       {
         "grupo": "H",
@@ -22412,19 +22412,19 @@
       "D",
       "I",
       "A",
-      "L",
-      "J"
+      "G",
+      "L"
     ],
     "gruposTerceirosEliminados": [
+      "J",
       "C",
-      "G",
       "H",
       "K"
     ],
     "anexoC": {
       "ok": true,
-      "opcao": 352,
-      "chave": "ABDEFIJL",
+      "opcao": 363,
+      "chave": "ABDEFGIL",
       "gruposTerceirosClassificados": [
         "F",
         "E",
@@ -22432,12 +22432,12 @@
         "D",
         "I",
         "A",
-        "L",
-        "J"
+        "G",
+        "L"
       ],
       "gruposTerceirosEliminados": [
+        "J",
         "C",
-        "G",
         "H",
         "K"
       ],
@@ -22846,7 +22846,7 @@
           "time": "Spain",
           "flag": "🇪🇸",
           "codigo": "es",
-          "pontos": 4,
+          "pontos": 5,
           "saldo": 4,
           "golsPro": 4,
           "conduta": -1,
@@ -22910,11 +22910,11 @@
         "origem": "FIFA_2026_ANEXO_C",
         "coluna": "1B",
         "slotFifa": "3EFGIJ",
-        "textoRegra": "1B x 3J",
+        "textoRegra": "1B x 3G",
         "mandanteSlot": "1B",
-        "visitanteSlot": "3J",
+        "visitanteSlot": "3G",
         "mandante": "Switzerland",
-        "visitante": "Algeria",
+        "visitante": "Cape Verde Islands",
         "mandanteObj": {
           "slot": "1B",
           "grupo": "B",
@@ -22937,31 +22937,31 @@
           "provisoria": false
         },
         "visitanteObj": {
-          "slot": "3J",
-          "grupo": "J",
-          "nome": "Algeria",
-          "time": "Algeria",
-          "flag": "🇩🇿",
-          "codigo": "dz",
+          "slot": "3G",
+          "grupo": "G",
+          "nome": "Cape Verde Islands",
+          "time": "Cape Verde Islands",
+          "flag": "🇨🇻",
+          "codigo": "cv",
           "pontos": 3,
-          "saldo": -2,
+          "saldo": 0,
           "golsPro": 2,
-          "conduta": -1,
-          "fair_play": -1,
-          "penalidade_cartoes": 1,
-          "cartoes_ca": 1,
+          "conduta": -3,
+          "fair_play": -3,
+          "penalidade_cartoes": 3,
+          "cartoes_ca": 3,
           "cartoes_cv": 0,
-          "rankingFifa": 32,
-          "ranking_fifa": 32,
+          "rankingFifa": 47,
+          "ranking_fifa": 47,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "provisoria": true
         },
         "flagMandante": "🇨🇭",
-        "flagVisitante": "🇩🇿",
+        "flagVisitante": "🇨🇻",
         "codigoMandante": "ch",
-        "codigoVisitante": "dz",
-        "grupoTerceiro": "J",
+        "codigoVisitante": "cv",
+        "grupoTerceiro": "G",
         "status": "PROVISORIO",
         "provisoria": true,
         "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
@@ -22970,11 +22970,11 @@
         "mandante_exibicao": "Suíça",
         "mandante_codigo": "ch",
         "mandante_iso": "ch",
-        "visitante_pt": "Argélia",
-        "visitante_nome_pt": "Argélia",
-        "visitante_exibicao": "Argélia",
-        "visitante_codigo": "dz",
-        "visitante_iso": "dz"
+        "visitante_pt": "Cabo Verde",
+        "visitante_nome_pt": "Cabo Verde",
+        "visitante_exibicao": "Cabo Verde",
+        "visitante_codigo": "cv",
+        "visitante_iso": "cv"
       },
       {
         "id": "M87",
@@ -23456,7 +23456,7 @@
           "time": "Spain",
           "flag": "🇪🇸",
           "codigo": "es",
-          "pontos": 4,
+          "pontos": 5,
           "saldo": 4,
           "golsPro": 4,
           "conduta": -1,
@@ -23520,11 +23520,11 @@
         "origem": "FIFA_2026_ANEXO_C",
         "coluna": "1B",
         "slotFifa": "3EFGIJ",
-        "textoRegra": "1B x 3J",
+        "textoRegra": "1B x 3G",
         "mandanteSlot": "1B",
-        "visitanteSlot": "3J",
+        "visitanteSlot": "3G",
         "mandante": "Switzerland",
-        "visitante": "Algeria",
+        "visitante": "Cape Verde Islands",
         "mandanteObj": {
           "slot": "1B",
           "grupo": "B",
@@ -23547,31 +23547,31 @@
           "provisoria": false
         },
         "visitanteObj": {
-          "slot": "3J",
-          "grupo": "J",
-          "nome": "Algeria",
-          "time": "Algeria",
-          "flag": "🇩🇿",
-          "codigo": "dz",
+          "slot": "3G",
+          "grupo": "G",
+          "nome": "Cape Verde Islands",
+          "time": "Cape Verde Islands",
+          "flag": "🇨🇻",
+          "codigo": "cv",
           "pontos": 3,
-          "saldo": -2,
+          "saldo": 0,
           "golsPro": 2,
-          "conduta": -1,
-          "fair_play": -1,
-          "penalidade_cartoes": 1,
-          "cartoes_ca": 1,
+          "conduta": -3,
+          "fair_play": -3,
+          "penalidade_cartoes": 3,
+          "cartoes_ca": 3,
           "cartoes_cv": 0,
-          "rankingFifa": 32,
-          "ranking_fifa": 32,
+          "rankingFifa": 47,
+          "ranking_fifa": 47,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
           "provisoria": true
         },
         "flagMandante": "🇨🇭",
-        "flagVisitante": "🇩🇿",
+        "flagVisitante": "🇨🇻",
         "codigoMandante": "ch",
-        "codigoVisitante": "dz",
-        "grupoTerceiro": "J",
+        "codigoVisitante": "cv",
+        "grupoTerceiro": "G",
         "status": "PROVISORIO",
         "provisoria": true,
         "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
@@ -23580,11 +23580,11 @@
         "mandante_exibicao": "Suíça",
         "mandante_codigo": "ch",
         "mandante_iso": "ch",
-        "visitante_pt": "Argélia",
-        "visitante_nome_pt": "Argélia",
-        "visitante_exibicao": "Argélia",
-        "visitante_codigo": "dz",
-        "visitante_iso": "dz"
+        "visitante_pt": "Cabo Verde",
+        "visitante_nome_pt": "Cabo Verde",
+        "visitante_exibicao": "Cabo Verde",
+        "visitante_codigo": "cv",
+        "visitante_iso": "cv"
       },
       {
         "id": "M87",
@@ -23668,8 +23668,8 @@
       "status": "PROVISORIO",
       "anexoC": {
         "ok": true,
-        "opcao": 352,
-        "chave": "ABDEFIJL",
+        "opcao": 363,
+        "chave": "ABDEFGIL",
         "gruposTerceirosClassificados": [
           "F",
           "E",
@@ -23677,12 +23677,12 @@
           "D",
           "I",
           "A",
-          "L",
-          "J"
+          "G",
+          "L"
         ],
         "gruposTerceirosEliminados": [
+          "J",
           "C",
-          "G",
           "H",
           "K"
         ],
@@ -24091,7 +24091,7 @@
             "time": "Spain",
             "flag": "🇪🇸",
             "codigo": "es",
-            "pontos": 4,
+            "pontos": 5,
             "saldo": 4,
             "golsPro": 4,
             "conduta": -1,
@@ -24155,11 +24155,11 @@
           "origem": "FIFA_2026_ANEXO_C",
           "coluna": "1B",
           "slotFifa": "3EFGIJ",
-          "textoRegra": "1B x 3J",
+          "textoRegra": "1B x 3G",
           "mandanteSlot": "1B",
-          "visitanteSlot": "3J",
+          "visitanteSlot": "3G",
           "mandante": "Switzerland",
-          "visitante": "Algeria",
+          "visitante": "Cape Verde Islands",
           "mandanteObj": {
             "slot": "1B",
             "grupo": "B",
@@ -24182,31 +24182,31 @@
             "provisoria": false
           },
           "visitanteObj": {
-            "slot": "3J",
-            "grupo": "J",
-            "nome": "Algeria",
-            "time": "Algeria",
-            "flag": "🇩🇿",
-            "codigo": "dz",
+            "slot": "3G",
+            "grupo": "G",
+            "nome": "Cape Verde Islands",
+            "time": "Cape Verde Islands",
+            "flag": "🇨🇻",
+            "codigo": "cv",
             "pontos": 3,
-            "saldo": -2,
+            "saldo": 0,
             "golsPro": 2,
-            "conduta": -1,
-            "fair_play": -1,
-            "penalidade_cartoes": 1,
-            "cartoes_ca": 1,
+            "conduta": -3,
+            "fair_play": -3,
+            "penalidade_cartoes": 3,
+            "cartoes_ca": 3,
             "cartoes_cv": 0,
-            "rankingFifa": 32,
-            "ranking_fifa": 32,
+            "rankingFifa": 47,
+            "ranking_fifa": 47,
             "rankingFifaAnterior": 9999,
             "posicao": 3,
             "provisoria": true
           },
           "flagMandante": "🇨🇭",
-          "flagVisitante": "🇩🇿",
+          "flagVisitante": "🇨🇻",
           "codigoMandante": "ch",
-          "codigoVisitante": "dz",
-          "grupoTerceiro": "J",
+          "codigoVisitante": "cv",
+          "grupoTerceiro": "G",
           "status": "PROVISORIO",
           "provisoria": true,
           "observacao": "Confronto provisório calculado pelo GS com a classificação atual.",
@@ -24215,11 +24215,11 @@
           "mandante_exibicao": "Suíça",
           "mandante_codigo": "ch",
           "mandante_iso": "ch",
-          "visitante_pt": "Argélia",
-          "visitante_nome_pt": "Argélia",
-          "visitante_exibicao": "Argélia",
-          "visitante_codigo": "dz",
-          "visitante_iso": "dz"
+          "visitante_pt": "Cabo Verde",
+          "visitante_nome_pt": "Cabo Verde",
+          "visitante_exibicao": "Cabo Verde",
+          "visitante_codigo": "cv",
+          "visitante_iso": "cv"
         },
         {
           "id": "M87",
@@ -42949,7 +42949,7 @@
       },
       {
         "id_bolao": "BOLAO001",
-        "id_jogo": "d92e1bb637c6f0ee",
+        "id_jogo": "0b53b4abe543af7d",
         "mandante": "Cape Verde",
         "visitante": "Saudi Arabia",
         "mandante_pt": "Cabo Verde",
@@ -42957,11 +42957,11 @@
         "codigoMandante": "cv",
         "codigoVisitante": "sa",
         "data_jogo": "",
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "placar": " x ",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "placar": "0 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -42993,7 +42993,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ],
         "palpitesPublicos": [
@@ -43026,7 +43026,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ],
         "palpitesOutros": [
@@ -43059,7 +43059,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ],
         "palpitesParticipantes": [
@@ -43092,13 +43092,13 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:30:56.364Z",
-            "id_jogo_json": "d92e1bb637c6f0ee"
+            "id_jogo_json": "0b53b4abe543af7d"
           }
         ]
       },
       {
         "id_bolao": "BOLAO001",
-        "id_jogo": "d78de2369989bdea",
+        "id_jogo": "55499f5a5590fc28",
         "mandante": "Uruguay",
         "visitante": "Spain",
         "mandante_pt": "Uruguai",
@@ -43106,11 +43106,11 @@
         "codigoMandante": "uy",
         "codigoVisitante": "es",
         "data_jogo": "",
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "placar": " x ",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "placar": "0 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -43142,7 +43142,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ],
         "palpitesPublicos": [
@@ -43175,7 +43175,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ],
         "palpitesOutros": [
@@ -43208,7 +43208,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ],
         "palpitesParticipantes": [
@@ -43241,7 +43241,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-26T03:31:13.511Z",
-            "id_jogo_json": "d78de2369989bdea"
+            "id_jogo_json": "55499f5a5590fc28"
           }
         ]
       }
@@ -43250,11 +43250,11 @@
     "totalPalpitesPublicos": 122,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "26/06/2026 21:13:02"
+    "gerado_em": "26/06/2026 21:43:07"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "26/06/2026 21:13:02",
-  "gerado_ts": 1782519182192,
+  "gerado_em": "26/06/2026 21:43:07",
+  "gerado_ts": 1782520987647,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -61113,9 +61113,9 @@
       "visitante_iso": "iq"
     },
     {
-      "id": "d92e1bb637c6f0ee",
+      "id": "0b53b4abe543af7d",
       "id_bolao": "BOLAO001",
-      "id_jogo": "d92e1bb637c6f0ee",
+      "id_jogo": "0b53b4abe543af7d",
       "mandante": "Cape Verde",
       "visitante": "Saudi Arabia",
       "flagMandante": "🇨🇻",
@@ -61130,11 +61130,11 @@
       "hora": "21:00",
       "dataHora": "26/06/2026 21:00",
       "limitePalpite": "26/06/2026 21:00",
-      "gols_mandante": "",
-      "gols_visitante": "",
-      "status": "Fechado",
+      "gols_mandante": 0,
+      "gols_visitante": 0,
+      "status": "Ao vivo",
       "aceitaPalpite": false,
-      "status_jogo": "FECHADO",
+      "status_jogo": "AO_VIVO",
       "status_bolao": "FECHADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
@@ -61289,9 +61289,9 @@
       "visitante_iso": "sa"
     },
     {
-      "id": "d78de2369989bdea",
+      "id": "55499f5a5590fc28",
       "id_bolao": "BOLAO001",
-      "id_jogo": "d78de2369989bdea",
+      "id_jogo": "55499f5a5590fc28",
       "mandante": "Uruguay",
       "visitante": "Spain",
       "flagMandante": "🇺🇾",
@@ -61306,11 +61306,11 @@
       "hora": "21:00",
       "dataHora": "26/06/2026 21:00",
       "limitePalpite": "26/06/2026 21:00",
-      "gols_mandante": "",
-      "gols_visitante": "",
-      "status": "Fechado",
+      "gols_mandante": 0,
+      "gols_visitante": 0,
+      "status": "Ao vivo",
       "aceitaPalpite": false,
-      "status_jogo": "FECHADO",
+      "status_jogo": "AO_VIVO",
       "status_bolao": "FECHADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
