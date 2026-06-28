@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260607185133484",
-  "gerado_em": "27/06/2026 20:53:13",
-  "gerado_ts": 1782604393898,
+  "gerado_em": "27/06/2026 21:09:43",
+  "gerado_ts": 1782605383214,
   "dados": {
     "id_bolao": "BOLAO20260607185133484",
     "bolaoAtual": {
@@ -15578,9 +15578,9 @@
         "visitante_iso": "gb-eng"
       },
       {
-        "id": "3333b64d80b8e0ce",
+        "id": "2ad443ab44963d71",
         "id_bolao": "BOLAO20260607185133484",
-        "id_jogo": "3333b64d80b8e0ce",
+        "id_jogo": "2ad443ab44963d71",
         "mandante": "Colombia",
         "visitante": "Portugal",
         "flagMandante": "🇨🇴",
@@ -15592,14 +15592,14 @@
         "grupo": "Grupo K",
         "rodada_grupo": "Grupo K",
         "data": "27/06/2026",
-        "hora": "20:30",
-        "dataHora": "27/06/2026 20:30",
-        "limitePalpite": "27/06/2026 20:30",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "hora": "20:31",
+        "dataHora": "27/06/2026 20:31",
+        "limitePalpite": "27/06/2026 20:31",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "status": "Ao vivo",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
@@ -15640,7 +15640,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:39.054Z",
-            "id_jogo_json": "3333b64d80b8e0ce"
+            "id_jogo_json": "2ad443ab44963d71"
           }
         ],
         "palpitesOutros": [
@@ -15673,7 +15673,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:39.054Z",
-            "id_jogo_json": "3333b64d80b8e0ce"
+            "id_jogo_json": "2ad443ab44963d71"
           }
         ],
         "palpitesParticipantes": [
@@ -15706,42 +15706,10 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:39.054Z",
-            "id_jogo_json": "3333b64d80b8e0ce"
+            "id_jogo_json": "2ad443ab44963d71"
           }
         ],
-        "palpites": [
-          {
-            "id_bolao": "BOLAO20260607185133484",
-            "id_jogo": "3333b64d80b8e0ce",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "Colombia",
-            "visitante": "Portugal",
-            "palpite_mandante": 1,
-            "palpite_visitante": 2,
-            "placarMandante": 1,
-            "placarVisitante": 2,
-            "placar_texto": "1 x 2",
-            "pontos": 0,
-            "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 0,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "data_hora": "27/06/2026 00:31:39",
-            "dataHora": "27/06/2026 00:31:39",
-            "proprio": false
-          }
-        ],
+        "palpites": [],
         "mandante_pt": "Colômbia",
         "mandante_nome_pt": "Colômbia",
         "mandante_exibicao": "Colômbia",
@@ -15754,9 +15722,9 @@
         "visitante_iso": "pt"
       },
       {
-        "id": "6d58c022d4c368d9",
+        "id": "619c721e58cbfafe",
         "id_bolao": "BOLAO20260607185133484",
-        "id_jogo": "6d58c022d4c368d9",
+        "id_jogo": "619c721e58cbfafe",
         "mandante": "Congo DR",
         "visitante": "Uzbekistan",
         "flagMandante": "🇨🇩",
@@ -15768,14 +15736,14 @@
         "grupo": "Grupo K",
         "rodada_grupo": "Grupo K",
         "data": "27/06/2026",
-        "hora": "20:30",
-        "dataHora": "27/06/2026 20:30",
-        "limitePalpite": "27/06/2026 20:30",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "hora": "20:31",
+        "dataHora": "27/06/2026 20:31",
+        "limitePalpite": "27/06/2026 20:31",
+        "gols_mandante": 0,
+        "gols_visitante": 1,
+        "status": "Ao vivo",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
@@ -15816,7 +15784,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:46.158Z",
-            "id_jogo_json": "6d58c022d4c368d9"
+            "id_jogo_json": "619c721e58cbfafe"
           }
         ],
         "palpitesOutros": [
@@ -15849,7 +15817,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:46.158Z",
-            "id_jogo_json": "6d58c022d4c368d9"
+            "id_jogo_json": "619c721e58cbfafe"
           }
         ],
         "palpitesParticipantes": [
@@ -15882,42 +15850,10 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:46.158Z",
-            "id_jogo_json": "6d58c022d4c368d9"
+            "id_jogo_json": "619c721e58cbfafe"
           }
         ],
-        "palpites": [
-          {
-            "id_bolao": "BOLAO20260607185133484",
-            "id_jogo": "6d58c022d4c368d9",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "Congo DR",
-            "visitante": "Uzbekistan",
-            "palpite_mandante": 1,
-            "palpite_visitante": 1,
-            "placarMandante": 1,
-            "placarVisitante": 1,
-            "placar_texto": "1 x 1",
-            "pontos": 0,
-            "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 0,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "data_hora": "27/06/2026 00:31:46",
-            "dataHora": "27/06/2026 00:31:46",
-            "proprio": false
-          }
-        ],
+        "palpites": [],
         "mandante_pt": "República Democrática do Congo",
         "mandante_nome_pt": "República Democrática do Congo",
         "mandante_exibicao": "República Democrática do Congo",
@@ -29683,7 +29619,7 @@
       },
       {
         "id_bolao": "BOLAO20260607185133484",
-        "id_jogo": "3333b64d80b8e0ce",
+        "id_jogo": "2ad443ab44963d71",
         "mandante": "Colombia",
         "visitante": "Portugal",
         "mandante_pt": "Colômbia",
@@ -29691,11 +29627,11 @@
         "codigoMandante": "co",
         "codigoVisitante": "pt",
         "data_jogo": "",
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "placar": " x ",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "placar": "0 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -29727,7 +29663,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:39.054Z",
-            "id_jogo_json": "3333b64d80b8e0ce"
+            "id_jogo_json": "2ad443ab44963d71"
           }
         ],
         "palpitesPublicos": [
@@ -29760,7 +29696,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:39.054Z",
-            "id_jogo_json": "3333b64d80b8e0ce"
+            "id_jogo_json": "2ad443ab44963d71"
           }
         ],
         "palpitesOutros": [
@@ -29793,7 +29729,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:39.054Z",
-            "id_jogo_json": "3333b64d80b8e0ce"
+            "id_jogo_json": "2ad443ab44963d71"
           }
         ],
         "palpitesParticipantes": [
@@ -29826,13 +29762,13 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:39.054Z",
-            "id_jogo_json": "3333b64d80b8e0ce"
+            "id_jogo_json": "2ad443ab44963d71"
           }
         ]
       },
       {
         "id_bolao": "BOLAO20260607185133484",
-        "id_jogo": "6d58c022d4c368d9",
+        "id_jogo": "619c721e58cbfafe",
         "mandante": "Congo DR",
         "visitante": "Uzbekistan",
         "mandante_pt": "República Democrática do Congo",
@@ -29840,11 +29776,11 @@
         "codigoMandante": "cd",
         "codigoVisitante": "uz",
         "data_jogo": "",
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "placar": " x ",
+        "gols_mandante": 0,
+        "gols_visitante": 1,
+        "placar": "0 x 1",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -29876,7 +29812,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:46.158Z",
-            "id_jogo_json": "6d58c022d4c368d9"
+            "id_jogo_json": "619c721e58cbfafe"
           }
         ],
         "palpitesPublicos": [
@@ -29909,7 +29845,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:46.158Z",
-            "id_jogo_json": "6d58c022d4c368d9"
+            "id_jogo_json": "619c721e58cbfafe"
           }
         ],
         "palpitesOutros": [
@@ -29942,7 +29878,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:46.158Z",
-            "id_jogo_json": "6d58c022d4c368d9"
+            "id_jogo_json": "619c721e58cbfafe"
           }
         ],
         "palpitesParticipantes": [
@@ -29975,7 +29911,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-27T03:31:46.158Z",
-            "id_jogo_json": "6d58c022d4c368d9"
+            "id_jogo_json": "619c721e58cbfafe"
           }
         ]
       }
@@ -29983,7 +29919,7 @@
     "totalJogosComPalpitesPublicos": 67,
     "totalPalpitesPublicos": 99,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "27/06/2026 20:53:13",
+    "cacheAtualizadoEm": "27/06/2026 21:09:43",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
