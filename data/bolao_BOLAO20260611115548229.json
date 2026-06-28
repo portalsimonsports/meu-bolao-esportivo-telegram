@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260611115548229",
-  "gerado_em": "28/06/2026 13:38:02",
-  "gerado_ts": 1782664682777,
+  "gerado_em": "28/06/2026 14:23:36",
+  "gerado_ts": 1782667416977,
   "dados": {
     "id_bolao": "BOLAO20260611115548229",
     "bolaoAtual": {
@@ -30,8 +30,8 @@
         "username": "desafiante_ia",
         "total_pontos": 4950,
         "pontos": "4.950",
-        "palpites": 67,
-        "total_palpites": 67,
+        "palpites": 68,
+        "total_palpites": 68,
         "medalha": "👑",
         "classe": "gold",
         "avatar": "👨🏻"
@@ -29158,7 +29158,7 @@
     "totalJogosComPalpitesPublicos": 67,
     "totalPalpitesPublicos": 90,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "28/06/2026 13:38:02",
+    "cacheAtualizadoEm": "28/06/2026 14:23:36",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
