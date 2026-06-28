@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260607182904806",
-  "gerado_em": "28/06/2026 02:14:18",
-  "gerado_ts": 1782623658671,
+  "gerado_em": "28/06/2026 02:25:23",
+  "gerado_ts": 1782624323566,
   "dados": {
     "id_bolao": "BOLAO20260607182904806",
     "bolaoAtual": {
@@ -16875,8 +16875,8 @@
         "hora": "23:00",
         "dataHora": "27/06/2026 23:00",
         "limitePalpite": "27/06/2026 23:00",
-        "gols_mandante": 1,
-        "gols_visitante": 1,
+        "gols_mandante": 3,
+        "gols_visitante": 3,
         "status": "Finalizado",
         "aceitaPalpite": false,
         "status_jogo": "FINALIZADO",
@@ -17051,8 +17051,8 @@
         "hora": "23:00",
         "dataHora": "27/06/2026 23:00",
         "limitePalpite": "27/06/2026 23:00",
-        "gols_mandante": 0,
-        "gols_visitante": 2,
+        "gols_mandante": 1,
+        "gols_visitante": 3,
         "status": "Finalizado",
         "aceitaPalpite": false,
         "status_jogo": "FINALIZADO",
@@ -32167,9 +32167,9 @@
         "data_jogo": "",
         "status_jogo": "FINALIZADO",
         "status_bolao": "FINALIZADO",
-        "gols_mandante": 1,
-        "gols_visitante": 1,
-        "placar": "1 x 1",
+        "gols_mandante": 3,
+        "gols_visitante": 3,
+        "placar": "3 x 3",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -32316,9 +32316,9 @@
         "data_jogo": "",
         "status_jogo": "FINALIZADO",
         "status_bolao": "FINALIZADO",
-        "gols_mandante": 0,
-        "gols_visitante": 2,
-        "placar": "0 x 2",
+        "gols_mandante": 1,
+        "gols_visitante": 3,
+        "placar": "1 x 3",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -32457,7 +32457,7 @@
     "totalJogosComPalpitesPublicos": 69,
     "totalPalpitesPublicos": 109,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "28/06/2026 02:14:18",
+    "cacheAtualizadoEm": "28/06/2026 02:25:23",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
