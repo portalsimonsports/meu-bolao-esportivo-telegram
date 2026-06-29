@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "29/06/2026 08:35:31",
+  "dataHora": "29/06/2026 11:52:42",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -17204,19 +17204,19 @@
         "visitante_iso": "gh"
       },
       {
-        "id": "1e8798098f9f3bf5",
+        "id": "7751074e1316679a",
         "id_bolao": "BOLAO20260607185133484",
-        "id_jogo": "1e8798098f9f3bf5",
-        "mandante": "Winner Match 73",
+        "id_jogo": "7751074e1316679a",
+        "mandante": "Canada",
         "visitante": "Winner Match 75",
-        "flagMandante": "⚽",
+        "flagMandante": "🇨🇦",
         "flagVisitante": "⚽",
-        "flagMandanteEmoji": "⚽",
+        "flagMandanteEmoji": "🇨🇦",
         "flagVisitanteEmoji": "⚽",
-        "codigoMandante": "",
+        "codigoMandante": "ca",
         "codigoVisitante": "",
-        "grupo": "CUP05",
-        "rodada_grupo": "CUP05",
+        "grupo": "Grupo B",
+        "rodada_grupo": "Grupo B",
         "data": "04/07/2026",
         "hora": "14:00",
         "dataHora": "04/07/2026 14:00",
@@ -17240,9 +17240,11 @@
         "palpitesOutros": [],
         "palpitesParticipantes": [],
         "palpites": [],
-        "mandante_pt": "Winner Match 73",
-        "mandante_nome_pt": "Winner Match 73",
-        "mandante_exibicao": "Winner Match 73",
+        "mandante_pt": "Canadá",
+        "mandante_nome_pt": "Canadá",
+        "mandante_exibicao": "Canadá",
+        "mandante_codigo": "ca",
+        "mandante_iso": "ca",
         "visitante_pt": "Winner Match 75",
         "visitante_nome_pt": "Winner Match 75",
         "visitante_exibicao": "Winner Match 75"
@@ -17909,7 +17911,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "29/06/2026 08:37:59",
+    "cacheAtualizadoEm": "29/06/2026 11:55:04",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 104,
     "classificacaoGrupos": [
@@ -18219,7 +18221,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 1,
             "slot": "1B",
-            "provisoria": false,
+            "provisoria": true,
             "criterios_fifa": {
               "pontos": 7,
               "saldo": 4,
@@ -18271,7 +18273,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 2,
             "slot": "2B",
-            "provisoria": false,
+            "provisoria": true,
             "criterios_fifa": {
               "pontos": 4,
               "saldo": 5,
@@ -18323,7 +18325,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 3,
             "slot": "3B",
-            "provisoria": false,
+            "provisoria": true,
             "criterios_fifa": {
               "pontos": 4,
               "saldo": -1,
@@ -18375,7 +18377,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 4,
             "slot": "4B",
-            "provisoria": false,
+            "provisoria": true,
             "criterios_fifa": {
               "pontos": 1,
               "saldo": -8,
@@ -18393,13 +18395,64 @@
             "selecao_pt": "Catar",
             "nome_exibicao": "Catar",
             "codigo_pais": "qa"
+          },
+          {
+            "grupo": "B",
+            "nome": "Winner Match 75",
+            "time": "Winner Match 75",
+            "flag": "⚽",
+            "codigo": "",
+            "jogos": 0,
+            "vitorias": 0,
+            "empates": 0,
+            "derrotas": 0,
+            "pontos": 0,
+            "pts": 0,
+            "golsPro": 0,
+            "golsContra": 0,
+            "saldo": 0,
+            "conduta": 0,
+            "fair_play": 0,
+            "teamConductScore": 0,
+            "penalidade_cartoes": 0,
+            "cartoes_ca": 0,
+            "cartoes_cv": 0,
+            "cartoes_pts": 0,
+            "origemFairPlay": "SEM_CARTOES",
+            "rankingFifa": 9999,
+            "ranking_fifa": 9999,
+            "rankingFifaAnterior": 9999,
+            "ranking_fifa_anterior": 9999,
+            "forca": 50,
+            "ataque": 50,
+            "defesa": 50,
+            "origemRanking": "NAO_ENCONTRADO",
+            "posicao": 5,
+            "slot": "5B",
+            "provisoria": true,
+            "criterios_fifa": {
+              "pontos": 0,
+              "saldo": 0,
+              "gols_pro": 0,
+              "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
+              "fair_play": 0,
+              "penalidade_cartoes_pts": 0,
+              "cartoes_ca": 0,
+              "cartoes_cv": 0,
+              "origem_cartoes": "SEM_CARTOES",
+              "ranking_fifa": 9999
+            },
+            "nome_pt": "Winner Match 75",
+            "time_pt": "Winner Match 75",
+            "selecao_pt": "Winner Match 75",
+            "nome_exibicao": "Winner Match 75"
           }
         ],
-        "jogos_total": 6,
+        "jogos_total": 7,
         "jogos_com_placar": 6,
         "jogos_ao_vivo": 0,
-        "jogos_pendentes": 0,
-        "status": "DEFINITIVO"
+        "jogos_pendentes": 1,
+        "status": "PROVISORIO"
       },
       {
         "grupo": "C",
@@ -21040,7 +21093,7 @@
         "origemRanking": "FORCA_SELECOES",
         "posicao": 3,
         "slot": "3B",
-        "provisoria": false,
+        "provisoria": true,
         "criterios_fifa": {
           "pontos": 4,
           "saldo": -1,
@@ -21942,7 +21995,7 @@
           "ranking_fifa": 42,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
-          "provisoria": false
+          "provisoria": true
         },
         "flagMandante": "🇺🇸",
         "flagVisitante": "🇧🇦",
@@ -22073,7 +22126,7 @@
           "ranking_fifa": 15,
           "rankingFifaAnterior": 9999,
           "posicao": 1,
-          "provisoria": false
+          "provisoria": true
         },
         "visitanteObj": {
           "slot": "3J",
@@ -22552,7 +22605,7 @@
           "ranking_fifa": 42,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
-          "provisoria": false
+          "provisoria": true
         },
         "flagMandante": "🇺🇸",
         "flagVisitante": "🇧🇦",
@@ -22683,7 +22736,7 @@
           "ranking_fifa": 15,
           "rankingFifaAnterior": 9999,
           "posicao": 1,
-          "provisoria": false
+          "provisoria": true
         },
         "visitanteObj": {
           "slot": "3J",
@@ -23187,7 +23240,7 @@
             "ranking_fifa": 42,
             "rankingFifaAnterior": 9999,
             "posicao": 3,
-            "provisoria": false
+            "provisoria": true
           },
           "flagMandante": "🇺🇸",
           "flagVisitante": "🇧🇦",
@@ -23318,7 +23371,7 @@
             "ranking_fifa": 15,
             "rankingFifaAnterior": 9999,
             "posicao": 1,
-            "provisoria": false
+            "provisoria": true
           },
           "visitanteObj": {
             "slot": "3J",
@@ -40059,11 +40112,11 @@
     "totalPalpitesPublicos": 102,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "29/06/2026 08:37:59"
+    "gerado_em": "29/06/2026 11:55:04"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "29/06/2026 08:37:59",
-  "gerado_ts": 1782733079248,
+  "gerado_em": "29/06/2026 11:55:04",
+  "gerado_ts": 1782744904177,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -56838,19 +56891,19 @@
       "visitante_iso": "gh"
     },
     {
-      "id": "1e8798098f9f3bf5",
+      "id": "7751074e1316679a",
       "id_bolao": "BOLAO20260607185133484",
-      "id_jogo": "1e8798098f9f3bf5",
-      "mandante": "Winner Match 73",
+      "id_jogo": "7751074e1316679a",
+      "mandante": "Canada",
       "visitante": "Winner Match 75",
-      "flagMandante": "⚽",
+      "flagMandante": "🇨🇦",
       "flagVisitante": "⚽",
-      "flagMandanteEmoji": "⚽",
+      "flagMandanteEmoji": "🇨🇦",
       "flagVisitanteEmoji": "⚽",
-      "codigoMandante": "",
+      "codigoMandante": "ca",
       "codigoVisitante": "",
-      "grupo": "CUP05",
-      "rodada_grupo": "CUP05",
+      "grupo": "Grupo B",
+      "rodada_grupo": "Grupo B",
       "data": "04/07/2026",
       "hora": "14:00",
       "dataHora": "04/07/2026 14:00",
@@ -56874,9 +56927,11 @@
       "palpitesOutros": [],
       "palpitesParticipantes": [],
       "palpites": [],
-      "mandante_pt": "Winner Match 73",
-      "mandante_nome_pt": "Winner Match 73",
-      "mandante_exibicao": "Winner Match 73",
+      "mandante_pt": "Canadá",
+      "mandante_nome_pt": "Canadá",
+      "mandante_exibicao": "Canadá",
+      "mandante_codigo": "ca",
+      "mandante_iso": "ca",
       "visitante_pt": "Winner Match 75",
       "visitante_nome_pt": "Winner Match 75",
       "visitante_exibicao": "Winner Match 75"
