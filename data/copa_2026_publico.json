@@ -5,8 +5,8 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V123_RANKING_OFICIAL_JSON_JOGOS_COPA_FIX",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "30/06/2026 15:45:15",
-  "gerado_ts": 1782845115827,
+  "gerado_em": "30/06/2026 16:07:08",
+  "gerado_ts": 1782846428212,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -3296,12 +3296,12 @@
         "hora": "14:00",
         "dataHora": "30/06/2026 14:00",
         "limitePalpite": "30/06/2026 14:00",
-        "gols_mandante": 0,
-        "gols_visitante": 1,
-        "status": "Ao vivo",
+        "gols_mandante": 1,
+        "gols_visitante": 2,
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -7714,12 +7714,12 @@
         "hora": "14:00",
         "dataHora": "30/06/2026 14:00",
         "limitePalpite": "30/06/2026 14:00",
-        "gols_mandante": 0,
-        "gols_visitante": 1,
-        "status": "Ao vivo",
+        "gols_mandante": 1,
+        "gols_visitante": 2,
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -9771,7 +9771,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 1,
             "slot": "1I",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 9,
               "saldo": 8,
@@ -9802,8 +9802,8 @@
             "derrotas": 1,
             "pontos": 9,
             "pts": 9,
-            "golsPro": 9,
-            "golsContra": 7,
+            "golsPro": 10,
+            "golsContra": 8,
             "saldo": 2,
             "conduta": -1,
             "fair_play": -1,
@@ -9823,11 +9823,11 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 2,
             "slot": "2I",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 9,
               "saldo": 2,
-              "gols_pro": 9,
+              "gols_pro": 10,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
               "fair_play": -1,
               "penalidade_cartoes_pts": 1,
@@ -9875,7 +9875,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 3,
             "slot": "3I",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 3,
               "saldo": 2,
@@ -9906,8 +9906,8 @@
             "derrotas": 1,
             "pontos": 0,
             "pts": 0,
-            "golsPro": 0,
-            "golsContra": 1,
+            "golsPro": 1,
+            "golsContra": 2,
             "saldo": -1,
             "conduta": -4,
             "fair_play": -4,
@@ -9927,11 +9927,11 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 4,
             "slot": "4I",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 0,
               "saldo": -1,
-              "gols_pro": 0,
+              "gols_pro": 1,
               "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
               "fair_play": -4,
               "penalidade_cartoes_pts": 4,
@@ -9979,7 +9979,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 5,
             "slot": "5I",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 0,
               "saldo": -11,
@@ -10001,9 +10001,9 @@
         ],
         "jogos_total": 7,
         "jogos_com_placar": 7,
-        "jogos_ao_vivo": 1,
+        "jogos_ao_vivo": 0,
         "jogos_pendentes": 0,
-        "status": "PROVISORIO"
+        "status": "DEFINITIVO"
       },
       {
         "grupo": "J",
@@ -11215,7 +11215,7 @@
         "origemRanking": "FORCA_SELECOES",
         "posicao": 3,
         "slot": "3I",
-        "provisoria": true,
+        "provisoria": false,
         "criterios_fifa": {
           "pontos": 3,
           "saldo": 2,
@@ -13909,7 +13909,7 @@
             "ranking_fifa": 2,
             "rankingFifaAnterior": 9999,
             "posicao": 1,
-            "provisoria": true
+            "provisoria": false
           },
           "visitanteObj": {
             "slot": "3F",
@@ -14234,7 +14234,7 @@
             "ranking_fifa": 19,
             "rankingFifaAnterior": 9999,
             "posicao": 3,
-            "provisoria": true
+            "provisoria": false
           },
           "flagMandante": "🇪🇸",
           "flagVisitante": "🇸🇳",
@@ -14520,7 +14520,7 @@
           "ranking_fifa": 2,
           "rankingFifaAnterior": 9999,
           "posicao": 1,
-          "provisoria": true
+          "provisoria": false
         },
         "visitanteObj": {
           "slot": "3F",
@@ -14845,7 +14845,7 @@
           "ranking_fifa": 19,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
-          "provisoria": true
+          "provisoria": false
         },
         "flagMandante": "🇪🇸",
         "flagVisitante": "🇸🇳",
@@ -15130,7 +15130,7 @@
           "ranking_fifa": 2,
           "rankingFifaAnterior": 9999,
           "posicao": 1,
-          "provisoria": true
+          "provisoria": false
         },
         "visitanteObj": {
           "slot": "3F",
@@ -15455,7 +15455,7 @@
           "ranking_fifa": 19,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
-          "provisoria": true
+          "provisoria": false
         },
         "flagMandante": "🇪🇸",
         "flagVisitante": "🇸🇳",
@@ -15630,7 +15630,7 @@
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "30/06/2026 15:45:15"
+    "cacheAtualizadoEm": "30/06/2026 16:07:08"
   },
   "jogos": [
     {
@@ -18919,12 +18919,12 @@
       "hora": "14:00",
       "dataHora": "30/06/2026 14:00",
       "limitePalpite": "30/06/2026 14:00",
-      "gols_mandante": 0,
-      "gols_visitante": 1,
-      "status": "Ao vivo",
+      "gols_mandante": 1,
+      "gols_visitante": 2,
+      "status": "Finalizado",
       "aceitaPalpite": false,
-      "status_jogo": "AO_VIVO",
-      "status_bolao": "FECHADO",
+      "status_jogo": "FINALIZADO",
+      "status_bolao": "FINALIZADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
@@ -23337,12 +23337,12 @@
       "hora": "14:00",
       "dataHora": "30/06/2026 14:00",
       "limitePalpite": "30/06/2026 14:00",
-      "gols_mandante": 0,
-      "gols_visitante": 1,
-      "status": "Ao vivo",
+      "gols_mandante": 1,
+      "gols_visitante": 2,
+      "status": "Finalizado",
       "aceitaPalpite": false,
-      "status_jogo": "AO_VIVO",
-      "status_bolao": "FECHADO",
+      "status_jogo": "FINALIZADO",
+      "status_bolao": "FINALIZADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
@@ -25351,7 +25351,7 @@
           "origemRanking": "FORCA_SELECOES",
           "posicao": 1,
           "slot": "1I",
-          "provisoria": true,
+          "provisoria": false,
           "criterios_fifa": {
             "pontos": 9,
             "saldo": 8,
@@ -25382,8 +25382,8 @@
           "derrotas": 1,
           "pontos": 9,
           "pts": 9,
-          "golsPro": 9,
-          "golsContra": 7,
+          "golsPro": 10,
+          "golsContra": 8,
           "saldo": 2,
           "conduta": -1,
           "fair_play": -1,
@@ -25403,11 +25403,11 @@
           "origemRanking": "FORCA_SELECOES",
           "posicao": 2,
           "slot": "2I",
-          "provisoria": true,
+          "provisoria": false,
           "criterios_fifa": {
             "pontos": 9,
             "saldo": 2,
-            "gols_pro": 9,
+            "gols_pro": 10,
             "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
             "fair_play": -1,
             "penalidade_cartoes_pts": 1,
@@ -25455,7 +25455,7 @@
           "origemRanking": "FORCA_SELECOES",
           "posicao": 3,
           "slot": "3I",
-          "provisoria": true,
+          "provisoria": false,
           "criterios_fifa": {
             "pontos": 3,
             "saldo": 2,
@@ -25486,8 +25486,8 @@
           "derrotas": 1,
           "pontos": 0,
           "pts": 0,
-          "golsPro": 0,
-          "golsContra": 1,
+          "golsPro": 1,
+          "golsContra": 2,
           "saldo": -1,
           "conduta": -4,
           "fair_play": -4,
@@ -25507,11 +25507,11 @@
           "origemRanking": "FORCA_SELECOES",
           "posicao": 4,
           "slot": "4I",
-          "provisoria": true,
+          "provisoria": false,
           "criterios_fifa": {
             "pontos": 0,
             "saldo": -1,
-            "gols_pro": 0,
+            "gols_pro": 1,
             "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
             "fair_play": -4,
             "penalidade_cartoes_pts": 4,
@@ -25559,7 +25559,7 @@
           "origemRanking": "FORCA_SELECOES",
           "posicao": 5,
           "slot": "5I",
-          "provisoria": true,
+          "provisoria": false,
           "criterios_fifa": {
             "pontos": 0,
             "saldo": -11,
@@ -25581,9 +25581,9 @@
       ],
       "jogos_total": 7,
       "jogos_com_placar": 7,
-      "jogos_ao_vivo": 1,
+      "jogos_ao_vivo": 0,
       "jogos_pendentes": 0,
-      "status": "PROVISORIO"
+      "status": "DEFINITIVO"
     },
     {
       "grupo": "J",
@@ -26795,7 +26795,7 @@
       "origemRanking": "FORCA_SELECOES",
       "posicao": 3,
       "slot": "3I",
-      "provisoria": true,
+      "provisoria": false,
       "criterios_fifa": {
         "pontos": 3,
         "saldo": 2,
@@ -29489,7 +29489,7 @@
           "ranking_fifa": 2,
           "rankingFifaAnterior": 9999,
           "posicao": 1,
-          "provisoria": true
+          "provisoria": false
         },
         "visitanteObj": {
           "slot": "3F",
@@ -29814,7 +29814,7 @@
           "ranking_fifa": 19,
           "rankingFifaAnterior": 9999,
           "posicao": 3,
-          "provisoria": true
+          "provisoria": false
         },
         "flagMandante": "🇪🇸",
         "flagVisitante": "🇸🇳",
@@ -30100,7 +30100,7 @@
         "ranking_fifa": 2,
         "rankingFifaAnterior": 9999,
         "posicao": 1,
-        "provisoria": true
+        "provisoria": false
       },
       "visitanteObj": {
         "slot": "3F",
@@ -30425,7 +30425,7 @@
         "ranking_fifa": 19,
         "rankingFifaAnterior": 9999,
         "posicao": 3,
-        "provisoria": true
+        "provisoria": false
       },
       "flagMandante": "🇪🇸",
       "flagVisitante": "🇸🇳",
@@ -30710,7 +30710,7 @@
         "ranking_fifa": 2,
         "rankingFifaAnterior": 9999,
         "posicao": 1,
-        "provisoria": true
+        "provisoria": false
       },
       "visitanteObj": {
         "slot": "3F",
@@ -31035,7 +31035,7 @@
         "ranking_fifa": 19,
         "rankingFifaAnterior": 9999,
         "posicao": 3,
-        "provisoria": true
+        "provisoria": false
       },
       "flagMandante": "🇪🇸",
       "flagVisitante": "🇸🇳",
