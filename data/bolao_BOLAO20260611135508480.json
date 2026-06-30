@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260611135508480",
-  "gerado_em": "30/06/2026 06:07:19",
-  "gerado_ts": 1782810439933,
+  "gerado_em": "30/06/2026 06:24:59",
+  "gerado_ts": 1782811499122,
   "dados": {
     "id_bolao": "BOLAO20260611135508480",
     "bolaoAtual": {
@@ -14257,9 +14257,9 @@
         "visitante_iso": "py"
       },
       {
-        "id": "0e14de48867ae231",
+        "id": "b857bc71e914531c",
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "0e14de48867ae231",
+        "id_jogo": "b857bc71e914531c",
         "mandante": "Netherlands",
         "visitante": "Morocco",
         "flagMandante": "🇳🇱",
@@ -14271,15 +14271,15 @@
         "grupo": "CUP04",
         "rodada_grupo": "CUP04",
         "data": "29/06/2026",
-        "hora": "22:00",
-        "dataHora": "29/06/2026 22:00",
-        "limitePalpite": "29/06/2026 22:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "hora": "21:59",
+        "dataHora": "29/06/2026 21:59",
+        "limitePalpite": "29/06/2026 21:59",
+        "gols_mandante": 1,
+        "gols_visitante": 1,
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -14319,7 +14319,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-29T03:30:39.700Z",
-            "id_jogo_json": "0e14de48867ae231"
+            "id_jogo_json": "b857bc71e914531c"
           }
         ],
         "palpitesOutros": [
@@ -14352,7 +14352,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-29T03:30:39.700Z",
-            "id_jogo_json": "0e14de48867ae231"
+            "id_jogo_json": "b857bc71e914531c"
           }
         ],
         "palpitesParticipantes": [
@@ -14385,42 +14385,10 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-29T03:30:39.700Z",
-            "id_jogo_json": "0e14de48867ae231"
+            "id_jogo_json": "b857bc71e914531c"
           }
         ],
-        "palpites": [
-          {
-            "id_bolao": "BOLAO20260611135508480",
-            "id_jogo": "0e14de48867ae231",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "Netherlands",
-            "visitante": "Morocco",
-            "palpite_mandante": 1,
-            "palpite_visitante": 1,
-            "placarMandante": 1,
-            "placarVisitante": 1,
-            "placar_texto": "1 x 1",
-            "pontos": 0,
-            "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 0,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "data_hora": "29/06/2026 00:30:39",
-            "dataHora": "29/06/2026 00:30:39",
-            "proprio": false
-          }
-        ],
+        "palpites": [],
         "mandante_pt": "Países Baixos",
         "mandante_nome_pt": "Países Baixos",
         "mandante_exibicao": "Países Baixos",
@@ -27885,7 +27853,7 @@
       },
       {
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "0e14de48867ae231",
+        "id_jogo": "b857bc71e914531c",
         "mandante": "Netherlands",
         "visitante": "Morocco",
         "mandante_pt": "Países Baixos",
@@ -27893,11 +27861,11 @@
         "codigoMandante": "nl",
         "codigoVisitante": "ma",
         "data_jogo": "",
-        "status_jogo": "FECHADO",
-        "status_bolao": "FECHADO",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "placar": " x ",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
+        "gols_mandante": 1,
+        "gols_visitante": 1,
+        "placar": "1 x 1",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -27929,7 +27897,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-29T03:30:39.700Z",
-            "id_jogo_json": "0e14de48867ae231"
+            "id_jogo_json": "b857bc71e914531c"
           }
         ],
         "palpitesPublicos": [
@@ -27962,7 +27930,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-29T03:30:39.700Z",
-            "id_jogo_json": "0e14de48867ae231"
+            "id_jogo_json": "b857bc71e914531c"
           }
         ],
         "palpitesOutros": [
@@ -27995,7 +27963,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-29T03:30:39.700Z",
-            "id_jogo_json": "0e14de48867ae231"
+            "id_jogo_json": "b857bc71e914531c"
           }
         ],
         "palpitesParticipantes": [
@@ -28028,7 +27996,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-29T03:30:39.700Z",
-            "id_jogo_json": "0e14de48867ae231"
+            "id_jogo_json": "b857bc71e914531c"
           }
         ]
       }
@@ -28036,7 +28004,7 @@
     "totalJogosComPalpitesPublicos": 71,
     "totalPalpitesPublicos": 85,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "30/06/2026 06:07:19",
+    "cacheAtualizadoEm": "30/06/2026 06:24:59",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
