@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260611135508480",
-  "gerado_em": "01/07/2026 09:22:36",
-  "gerado_ts": 1782908556818,
+  "gerado_em": "01/07/2026 10:23:49",
+  "gerado_ts": 1782912229055,
   "dados": {
     "id_bolao": "BOLAO20260611135508480",
     "bolaoAtual": {
@@ -15377,19 +15377,19 @@
         "visitante_iso": "ma"
       },
       {
-        "id": "6dd6a2b370c4643b",
+        "id": "fd244402ff1671d3",
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "6dd6a2b370c4643b",
+        "id_jogo": "fd244402ff1671d3",
         "mandante": "Paraguay",
-        "visitante": "Winner Match 77",
+        "visitante": "France",
         "flagMandante": "🇵🇾",
-        "flagVisitante": "⚽",
+        "flagVisitante": "🇫🇷",
         "flagMandanteEmoji": "🇵🇾",
-        "flagVisitanteEmoji": "⚽",
+        "flagVisitanteEmoji": "🇫🇷",
         "codigoMandante": "py",
-        "codigoVisitante": "",
-        "grupo": "Grupo D",
-        "rodada_grupo": "Grupo D",
+        "codigoVisitante": "fr",
+        "grupo": "CUP05",
+        "rodada_grupo": "CUP05",
         "data": "04/07/2026",
         "hora": "18:00",
         "dataHora": "04/07/2026 18:00",
@@ -15418,9 +15418,11 @@
         "mandante_exibicao": "Paraguai",
         "mandante_codigo": "py",
         "mandante_iso": "py",
-        "visitante_pt": "Winner Match 77",
-        "visitante_nome_pt": "Winner Match 77",
-        "visitante_exibicao": "Winner Match 77"
+        "visitante_pt": "França",
+        "visitante_nome_pt": "França",
+        "visitante_exibicao": "França",
+        "visitante_codigo": "fr",
+        "visitante_iso": "fr"
       },
       {
         "id": "3aadadf97cd7eaf6",
@@ -28809,7 +28811,7 @@
     "totalJogosComPalpitesPublicos": 74,
     "totalPalpitesPublicos": 88,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "01/07/2026 09:22:36",
+    "cacheAtualizadoEm": "01/07/2026 10:23:49",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
