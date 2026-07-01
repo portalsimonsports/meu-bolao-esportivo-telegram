@@ -5,8 +5,8 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V123_RANKING_OFICIAL_JSON_JOGOS_COPA_FIX",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "30/06/2026 22:47:06",
-  "gerado_ts": 1782870426707,
+  "gerado_em": "30/06/2026 23:04:15",
+  "gerado_ts": 1782871455389,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -3365,9 +3365,9 @@
         "visitante_iso": "se"
       },
       {
-        "id": "40e173f7b509ae5b",
+        "id": "8d6b0ed3d42fdfc8",
         "id_bolao": "BOLAO001",
-        "id_jogo": "40e173f7b509ae5b",
+        "id_jogo": "8d6b0ed3d42fdfc8",
         "mandante": "Mexico",
         "visitante": "Ecuador",
         "flagMandante": "🇲🇽",
@@ -3379,9 +3379,9 @@
         "grupo": "CUP04",
         "rodada_grupo": "CUP04",
         "data": "30/06/2026",
-        "hora": "22:00",
-        "dataHora": "30/06/2026 22:00",
-        "limitePalpite": "30/06/2026 22:00",
+        "hora": "23:00",
+        "dataHora": "30/06/2026 23:00",
+        "limitePalpite": "30/06/2026 23:00",
         "gols_mandante": "",
         "gols_visitante": "",
         "status": "Fechado",
@@ -15673,7 +15673,7 @@
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "30/06/2026 22:47:06"
+    "cacheAtualizadoEm": "30/06/2026 23:04:15"
   },
   "jogos": [
     {
@@ -19031,9 +19031,9 @@
       "visitante_iso": "se"
     },
     {
-      "id": "40e173f7b509ae5b",
+      "id": "8d6b0ed3d42fdfc8",
       "id_bolao": "BOLAO001",
-      "id_jogo": "40e173f7b509ae5b",
+      "id_jogo": "8d6b0ed3d42fdfc8",
       "mandante": "Mexico",
       "visitante": "Ecuador",
       "flagMandante": "🇲🇽",
@@ -19045,9 +19045,9 @@
       "grupo": "CUP04",
       "rodada_grupo": "CUP04",
       "data": "30/06/2026",
-      "hora": "22:00",
-      "dataHora": "30/06/2026 22:00",
-      "limitePalpite": "30/06/2026 22:00",
+      "hora": "23:00",
+      "dataHora": "30/06/2026 23:00",
+      "limitePalpite": "30/06/2026 23:00",
       "gols_mandante": "",
       "gols_visitante": "",
       "status": "Fechado",
