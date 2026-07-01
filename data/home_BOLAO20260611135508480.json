@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "30/06/2026 22:37:34",
+  "dataHora": "30/06/2026 23:20:10",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -14843,9 +14843,9 @@
         "visitante_iso": "se"
       },
       {
-        "id": "40e173f7b509ae5b",
+        "id": "8d6b0ed3d42fdfc8",
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "40e173f7b509ae5b",
+        "id_jogo": "8d6b0ed3d42fdfc8",
         "mandante": "Mexico",
         "visitante": "Ecuador",
         "flagMandante": "🇲🇽",
@@ -14857,9 +14857,9 @@
         "grupo": "CUP04",
         "rodada_grupo": "CUP04",
         "data": "30/06/2026",
-        "hora": "22:00",
-        "dataHora": "30/06/2026 22:00",
-        "limitePalpite": "30/06/2026 22:00",
+        "hora": "23:00",
+        "dataHora": "30/06/2026 23:00",
+        "limitePalpite": "30/06/2026 23:00",
         "gols_mandante": "",
         "gols_visitante": "",
         "status": "Fechado",
@@ -14905,7 +14905,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-30T03:31:41.652Z",
-            "id_jogo_json": "40e173f7b509ae5b"
+            "id_jogo_json": "8d6b0ed3d42fdfc8"
           }
         ],
         "palpitesOutros": [
@@ -14938,7 +14938,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-30T03:31:41.652Z",
-            "id_jogo_json": "40e173f7b509ae5b"
+            "id_jogo_json": "8d6b0ed3d42fdfc8"
           }
         ],
         "palpitesParticipantes": [
@@ -14971,42 +14971,10 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-30T03:31:41.652Z",
-            "id_jogo_json": "40e173f7b509ae5b"
+            "id_jogo_json": "8d6b0ed3d42fdfc8"
           }
         ],
-        "palpites": [
-          {
-            "id_bolao": "BOLAO20260611135508480",
-            "id_jogo": "40e173f7b509ae5b",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "Mexico",
-            "visitante": "Ecuador",
-            "palpite_mandante": 1,
-            "palpite_visitante": 1,
-            "placarMandante": 1,
-            "placarVisitante": 1,
-            "placar_texto": "1 x 1",
-            "pontos": 0,
-            "pontos_label": "0 pts",
-            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 0,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "data_hora": "30/06/2026 00:31:41",
-            "dataHora": "30/06/2026 00:31:41",
-            "proprio": false
-          }
-        ],
+        "palpites": [],
         "mandante_pt": "México",
         "mandante_nome_pt": "México",
         "mandante_exibicao": "México",
@@ -16164,7 +16132,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "30/06/2026 22:39:18",
+    "cacheAtualizadoEm": "30/06/2026 23:22:09",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 104,
     "classificacaoGrupos": [
@@ -36628,7 +36596,7 @@
       },
       {
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "40e173f7b509ae5b",
+        "id_jogo": "8d6b0ed3d42fdfc8",
         "mandante": "Mexico",
         "visitante": "Ecuador",
         "mandante_pt": "México",
@@ -36672,7 +36640,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-30T03:31:41.652Z",
-            "id_jogo_json": "40e173f7b509ae5b"
+            "id_jogo_json": "8d6b0ed3d42fdfc8"
           }
         ],
         "palpitesPublicos": [
@@ -36705,7 +36673,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-30T03:31:41.652Z",
-            "id_jogo_json": "40e173f7b509ae5b"
+            "id_jogo_json": "8d6b0ed3d42fdfc8"
           }
         ],
         "palpitesOutros": [
@@ -36738,7 +36706,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-30T03:31:41.652Z",
-            "id_jogo_json": "40e173f7b509ae5b"
+            "id_jogo_json": "8d6b0ed3d42fdfc8"
           }
         ],
         "palpitesParticipantes": [
@@ -36771,7 +36739,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-06-30T03:31:41.652Z",
-            "id_jogo_json": "40e173f7b509ae5b"
+            "id_jogo_json": "8d6b0ed3d42fdfc8"
           }
         ]
       }
@@ -36780,11 +36748,11 @@
     "totalPalpitesPublicos": 88,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "30/06/2026 22:39:18"
+    "gerado_em": "30/06/2026 23:22:09"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "30/06/2026 22:39:18",
-  "gerado_ts": 1782869958813,
+  "gerado_em": "30/06/2026 23:22:09",
+  "gerado_ts": 1782872529924,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -51099,9 +51067,9 @@
       "visitante_iso": "se"
     },
     {
-      "id": "40e173f7b509ae5b",
+      "id": "8d6b0ed3d42fdfc8",
       "id_bolao": "BOLAO20260611135508480",
-      "id_jogo": "40e173f7b509ae5b",
+      "id_jogo": "8d6b0ed3d42fdfc8",
       "mandante": "Mexico",
       "visitante": "Ecuador",
       "flagMandante": "🇲🇽",
@@ -51113,9 +51081,9 @@
       "grupo": "CUP04",
       "rodada_grupo": "CUP04",
       "data": "30/06/2026",
-      "hora": "22:00",
-      "dataHora": "30/06/2026 22:00",
-      "limitePalpite": "30/06/2026 22:00",
+      "hora": "23:00",
+      "dataHora": "30/06/2026 23:00",
+      "limitePalpite": "30/06/2026 23:00",
       "gols_mandante": "",
       "gols_visitante": "",
       "status": "Fechado",
@@ -51131,138 +51099,10 @@
       "cidade": "",
       "transmissao": "",
       "fonte": "",
-      "palpitesPublicos": [
-        {
-          "id_bolao": "BOLAO20260611135508480",
-          "id_jogo": "40e173f7b509ae5b",
-          "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-          "nome": "🤖 Desafiante IA",
-          "username": "desafiante_ia",
-          "mandante": "Mexico",
-          "visitante": "Ecuador",
-          "palpite_mandante": 1,
-          "palpite_visitante": 1,
-          "placarMandante": 1,
-          "placarVisitante": 1,
-          "placar_texto": "1 x 1",
-          "pontos": 0,
-          "pontos_label": "0 pts",
-          "criterio_pontuacao": "AGUARDANDO_RESULTADO",
-          "PTS_EXATO": 0,
-          "PTS_GOL_VENCEDOR": 0,
-          "PTS_SALDO": 0,
-          "PTS_GOL_PERDEDOR": 0,
-          "PTS_VENCEDOR": 0,
-          "PTS_EMPATE_GARANTIDO": 0,
-          "status": "VALIDO",
-          "origem": "VIRTUAL_IA",
-          "automatico": false,
-          "desafiante_ia": true,
-          "origem_label": "🤖 Desafiante IA",
-          "data_hora": "30/06/2026 00:31:41",
-          "dataHora": "30/06/2026 00:31:41",
-          "proprio": false
-        }
-      ],
-      "palpitesOutros": [
-        {
-          "id_bolao": "BOLAO20260611135508480",
-          "id_jogo": "40e173f7b509ae5b",
-          "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-          "nome": "🤖 Desafiante IA",
-          "username": "desafiante_ia",
-          "mandante": "Mexico",
-          "visitante": "Ecuador",
-          "palpite_mandante": 1,
-          "palpite_visitante": 1,
-          "placarMandante": 1,
-          "placarVisitante": 1,
-          "placar_texto": "1 x 1",
-          "pontos": 0,
-          "pontos_label": "0 pts",
-          "criterio_pontuacao": "AGUARDANDO_RESULTADO",
-          "PTS_EXATO": 0,
-          "PTS_GOL_VENCEDOR": 0,
-          "PTS_SALDO": 0,
-          "PTS_GOL_PERDEDOR": 0,
-          "PTS_VENCEDOR": 0,
-          "PTS_EMPATE_GARANTIDO": 0,
-          "status": "VALIDO",
-          "origem": "VIRTUAL_IA",
-          "automatico": false,
-          "desafiante_ia": true,
-          "origem_label": "🤖 Desafiante IA",
-          "data_hora": "30/06/2026 00:31:41",
-          "dataHora": "30/06/2026 00:31:41",
-          "proprio": false
-        }
-      ],
-      "palpitesParticipantes": [
-        {
-          "id_bolao": "BOLAO20260611135508480",
-          "id_jogo": "40e173f7b509ae5b",
-          "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-          "nome": "🤖 Desafiante IA",
-          "username": "desafiante_ia",
-          "mandante": "Mexico",
-          "visitante": "Ecuador",
-          "palpite_mandante": 1,
-          "palpite_visitante": 1,
-          "placarMandante": 1,
-          "placarVisitante": 1,
-          "placar_texto": "1 x 1",
-          "pontos": 0,
-          "pontos_label": "0 pts",
-          "criterio_pontuacao": "AGUARDANDO_RESULTADO",
-          "PTS_EXATO": 0,
-          "PTS_GOL_VENCEDOR": 0,
-          "PTS_SALDO": 0,
-          "PTS_GOL_PERDEDOR": 0,
-          "PTS_VENCEDOR": 0,
-          "PTS_EMPATE_GARANTIDO": 0,
-          "status": "VALIDO",
-          "origem": "VIRTUAL_IA",
-          "automatico": false,
-          "desafiante_ia": true,
-          "origem_label": "🤖 Desafiante IA",
-          "data_hora": "30/06/2026 00:31:41",
-          "dataHora": "30/06/2026 00:31:41",
-          "proprio": false
-        }
-      ],
-      "palpites": [
-        {
-          "id_bolao": "BOLAO20260611135508480",
-          "id_jogo": "40e173f7b509ae5b",
-          "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-          "nome": "🤖 Desafiante IA",
-          "username": "desafiante_ia",
-          "mandante": "Mexico",
-          "visitante": "Ecuador",
-          "palpite_mandante": 1,
-          "palpite_visitante": 1,
-          "placarMandante": 1,
-          "placarVisitante": 1,
-          "placar_texto": "1 x 1",
-          "pontos": 0,
-          "pontos_label": "0 pts",
-          "criterio_pontuacao": "AGUARDANDO_RESULTADO",
-          "PTS_EXATO": 0,
-          "PTS_GOL_VENCEDOR": 0,
-          "PTS_SALDO": 0,
-          "PTS_GOL_PERDEDOR": 0,
-          "PTS_VENCEDOR": 0,
-          "PTS_EMPATE_GARANTIDO": 0,
-          "status": "VALIDO",
-          "origem": "VIRTUAL_IA",
-          "automatico": false,
-          "desafiante_ia": true,
-          "origem_label": "🤖 Desafiante IA",
-          "data_hora": "30/06/2026 00:31:41",
-          "dataHora": "30/06/2026 00:31:41",
-          "proprio": false
-        }
-      ],
+      "palpitesPublicos": [],
+      "palpitesOutros": [],
+      "palpitesParticipantes": [],
+      "palpites": [],
       "mandante_pt": "México",
       "mandante_nome_pt": "México",
       "mandante_exibicao": "México",
