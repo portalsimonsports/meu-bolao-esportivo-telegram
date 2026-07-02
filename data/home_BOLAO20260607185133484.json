@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "02/07/2026 11:50:23",
+  "dataHora": "02/07/2026 12:50:26",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -18528,10 +18528,10 @@
         "visitante_exibicao": "Winner Match 84"
       },
       {
-        "id": "4ce270d7e9b9de8d",
+        "id": "37e19191f6fa3030",
         "id_bolao": "BOLAO20260607185133484",
-        "id_jogo": "4ce270d7e9b9de8d",
-        "mandante": "United States",
+        "id_jogo": "37e19191f6fa3030",
+        "mandante": "USA",
         "visitante": "Belgium",
         "flagMandante": "🇺🇸",
         "flagVisitante": "🇧🇪",
@@ -19017,7 +19017,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "02/07/2026 11:53:12",
+    "cacheAtualizadoEm": "02/07/2026 12:53:39",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 104,
     "classificacaoGrupos": [
@@ -42508,11 +42508,11 @@
     "totalPalpitesPublicos": 111,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "02/07/2026 11:53:12"
+    "gerado_em": "02/07/2026 12:53:39"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "02/07/2026 11:53:12",
-  "gerado_ts": 1783003992321,
+  "gerado_em": "02/07/2026 12:53:39",
+  "gerado_ts": 1783007619735,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -60419,10 +60419,10 @@
       "visitante_exibicao": "Winner Match 84"
     },
     {
-      "id": "4ce270d7e9b9de8d",
+      "id": "37e19191f6fa3030",
       "id_bolao": "BOLAO20260607185133484",
-      "id_jogo": "4ce270d7e9b9de8d",
-      "mandante": "United States",
+      "id_jogo": "37e19191f6fa3030",
+      "mandante": "USA",
       "visitante": "Belgium",
       "flagMandante": "🇺🇸",
       "flagVisitante": "🇧🇪",
