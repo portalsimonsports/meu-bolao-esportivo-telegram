@@ -5,8 +5,8 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V123_RANKING_OFICIAL_JSON_JOGOS_COPA_FIX",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "02/07/2026 11:46:02",
-  "gerado_ts": 1783003562044,
+  "gerado_em": "02/07/2026 12:06:15",
+  "gerado_ts": 1783004775551,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -4006,10 +4006,10 @@
         "visitante_exibicao": "Winner Match 84"
       },
       {
-        "id": "4ce270d7e9b9de8d",
+        "id": "37e19191f6fa3030",
         "id_bolao": "BOLAO001",
-        "id_jogo": "4ce270d7e9b9de8d",
-        "mandante": "United States",
+        "id_jogo": "37e19191f6fa3030",
+        "mandante": "USA",
         "visitante": "Belgium",
         "flagMandante": "🇺🇸",
         "flagVisitante": "🇧🇪",
@@ -15755,7 +15755,7 @@
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "02/07/2026 11:46:02"
+    "cacheAtualizadoEm": "02/07/2026 12:06:15"
   },
   "jogos": [
     {
@@ -19754,10 +19754,10 @@
       "visitante_exibicao": "Winner Match 84"
     },
     {
-      "id": "4ce270d7e9b9de8d",
+      "id": "37e19191f6fa3030",
       "id_bolao": "BOLAO001",
-      "id_jogo": "4ce270d7e9b9de8d",
-      "mandante": "United States",
+      "id_jogo": "37e19191f6fa3030",
+      "mandante": "USA",
       "visitante": "Belgium",
       "flagMandante": "🇺🇸",
       "flagVisitante": "🇧🇪",
