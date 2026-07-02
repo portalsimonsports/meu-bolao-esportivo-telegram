@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "02/07/2026 10:20:18",
+  "dataHora": "02/07/2026 11:20:24",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -15947,19 +15947,19 @@
         "visitante_iso": "no"
       },
       {
-        "id": "2b546b7394657fcb",
+        "id": "4106334da6896864",
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "2b546b7394657fcb",
+        "id_jogo": "4106334da6896864",
         "mandante": "Mexico",
-        "visitante": "Winner Match 80",
+        "visitante": "England",
         "flagMandante": "🇲🇽",
-        "flagVisitante": "⚽",
+        "flagVisitante": "🏴",
         "flagMandanteEmoji": "🇲🇽",
-        "flagVisitanteEmoji": "⚽",
+        "flagVisitanteEmoji": "🏴",
         "codigoMandante": "mx",
-        "codigoVisitante": "",
-        "grupo": "Grupo A",
-        "rodada_grupo": "Grupo A",
+        "codigoVisitante": "gb-eng",
+        "grupo": "CUP05",
+        "rodada_grupo": "CUP05",
         "data": "05/07/2026",
         "hora": "21:00",
         "dataHora": "05/07/2026 21:00",
@@ -15988,9 +15988,11 @@
         "mandante_exibicao": "México",
         "mandante_codigo": "mx",
         "mandante_iso": "mx",
-        "visitante_pt": "Winner Match 80",
-        "visitante_nome_pt": "Winner Match 80",
-        "visitante_exibicao": "Winner Match 80"
+        "visitante_pt": "Inglaterra",
+        "visitante_nome_pt": "Inglaterra",
+        "visitante_exibicao": "Inglaterra",
+        "visitante_codigo": "gb-eng",
+        "visitante_iso": "gb-eng"
       },
       {
         "id": "e97ba5d3c5f6b6de",
@@ -16037,17 +16039,17 @@
         "visitante_exibicao": "Winner Match 84"
       },
       {
-        "id": "09fe7dba5311335a",
+        "id": "4ce270d7e9b9de8d",
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "09fe7dba5311335a",
-        "mandante": "Winner Match 81",
-        "visitante": "Winner Match 82",
-        "flagMandante": "⚽",
-        "flagVisitante": "⚽",
-        "flagMandanteEmoji": "⚽",
-        "flagVisitanteEmoji": "⚽",
-        "codigoMandante": "",
-        "codigoVisitante": "",
+        "id_jogo": "4ce270d7e9b9de8d",
+        "mandante": "United States",
+        "visitante": "Belgium",
+        "flagMandante": "🇺🇸",
+        "flagVisitante": "🇧🇪",
+        "flagMandanteEmoji": "🇺🇸",
+        "flagVisitanteEmoji": "🇧🇪",
+        "codigoMandante": "us",
+        "codigoVisitante": "be",
         "grupo": "CUP05",
         "rodada_grupo": "CUP05",
         "data": "06/07/2026",
@@ -16073,12 +16075,16 @@
         "palpitesOutros": [],
         "palpitesParticipantes": [],
         "palpites": [],
-        "mandante_pt": "Winner Match 81",
-        "mandante_nome_pt": "Winner Match 81",
-        "mandante_exibicao": "Winner Match 81",
-        "visitante_pt": "Winner Match 82",
-        "visitante_nome_pt": "Winner Match 82",
-        "visitante_exibicao": "Winner Match 82"
+        "mandante_pt": "Estados Unidos",
+        "mandante_nome_pt": "Estados Unidos",
+        "mandante_exibicao": "Estados Unidos",
+        "mandante_codigo": "us",
+        "mandante_iso": "us",
+        "visitante_pt": "Bélgica",
+        "visitante_nome_pt": "Bélgica",
+        "visitante_exibicao": "Bélgica",
+        "visitante_codigo": "be",
+        "visitante_iso": "be"
       },
       {
         "id": "74ca4fd80117cefb",
@@ -16522,7 +16528,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "02/07/2026 10:22:23",
+    "cacheAtualizadoEm": "02/07/2026 11:23:01",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 104,
     "classificacaoGrupos": [
@@ -16562,7 +16568,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 1,
             "slot": "1A",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 9,
               "saldo": 6,
@@ -16614,7 +16620,7 @@
             "origemRanking": "NAO_ENCONTRADO",
             "posicao": 2,
             "slot": "2A",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 4,
               "saldo": -1,
@@ -16666,7 +16672,7 @@
             "origemRanking": "NAO_ENCONTRADO",
             "posicao": 3,
             "slot": "3A",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 3,
               "saldo": 1,
@@ -16718,7 +16724,7 @@
             "origemRanking": "FORCA_SELECOES",
             "posicao": 4,
             "slot": "4A",
-            "provisoria": true,
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 1,
               "saldo": -4,
@@ -16736,57 +16742,6 @@
             "selecao_pt": "República Tcheca",
             "nome_exibicao": "República Tcheca",
             "codigo_pais": "cz"
-          },
-          {
-            "grupo": "A",
-            "nome": "Winner Match 80",
-            "time": "Winner Match 80",
-            "flag": "⚽",
-            "codigo": "",
-            "jogos": 0,
-            "vitorias": 0,
-            "empates": 0,
-            "derrotas": 0,
-            "pontos": 0,
-            "pts": 0,
-            "golsPro": 0,
-            "golsContra": 0,
-            "saldo": 0,
-            "conduta": 0,
-            "fair_play": 0,
-            "teamConductScore": 0,
-            "penalidade_cartoes": 0,
-            "cartoes_ca": 0,
-            "cartoes_cv": 0,
-            "cartoes_pts": 0,
-            "origemFairPlay": "SEM_CARTOES",
-            "rankingFifa": 9999,
-            "ranking_fifa": 9999,
-            "rankingFifaAnterior": 9999,
-            "ranking_fifa_anterior": 9999,
-            "forca": 50,
-            "ataque": 50,
-            "defesa": 50,
-            "origemRanking": "NAO_ENCONTRADO",
-            "posicao": 5,
-            "slot": "5A",
-            "provisoria": true,
-            "criterios_fifa": {
-              "pontos": 0,
-              "saldo": 0,
-              "gols_pro": 0,
-              "confronto_direto": "aplicado_quando_ha_empate_no_bloco",
-              "fair_play": 0,
-              "penalidade_cartoes_pts": 0,
-              "cartoes_ca": 0,
-              "cartoes_cv": 0,
-              "origem_cartoes": "SEM_CARTOES",
-              "ranking_fifa": 9999
-            },
-            "nome_pt": "Winner Match 80",
-            "time_pt": "Winner Match 80",
-            "selecao_pt": "Winner Match 80",
-            "nome_exibicao": "Winner Match 80"
           },
           {
             "grupo": "A",
@@ -16819,9 +16774,9 @@
             "ataque": 73,
             "defesa": 72,
             "origemRanking": "FORCA_SELECOES",
-            "posicao": 6,
-            "slot": "6A",
-            "provisoria": true,
+            "posicao": 5,
+            "slot": "5A",
+            "provisoria": false,
             "criterios_fifa": {
               "pontos": 0,
               "saldo": -2,
@@ -16841,11 +16796,11 @@
             "codigo_pais": "kr"
           }
         ],
-        "jogos_total": 7,
+        "jogos_total": 6,
         "jogos_com_placar": 6,
         "jogos_ao_vivo": 0,
-        "jogos_pendentes": 1,
-        "status": "PROVISORIO"
+        "jogos_pendentes": 0,
+        "status": "DEFINITIVO"
       },
       {
         "grupo": "B",
@@ -19972,7 +19927,7 @@
         "origemRanking": "NAO_ENCONTRADO",
         "posicao": 3,
         "slot": "3A",
-        "provisoria": true,
+        "provisoria": false,
         "criterios_fifa": {
           "pontos": 3,
           "saldo": 1,
@@ -20433,7 +20388,7 @@
           "ranking_fifa": 17,
           "rankingFifaAnterior": 9999,
           "posicao": 1,
-          "provisoria": true
+          "provisoria": false
         },
         "visitanteObj": {
           "slot": "3E",
@@ -21043,7 +20998,7 @@
           "ranking_fifa": 17,
           "rankingFifaAnterior": 9999,
           "posicao": 1,
-          "provisoria": true
+          "provisoria": false
         },
         "visitanteObj": {
           "slot": "3E",
@@ -21678,7 +21633,7 @@
             "ranking_fifa": 17,
             "rankingFifaAnterior": 9999,
             "posicao": 1,
-            "provisoria": true
+            "provisoria": false
           },
           "visitanteObj": {
             "slot": "3E",
@@ -37534,11 +37489,11 @@
     "totalPalpitesPublicos": 91,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "02/07/2026 10:22:23"
+    "gerado_em": "02/07/2026 11:23:01"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "02/07/2026 10:22:23",
-  "gerado_ts": 1782998543853,
+  "gerado_em": "02/07/2026 11:23:01",
+  "gerado_ts": 1783002181320,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -52861,19 +52816,19 @@
       "visitante_iso": "no"
     },
     {
-      "id": "2b546b7394657fcb",
+      "id": "4106334da6896864",
       "id_bolao": "BOLAO20260611135508480",
-      "id_jogo": "2b546b7394657fcb",
+      "id_jogo": "4106334da6896864",
       "mandante": "Mexico",
-      "visitante": "Winner Match 80",
+      "visitante": "England",
       "flagMandante": "🇲🇽",
-      "flagVisitante": "⚽",
+      "flagVisitante": "🏴",
       "flagMandanteEmoji": "🇲🇽",
-      "flagVisitanteEmoji": "⚽",
+      "flagVisitanteEmoji": "🏴",
       "codigoMandante": "mx",
-      "codigoVisitante": "",
-      "grupo": "Grupo A",
-      "rodada_grupo": "Grupo A",
+      "codigoVisitante": "gb-eng",
+      "grupo": "CUP05",
+      "rodada_grupo": "CUP05",
       "data": "05/07/2026",
       "hora": "21:00",
       "dataHora": "05/07/2026 21:00",
@@ -52902,9 +52857,11 @@
       "mandante_exibicao": "México",
       "mandante_codigo": "mx",
       "mandante_iso": "mx",
-      "visitante_pt": "Winner Match 80",
-      "visitante_nome_pt": "Winner Match 80",
-      "visitante_exibicao": "Winner Match 80"
+      "visitante_pt": "Inglaterra",
+      "visitante_nome_pt": "Inglaterra",
+      "visitante_exibicao": "Inglaterra",
+      "visitante_codigo": "gb-eng",
+      "visitante_iso": "gb-eng"
     },
     {
       "id": "e97ba5d3c5f6b6de",
@@ -52951,17 +52908,17 @@
       "visitante_exibicao": "Winner Match 84"
     },
     {
-      "id": "09fe7dba5311335a",
+      "id": "4ce270d7e9b9de8d",
       "id_bolao": "BOLAO20260611135508480",
-      "id_jogo": "09fe7dba5311335a",
-      "mandante": "Winner Match 81",
-      "visitante": "Winner Match 82",
-      "flagMandante": "⚽",
-      "flagVisitante": "⚽",
-      "flagMandanteEmoji": "⚽",
-      "flagVisitanteEmoji": "⚽",
-      "codigoMandante": "",
-      "codigoVisitante": "",
+      "id_jogo": "4ce270d7e9b9de8d",
+      "mandante": "United States",
+      "visitante": "Belgium",
+      "flagMandante": "🇺🇸",
+      "flagVisitante": "🇧🇪",
+      "flagMandanteEmoji": "🇺🇸",
+      "flagVisitanteEmoji": "🇧🇪",
+      "codigoMandante": "us",
+      "codigoVisitante": "be",
       "grupo": "CUP05",
       "rodada_grupo": "CUP05",
       "data": "06/07/2026",
@@ -52987,12 +52944,16 @@
       "palpitesOutros": [],
       "palpitesParticipantes": [],
       "palpites": [],
-      "mandante_pt": "Winner Match 81",
-      "mandante_nome_pt": "Winner Match 81",
-      "mandante_exibicao": "Winner Match 81",
-      "visitante_pt": "Winner Match 82",
-      "visitante_nome_pt": "Winner Match 82",
-      "visitante_exibicao": "Winner Match 82"
+      "mandante_pt": "Estados Unidos",
+      "mandante_nome_pt": "Estados Unidos",
+      "mandante_exibicao": "Estados Unidos",
+      "mandante_codigo": "us",
+      "mandante_iso": "us",
+      "visitante_pt": "Bélgica",
+      "visitante_nome_pt": "Bélgica",
+      "visitante_exibicao": "Bélgica",
+      "visitante_codigo": "be",
+      "visitante_iso": "be"
     },
     {
       "id": "74ca4fd80117cefb",
