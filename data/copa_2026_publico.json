@@ -5,8 +5,8 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V123_RANKING_OFICIAL_JSON_JOGOS_COPA_FIX",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "04/07/2026 18:45:30",
-  "gerado_ts": 1783201530259,
+  "gerado_em": "04/07/2026 19:04:12",
+  "gerado_ts": 1783202652657,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -3838,9 +3838,9 @@
         "visitante_iso": "ma"
       },
       {
-        "id": "fd244402ff1671d3",
+        "id": "c245e34d8e70b1b0",
         "id_bolao": "BOLAO001",
-        "id_jogo": "fd244402ff1671d3",
+        "id_jogo": "c245e34d8e70b1b0",
         "mandante": "Paraguay",
         "visitante": "France",
         "flagMandante": "🇵🇾",
@@ -8280,9 +8280,9 @@
         "visitante_iso": "ma"
       },
       {
-        "id": "fd244402ff1671d3",
+        "id": "c245e34d8e70b1b0",
         "id_bolao": "BOLAO001",
-        "id_jogo": "fd244402ff1671d3",
+        "id_jogo": "c245e34d8e70b1b0",
         "mandante": "Paraguay",
         "visitante": "France",
         "flagMandante": "🇵🇾",
@@ -16111,7 +16111,7 @@
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "04/07/2026 18:45:30"
+    "cacheAtualizadoEm": "04/07/2026 19:04:12"
   },
   "jogos": [
     {
@@ -19942,9 +19942,9 @@
       "visitante_iso": "ma"
     },
     {
-      "id": "fd244402ff1671d3",
+      "id": "c245e34d8e70b1b0",
       "id_bolao": "BOLAO001",
-      "id_jogo": "fd244402ff1671d3",
+      "id_jogo": "c245e34d8e70b1b0",
       "mandante": "Paraguay",
       "visitante": "France",
       "flagMandante": "🇵🇾",
@@ -24384,9 +24384,9 @@
       "visitante_iso": "ma"
     },
     {
-      "id": "fd244402ff1671d3",
+      "id": "c245e34d8e70b1b0",
       "id_bolao": "BOLAO001",
-      "id_jogo": "fd244402ff1671d3",
+      "id_jogo": "c245e34d8e70b1b0",
       "mandante": "Paraguay",
       "visitante": "France",
       "flagMandante": "🇵🇾",
