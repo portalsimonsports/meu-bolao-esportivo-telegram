@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "04/07/2026 14:50:13",
+  "dataHora": "04/07/2026 15:50:10",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -18950,7 +18950,7 @@
         "dataHora": "04/07/2026 14:00",
         "limitePalpite": "04/07/2026 14:00",
         "gols_mandante": 0,
-        "gols_visitante": 0,
+        "gols_visitante": 1,
         "status": "Ao vivo",
         "aceitaPalpite": false,
         "status_jogo": "AO_VIVO",
@@ -19797,7 +19797,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "04/07/2026 14:52:42",
+    "cacheAtualizadoEm": "04/07/2026 15:51:53",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 104,
     "classificacaoGrupos": [
@@ -44041,8 +44041,8 @@
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "gols_mandante": 0,
-        "gols_visitante": 0,
-        "placar": "0 x 0",
+        "gols_visitante": 1,
+        "placar": "0 x 1",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -44182,11 +44182,11 @@
     "totalPalpitesPublicos": 117,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "04/07/2026 14:52:42"
+    "gerado_em": "04/07/2026 15:51:53"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "04/07/2026 14:52:42",
-  "gerado_ts": 1783187562982,
+  "gerado_em": "04/07/2026 15:51:53",
+  "gerado_ts": 1783191113513,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -62515,7 +62515,7 @@
       "dataHora": "04/07/2026 14:00",
       "limitePalpite": "04/07/2026 14:00",
       "gols_mandante": 0,
-      "gols_visitante": 0,
+      "gols_visitante": 1,
       "status": "Ao vivo",
       "aceitaPalpite": false,
       "status_jogo": "AO_VIVO",
