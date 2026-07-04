@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "04/07/2026 05:27:20",
+  "dataHora": "04/07/2026 06:05:17",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -78,8 +78,8 @@
         "username": "desafiante_ia",
         "total_pontos": 6350,
         "pontos": "6.350",
-        "palpites": 82,
-        "total_palpites": 82,
+        "palpites": 84,
+        "total_palpites": 84,
         "medalha": "👑",
         "classe": "gold",
         "avatar": "👨🏻"
@@ -20655,7 +20655,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "04/07/2026 05:29:05",
+    "cacheAtualizadoEm": "04/07/2026 06:06:55",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 104,
     "classificacaoGrupos": [
@@ -45934,11 +45934,11 @@
     "totalPalpitesPublicos": 124,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "04/07/2026 05:29:05"
+    "gerado_em": "04/07/2026 06:06:55"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "04/07/2026 05:29:05",
-  "gerado_ts": 1783153745595,
+  "gerado_em": "04/07/2026 06:06:55",
+  "gerado_ts": 1783156015632,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -65981,8 +65981,8 @@
       "username": "desafiante_ia",
       "total_pontos": 6350,
       "pontos": "6.350",
-      "palpites": 82,
-      "total_palpites": 82,
+      "palpites": 84,
+      "total_palpites": 84,
       "medalha": "👑",
       "classe": "gold",
       "avatar": "👨🏻"
