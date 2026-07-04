@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260611135508480",
-  "gerado_em": "04/07/2026 18:22:13",
-  "gerado_ts": 1783200133885,
+  "gerado_em": "04/07/2026 19:22:13",
+  "gerado_ts": 1783203733175,
   "dados": {
     "id_bolao": "BOLAO20260611135508480",
     "bolaoAtual": {
@@ -16529,9 +16529,9 @@
         "visitante_iso": "ma"
       },
       {
-        "id": "fd244402ff1671d3",
+        "id": "c245e34d8e70b1b0",
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "fd244402ff1671d3",
+        "id_jogo": "c245e34d8e70b1b0",
         "mandante": "Paraguay",
         "visitante": "France",
         "flagMandante": "🇵🇾",
@@ -16546,11 +16546,11 @@
         "hora": "18:00",
         "dataHora": "04/07/2026 18:00",
         "limitePalpite": "04/07/2026 18:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "status": "Ao vivo",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
@@ -16591,7 +16591,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:31:44.120Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ],
         "palpitesOutros": [
@@ -16624,7 +16624,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:31:44.120Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ],
         "palpitesParticipantes": [
@@ -16657,7 +16657,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:31:44.120Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ],
         "palpites": [
@@ -31452,7 +31452,7 @@
       },
       {
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "fd244402ff1671d3",
+        "id_jogo": "c245e34d8e70b1b0",
         "mandante": "Paraguay",
         "visitante": "France",
         "mandante_pt": "Paraguai",
@@ -31460,11 +31460,11 @@
         "codigoMandante": "py",
         "codigoVisitante": "fr",
         "data_jogo": "",
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "placar": " x ",
+        "gols_mandante": 0,
+        "gols_visitante": 0,
+        "placar": "0 x 0",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -31496,7 +31496,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:31:44.120Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ],
         "palpitesPublicos": [
@@ -31529,7 +31529,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:31:44.120Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ],
         "palpitesOutros": [
@@ -31562,7 +31562,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:31:44.120Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ],
         "palpitesParticipantes": [
@@ -31595,7 +31595,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:31:44.120Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ]
       }
@@ -31603,7 +31603,7 @@
     "totalJogosComPalpitesPublicos": 84,
     "totalPalpitesPublicos": 98,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "04/07/2026 18:22:13",
+    "cacheAtualizadoEm": "04/07/2026 19:22:13",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
