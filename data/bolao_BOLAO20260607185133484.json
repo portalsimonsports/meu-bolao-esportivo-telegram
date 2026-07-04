@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260607185133484",
-  "gerado_em": "04/07/2026 18:52:04",
-  "gerado_ts": 1783201924227,
+  "gerado_em": "04/07/2026 19:52:10",
+  "gerado_ts": 1783205530690,
   "dados": {
     "id_bolao": "BOLAO20260607185133484",
     "bolaoAtual": {
@@ -19018,9 +19018,9 @@
         "visitante_iso": "ma"
       },
       {
-        "id": "fd244402ff1671d3",
+        "id": "c245e34d8e70b1b0",
         "id_bolao": "BOLAO20260607185133484",
-        "id_jogo": "fd244402ff1671d3",
+        "id_jogo": "c245e34d8e70b1b0",
         "mandante": "Paraguay",
         "visitante": "France",
         "flagMandante": "🇵🇾",
@@ -19080,7 +19080,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:30:54.306Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ],
         "palpitesOutros": [
@@ -19113,7 +19113,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:30:54.306Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ],
         "palpitesParticipantes": [
@@ -19146,7 +19146,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:30:54.306Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ],
         "palpites": [
@@ -36471,7 +36471,7 @@
       },
       {
         "id_bolao": "BOLAO20260607185133484",
-        "id_jogo": "fd244402ff1671d3",
+        "id_jogo": "c245e34d8e70b1b0",
         "mandante": "Paraguay",
         "visitante": "France",
         "mandante_pt": "Paraguai",
@@ -36515,7 +36515,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:30:54.306Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ],
         "palpitesPublicos": [
@@ -36548,7 +36548,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:30:54.306Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ],
         "palpitesOutros": [
@@ -36581,7 +36581,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:30:54.306Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ],
         "palpitesParticipantes": [
@@ -36614,7 +36614,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-04T03:30:54.306Z",
-            "id_jogo_json": "fd244402ff1671d3"
+            "id_jogo_json": "c245e34d8e70b1b0"
           }
         ]
       }
@@ -36622,7 +36622,7 @@
     "totalJogosComPalpitesPublicos": 86,
     "totalPalpitesPublicos": 118,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "04/07/2026 18:52:04",
+    "cacheAtualizadoEm": "04/07/2026 19:52:10",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
