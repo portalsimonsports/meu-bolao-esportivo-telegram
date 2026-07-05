@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "04/07/2026 21:07:33",
+  "dataHora": "04/07/2026 21:50:07",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -19925,7 +19925,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "04/07/2026 21:09:55",
+    "cacheAtualizadoEm": "04/07/2026 21:51:35",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 104,
     "classificacaoGrupos": [
@@ -44459,11 +44459,11 @@
     "totalPalpitesPublicos": 118,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "04/07/2026 21:09:55"
+    "gerado_em": "04/07/2026 21:51:35"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "04/07/2026 21:09:55",
-  "gerado_ts": 1783210195849,
+  "gerado_em": "04/07/2026 21:51:35",
+  "gerado_ts": 1783212695080,
   "jogos": [
     {
       "id": "dff5182881d55565",
