@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260611135508480",
-  "gerado_em": "05/07/2026 20:23:15",
-  "gerado_ts": 1783293795991,
+  "gerado_em": "05/07/2026 21:23:27",
+  "gerado_ts": 1783297407547,
   "dados": {
     "id_bolao": "BOLAO20260611135508480",
     "bolaoAtual": {
@@ -16881,9 +16881,9 @@
         "visitante_iso": "no"
       },
       {
-        "id": "4106334da6896864",
+        "id": "a0d9799e08dbb3de",
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "4106334da6896864",
+        "id_jogo": "a0d9799e08dbb3de",
         "mandante": "Mexico",
         "visitante": "England",
         "flagMandante": "🇲🇽",
@@ -16895,9 +16895,9 @@
         "grupo": "CUP05",
         "rodada_grupo": "CUP05",
         "data": "05/07/2026",
-        "hora": "21:00",
-        "dataHora": "05/07/2026 21:00",
-        "limitePalpite": "05/07/2026 21:00",
+        "hora": "22:00",
+        "dataHora": "05/07/2026 22:00",
+        "limitePalpite": "05/07/2026 22:00",
         "gols_mandante": "",
         "gols_visitante": "",
         "status": "Aberto",
@@ -31884,7 +31884,7 @@
     "totalJogosComPalpitesPublicos": 85,
     "totalPalpitesPublicos": 99,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "05/07/2026 20:23:15",
+    "cacheAtualizadoEm": "05/07/2026 21:23:27",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
