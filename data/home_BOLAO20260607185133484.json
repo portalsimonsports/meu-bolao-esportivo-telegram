@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "05/07/2026 20:50:11",
+  "dataHora": "05/07/2026 21:50:16",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -22,9 +22,9 @@
       "visibilidade_palpites": "APOS_FECHAMENTO_JOGO"
     },
     "jogoDestaque": {
-      "id": "4106334da6896864",
+      "id": "a0d9799e08dbb3de",
       "id_bolao": "BOLAO20260607185133484",
-      "id_jogo": "4106334da6896864",
+      "id_jogo": "a0d9799e08dbb3de",
       "mandante": "Mexico",
       "visitante": "England",
       "flagMandante": "🇲🇽",
@@ -36,9 +36,9 @@
       "grupo": "CUP05",
       "rodada_grupo": "CUP05",
       "data": "05/07/2026",
-      "hora": "21:00",
-      "dataHora": "05/07/2026 21:00",
-      "limitePalpite": "05/07/2026 21:00",
+      "hora": "22:00",
+      "dataHora": "05/07/2026 22:00",
+      "limitePalpite": "05/07/2026 22:00",
       "gols_mandante": "",
       "gols_visitante": "",
       "status": "Aberto",
@@ -78,8 +78,8 @@
         "username": "desafiante_ia",
         "total_pontos": 6470,
         "pontos": "6.470",
-        "palpites": 86,
-        "total_palpites": 86,
+        "palpites": 87,
+        "total_palpites": 87,
         "medalha": "👑",
         "classe": "gold",
         "avatar": "👨🏻"
@@ -19460,9 +19460,9 @@
         "visitante_iso": "no"
       },
       {
-        "id": "4106334da6896864",
+        "id": "a0d9799e08dbb3de",
         "id_bolao": "BOLAO20260607185133484",
-        "id_jogo": "4106334da6896864",
+        "id_jogo": "a0d9799e08dbb3de",
         "mandante": "Mexico",
         "visitante": "England",
         "flagMandante": "🇲🇽",
@@ -19474,9 +19474,9 @@
         "grupo": "CUP05",
         "rodada_grupo": "CUP05",
         "data": "05/07/2026",
-        "hora": "21:00",
-        "dataHora": "05/07/2026 21:00",
-        "limitePalpite": "05/07/2026 21:00",
+        "hora": "22:00",
+        "dataHora": "05/07/2026 22:00",
+        "limitePalpite": "05/07/2026 22:00",
         "gols_mandante": "",
         "gols_visitante": "",
         "status": "Aberto",
@@ -20057,7 +20057,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "05/07/2026 20:52:06",
+    "cacheAtualizadoEm": "05/07/2026 21:52:46",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 104,
     "classificacaoGrupos": [
@@ -44740,11 +44740,11 @@
     "totalPalpitesPublicos": 119,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "05/07/2026 20:52:06"
+    "gerado_em": "05/07/2026 21:52:46"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "05/07/2026 20:52:06",
-  "gerado_ts": 1783295526664,
+  "gerado_em": "05/07/2026 21:52:46",
+  "gerado_ts": 1783299166896,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -63583,9 +63583,9 @@
       "visitante_iso": "no"
     },
     {
-      "id": "4106334da6896864",
+      "id": "a0d9799e08dbb3de",
       "id_bolao": "BOLAO20260607185133484",
-      "id_jogo": "4106334da6896864",
+      "id_jogo": "a0d9799e08dbb3de",
       "mandante": "Mexico",
       "visitante": "England",
       "flagMandante": "🇲🇽",
@@ -63597,9 +63597,9 @@
       "grupo": "CUP05",
       "rodada_grupo": "CUP05",
       "data": "05/07/2026",
-      "hora": "21:00",
-      "dataHora": "05/07/2026 21:00",
-      "limitePalpite": "05/07/2026 21:00",
+      "hora": "22:00",
+      "dataHora": "05/07/2026 22:00",
+      "limitePalpite": "05/07/2026 22:00",
       "gols_mandante": "",
       "gols_visitante": "",
       "status": "Aberto",
@@ -64189,8 +64189,8 @@
       "username": "desafiante_ia",
       "total_pontos": 6470,
       "pontos": "6.470",
-      "palpites": 86,
-      "total_palpites": 86,
+      "palpites": 87,
+      "total_palpites": 87,
       "medalha": "👑",
       "classe": "gold",
       "avatar": "👨🏻"
