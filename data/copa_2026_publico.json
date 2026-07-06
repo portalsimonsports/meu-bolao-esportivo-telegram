@@ -5,8 +5,8 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V123_RANKING_OFICIAL_JSON_JOGOS_COPA_FIX",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "06/07/2026 01:44:40",
-  "gerado_ts": 1783313080456,
+  "gerado_em": "06/07/2026 02:04:14",
+  "gerado_ts": 1783314254090,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -16201,7 +16201,7 @@
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "06/07/2026 01:44:40"
+    "cacheAtualizadoEm": "06/07/2026 02:04:14"
   },
   "jogos": [
     {
