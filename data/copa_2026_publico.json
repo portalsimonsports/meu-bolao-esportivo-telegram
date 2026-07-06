@@ -5,8 +5,8 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V123_RANKING_OFICIAL_JSON_JOGOS_COPA_FIX",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "05/07/2026 20:34:08",
-  "gerado_ts": 1783294448535,
+  "gerado_em": "05/07/2026 21:05:26",
+  "gerado_ts": 1783296326489,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -3924,9 +3924,9 @@
         "visitante_iso": "no"
       },
       {
-        "id": "4106334da6896864",
+        "id": "a0d9799e08dbb3de",
         "id_bolao": "BOLAO001",
-        "id_jogo": "4106334da6896864",
+        "id_jogo": "a0d9799e08dbb3de",
         "mandante": "Mexico",
         "visitante": "England",
         "flagMandante": "🇲🇽",
@@ -3938,9 +3938,9 @@
         "grupo": "CUP05",
         "rodada_grupo": "CUP05",
         "data": "05/07/2026",
-        "hora": "21:00",
-        "dataHora": "05/07/2026 21:00",
-        "limitePalpite": "05/07/2026 21:00",
+        "hora": "22:00",
+        "dataHora": "05/07/2026 22:00",
+        "limitePalpite": "05/07/2026 22:00",
         "gols_mandante": "",
         "gols_visitante": "",
         "status": "Aberto",
@@ -8371,9 +8371,9 @@
       }
     ],
     "jogoDestaque": {
-      "id": "4106334da6896864",
+      "id": "a0d9799e08dbb3de",
       "id_bolao": "BOLAO001",
-      "id_jogo": "4106334da6896864",
+      "id_jogo": "a0d9799e08dbb3de",
       "mandante": "Mexico",
       "visitante": "England",
       "flagMandante": "🇲🇽",
@@ -8385,9 +8385,9 @@
       "grupo": "CUP05",
       "rodada_grupo": "CUP05",
       "data": "05/07/2026",
-      "hora": "21:00",
-      "dataHora": "05/07/2026 21:00",
-      "limitePalpite": "05/07/2026 21:00",
+      "hora": "22:00",
+      "dataHora": "05/07/2026 22:00",
+      "limitePalpite": "05/07/2026 22:00",
       "gols_mandante": "",
       "gols_visitante": "",
       "status": "Aberto",
@@ -16158,7 +16158,7 @@
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "05/07/2026 20:34:08"
+    "cacheAtualizadoEm": "05/07/2026 21:05:26"
   },
   "jogos": [
     {
@@ -20075,9 +20075,9 @@
       "visitante_iso": "no"
     },
     {
-      "id": "4106334da6896864",
+      "id": "a0d9799e08dbb3de",
       "id_bolao": "BOLAO001",
-      "id_jogo": "4106334da6896864",
+      "id_jogo": "a0d9799e08dbb3de",
       "mandante": "Mexico",
       "visitante": "England",
       "flagMandante": "🇲🇽",
@@ -20089,9 +20089,9 @@
       "grupo": "CUP05",
       "rodada_grupo": "CUP05",
       "data": "05/07/2026",
-      "hora": "21:00",
-      "dataHora": "05/07/2026 21:00",
-      "limitePalpite": "05/07/2026 21:00",
+      "hora": "22:00",
+      "dataHora": "05/07/2026 22:00",
+      "limitePalpite": "05/07/2026 22:00",
       "gols_mandante": "",
       "gols_visitante": "",
       "status": "Aberto",
