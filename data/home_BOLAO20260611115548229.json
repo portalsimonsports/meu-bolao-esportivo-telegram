@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "05/07/2026 22:35:13",
+  "dataHora": "05/07/2026 23:35:09",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -18104,8 +18104,8 @@
         "hora": "22:00",
         "dataHora": "05/07/2026 22:00",
         "limitePalpite": "05/07/2026 22:00",
-        "gols_mandante": 0,
-        "gols_visitante": 0,
+        "gols_mandante": 1,
+        "gols_visitante": 2,
         "status": "Ao vivo",
         "aceitaPalpite": false,
         "status_jogo": "AO_VIVO",
@@ -18905,7 +18905,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "05/07/2026 22:37:15",
+    "cacheAtualizadoEm": "05/07/2026 23:37:20",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 104,
     "classificacaoGrupos": [
@@ -42181,9 +42181,9 @@
         "data_jogo": "",
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": 0,
-        "gols_visitante": 0,
-        "placar": "0 x 0",
+        "gols_mandante": 1,
+        "gols_visitante": 2,
+        "placar": "1 x 2",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -42447,11 +42447,11 @@
     "totalPalpitesPublicos": 110,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "05/07/2026 22:37:15"
+    "gerado_em": "05/07/2026 23:37:20"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "05/07/2026 22:37:15",
-  "gerado_ts": 1783301835793,
+  "gerado_em": "05/07/2026 23:37:20",
+  "gerado_ts": 1783305440456,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -59931,8 +59931,8 @@
       "hora": "22:00",
       "dataHora": "05/07/2026 22:00",
       "limitePalpite": "05/07/2026 22:00",
-      "gols_mandante": 0,
-      "gols_visitante": 0,
+      "gols_mandante": 1,
+      "gols_visitante": 2,
       "status": "Ao vivo",
       "aceitaPalpite": false,
       "status_jogo": "AO_VIVO",
