@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO001",
-  "gerado_em": "07/07/2026 13:59:02",
-  "gerado_ts": 1783443542333,
+  "gerado_em": "07/07/2026 15:28:44",
+  "gerado_ts": 1783448924429,
   "dados": {
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
@@ -26893,9 +26893,9 @@
         "visitante_iso": "be"
       },
       {
-        "id": "eeb88af1b9d5c772",
+        "id": "c82329f7a5aded23",
         "id_bolao": "BOLAO001",
-        "id_jogo": "eeb88af1b9d5c772",
+        "id_jogo": "c82329f7a5aded23",
         "mandante": "Argentina",
         "visitante": "Egypt",
         "flagMandante": "🇦🇷",
@@ -26910,12 +26910,12 @@
         "hora": "13:00",
         "dataHora": "07/07/2026 13:00",
         "limitePalpite": "07/07/2026 13:00",
-        "gols_mandante": 0,
-        "gols_visitante": 1,
-        "status": "Ao vivo",
+        "gols_mandante": 3,
+        "gols_visitante": 2,
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -26955,7 +26955,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesOutros": [
@@ -26988,7 +26988,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesParticipantes": [
@@ -27021,7 +27021,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpites": [
@@ -52031,7 +52031,7 @@
       },
       {
         "id_bolao": "BOLAO001",
-        "id_jogo": "eeb88af1b9d5c772",
+        "id_jogo": "c82329f7a5aded23",
         "mandante": "Argentina",
         "visitante": "Egypt",
         "mandante_pt": "Argentina",
@@ -52039,11 +52039,11 @@
         "codigoMandante": "ar",
         "codigoVisitante": "eg",
         "data_jogo": "",
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
-        "gols_mandante": 0,
-        "gols_visitante": 1,
-        "placar": "0 x 1",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
+        "gols_mandante": 3,
+        "gols_visitante": 2,
+        "placar": "3 x 2",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -52075,7 +52075,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesPublicos": [
@@ -52108,7 +52108,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesOutros": [
@@ -52141,7 +52141,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesParticipantes": [
@@ -52174,7 +52174,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ]
       }
@@ -52182,7 +52182,7 @@
     "totalJogosComPalpitesPublicos": 95,
     "totalPalpitesPublicos": 180,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "07/07/2026 13:59:02",
+    "cacheAtualizadoEm": "07/07/2026 15:28:44",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
