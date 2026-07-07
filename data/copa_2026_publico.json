@@ -5,8 +5,8 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V123_RANKING_OFICIAL_JSON_JOGOS_COPA_FIX",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "07/07/2026 15:07:47",
-  "gerado_ts": 1783447667088,
+  "gerado_em": "07/07/2026 15:15:10",
+  "gerado_ts": 1783448110904,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -4070,7 +4070,7 @@
         "hora": "13:00",
         "dataHora": "07/07/2026 13:00",
         "limitePalpite": "07/07/2026 13:00",
-        "gols_mandante": 2,
+        "gols_mandante": 3,
         "gols_visitante": 2,
         "status": "Finalizado",
         "aceitaPalpite": false,
@@ -8524,7 +8524,7 @@
         "hora": "13:00",
         "dataHora": "07/07/2026 13:00",
         "limitePalpite": "07/07/2026 13:00",
-        "gols_mandante": 2,
+        "gols_mandante": 3,
         "gols_visitante": 2,
         "status": "Finalizado",
         "aceitaPalpite": false,
@@ -16338,7 +16338,7 @@
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "07/07/2026 15:07:47"
+    "cacheAtualizadoEm": "07/07/2026 15:15:10"
   },
   "jogos": [
     {
@@ -20401,7 +20401,7 @@
       "hora": "13:00",
       "dataHora": "07/07/2026 13:00",
       "limitePalpite": "07/07/2026 13:00",
-      "gols_mandante": 2,
+      "gols_mandante": 3,
       "gols_visitante": 2,
       "status": "Finalizado",
       "aceitaPalpite": false,
@@ -24855,7 +24855,7 @@
       "hora": "13:00",
       "dataHora": "07/07/2026 13:00",
       "limitePalpite": "07/07/2026 13:00",
-      "gols_mandante": 2,
+      "gols_mandante": 3,
       "gols_visitante": 2,
       "status": "Finalizado",
       "aceitaPalpite": false,
