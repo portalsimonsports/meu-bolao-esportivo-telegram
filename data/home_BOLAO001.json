@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "07/07/2026 13:55:56",
+  "dataHora": "07/07/2026 15:25:46",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -26983,9 +26983,9 @@
         "visitante_iso": "be"
       },
       {
-        "id": "eeb88af1b9d5c772",
+        "id": "c82329f7a5aded23",
         "id_bolao": "BOLAO001",
-        "id_jogo": "eeb88af1b9d5c772",
+        "id_jogo": "c82329f7a5aded23",
         "mandante": "Argentina",
         "visitante": "Egypt",
         "flagMandante": "🇦🇷",
@@ -27000,12 +27000,12 @@
         "hora": "13:00",
         "dataHora": "07/07/2026 13:00",
         "limitePalpite": "07/07/2026 13:00",
-        "gols_mandante": 0,
-        "gols_visitante": 1,
-        "status": "Ao vivo",
+        "gols_mandante": 3,
+        "gols_visitante": 2,
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -27045,7 +27045,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesOutros": [
@@ -27078,7 +27078,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesParticipantes": [
@@ -27111,7 +27111,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpites": [
@@ -27572,7 +27572,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "07/07/2026 13:59:02",
+    "cacheAtualizadoEm": "07/07/2026 15:28:44",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 104,
     "classificacaoGrupos": [
@@ -59867,7 +59867,7 @@
       },
       {
         "id_bolao": "BOLAO001",
-        "id_jogo": "eeb88af1b9d5c772",
+        "id_jogo": "c82329f7a5aded23",
         "mandante": "Argentina",
         "visitante": "Egypt",
         "mandante_pt": "Argentina",
@@ -59875,11 +59875,11 @@
         "codigoMandante": "ar",
         "codigoVisitante": "eg",
         "data_jogo": "",
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
-        "gols_mandante": 0,
-        "gols_visitante": 1,
-        "placar": "0 x 1",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
+        "gols_mandante": 3,
+        "gols_visitante": 2,
+        "placar": "3 x 2",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -59911,7 +59911,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesPublicos": [
@@ -59944,7 +59944,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesOutros": [
@@ -59977,7 +59977,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesParticipantes": [
@@ -60010,7 +60010,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:29:27.852Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ]
       }
@@ -60019,11 +60019,11 @@
     "totalPalpitesPublicos": 180,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "07/07/2026 13:59:02"
+    "gerado_em": "07/07/2026 15:28:44"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "07/07/2026 13:59:02",
-  "gerado_ts": 1783443542333,
+  "gerado_em": "07/07/2026 15:28:44",
+  "gerado_ts": 1783448924429,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -86118,9 +86118,9 @@
       "visitante_iso": "be"
     },
     {
-      "id": "eeb88af1b9d5c772",
+      "id": "c82329f7a5aded23",
       "id_bolao": "BOLAO001",
-      "id_jogo": "eeb88af1b9d5c772",
+      "id_jogo": "c82329f7a5aded23",
       "mandante": "Argentina",
       "visitante": "Egypt",
       "flagMandante": "🇦🇷",
@@ -86135,12 +86135,12 @@
       "hora": "13:00",
       "dataHora": "07/07/2026 13:00",
       "limitePalpite": "07/07/2026 13:00",
-      "gols_mandante": 0,
-      "gols_visitante": 1,
-      "status": "Ao vivo",
+      "gols_mandante": 3,
+      "gols_visitante": 2,
+      "status": "Finalizado",
       "aceitaPalpite": false,
-      "status_jogo": "AO_VIVO",
-      "status_bolao": "FECHADO",
+      "status_jogo": "FINALIZADO",
+      "status_bolao": "FINALIZADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
