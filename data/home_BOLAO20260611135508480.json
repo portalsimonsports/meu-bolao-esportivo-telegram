@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "07/07/2026 13:20:16",
+  "dataHora": "07/07/2026 15:20:18",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -16475,105 +16475,9 @@
         "cidade": "",
         "transmissao": "",
         "fonte": "",
-        "palpitesPublicos": [
-          {
-            "id_palpite": "5c74d2a8c3f0248cf456",
-            "id_bolao": "BOLAO20260611135508480",
-            "id_jogo": "80ed25bdf9ae0917",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "Canada",
-            "visitante": "Morocco",
-            "palpite_mandante": 0,
-            "palpite_visitante": 2,
-            "placarMandante": 0,
-            "placarVisitante": 2,
-            "placar_texto": "0 x 2",
-            "pontos": 120,
-            "pontos_label": "120 pts",
-            "criterio_pontuacao": "GOL_PERDEDOR",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 120,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "dataHora": "2026-07-04T03:31:31.637Z",
-            "id_jogo_json": "80ed25bdf9ae0917"
-          }
-        ],
-        "palpitesOutros": [
-          {
-            "id_palpite": "5c74d2a8c3f0248cf456",
-            "id_bolao": "BOLAO20260611135508480",
-            "id_jogo": "80ed25bdf9ae0917",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "Canada",
-            "visitante": "Morocco",
-            "palpite_mandante": 0,
-            "palpite_visitante": 2,
-            "placarMandante": 0,
-            "placarVisitante": 2,
-            "placar_texto": "0 x 2",
-            "pontos": 120,
-            "pontos_label": "120 pts",
-            "criterio_pontuacao": "GOL_PERDEDOR",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 120,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "dataHora": "2026-07-04T03:31:31.637Z",
-            "id_jogo_json": "80ed25bdf9ae0917"
-          }
-        ],
-        "palpitesParticipantes": [
-          {
-            "id_palpite": "5c74d2a8c3f0248cf456",
-            "id_bolao": "BOLAO20260611135508480",
-            "id_jogo": "80ed25bdf9ae0917",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "Canada",
-            "visitante": "Morocco",
-            "palpite_mandante": 0,
-            "palpite_visitante": 2,
-            "placarMandante": 0,
-            "placarVisitante": 2,
-            "placar_texto": "0 x 2",
-            "pontos": 120,
-            "pontos_label": "120 pts",
-            "criterio_pontuacao": "GOL_PERDEDOR",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 120,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "dataHora": "2026-07-04T03:31:31.637Z",
-            "id_jogo_json": "80ed25bdf9ae0917"
-          }
-        ],
+        "palpitesPublicos": [],
+        "palpitesOutros": [],
+        "palpitesParticipantes": [],
         "palpites": [
           {
             "id_bolao": "BOLAO20260611135508480",
@@ -17592,9 +17496,9 @@
         "visitante_iso": "be"
       },
       {
-        "id": "eeb88af1b9d5c772",
+        "id": "c82329f7a5aded23",
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "eeb88af1b9d5c772",
+        "id_jogo": "c82329f7a5aded23",
         "mandante": "Argentina",
         "visitante": "Egypt",
         "flagMandante": "🇦🇷",
@@ -17609,12 +17513,12 @@
         "hora": "13:00",
         "dataHora": "07/07/2026 13:00",
         "limitePalpite": "07/07/2026 13:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "gols_mandante": 3,
+        "gols_visitante": 2,
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -17654,7 +17558,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:30:26.144Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesOutros": [
@@ -17687,7 +17591,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:30:26.144Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesParticipantes": [
@@ -17720,7 +17624,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:30:26.144Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpites": [
@@ -18181,7 +18085,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "07/07/2026 13:22:33",
+    "cacheAtualizadoEm": "07/07/2026 15:23:12",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 104,
     "classificacaoGrupos": [
@@ -39884,155 +39788,6 @@
       },
       {
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "80ed25bdf9ae0917",
-        "mandante": "Canada",
-        "visitante": "Morocco",
-        "mandante_pt": "Canadá",
-        "visitante_pt": "Marrocos",
-        "codigoMandante": "ca",
-        "codigoVisitante": "ma",
-        "data_jogo": "",
-        "status_jogo": "FINALIZADO",
-        "status_bolao": "FINALIZADO",
-        "gols_mandante": 0,
-        "gols_visitante": 3,
-        "placar": "0 x 3",
-        "palpitesPublicosLiberados": true,
-        "palpites": [
-          {
-            "id_palpite": "5c74d2a8c3f0248cf456",
-            "id_bolao": "BOLAO20260611135508480",
-            "id_jogo": "80ed25bdf9ae0917",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "Canada",
-            "visitante": "Morocco",
-            "palpite_mandante": 0,
-            "palpite_visitante": 2,
-            "placarMandante": 0,
-            "placarVisitante": 2,
-            "placar_texto": "0 x 2",
-            "pontos": 120,
-            "pontos_label": "120 pts",
-            "criterio_pontuacao": "GOL_PERDEDOR",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 120,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "dataHora": "2026-07-04T03:31:31.637Z",
-            "id_jogo_json": "80ed25bdf9ae0917"
-          }
-        ],
-        "palpitesPublicos": [
-          {
-            "id_palpite": "5c74d2a8c3f0248cf456",
-            "id_bolao": "BOLAO20260611135508480",
-            "id_jogo": "80ed25bdf9ae0917",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "Canada",
-            "visitante": "Morocco",
-            "palpite_mandante": 0,
-            "palpite_visitante": 2,
-            "placarMandante": 0,
-            "placarVisitante": 2,
-            "placar_texto": "0 x 2",
-            "pontos": 120,
-            "pontos_label": "120 pts",
-            "criterio_pontuacao": "GOL_PERDEDOR",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 120,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "dataHora": "2026-07-04T03:31:31.637Z",
-            "id_jogo_json": "80ed25bdf9ae0917"
-          }
-        ],
-        "palpitesOutros": [
-          {
-            "id_palpite": "5c74d2a8c3f0248cf456",
-            "id_bolao": "BOLAO20260611135508480",
-            "id_jogo": "80ed25bdf9ae0917",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "Canada",
-            "visitante": "Morocco",
-            "palpite_mandante": 0,
-            "palpite_visitante": 2,
-            "placarMandante": 0,
-            "placarVisitante": 2,
-            "placar_texto": "0 x 2",
-            "pontos": 120,
-            "pontos_label": "120 pts",
-            "criterio_pontuacao": "GOL_PERDEDOR",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 120,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "dataHora": "2026-07-04T03:31:31.637Z",
-            "id_jogo_json": "80ed25bdf9ae0917"
-          }
-        ],
-        "palpitesParticipantes": [
-          {
-            "id_palpite": "5c74d2a8c3f0248cf456",
-            "id_bolao": "BOLAO20260611135508480",
-            "id_jogo": "80ed25bdf9ae0917",
-            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
-            "nome": "🤖 Desafiante IA",
-            "username": "desafiante_ia",
-            "mandante": "Canada",
-            "visitante": "Morocco",
-            "palpite_mandante": 0,
-            "palpite_visitante": 2,
-            "placarMandante": 0,
-            "placarVisitante": 2,
-            "placar_texto": "0 x 2",
-            "pontos": 120,
-            "pontos_label": "120 pts",
-            "criterio_pontuacao": "GOL_PERDEDOR",
-            "PTS_EXATO": 0,
-            "PTS_GOL_VENCEDOR": 0,
-            "PTS_SALDO": 0,
-            "PTS_GOL_PERDEDOR": 120,
-            "PTS_VENCEDOR": 0,
-            "PTS_EMPATE_GARANTIDO": 0,
-            "status": "VALIDO",
-            "origem": "VIRTUAL_IA",
-            "automatico": false,
-            "desafiante_ia": true,
-            "origem_label": "🤖 Desafiante IA",
-            "dataHora": "2026-07-04T03:31:31.637Z",
-            "id_jogo_json": "80ed25bdf9ae0917"
-          }
-        ]
-      },
-      {
-        "id_bolao": "BOLAO20260611135508480",
         "id_jogo": "c245e34d8e70b1b0",
         "mandante": "Paraguay",
         "visitante": "France",
@@ -40902,7 +40657,7 @@
       },
       {
         "id_bolao": "BOLAO20260611135508480",
-        "id_jogo": "eeb88af1b9d5c772",
+        "id_jogo": "c82329f7a5aded23",
         "mandante": "Argentina",
         "visitante": "Egypt",
         "mandante_pt": "Argentina",
@@ -40910,11 +40665,11 @@
         "codigoMandante": "ar",
         "codigoVisitante": "eg",
         "data_jogo": "",
-        "status_jogo": "FECHADO",
-        "status_bolao": "FECHADO",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "placar": " x ",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
+        "gols_mandante": 3,
+        "gols_visitante": 2,
+        "placar": "3 x 2",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -40946,7 +40701,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:30:26.144Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesPublicos": [
@@ -40979,7 +40734,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:30:26.144Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesOutros": [
@@ -41012,7 +40767,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:30:26.144Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ],
         "palpitesParticipantes": [
@@ -41045,20 +40800,20 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-07T03:30:26.144Z",
-            "id_jogo_json": "eeb88af1b9d5c772"
+            "id_jogo_json": "c82329f7a5aded23"
           }
         ]
       }
     ],
-    "totalJogosComPalpitesPublicos": 89,
-    "totalPalpitesPublicos": 104,
+    "totalJogosComPalpitesPublicos": 88,
+    "totalPalpitesPublicos": 103,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "07/07/2026 13:22:33"
+    "gerado_em": "07/07/2026 15:23:12"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "07/07/2026 13:22:33",
-  "gerado_ts": 1783441353672,
+  "gerado_em": "07/07/2026 15:23:12",
+  "gerado_ts": 1783448592779,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -57933,9 +57688,9 @@
       "visitante_iso": "be"
     },
     {
-      "id": "eeb88af1b9d5c772",
+      "id": "c82329f7a5aded23",
       "id_bolao": "BOLAO20260611135508480",
-      "id_jogo": "eeb88af1b9d5c772",
+      "id_jogo": "c82329f7a5aded23",
       "mandante": "Argentina",
       "visitante": "Egypt",
       "flagMandante": "🇦🇷",
@@ -57950,12 +57705,12 @@
       "hora": "13:00",
       "dataHora": "07/07/2026 13:00",
       "limitePalpite": "07/07/2026 13:00",
-      "gols_mandante": "",
-      "gols_visitante": "",
-      "status": "Fechado",
+      "gols_mandante": 3,
+      "gols_visitante": 2,
+      "status": "Finalizado",
       "aceitaPalpite": false,
-      "status_jogo": "FECHADO",
-      "status_bolao": "FECHADO",
+      "status_jogo": "FINALIZADO",
+      "status_bolao": "FINALIZADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
       "permiteVerPalpites": true,
@@ -59667,8 +59422,8 @@
     "aviso": "Campos originais mandante/visitante foram preservados. Para exibir em português, o HTML deve usar mandante_pt/visitante_pt quando existirem."
   },
   "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
-  "totalJogosComPalpitesPublicos": 89,
-  "totalPalpitesPublicos": 104,
+  "totalJogosComPalpitesPublicos": 88,
+  "totalPalpitesPublicos": 103,
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO"
 }
