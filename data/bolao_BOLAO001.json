@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO001",
-  "gerado_em": "11/07/2026 18:58:26",
-  "gerado_ts": 1783807106374,
+  "gerado_em": "11/07/2026 19:42:52",
+  "gerado_ts": 1783809772245,
   "dados": {
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
@@ -27597,9 +27597,9 @@
         "visitante_iso": "be"
       },
       {
-        "id": "6febb68abfa8edc5",
+        "id": "443220123321c831",
         "id_bolao": "BOLAO001",
-        "id_jogo": "6febb68abfa8edc5",
+        "id_jogo": "443220123321c831",
         "mandante": "Norway",
         "visitante": "England",
         "flagMandante": "🇳🇴",
@@ -27614,8 +27614,8 @@
         "hora": "18:00",
         "dataHora": "11/07/2026 18:00",
         "limitePalpite": "11/07/2026 18:00",
-        "gols_mandante": 0,
-        "gols_visitante": 0,
+        "gols_mandante": 2,
+        "gols_visitante": 1,
         "status": "Ao vivo",
         "aceitaPalpite": false,
         "status_jogo": "AO_VIVO",
@@ -27659,7 +27659,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:24.138Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ],
         "palpitesOutros": [
@@ -27692,7 +27692,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:24.138Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ],
         "palpitesParticipantes": [
@@ -27725,7 +27725,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:24.138Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ],
         "palpites": [
@@ -53147,7 +53147,7 @@
       },
       {
         "id_bolao": "BOLAO001",
-        "id_jogo": "6febb68abfa8edc5",
+        "id_jogo": "443220123321c831",
         "mandante": "Norway",
         "visitante": "England",
         "mandante_pt": "Noruega",
@@ -53157,9 +53157,9 @@
         "data_jogo": "",
         "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": 0,
-        "gols_visitante": 0,
-        "placar": "0 x 0",
+        "gols_mandante": 2,
+        "gols_visitante": 1,
+        "placar": "2 x 1",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -53191,7 +53191,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:24.138Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ],
         "palpitesPublicos": [
@@ -53224,7 +53224,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:24.138Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ],
         "palpitesOutros": [
@@ -53257,7 +53257,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:24.138Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ],
         "palpitesParticipantes": [
@@ -53290,7 +53290,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:24.138Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ]
       }
@@ -53298,7 +53298,7 @@
     "totalJogosComPalpitesPublicos": 99,
     "totalPalpitesPublicos": 184,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "11/07/2026 18:58:26",
+    "cacheAtualizadoEm": "11/07/2026 19:42:52",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
