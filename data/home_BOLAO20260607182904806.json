@@ -3,7 +3,7 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V089_CHAVEAMENTO_ANEXO_C_FIFA_2026",
   "modoHome": "LEVE_CACHE_RAPIDO_MULTI_BOLOES",
-  "dataHora": "11/07/2026 18:20:12",
+  "dataHora": "11/07/2026 19:20:12",
   "dados": {
     "apiUrl": "https://script.google.com/macros/s/AKfycbzp2XfmJUtcSrZNZe9Jk45ESlvvRoEMZULSw13J0qgd5ukchetCdppOQ65wrpp2OKw/exec",
     "miniappUrl": "https://bolaodacopa.portalsimonsports.com/?v=V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA&perfil=1",
@@ -21777,9 +21777,9 @@
         "visitante_iso": "be"
       },
       {
-        "id": "6febb68abfa8edc5",
+        "id": "443220123321c831",
         "id_bolao": "BOLAO20260607182904806",
-        "id_jogo": "6febb68abfa8edc5",
+        "id_jogo": "443220123321c831",
         "mandante": "Norway",
         "visitante": "England",
         "flagMandante": "🇳🇴",
@@ -21794,11 +21794,11 @@
         "hora": "18:00",
         "dataHora": "11/07/2026 18:00",
         "limitePalpite": "11/07/2026 18:00",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "status": "Fechado",
+        "gols_mandante": 1,
+        "gols_visitante": 1,
+        "status": "Ao vivo",
         "aceitaPalpite": false,
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
@@ -21839,7 +21839,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:39.033Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ],
         "palpitesOutros": [
@@ -21872,7 +21872,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:39.033Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ],
         "palpitesParticipantes": [
@@ -21905,7 +21905,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:39.033Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ],
         "palpites": [
@@ -22182,7 +22182,7 @@
       }
     ],
     "meusPalpites": [],
-    "cacheAtualizadoEm": "11/07/2026 18:22:19",
+    "cacheAtualizadoEm": "11/07/2026 19:22:08",
     "modoDados": "JSON_PUBLICO_ESTATICO_V123_RANKING_OFICIAL_JOGOS_COMPLETOS",
     "totalJogos": 104,
     "classificacaoGrupos": [
@@ -49021,7 +49021,7 @@
       },
       {
         "id_bolao": "BOLAO20260607182904806",
-        "id_jogo": "6febb68abfa8edc5",
+        "id_jogo": "443220123321c831",
         "mandante": "Norway",
         "visitante": "England",
         "mandante_pt": "Noruega",
@@ -49029,11 +49029,11 @@
         "codigoMandante": "no",
         "codigoVisitante": "gb-eng",
         "data_jogo": "",
-        "status_jogo": "FECHADO",
+        "status_jogo": "AO_VIVO",
         "status_bolao": "FECHADO",
-        "gols_mandante": "",
-        "gols_visitante": "",
-        "placar": " x ",
+        "gols_mandante": 1,
+        "gols_visitante": 1,
+        "placar": "1 x 1",
         "palpitesPublicosLiberados": true,
         "palpites": [
           {
@@ -49065,7 +49065,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:39.033Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ],
         "palpitesPublicos": [
@@ -49098,7 +49098,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:39.033Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ],
         "palpitesOutros": [
@@ -49131,7 +49131,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:39.033Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ],
         "palpitesParticipantes": [
@@ -49164,7 +49164,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-11T03:29:39.033Z",
-            "id_jogo_json": "6febb68abfa8edc5"
+            "id_jogo_json": "443220123321c831"
           }
         ]
       }
@@ -49173,11 +49173,11 @@
     "totalPalpitesPublicos": 136,
     "hotfix_v115": "V115_PUBLICACAO_DIRETA_PALPITES_LIBERADOS",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
-    "gerado_em": "11/07/2026 18:22:19"
+    "gerado_em": "11/07/2026 19:22:08"
   },
   "modoJsonPublico": "CLOUDFLARE_PAGES_JSON_CACHE_FIRST",
-  "gerado_em": "11/07/2026 18:22:19",
-  "gerado_ts": 1783804939489,
+  "gerado_em": "11/07/2026 19:22:08",
+  "gerado_ts": 1783808528957,
   "jogos": [
     {
       "id": "dff5182881d55565",
@@ -70240,9 +70240,9 @@
       "visitante_iso": "be"
     },
     {
-      "id": "6febb68abfa8edc5",
+      "id": "443220123321c831",
       "id_bolao": "BOLAO20260607182904806",
-      "id_jogo": "6febb68abfa8edc5",
+      "id_jogo": "443220123321c831",
       "mandante": "Norway",
       "visitante": "England",
       "flagMandante": "🇳🇴",
@@ -70257,11 +70257,11 @@
       "hora": "18:00",
       "dataHora": "11/07/2026 18:00",
       "limitePalpite": "11/07/2026 18:00",
-      "gols_mandante": "",
-      "gols_visitante": "",
-      "status": "Fechado",
+      "gols_mandante": 1,
+      "gols_visitante": 1,
+      "status": "Ao vivo",
       "aceitaPalpite": false,
-      "status_jogo": "FECHADO",
+      "status_jogo": "AO_VIVO",
       "status_bolao": "FECHADO",
       "palpites_liberados": "NAO",
       "palpitesPublicosLiberados": true,
