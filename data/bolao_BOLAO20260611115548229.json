@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260611115548229",
-  "gerado_em": "10/07/2026 22:52:55",
-  "gerado_ts": 1783734775148,
+  "gerado_em": "10/07/2026 23:09:30",
+  "gerado_ts": 1783735770246,
   "dados": {
     "id_bolao": "BOLAO20260611115548229",
     "bolaoAtual": {
@@ -19418,19 +19418,19 @@
         "visitante_iso": "ch"
       },
       {
-        "id": "6a75f42851209814",
+        "id": "3a8800c9cbe6e3d1",
         "id_bolao": "BOLAO20260611115548229",
-        "id_jogo": "6a75f42851209814",
+        "id_jogo": "3a8800c9cbe6e3d1",
         "mandante": "France",
-        "visitante": "Winner Quarter-final 2",
+        "visitante": "Spain",
         "flagMandante": "🇫🇷",
-        "flagVisitante": "⚽",
+        "flagVisitante": "🇪🇸",
         "flagMandanteEmoji": "🇫🇷",
-        "flagVisitanteEmoji": "⚽",
+        "flagVisitanteEmoji": "🇪🇸",
         "codigoMandante": "fr",
-        "codigoVisitante": "",
-        "grupo": "Grupo I",
-        "rodada_grupo": "Grupo I",
+        "codigoVisitante": "es",
+        "grupo": "CUP07",
+        "rodada_grupo": "CUP07",
         "data": "14/07/2026",
         "hora": "16:00",
         "dataHora": "14/07/2026 16:00",
@@ -19459,9 +19459,11 @@
         "mandante_exibicao": "França",
         "mandante_codigo": "fr",
         "mandante_iso": "fr",
-        "visitante_pt": "Winner Quarter-final 2",
-        "visitante_nome_pt": "Winner Quarter-final 2",
-        "visitante_exibicao": "Winner Quarter-final 2"
+        "visitante_pt": "Espanha",
+        "visitante_nome_pt": "Espanha",
+        "visitante_exibicao": "Espanha",
+        "visitante_codigo": "es",
+        "visitante_iso": "es"
       },
       {
         "id": "8899482424b7d2d3",
@@ -36286,7 +36288,7 @@
     "totalJogosComPalpitesPublicos": 92,
     "totalPalpitesPublicos": 116,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "10/07/2026 22:52:55",
+    "cacheAtualizadoEm": "10/07/2026 23:09:30",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
