@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO001",
-  "gerado_em": "18/07/2026 03:59:04",
-  "gerado_ts": 1784357944867,
+  "gerado_em": "18/07/2026 04:27:27",
+  "gerado_ts": 1784359647217,
   "dados": {
     "id_bolao": "BOLAO001",
     "bolaoAtual": {
@@ -54141,7 +54141,7 @@
     "totalJogosComPalpitesPublicos": 102,
     "totalPalpitesPublicos": 187,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "18/07/2026 03:59:04",
+    "cacheAtualizadoEm": "18/07/2026 04:27:27",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
