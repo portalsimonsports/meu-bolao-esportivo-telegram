@@ -5,8 +5,8 @@
   "versao": "V125_ROTINA_AUTOMATICA_GLOBAL_LIMPA",
   "hotfix": "V123_RANKING_OFICIAL_JSON_JOGOS_COPA_FIX",
   "modoJsonPublico": "COPA_GLOBAL_UNICA_PARA_TODOS_OS_BOLOES",
-  "gerado_em": "19/07/2026 18:14:50",
-  "gerado_ts": 1784495690475,
+  "gerado_em": "19/07/2026 18:34:34",
+  "gerado_ts": 1784496874495,
   "dados": {
     "id_base": "BOLAO001",
     "jogos": [
@@ -4440,9 +4440,9 @@
         "visitante_iso": "gb-eng"
       },
       {
-        "id": "e862678446d28ba4",
+        "id": "9121318c93130d9f",
         "id_bolao": "BOLAO001",
-        "id_jogo": "e862678446d28ba4",
+        "id_jogo": "9121318c93130d9f",
         "mandante": "Spain",
         "visitante": "Argentina",
         "flagMandante": "🇪🇸",
@@ -4454,9 +4454,9 @@
         "grupo": "CUP09",
         "rodada_grupo": "CUP09",
         "data": "19/07/2026",
-        "hora": "16:10",
-        "dataHora": "19/07/2026 16:10",
-        "limitePalpite": "19/07/2026 16:10",
+        "hora": "16:00",
+        "dataHora": "19/07/2026 16:00",
+        "limitePalpite": "19/07/2026 16:00",
         "gols_mandante": 0,
         "gols_visitante": 0,
         "status": "Finalizado",
@@ -8914,9 +8914,9 @@
         "visitante_iso": "gb-eng"
       },
       {
-        "id": "e862678446d28ba4",
+        "id": "9121318c93130d9f",
         "id_bolao": "BOLAO001",
-        "id_jogo": "e862678446d28ba4",
+        "id_jogo": "9121318c93130d9f",
         "mandante": "Spain",
         "visitante": "Argentina",
         "flagMandante": "🇪🇸",
@@ -8928,9 +8928,9 @@
         "grupo": "CUP09",
         "rodada_grupo": "CUP09",
         "data": "19/07/2026",
-        "hora": "16:10",
-        "dataHora": "19/07/2026 16:10",
-        "limitePalpite": "19/07/2026 16:10",
+        "hora": "16:00",
+        "dataHora": "19/07/2026 16:00",
+        "limitePalpite": "19/07/2026 16:00",
         "gols_mandante": 0,
         "gols_visitante": 0,
         "status": "Finalizado",
@@ -16745,7 +16745,7 @@
       }
     ],
     "estatisticas": {},
-    "cacheAtualizadoEm": "19/07/2026 18:14:50"
+    "cacheAtualizadoEm": "19/07/2026 18:34:34"
   },
   "jogos": [
     {
@@ -21178,9 +21178,9 @@
       "visitante_iso": "gb-eng"
     },
     {
-      "id": "e862678446d28ba4",
+      "id": "9121318c93130d9f",
       "id_bolao": "BOLAO001",
-      "id_jogo": "e862678446d28ba4",
+      "id_jogo": "9121318c93130d9f",
       "mandante": "Spain",
       "visitante": "Argentina",
       "flagMandante": "🇪🇸",
@@ -21192,9 +21192,9 @@
       "grupo": "CUP09",
       "rodada_grupo": "CUP09",
       "data": "19/07/2026",
-      "hora": "16:10",
-      "dataHora": "19/07/2026 16:10",
-      "limitePalpite": "19/07/2026 16:10",
+      "hora": "16:00",
+      "dataHora": "19/07/2026 16:00",
+      "limitePalpite": "19/07/2026 16:00",
       "gols_mandante": 0,
       "gols_visitante": 0,
       "status": "Finalizado",
@@ -25652,9 +25652,9 @@
       "visitante_iso": "gb-eng"
     },
     {
-      "id": "e862678446d28ba4",
+      "id": "9121318c93130d9f",
       "id_bolao": "BOLAO001",
-      "id_jogo": "e862678446d28ba4",
+      "id_jogo": "9121318c93130d9f",
       "mandante": "Spain",
       "visitante": "Argentina",
       "flagMandante": "🇪🇸",
@@ -25666,9 +25666,9 @@
       "grupo": "CUP09",
       "rodada_grupo": "CUP09",
       "data": "19/07/2026",
-      "hora": "16:10",
-      "dataHora": "19/07/2026 16:10",
-      "limitePalpite": "19/07/2026 16:10",
+      "hora": "16:00",
+      "dataHora": "19/07/2026 16:00",
+      "limitePalpite": "19/07/2026 16:00",
       "gols_mandante": 0,
       "gols_visitante": 0,
       "status": "Finalizado",
