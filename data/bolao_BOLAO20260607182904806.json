@@ -5,8 +5,8 @@
   "versao_execucao": "V124_JSON_PRIVADOS_SEGURO",
   "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO",
   "id_bolao": "BOLAO20260607182904806",
-  "gerado_em": "19/07/2026 17:51:59",
-  "gerado_ts": 1784494319209,
+  "gerado_em": "19/07/2026 18:43:08",
+  "gerado_ts": 1784497388200,
   "dados": {
     "id_bolao": "BOLAO20260607182904806",
     "bolaoAtual": {
@@ -22567,9 +22567,9 @@
         "visitante_iso": "gb-eng"
       },
       {
-        "id": "e862678446d28ba4",
+        "id": "9121318c93130d9f",
         "id_bolao": "BOLAO20260607182904806",
-        "id_jogo": "e862678446d28ba4",
+        "id_jogo": "9121318c93130d9f",
         "mandante": "Spain",
         "visitante": "Argentina",
         "flagMandante": "🇪🇸",
@@ -22581,15 +22581,15 @@
         "grupo": "CUP09",
         "rodada_grupo": "CUP09",
         "data": "19/07/2026",
-        "hora": "16:10",
-        "dataHora": "19/07/2026 16:10",
-        "limitePalpite": "19/07/2026 16:10",
+        "hora": "16:00",
+        "dataHora": "19/07/2026 16:00",
+        "limitePalpite": "19/07/2026 16:00",
         "gols_mandante": 0,
         "gols_visitante": 0,
-        "status": "Ao vivo",
+        "status": "Finalizado",
         "aceitaPalpite": false,
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "palpites_liberados": "NAO",
         "palpitesPublicosLiberados": true,
         "permiteVerPalpites": true,
@@ -22629,7 +22629,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-19T03:29:44.538Z",
-            "id_jogo_json": "e862678446d28ba4"
+            "id_jogo_json": "9121318c93130d9f"
           }
         ],
         "palpitesOutros": [
@@ -22662,7 +22662,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-19T03:29:44.538Z",
-            "id_jogo_json": "e862678446d28ba4"
+            "id_jogo_json": "9121318c93130d9f"
           }
         ],
         "palpitesParticipantes": [
@@ -22695,10 +22695,42 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-19T03:29:44.538Z",
-            "id_jogo_json": "e862678446d28ba4"
+            "id_jogo_json": "9121318c93130d9f"
           }
         ],
-        "palpites": [],
+        "palpites": [
+          {
+            "id_bolao": "BOLAO20260607182904806",
+            "id_jogo": "045fb72466568504",
+            "telegram_id": "VIRTUAL_IA_DESAFIANTE",
+            "nome": "🤖 Desafiante IA",
+            "username": "desafiante_ia",
+            "mandante": "Spain",
+            "visitante": "Argentina",
+            "palpite_mandante": 1,
+            "palpite_visitante": 2,
+            "placarMandante": 1,
+            "placarVisitante": 2,
+            "placar_texto": "1 x 2",
+            "pontos": 0,
+            "pontos_label": "0 pts",
+            "criterio_pontuacao": "AGUARDANDO_RESULTADO",
+            "PTS_EXATO": 0,
+            "PTS_GOL_VENCEDOR": 0,
+            "PTS_SALDO": 0,
+            "PTS_GOL_PERDEDOR": 0,
+            "PTS_VENCEDOR": 0,
+            "PTS_EMPATE_GARANTIDO": 0,
+            "status": "VALIDO",
+            "origem": "VIRTUAL_IA",
+            "automatico": false,
+            "desafiante_ia": true,
+            "origem_label": "🤖 Desafiante IA",
+            "data_hora": "19/07/2026 00:29:44",
+            "dataHora": "19/07/2026 00:29:44",
+            "proprio": false
+          }
+        ],
         "mandante_pt": "Espanha",
         "mandante_nome_pt": "Espanha",
         "mandante_exibicao": "Espanha",
@@ -42550,7 +42582,7 @@
       },
       {
         "id_bolao": "BOLAO20260607182904806",
-        "id_jogo": "e862678446d28ba4",
+        "id_jogo": "9121318c93130d9f",
         "mandante": "Spain",
         "visitante": "Argentina",
         "mandante_pt": "Espanha",
@@ -42558,8 +42590,8 @@
         "codigoMandante": "es",
         "codigoVisitante": "ar",
         "data_jogo": "",
-        "status_jogo": "AO_VIVO",
-        "status_bolao": "FECHADO",
+        "status_jogo": "FINALIZADO",
+        "status_bolao": "FINALIZADO",
         "gols_mandante": 0,
         "gols_visitante": 0,
         "placar": "0 x 0",
@@ -42594,7 +42626,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-19T03:29:44.538Z",
-            "id_jogo_json": "e862678446d28ba4"
+            "id_jogo_json": "9121318c93130d9f"
           }
         ],
         "palpitesPublicos": [
@@ -42627,7 +42659,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-19T03:29:44.538Z",
-            "id_jogo_json": "e862678446d28ba4"
+            "id_jogo_json": "9121318c93130d9f"
           }
         ],
         "palpitesOutros": [
@@ -42660,7 +42692,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-19T03:29:44.538Z",
-            "id_jogo_json": "e862678446d28ba4"
+            "id_jogo_json": "9121318c93130d9f"
           }
         ],
         "palpitesParticipantes": [
@@ -42693,7 +42725,7 @@
             "desafiante_ia": true,
             "origem_label": "🤖 Desafiante IA",
             "dataHora": "2026-07-19T03:29:44.538Z",
-            "id_jogo_json": "e862678446d28ba4"
+            "id_jogo_json": "9121318c93130d9f"
           }
         ]
       }
@@ -42701,7 +42733,7 @@
     "totalJogosComPalpitesPublicos": 100,
     "totalPalpitesPublicos": 141,
     "meusPalpites": [],
-    "cacheAtualizadoEm": "19/07/2026 17:51:59",
+    "cacheAtualizadoEm": "19/07/2026 18:43:08",
     "copaGlobalPath": "data/copa_2026_publico.json",
     "hotfix_v124": "V124_JSON_PRIVADOS_SEGURO_DEDUP_SOMENTE_PUBLICACAO"
   },
